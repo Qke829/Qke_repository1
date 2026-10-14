@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>猴子跑酷</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html, body { width:100%; height:100%; overflow:hidden; background:#5a4326; font-family:system-ui,"PingFang SC","Microsoft YaHei",sans-serif; }
+  #game { position:fixed; inset:0; display:block; touch-action:none; }
+  .overlay {
+    position:fixed; inset:0; z-index:10; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; gap:10px; padding:24px;
+    background:rgba(20,12,4,.78); color:#fff; text-align:center;
+  }
+  .overlay.hidden { display:none; }
+  .title { font-size:30px; font-weight:800; margin-bottom:6px; letter-spacing:1px; }
+  .stat { font-size:16px; opacity:.92; }
+  .stat b { color:#ffd54a; }
+  .hint { font-size:13px; opacity:.7; margin-top:6px; line-height:1.5; max-width:340px; }
+  .btn {
+    border:none; border-radius:12px; padding:12px 22px; font-size:17px; font-weight:700;
+    color:#3a2400; background:linear-gradient(180deg,#ffe27a,#ffc83a); cursor:pointer;
+    box-shadow:0 4px 0 #c08a1e; margin-top:4px;
+  }
+  .btn:active { transform:translateY(2px); box-shadow:0 2px 0 #c08a1e; }
+  .btn2 {
+    border:none; border-radius:12px; padding:10px 20px; font-size:15px; font-weight:600;
+    color:#fff; background:rgba(255,255,255,.16); cursor:pointer;
+  }
+  .btn2:active { background:rgba(255,255,255,.28); }
+  .modes { display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; max-width:380px; margin:6px 0; }
+  .modeCard {
+    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16);
+    border-radius:14px; padding:14px 10px; display:flex; flex-direction:column; align-items:center; gap:6px;
+  }
+  .modeCard .mName { font-size:19px; font-weight:800; }
+  .modeCard .mBest { font-size:12px; opacity:.8; min-height:16px; }
+  .modeCard .mDesc { font-size:11px; opacity:.6; }
+  .modeCard .btn { padding:8px 18px; font-size:15px; }
+  .mEasy .mName { color:#9be37a; } .mNormal .mName { color:#ffe27a; }
+  .mFast .mName { color:#7ec8ff; } .mHard .mName { color:#ff9a8a; }
+  .pauseBtn {
+    position:fixed; top:78px; right:12px; z-index:9; width:46px; height:46px; border-radius:50%;
+    border:none; background:rgba(0,0,0,.45); color:#fff; font-size:20px; display:none;
+    align-items:center; justify-content:center; cursor:pointer;
+  }
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<button class="pauseBtn" id="pauseBtn">⏸</button>
+
+<!-- 开始界面：四模式选择，并显示各模式历史最佳 -->
+<div id="startScreen" class="overlay">
+  <div class="title">🐒 猴子跑酷</div>
+  <div class="modes">
+    <div class="modeCard mEasy"><div class="mName">简单</div><div class="mBest" id="bestEasy">最佳 0 m · 0 勺</div><button class="btn modeBtn" data-mode="easy">开始</button><div class="mDesc">无必杀 · 怪少 · 勺多</div></div>
+    <div class="modeCard mNormal"><div class="mName">普通</div><div class="mBest" id="bestNormal">最佳 0 m · 0 勺</div><button class="btn modeBtn" data-mode="normal">开始</button><div class="mDesc">标准体验</div></div>
+    <div class="modeCard mFast"><div class="mName">极速</div><div class="mBest" id="bestFast">最佳 0 m · 0 勺</div><button class="btn modeBtn" data-mode="fast">开始</button><div class="mDesc">里程快 · 越来越快 · 勺多</div></div>
+    <div class="modeCard mHard"><div class="mName">困难</div><div class="mBest" id="bestHard">最佳 0 m · 0 勺</div><button class="btn modeBtn" data-mode="hard">开始</button><div class="mDesc">无血量 · 一击必杀</div></div>
+  </div>
+  <div class="hint">三条路拖动（手指/鼠标）上下换道收 🥄 · 躲避 🐷🦈🦛 · 死亡可无限复活<br>达到历史最佳里程前会提前出现金色分数线，超过后跟随你</div>
+</div>
+
+<!-- 死亡（血量归零 / 一击必杀）界面：无限复活 / 退出，并展示历史最佳 -->
+<div id="overScreen" class="overlay hidden">
+  <div class="title">游戏结束！</div>
+  <div class="stat">本次里程：<b id="finalMileage">0</b> 米</div>
+  <div class="stat">收集汤勺：<b id="finalSpoons">0</b> 个</div>
+  <div class="stat" id="bestLine" style="font-size:14px;opacity:.85"></div>
+  <div class="hint" id="reviveHint">复活后成绩不计入历史最佳</div>
+  <button class="btn" id="reviveBtn" style="margin-top:8px">🔄 复活（无限次）</button>
+  <button class="btn2" id="exitBtn">退出游戏</button>
+</div>
+
+<button class="pauseBtn" id="pauseBtn">⏸</button>
+<div id="pauseScreen" class="overlay hidden">
+  <div class="title">⏸ 已暂停</div>
+  <div class="stat" id="pauseBest" style="font-size:14px;opacity:.85"></div>
+  <button class="btn" id="resumePauseBtn">继续游戏</button>
+  <button class="btn2" id="restartPauseBtn">重新开始</button>
+  <button class="btn2" id="exitPauseBtn">退出游戏</button>
+  <div class="hint">已为你保存进度，退出后重新打开链接可继续</div>
+</div>
+
+<script>
+const canvas = document.getElementById('game');
+const ctx = canvas.getContext('2d');
+let W = 0, H = 0, dpr = 1;
+const LANES = 3;
+
+// ---------- 布局：三条道路占满全屏（天体在画面上方天空带轮转） ----------
+function laneH(){ return H / LANES; }
+function laneY(i){ const h = laneH(); return h * i + h / 2; }
+function laneFromY(y){
+  const h = laneH();
+  return Math.max(0, Math.min(LANES - 1, Math.floor(y / h)));
+}
+function skyBand(){ return Math.min(H * 0.30, 130); }
+
+function resize(){
+  dpr = Math.min(window.devicePixelRatio || 1, 2);
+  W = Math.max(1, window.innerWidth || document.documentElement.clientWidth || 360);
+  H = Math.max(1, window.innerHeight || document.documentElement.clientHeight || 640);
+  canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+  canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  buildStars();
+  if (state !== 'playing' && monkey) { monkey.y = laneY(monkey.targetLane); }
+}
+window.addEventListener('resize', resize);
+window.addEventListener('orientationchange', resize);
+if (window.visualViewport) window.visualViewport.addEventListener('resize', resize);
+
+// ---------- 游戏模式 ----------
+const MODES = {
+  easy:   { label:'简单', enemyMul:1.7,  spoonMul:0.6, mileageMul:1.0, oneShot:false, maxHp:100, acc:0,     desc:'无必杀 · 怪少 · 勺多' },
+  normal: { label:'普通', enemyMul:1.0,  spoonMul:1.0, mileageMul:1.0, oneShot:'per', maxHp:100, acc:0,     desc:'标准体验' },
+  fast:   { label:'极速', enemyMul:0.85, spoonMul:0.7, mileageMul:1.6, oneShot:'per', maxHp:100, acc:0.004, desc:'里程快 · 越来越快 · 勺多' },
+  hard:   { label:'困难', enemyMul:1.0,  spoonMul:1.0, mileageMul:1.0, oneShot:'all', maxHp:1,   acc:0,     desc:'无血量 · 一击必杀' },
+};
+const MODE_KEYS = ['easy','normal','fast','hard'];
+
+// ---------- 游戏状态 ----------
+const monkey = { x:0, y:0, targetLane:1, hp:100, maxHp:100, inv:0 };
+let curMode = 'normal';
+let spoons = [], enemies = [];
+let mileage = 0, spoonsCount = 0;
+let goldSpoons = false;
+let scrollSpeed = 180, baseSpeed = 180;
+let state = 'start';
+let lastT = 0;
+let spoonTimer = 0, enemyTimer = 0;
+let dayTime = 0.27;
+const DAY_LENGTH = 120;
+let stars = [];
+let flash = 0;
+let usedRevive = false;          // 本局是否用过复活（用过则成绩不计入历史最佳）
+let best = loadBest();
+resize();
+
+// 敌人参数：碰撞半径(colR)依次增大，基础伤害(baseDmg)依次降低
+const ENEMY_TYPES = {
+  '🦈': { colR:16, baseDmg:30, size:42, oneShot:2000 },
+  '🐷': { colR:22, baseDmg:22, size:44, oneShot:3200 },
+  '🦛': { colR:30, baseDmg:14, size:48, oneShot:5000 }
+};
+const MONKEY_R = 22;
+const SPOON_HEAL = 6;
+
+// ---------- 里程彩蛋 ----------
+const MILESTONES = [
+  { m:46,   ch:'🐷', label:'猪' },
+  { m:529,  ch:'🐒', label:'猴子' },
+  { m:720,  ch:'🦈', label:'鲨鱼' },
+  { m:829,  ch:'🦛', label:'河马' },
+  { m:1015, ch:'🥄', label:'勺子' }
+];
+let eggCh = null, eggAlpha = 0;
+const EGG_ALPHA = 0.16;
+
+// ---------- 历史最佳（按模式分别存储） ----------
+function defaultBest(){ return { easy:{mileage:0,spoons:0}, normal:{mileage:0,spoons:0}, fast:{mileage:0,spoons:0}, hard:{mileage:0,spoons:0} }; }
+function loadBest(){
+  try {
+    const v = JSON.parse(localStorage.getItem('monkeyRunBest') || 'null');
+    if (v && v.easy && v.normal && v.fast && v.hard) return v;
+  } catch(e){}
+  return defaultBest();
+}
+function saveBest(){ try { localStorage.setItem('monkeyRunBest', JSON.stringify(best)); } catch(e){} }
+// 仅当本局「未用过复活」才把当前成绩写入当前模式的历史最佳
+function commitBestIfValid(){
+  if (usedRevive) return;
+  const b = best[curMode];
+  if (Math.floor(mileage) > b.mileage) b.mileage = Math.floor(mileage);
+  if (spoonsCount > b.spoons) b.spoons = spoonsCount;
+  saveBest();
+}
+
+// ---------- 进度存档：暂停后可退出链接，重新进入继续 ----------
+function saveState(){
+  try {
+    localStorage.setItem('monkeyRunSave', JSON.stringify({
+      curMode, monkey, mileage, spoonsCount, dayTime, scrollSpeed, baseSpeed,
+      spoonTimer, enemyTimer, eggCh, eggAlpha, enemies, spoons, usedRevive, ts: Date.now()
+    }));
+  } catch(e){}
+}
+function loadState(){
+  try { const s = localStorage.getItem('monkeyRunSave'); return s ? JSON.parse(s) : null; }
+  catch(e){ return null; }
+}
+function clearState(){ try { localStorage.removeItem('monkeyRunSave'); } catch(e){} }
+function restoreState(s){
+  curMode = s.curMode || 'normal';
+  Object.assign(monkey, s.monkey);
+  mileage = s.mileage; spoonsCount = s.spoonsCount; dayTime = s.dayTime;
+  scrollSpeed = s.scrollSpeed; baseSpeed = s.baseSpeed;
+  spoonTimer = s.spoonTimer; enemyTimer = s.enemyTimer;
+  eggCh = s.eggCh; eggAlpha = s.eggAlpha;
+  enemies = s.enemies || []; spoons = s.spoons || [];
+  usedRevive = !!s.usedRevive;
+  lastT = performance.now();
+}
+
+function randInt(a,b){ return Math.floor(a + Math.random()*(b-a+1)); }
+function lerp(a,b,t){ return a + (b-a)*t; }
+
+function buildStars(){
+  stars = [];
+  for (let i=0;i<50;i++) stars.push({ x:Math.random(), y:Math.random()*0.85, r:Math.random()*1.4+0.4 });
+}
+
+function reset(){
+  const m = MODES[curMode];
+  monkey.targetLane = 1; monkey.y = laneY(1); monkey.x = W * 0.22;
+  monkey.maxHp = m.maxHp; monkey.hp = m.maxHp; monkey.inv = 0;
+  spoons = []; enemies = []; mileage = 0; spoonsCount = 0; goldSpoons = false;
+  scrollSpeed = baseSpeed; spoonTimer = 0.4; enemyTimer = 1.0;
+  dayTime = 0.27; flash = 0;
+  eggCh = null; eggAlpha = 0;
+  usedRevive = false;
+  lastT = performance.now();
+}
+
+function pointer(e){
+  if (state !== 'playing') return;
+  const rect = canvas.getBoundingClientRect();
+  monkey.targetLane = laneFromY(e.clientY - rect.top);
+}
+canvas.addEventListener('pointerdown', pointer);
+canvas.addEventListener('pointermove', e => {
+  if (state !== 'playing') return;
+  if (e.pointerType === 'mouse' && e.buttons === 0) return;
+  pointer(e);
+});
+
+function spawnSpoon(){ spoons.push({ lane:randInt(0,LANES-1), x:W+40 }); }
+function spawnEnemy(){
+  const incoming = enemies.filter(e => e.x > monkey.x).map(e => e.lane);
+  const free = [0,1,2].filter(l => !incoming.includes(l));
+  if (free.length === 0) return;
+  const lane = free[randInt(0, free.length-1)];
+  const keys = Object.keys(ENEMY_TYPES);
+  const type = keys[randInt(0, keys.length-1)];
+  enemies.push({ lane, x:W+60, type, speed:scrollSpeed + 60 + Math.random()*60 });
+}
+
+function enemyDamage(){ return 1 + mileage / 2000; }
+
+// 该动物在当前模式下是否「一击必杀」
+function isOneShot(type){
+  const m = MODES[curMode];
+  if (m.oneShot === false) return false;
+  if (m.oneShot === 'all') return true;
+  return mileage >= ENEMY_TYPES[type].oneShot;
+}
+
+function update(dt){
+  const m = MODES[curMode];
+  dayTime = (dayTime + dt / DAY_LENGTH) % 1;
+  scrollSpeed = baseSpeed + mileage * 0.02;
+  const acc = 12 + m.acc * mileage;                       // 极速模式猴子换道越来越快
+  const ty = laneY(monkey.targetLane);
+  monkey.y += (ty - monkey.y) * Math.min(1, dt * acc);
+  if (monkey.inv > 0) monkey.inv -= dt;
+  if (flash > 0) flash -= dt;
+  mileage += scrollSpeed * dt * 0.1 * m.mileageMul;      // 极速模式里程增速更快
+
+  // 汤勺
+  for (const s of spoons) s.x -= scrollSpeed * dt;
+  for (const s of spoons){
+    const dy = laneY(s.lane) - monkey.y;
+    const dx = s.x - monkey.x;
+    if (Math.abs(dx) < 30 && Math.abs(dy) < laneH()*0.5 && !s.got){
+      s.got = true; spoonsCount++;
+      monkey.hp = Math.min(monkey.maxHp, monkey.hp + SPOON_HEAL);
+    }
+  }
+  spoons = spoons.filter(s => !s.got && s.x > -60);
+
+  // 敌人移动 + 圆形碰撞判定
+  const mult = enemyDamage();
+  for (const e of enemies){
+    e.x -= e.speed * dt;
+    if (monkey.inv > 0) continue;
+    const ey = laneY(e.lane);
+    const dx = e.x - monkey.x;
+    const dy = ey - monkey.y;
+    const dist = Math.hypot(dx, dy);
+    const reach = ENEMY_TYPES[e.type].colR + MONKEY_R;
+    if (dist < reach){
+      const dmg = isOneShot(e.type) ? monkey.maxHp : ENEMY_TYPES[e.type].baseDmg * mult;
+      monkey.hp -= dmg;
+      monkey.inv = 1.2;
+      flash = 0.25;
+      if (monkey.hp <= 0){ monkey.hp = 0; gameOver(); return; }
+    }
+  }
+  enemies = enemies.filter(e => e.x > -80);
+
+  // 里程彩蛋
+  let reached = null;
+  for (const ms of MILESTONES) if (mileage >= ms.m) reached = ms;
+  if (reached && eggCh !== reached.ch){ eggCh = reached.ch; eggAlpha = 0; }
+  if (eggCh) eggAlpha = Math.min(EGG_ALPHA, eggAlpha + dt * 0.4);
+
+  goldSpoons = spoonsCount >= best[curMode].spoons;
+
+  // 刷怪 / 出勺频率（按模式调整）
+  spoonTimer -= dt;
+  if (spoonTimer <= 0){ spawnSpoon(); spoonTimer = (0.7 + Math.random()*0.6) * m.spoonMul; }
+  enemyTimer -= dt;
+  if (enemyTimer <= 0){
+    spawnEnemy();
+    enemyTimer = Math.max(0.7, (1.8 - mileage * 0.0008) * m.enemyMul) + Math.random() * 0.6;
+  }
+}
+
+// ---------- 天空 / 太阳 / 月亮 ----------
+const SKY = [
+  { t:0.00, top:[10,14,39], bot:[20,33,61] },
+  { t:0.22, top:[26,31,58], bot:[40,46,80] },
+  { t:0.28, top:[255,158,109], bot:[255,217,160] },
+  { t:0.50, top:[74,163,224], bot:[191,230,255] },
+  { t:0.72, top:[255,123,84], bot:[255,208,160] },
+  { t:0.78, top:[26,31,58], bot:[40,46,80] },
+  { t:1.00, top:[10,14,39], bot:[20,33,61] }
+];
+function skyColor(t){
+  for (let i=0;i<SKY.length-1;i++){
+    if (t>=SKY[i].t && t<=SKY[i+1].t){
+      const f = (t - SKY[i].t)/(SKY[i+1].t - SKY[i].t);
+      return {
+        top: SKY[i].top.map((c,k)=>Math.round(lerp(c,SKY[i+1].top[k],f))),
+        bot: SKY[i].bot.map((c,k)=>Math.round(lerp(c,SKY[i+1].bot[k],f)))
+      };
+    }
+  }
+  return { top:SKY[0].top, bot:SKY[0].bot };
+}
+function darkness(t){
+  if (t < 0.25) return (0.25 - t)/0.25;
+  if (t > 0.75) return (t - 0.75)/0.25;
+  return 0;
+}
+function fmtTime(t){
+  const total = t*24;
+  const hh = Math.floor(total)%24, mm = Math.floor((total-Math.floor(total))*60);
+  return String(hh).padStart(2,'0') + ':' + String(mm).padStart(2,'0');
+}
+
+function drawCelestial(){
+  const band = skyBand();
+  const dk = darkness(dayTime);
+  if (dk > 0.05){
+    ctx.fillStyle = `rgba(255,255,255,${0.85*dk})`;
+    for (const s of stars){ ctx.beginPath(); ctx.arc(s.x*W, s.y*band, s.r, 0, Math.PI*2); ctx.fill(); }
+  }
+  if (dayTime >= 0.25 && dayTime <= 0.75){
+    const p = (dayTime-0.25)/0.5;
+    const sx = p*W, sy = band - Math.sin(p*Math.PI)*(band*0.72) - 8;
+    const grd = ctx.createRadialGradient(sx,sy,4,sx,sy,42);
+    grd.addColorStop(0,'rgba(255,240,150,.95)'); grd.addColorStop(1,'rgba(255,200,80,0)');
+    ctx.fillStyle = grd; ctx.beginPath(); ctx.arc(sx,sy,42,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle = '#fff2a8'; ctx.beginPath(); ctx.arc(sx,sy,18,0,Math.PI*2); ctx.fill();
+  }
+  if (dayTime > 0.75 || dayTime < 0.25){
+    let frac = dayTime > 0.75 ? (dayTime-0.75)/0.5 : (dayTime+0.25)/0.5;
+    const mx = frac*W, my = band - Math.sin(frac*Math.PI)*(band*0.72) - 8;
+    ctx.fillStyle = 'rgba(255,255,210,0.95)'; ctx.beginPath(); ctx.arc(mx,my,15,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle = `rgb(${skyColor(dayTime).bot.join(',')})`; ctx.beginPath(); ctx.arc(mx+6,my-4,13,0,Math.PI*2); ctx.fill();
+  }
+}
+function drawDayNightTint(){
+  const dk = darkness(dayTime);
+  if (dk > 0.02){ ctx.fillStyle = `rgba(8,12,35,${0.30*dk})`; ctx.fillRect(0,0,W,H); }
+}
+
+function drawEmoji(ch,x,y,size){
+  ctx.font = size + 'px "Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(ch, x, y);
+}
+
+// 金色勺子：用与原勺子相同的 emoji 形状，仅改颜色（离屏染金缓存）
+let goldSpoonImg = null, goldSpoonSz = 0;
+function getGoldSpoonImg(sz){
+  if (goldSpoonImg && goldSpoonSz === sz) return goldSpoonImg;
+  const c = document.createElement('canvas');
+  c.width = c.height = sz;
+  const o = c.getContext('2d');
+  o.font = sz + 'px "Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif';
+  o.textAlign = 'center'; o.textBaseline = 'middle';
+  o.fillText('🥄', sz/2, sz/2);
+  o.globalCompositeOperation = 'source-atop';
+  o.fillStyle = 'rgba(255,200,40,0.85)';
+  o.fillRect(0,0,sz,sz);
+  goldSpoonImg = c; goldSpoonSz = sz;
+  return c;
+}
+function drawGoldSpoon(x,y,s){
+  const sz = Math.max(24, Math.ceil(s*1.5));
+  const img = getGoldSpoonImg(sz);
+  ctx.drawImage(img, x - s*0.75, y - s*0.75, s*1.5, s*1.5);
+}
+
+function drawGround(){
+  const h = laneH();
+  for (let i=0;i<LANES;i++){
+    const y = h*i;
+    ctx.fillStyle = (i%2===0) ? '#8d6e4f' : '#9c7a57';
+    ctx.fillRect(0,y,W,h);
+    if (i>0){
+      ctx.strokeStyle = 'rgba(255,255,255,.5)';
+      ctx.lineWidth = 3; ctx.setLineDash([18,14]);
+      ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke();
+      ctx.setLineDash([]);
+    }
+  }
+}
+
+// 金色最高分数线（无文字）：竖直线，与水平马路分界线垂直；
+// 到达历史最佳前 LEAD 米即出现在猴子前方，超过后跟随猴子
+const BEST_LEAD = 80;
+function drawBestLine(){
+  const b = best[curMode];
+  if (!b || b.mileage <= 0) return;
+  let lineX;
+  if (mileage >= b.mileage){
+    lineX = monkey.x;                              // 已破纪录：线跟随猴子
+  } else if (b.mileage - mileage <= BEST_LEAD){
+    const d = (b.mileage - mileage) / BEST_LEAD;  // 1→0，越接近越靠近猴子
+    lineX = monkey.x + d * 140;                    // 前方最多 140px
+  } else {
+    return;                                        // 还远：不显示
+  }
+  const pulse = 0.55 + 0.35 * Math.abs(Math.sin(performance.now()/300));
+  ctx.save();
+  ctx.shadowColor = '#ffd700'; ctx.shadowBlur = 16;
+  ctx.strokeStyle = `rgba(255,215,0,${pulse})`;
+  ctx.lineWidth = 5;
+  ctx.beginPath(); ctx.moveTo(lineX, 0); ctx.lineTo(lineX, H); ctx.stroke();
+  ctx.restore();
+}
+
+function drawEgg(){
+  if (!eggCh || eggAlpha <= 0.01) return;
+  ctx.save();
+  ctx.globalAlpha = eggAlpha;
+  try { ctx.filter = 'blur(8px)'; } catch(e){}
+  if (goldSpoons && eggCh === '🥄') drawGoldSpoon(W/2, H/2, Math.min(W,H)*0.95);
+  else drawEmoji(eggCh, W/2, H/2, Math.min(W,H)*0.95);
+  ctx.restore();
+}
+
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  drawGround();
+  drawBestLine();
+  drawEgg();
+
+  for (const s of spoons){
+    if (goldSpoons) drawGoldSpoon(s.x, laneY(s.lane), 30);
+    else drawEmoji('🥄', s.x, laneY(s.lane), 30);
+  }
+  for (const e of enemies) drawEmoji(e.type, e.x, laneY(e.lane), ENEMY_TYPES[e.type].size);
+
+  const blink = monkey.inv > 0 && Math.floor(monkey.inv*12)%2 === 0;
+  if (!blink) drawEmoji('🐒', monkey.x, monkey.y, 48);
+
+  drawCelestial();
+  drawDayNightTint();
+
+  if (flash > 0){
+    ctx.fillStyle = `rgba(255,40,40,${0.35*(flash/0.25)})`;
+    ctx.fillRect(0,0,W,H);
+  }
+  drawHUD();
+}
+
+function drawHUD(){
+  const pad = 12, barH = 14, topH = 72;
+  ctx.fillStyle = 'rgba(0,0,0,.35)';
+  ctx.fillRect(0,0,W,topH);
+  ctx.textBaseline = 'middle';
+  ctx.fillStyle = '#fff'; ctx.font = 'bold 18px system-ui,sans-serif';
+
+  ctx.textAlign = 'left';
+  ctx.fillText('🥄 ' + spoonsCount, pad, 22);
+  ctx.textAlign = 'right';
+  ctx.fillText('🕐 ' + fmtTime(dayTime), W - 58, 22);
+
+  ctx.textAlign = 'left';
+  ctx.fillText('📏 ' + Math.floor(mileage) + ' m', pad, 48);
+  ctx.textAlign = 'right';
+  ctx.fillStyle = '#ffd54a';
+  ctx.fillText('【' + MODES[curMode].label + '】', W - 12, 48);
+
+  // 血条（困难模式无血量，改为提示）
+  if (monkey.maxHp > 1){
+    const bx = pad, bw = W - pad*2, by = 56;
+    ctx.fillStyle = 'rgba(255,255,255,.25)';
+    ctx.fillRect(bx, by, bw, barH);
+    const ratio = Math.max(0, monkey.hp / monkey.maxHp);
+    const r = Math.round(lerp(220,80,ratio)), g = Math.round(lerp(40,200,ratio));
+    ctx.fillStyle = `rgb(${r},${g},60)`;
+    ctx.fillRect(bx, by, bw*ratio, barH);
+    ctx.fillStyle = '#fff'; ctx.font = 'bold 12px system-ui,sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('❤ ' + Math.ceil(monkey.hp), W/2, by + barH/2);
+  } else {
+    ctx.fillStyle = '#ff9a8a'; ctx.font = 'bold 13px system-ui,sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('☠ 一击必杀', W/2, 63);
+  }
+}
+
+function loop(t){
+  if (W < 2 || H < 2) resize();
+  if (state === 'playing'){
+    const dt = Math.min(0.05, (t - lastT)/1000);
+    lastT = t;
+    update(dt);
+    if (state === 'playing') draw();
+  }
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+
+// ---------- 界面控制 ----------
+const pauseBtn   = document.getElementById('pauseBtn');
+const pauseScreen= document.getElementById('pauseScreen');
+const resumeBtn  = document.getElementById('resumeBtn');
+const startScreen= document.getElementById('startScreen');
+const overScreen = document.getElementById('overScreen');
+
+function showPauseBtn(v){ pauseBtn.style.display = v ? 'flex' : 'none'; }
+function hideAllOverlays(){
+  startScreen.classList.add('hidden');
+  overScreen.classList.add('hidden');
+  pauseScreen.classList.add('hidden');
+}
+function refreshBestUI(){
+  for (const k of MODE_KEYS){
+    const el = document.getElementById('best' + k[0].toUpperCase() + k.slice(1));
+    if (el) el.textContent = `最佳 ${best[k].mileage} m · ${best[k].spoons} 勺`;
+  }
+}
+
+function startNewGame(mode){
+  curMode = mode || 'normal';
+  clearState();
+  reset();
+  hideAllOverlays();
+  state = 'playing';
+  showPauseBtn(true);
+}
+function continueGame(){
+  const s = loadState();
+  if (!s){ startNewGame(curMode); return; }
+  restoreState(s);
+  hideAllOverlays();
+  state = 'playing';
+  showPauseBtn(true);
+}
+function pauseGame(){
+  if (state !== 'playing') return;
+  state = 'paused';
+  saveState();
+  showPauseBtn(false);
+  document.getElementById('pauseBest').textContent =
+    '历史最佳：' + best[curMode].mileage + ' m · ' + best[curMode].spoons + ' 勺';
+  pauseScreen.classList.remove('hidden');
+}
+function resumeGame(){
+  if (state !== 'paused') return;
+  state = 'playing';
+  lastT = performance.now();
+  pauseScreen.classList.add('hidden');
+  showPauseBtn(true);
+}
+
+// 无限复活：死亡后可选复活（恢复满血、清场），或退出游戏回到主菜单
+function revive(){
+  usedRevive = true;                  // 一旦复活，本局成绩不计入历史最佳（复活前已结算）
+  monkey.hp = monkey.maxHp;
+  monkey.inv = 1.5;
+  enemies = [];                       // 清场，给复活缓冲
+  hideAllOverlays();
+  state = 'playing';
+  showPauseBtn(true);
+  lastT = performance.now();
+}
+
+// 退出到主菜单。fromDeath=true 表示来自死亡界面（结束本局，清存档）；
+// 来自暂停界面则保留存档，以便重开链接后「继续游戏」
+function exitToMenu(fromDeath){
+  commitBestIfValid();
+  if (fromDeath) clearState();
+  else saveState();                  // 暂停退出保留进度，供续玩
+  refreshBestUI();
+  hideAllOverlays();
+  state = 'menu';
+  startScreen.classList.remove('hidden');
+  showPauseBtn(false);
+  if (loadState()) resumeBtn.style.display = 'inline-block';
+  else resumeBtn.style.display = 'none';
+}
+
+function gameOver(){
+  state = 'dead';                    // 关键：切到死亡状态，停止游戏循环
+  commitBestIfValid();               // 死亡时即结算「复活前」的有效成绩
+  clearState();                      // 本局结束，清除续玩存档
+  showPauseBtn(false);
+  document.getElementById('finalMileage').textContent = Math.floor(mileage);
+  document.getElementById('finalSpoons').textContent = spoonsCount;
+  document.getElementById('bestLine').textContent =
+    '历史最佳：' + best[curMode].mileage + ' m · ' + best[curMode].spoons + ' 勺';
+  overScreen.classList.remove('hidden');
+}
+
+// 按钮绑定
+document.querySelectorAll('.modeBtn').forEach(b => {
+  b.onclick = () => startNewGame(b.getAttribute('data-mode'));
+});
+resumeBtn.onclick = continueGame;
+pauseBtn.onclick = pauseGame;
+document.getElementById('resumePauseBtn').onclick = resumeGame;
+document.getElementById('restartPauseBtn').onclick = () => startNewGame(curMode);
+document.getElementById('exitPauseBtn').onclick = () => exitToMenu(false);
+document.getElementById('reviveBtn').onclick = revive;
+document.getElementById('exitBtn').onclick = () => exitToMenu(true);
+
+refreshBestUI();
+if (loadState()) resumeBtn.style.display = 'inline-block'; else resumeBtn.style.display = 'none';
+</script>
+</body>
+</html>

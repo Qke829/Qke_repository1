@@ -1,0 +1,21 @@
+# WorkBuddy 内部工作区（含私密记忆，绝不入库）
+.workbuddy/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 运行时自动生成的数据（不入库）
+leaderboard.db
+monkey_best.json
+
+# 虚拟环境
+venv/
+.venv/
+
+# 编辑器 / 系统文件
+.DS_Store
+*.swp
+
+# 内部协作总结（含私人视角，不公开）
+monkey_parkour_summary.md
