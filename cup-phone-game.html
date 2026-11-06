@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#faf6ec">
+<title>三杯猜手机 · 上课摸鱼专注力小训练</title>
+<style>
+/* ============================================================
+   设计定调（校园手账 / Playful）
+   受众：想练专注力、但不想被难度劝退的大学生
+   展示字：宋体（Windows 必装，衬线 + 大字距，做出笔记本标题感）
+   正文字：微软雅黑（Windows 必装，避免西文数字回退乱码）
+   主色 60% 奶油纸 / 辅助 30% 木质桌面 / 强调 10% 朱砂红
+   记忆点：杯子抬起那一瞬间，露出的是手机还是作业本
+   技术约束：单文件自包含、零构建、零外部资源，静态托管即可运行
+   ============================================================ */
+:root {
+  --color-bg: #faf6ec;
+  --color-surface: #fffdf8;
+  --color-text: #302c28;
+  --color-muted: #6b6258;
+  --color-accent: #d94f36;
+  --color-border: #e6dccb;
+  --color-wood: #cea478;
+  --color-wood-dark: #b78b60;
+  --color-wood-ink: #5c4028;
+  --color-ok: #1f7d5c;
+  --color-line: #efe7d8;
+
+  --font-display: "SimSun", "STZhongsong", "Songti SC", serif;
+  --font-body: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+
+  --text-xs: 13px; --text-sm: 15px; --text-base: 17px;
+  --text-lg: 21px; --text-xl: 27px; --text-hero: clamp(36px, 5vw, 58px);
+
+  --space-1: 4px; --space-2: 8px; --space-3: 16px; --space-4: 24px;
+  --space-5: 40px; --space-6: 64px;
+
+  --radius-sm: 6px; --radius-md: 14px; --radius-lg: 24px;
+  --shadow-1: 0 2px 8px rgba(92, 64, 40, .12);
+  --shadow-2: 0 8px 28px rgba(92, 64, 40, .16);
+  --shadow-3: 0 24px 64px rgba(92, 64, 40, .20);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 160ms; --dur-base: 320ms; --dur-slow: 640ms;
+
+  --cup-w: 132px; --cup-h: 148px;
+  --item-w: 52px; --item-h: 82px; --item-font: 14px;
+  --stage-h: 420px; --desk-h: 120px;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  letter-spacing: .02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- 氛围层：横线纸纹 + 装订线 + 光斑 + 颗粒 --- */
+.paper {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 33px, var(--color-line) 33px 34px),
+    radial-gradient(48rem 32rem at 88% -12%, rgba(242, 160, 88, .16), transparent 62%),
+    radial-gradient(40rem 30rem at 4% 100%, rgba(63, 178, 156, .12), transparent 60%);
+}
+.paper::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 26px;
+  width: 2px; background: rgba(217, 79, 54, .28);
+}
+.grain {
+  position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: .045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+.app { position: relative; z-index: 2; max-width: 1040px; margin: 0 auto; padding: 0 28px 32px; }
+
+/* --- 顶栏：标题偏左、计分贴纸偏右，刻意非对称 --- */
+.topbar {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: var(--space-4); padding: 34px 0 14px;
+}
+.brand { position: relative; padding-left: 18px; }
+.brand h1 {
+  margin: 0; font-family: var(--font-display); font-weight: 700;
+  font-size: var(--text-hero); line-height: 1.05; letter-spacing: .07em;
+}
+.tagline { margin: 6px 0 0; color: var(--color-muted); font-size: var(--text-sm); }
+
+.scorecard {
+  position: relative; flex: none; display: grid; grid-template-columns: repeat(4, auto);
+  gap: 0 18px; padding: 12px 20px; border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm); background: var(--color-surface);
+  box-shadow: var(--shadow-1); transform: rotate(-1.6deg);
+}
+.scorecard::before {
+  content: ""; position: absolute; top: -9px; left: 50%; width: 68px; height: 18px;
+  transform: translateX(-50%) rotate(3deg); background: rgba(242, 160, 88, .55);
+}
+.score-row { text-align: center; }
+.score-row span { display: block; font-size: var(--text-xs); color: var(--color-muted); }
+.score-row b {
+  display: block; font-size: var(--text-lg); line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- HUD --- */
+.hud { height: 96px; padding-top: 10px; text-align: center; }
+.hud-msg {
+  margin: 0; font-family: var(--font-display); font-weight: 700;
+  font-size: var(--text-xl); letter-spacing: .03em;
+  transition: color var(--dur-base) var(--ease-out);
+}
+.hud-msg[data-phase="choose"] { color: var(--color-accent); }
+.hud-msg.is-win { color: var(--color-ok); }
+.hud-msg.is-lose { color: var(--color-accent); }
+.hud-sub { margin: 2px 0 8px; color: var(--color-muted); font-size: var(--text-sm); }
+.progress {
+  width: min(440px, 82%); height: 9px; margin: 0 auto; overflow: hidden;
+  border-radius: 999px; background: #e9e0cf;
+}
+.progress-fill {
+  height: 100%; width: 0%; border-radius: 999px;
+  background: var(--color-accent); transition: width 90ms linear;
+}
+
+/* --- 舞台 --- */
+.stage {
+  position: relative; height: var(--stage-h); overflow: hidden;
+  border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+  background: linear-gradient(to bottom, #fffdf8 0%, #fbf5e9 100%);
+  box-shadow: var(--shadow-2);
+}
+.stage::after { /* 内页发丝边框 */
+  content: ""; position: absolute; inset: 8px; border: 1px dashed rgba(92,64,40,.13);
+  border-radius: 18px; pointer-events: none;
+}
+.tape {
+  position: absolute; z-index: 25; width: 92px; height: 26px;
+  background: rgba(242, 160, 88, .48); pointer-events: none;
+}
+.tape-a { top: -8px; left: 40px; transform: rotate(-16deg); }
+.tape-b { top: -10px; right: 52px; transform: rotate(12deg); background: rgba(63, 178, 156, .42); }
+
+.desk {
+  position: absolute; left: 0; right: 0; bottom: 0; height: var(--desk-h); z-index: 1;
+  background: linear-gradient(to bottom, #d9b087 0%, var(--color-wood) 22%, #c2966a 100%);
+  border-top: 6px solid var(--color-wood-dark);
+}
+.desk::before { /* 木纹 */
+  content: ""; position: absolute; inset: 0; opacity: .28;
+  background: repeating-linear-gradient(to bottom, transparent 0 17px, rgba(92,64,40,.16) 17px 18px);
+}
+
+.slot-label {
+  position: absolute; z-index: 3; bottom: 26px; transform: translateX(-50%);
+  color: var(--color-wood-ink); font-size: var(--text-sm); font-weight: 700;
+  letter-spacing: .12em; white-space: nowrap;
+}
+
+/* 物品：手机 / 作业本，全部 CSS 自绘 */
+.item {
+  position: absolute; left: 0; bottom: calc(var(--desk-h) + 0px); z-index: 5;
+  width: var(--item-w); height: var(--item-h); will-change: transform;
+}
+.item.phone {
+  border-radius: 10px; background: #262a34; padding: 6px 5px;
+  box-shadow: 0 4px 10px rgba(38,42,52,.3);
+}
+.phone .screen {
+  height: calc(100% - 10px); border-radius: 5px;
+  background: linear-gradient(160deg, #a7dcef, #6fb9db);
+  display: flex; align-items: center; justify-content: center;
+  color: #1b4a63; font-size: var(--item-font); font-weight: 700; letter-spacing: .04em;
+}
+.phone .speaker {
+  position: absolute; top: 2px; left: 50%; transform: translateX(-50%);
+  width: 14px; height: 2px; border-radius: 2px; background: #6a7080;
+}
+.phone .home {
+  position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%);
+  width: 18px; height: 2px; border-radius: 2px; background: #e8eef5;
+}
+.item.homework {
+  border-radius: 4px; background: #fdfbf5; border: 2px solid #cec3ae;
+  box-shadow: 0 4px 10px rgba(92,64,40,.18);
+}
+.homework .spine {
+  position: absolute; top: 2px; bottom: 2px; left: 2px; width: 9px;
+  border-radius: 2px; background: var(--color-accent);
+}
+.homework .lines {
+  position: absolute; top: 16px; left: 16px; right: 6px; height: 34px;
+  background: repeating-linear-gradient(to bottom, #cfc4b0 0 2px, transparent 2px 11px);
+}
+.homework .label {
+  position: absolute; bottom: 5px; right: 7px; color: var(--color-muted);
+  font-size: var(--item-font); font-weight: 700;
+}
+
+.cup-shadow {
+  position: absolute; left: 0; bottom: calc(var(--desk-h) - 12px); z-index: 2;
+  width: var(--cup-w); height: 20px; border-radius: 50%;
+  background: rgba(92, 64, 40, .32); filter: blur(5px); will-change: transform;
+}
+/* 三只杯子共用同一组颜色 —— 外观必须完全一致，不能留下可区分特征 */
+.cup {
+  --c-light: #3fb29c; --c-dark: #248a7a;
+  position: absolute; left: 0; bottom: calc(var(--desk-h) - 8px); z-index: 10;
+  width: var(--cup-w); height: var(--cup-h); will-change: transform;
+  transition: filter var(--dur-fast) ease-out;
+}
+.cup-body {
+  position: absolute; inset: 0;
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 12% 100%);
+  background: linear-gradient(105deg,
+    var(--c-light) 0%, var(--c-light) 56%, var(--c-dark) 56%, var(--c-dark) 100%);
+  filter: drop-shadow(0 8px 6px rgba(92,64,40,.20));
+}
+.cup-rim {
+  position: absolute; top: -10px; left: 0; width: 100%; height: 26px;
+  border-radius: 50%; border: 2px solid var(--c-dark);
+  background: linear-gradient(rgba(255,255,255,.22), rgba(0,0,0,.07)), var(--c-light);
+}
+.cup-rim::after {
+  content: ""; position: absolute; inset: 5px 11px; border-radius: 50%;
+  background: linear-gradient(rgba(255,255,255,.14), rgba(0,0,0,.13)), var(--c-dark);
+}
+.cup-shine {
+  position: absolute; top: 12%; left: 13%; width: 9%; height: 80%;
+  border-radius: 999px; background: rgba(255,255,255,.42); transform: skewX(-5deg);
+}
+.cup.is-hover { filter: brightness(1.07) drop-shadow(0 6px 10px rgba(92,64,40,.28)); }
+.cup.is-right {
+  filter: drop-shadow(0 0 9px rgba(238,178,62,.95)) drop-shadow(0 0 18px rgba(238,178,62,.55));
+}
+.cup.is-right .cup-rim { border-color: #eeb23e; }
+.pin {
+  position: absolute; z-index: 22; top: 6px; left: 0; opacity: 0;
+  padding: 4px 12px; border-radius: 999px; background: var(--color-accent);
+  color: #fff; font-size: var(--text-sm); font-weight: 700; white-space: nowrap;
+  transition: opacity var(--dur-fast) ease-out;
+  box-shadow: var(--shadow-1); pointer-events: none;
+}
+.pin::after {
+  content: ""; position: absolute; bottom: -7px; left: 50%; transform: translateX(-50%);
+  border-left: 7px solid transparent; border-right: 7px solid transparent;
+  border-top: 8px solid var(--color-accent);
+}
+
+.slot-hit {
+  position: absolute; top: 0; bottom: 0; width: 33.3333%; z-index: 30;
+  border: 0; background: transparent; cursor: pointer; padding: 0;
+}
+.slot-hit[data-slot="0"] { left: 0; }
+.slot-hit[data-slot="1"] { left: 33.3333%; }
+.slot-hit[data-slot="2"] { left: 66.6666%; }
+.slot-hit:disabled { cursor: default; }
+.slot-hit:focus-visible { outline: 3px solid var(--color-accent); outline-offset: -6px; border-radius: 12px; }
+
+/* --- 菜单覆盖层 --- */
+.overlay {
+  position: absolute; inset: 0; z-index: 40; display: flex;
+  align-items: center; justify-content: center; padding: 16px;
+  background: rgba(250, 246, 236, .90);
+  backdrop-filter: blur(2px);
+}
+.menu-card {
+  position: relative; width: min(720px, 100%); padding: 26px 30px 24px;
+  border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+  background: var(--color-surface); box-shadow: var(--shadow-3);
+  text-align: center;
+}
+.menu-card::before {
+  content: ""; position: absolute; top: -12px; left: 50%; width: 96px; height: 24px;
+  transform: translateX(-50%) rotate(-4deg); background: rgba(140, 126, 214, .48);
+}
+.eyebrow {
+  margin: 0 0 4px; color: var(--color-accent); font-size: var(--text-xs);
+  font-weight: 700; letter-spacing: .22em;
+}
+.menu-card h2 {
+  margin: 0 0 6px; font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(24px, 3.2vw, 34px); letter-spacing: .05em;
+}
+.menu-card .intro { margin: 0 0 18px; color: var(--color-muted); font-size: var(--text-sm); line-height: 1.75; }
+.diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.diff-btn, .action-btn {
+  border: 0; cursor: pointer; font-family: var(--font-body); color: #fff;
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) ease-out, filter var(--dur-fast) ease-out;
+}
+.diff-btn {
+  min-height: 84px; padding: 12px 8px; border-radius: var(--radius-md);
+  background: var(--btn-bg); box-shadow: var(--shadow-1);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+}
+.diff-btn b { font-size: var(--text-lg); letter-spacing: .08em; }
+.diff-btn small { font-size: var(--text-xs); line-height: 1.5; opacity: .94; }
+.diff-btn:hover, .action-btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); filter: brightness(1.06); }
+.diff-btn:active, .action-btn:active { transform: translateY(0); }
+.diff-btn:focus-visible, .action-btn:focus-visible {
+  outline: 3px solid var(--color-text); outline-offset: 3px;
+}
+.tiny { margin: 16px 0 0; color: var(--color-muted); font-size: var(--text-xs); }
+
+/* --- 舞台下方的动作条：固定高度，避免布局跳动 --- */
+.actions { height: 78px; display: flex; align-items: center; justify-content: center; gap: 14px; }
+.actions-hint { color: var(--color-muted); font-size: var(--text-sm); text-align: center; }
+.action-buttons { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.action-btn {
+  min-height: 50px; min-width: 168px; padding: 10px 22px;
+  border-radius: var(--radius-md); background: var(--btn-bg);
+  font-size: var(--text-base); font-weight: 700; box-shadow: var(--shadow-1);
+}
+footer {
+  border-top: 1px solid var(--color-border); padding-top: 12px;
+  color: var(--color-muted); font-size: var(--text-xs); text-align: center;
+}
+footer p { margin: 2px 0; }
+
+/* --- 入场编排：5 组，间隔 80ms --- */
+.reveal { opacity: 0; transform: translateY(22px); }
+.reveal.in {
+  opacity: 1; transform: none;
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .diff-btn, .action-btn, .progress-fill, .cup, .pin { transition: none; }
+  .tape-a, .tape-b { transform: none; }
+  /* 杯子移动 / 抬起是玩法本身，不能关；只关掉装饰性动效 */
+}
+
+@media (max-width: 760px) {
+  :root {
+    --cup-w: 96px; --cup-h: 116px; --item-w: 40px; --item-h: 62px;
+    --item-font: 12px; --stage-h: 360px; --desk-h: 100px;
+  }
+  .app { padding: 0 16px 24px; }
+  .topbar { flex-direction: column; align-items: flex-start; padding-top: 22px; }
+  .scorecard { align-self: flex-end; transform: rotate(-1deg); }
+  .diff-grid { grid-template-columns: 1fr; gap: 8px; }
+  .diff-btn { min-height: 60px; flex-direction: row; gap: 10px; }
+  .menu-card { padding: 18px 18px 16px; }
+  .hud-msg { font-size: var(--text-lg); }
+  footer { font-size: 11px; }
+}
+@media (max-width: 400px) {
+  :root { --cup-w: 82px; --cup-h: 104px; --item-w: 34px; --item-h: 54px; --stage-h: 330px; }
+  .brand h1 { font-size: 32px; }
+  .action-btn { min-width: 132px; padding: 10px 14px; font-size: var(--text-sm); }
+}
+</style>
+</head>
+<body>
+<div class="paper" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="app">
+  <header class="topbar">
+    <div class="brand reveal">
+      <h1>三杯猜手机</h1>
+      <p class="tagline">记住手机 · 盯紧杯子 · 把它找出来</p>
+    </div>
+    <div class="scorecard reveal" aria-label="本局成绩">
+      <div class="score-row"><span>局数</span><b id="sRounds">0</b></div>
+      <div class="score-row"><span>答对</span><b id="sWins">0</b></div>
+      <div class="score-row"><span>连胜</span><b id="sStreak">0</b></div>
+      <div class="score-row"><span>最佳</span><b id="sBest">0</b></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hud reveal" aria-live="polite" aria-atomic="true">
+      <p class="hud-msg" id="phaseText" data-phase="menu">先选个难度吧</p>
+      <p class="hud-sub" id="phaseSub">一个杯子下面藏着手机，另外两个是作业</p>
+      <div class="progress" role="progressbar" aria-label="当前阶段进度">
+        <div class="progress-fill" id="barFill"></div>
+      </div>
+    </section>
+
+    <!-- 舞台不参与淡入：打开链接第一眼就能看到杯子和难度菜单，避免首屏空白 -->
+    <section class="stage" id="stage" aria-label="三个杯子的游戏舞台">
+      <span class="tape tape-a" aria-hidden="true"></span>
+      <span class="tape tape-b" aria-hidden="true"></span>
+      <div class="desk" aria-hidden="true"></div>
+      <div class="pin" id="pin" aria-hidden="true">↓ 手机在这</div>
+
+      <button type="button" class="slot-hit" data-slot="0" aria-label="选择第 1 杯"></button>
+      <button type="button" class="slot-hit" data-slot="1" aria-label="选择第 2 杯"></button>
+      <button type="button" class="slot-hit" data-slot="2" aria-label="选择第 3 杯"></button>
+
+      <div class="overlay" id="overlay">
+        <div class="menu-card">
+          <p class="eyebrow">上课摸鱼 · 专注力小训练</p>
+          <h2>手机藏在哪个杯子里？</h2>
+          <p class="intro">三个杯子，一部手机，两本作业。<br>开局先看清手机在哪，杯子交换完再把它点出来。</p>
+          <div class="diff-grid">
+            <button type="button" class="diff-btn" id="diff-easy" style="--btn-bg:#248a7a">
+              <b>轻松</b><small>记 3.0 秒 · 动 5 次</small>
+            </button>
+            <button type="button" class="diff-btn" id="diff-normal" style="--btn-bg:#c06a28">
+              <b>普通</b><small>记 2.0 秒 · 动 8 次</small>
+            </button>
+            <button type="button" class="diff-btn" id="diff-hard" style="--btn-bg:#695bb6">
+              <b>挑战</b><small>记 1.0 秒 · 动 12 次</small>
+            </button>
+          </div>
+          <p class="tiny">也可以直接按数字键 1 / 2 / 3 选难度</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="actions reveal" aria-label="操作区">
+      <p class="actions-hint" id="actionsHint">难度越高，记忆越短、杯子动得越快；洗牌总时长始终 6 秒</p>
+      <div class="action-buttons" id="actionButtons" hidden>
+        <button type="button" class="action-btn" id="btn-again" style="--btn-bg:#248a7a">再来一局</button>
+        <button type="button" class="action-btn" id="btn-menu" style="--btn-bg:#695bb6">换个难度</button>
+      </div>
+    </section>
+
+    <footer class="reveal">
+      <p>键盘：1 / 2 / 3 选杯子 · R 再来一局 · Esc 回难度选择</p>
+      <p>与 pygame 桌面版同规则、同参数。</p>
+    </footer>
+  </main>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var stage = $('stage');
+
+  // 与 pygame 桌面版完全一致：洗牌总时长恒 6 秒，难度靠「交换次数」提速
+  var DIFFS = [
+    { key: 'easy',   name: '轻松', memory: 3.0, duration: 6.0, swaps: 5, color: '#3fb29c' },
+    { key: 'normal', name: '普通', memory: 2.0, duration: 6.0, swaps: 8, color: '#e2954a' },
+    { key: 'hard',   name: '挑战', memory: 1.0, duration: 6.0, swaps: 12, color: '#8c7ed6' }
+  ];
+  var PHASE = { MENU: 'menu', REVEAL: 'reveal', PREP: 'prep', SHUFFLE: 'shuffle', CHOOSE: 'choose', RESULT: 'result' };
+  var LIFT_IN = 0.45, LIFT_OUT = 0.45, PREP_TIME = 0.70;
+  // 杯子颜色统一定义在 CSS .cup 上，三只杯子外观完全一致（不能靠颜色偷懒）
+
+  // ?fast=10 只用于自动化验收快进，玩家正常访问不带参数
+  var SPEED = parseFloat(new URLSearchParams(location.search).get('fast')) || 1;
+  if (SPEED < 1) SPEED = 1;
+
+  var els = {
+    phaseText: $('phaseText'), phaseSub: $('phaseSub'), barFill: $('barFill'),
+    overlay: $('overlay'), actionsHint: $('actionsHint'), actionButtons: $('actionButtons'),
+    pin: $('pin'), sRounds: $('sRounds'), sWins: $('sWins'), sStreak: $('sStreak'), sBest: $('sBest')
+  };
+
+  var state = {
+    phase: PHASE.MENU, t: 0, diffIndex: 0, diff: DIFFS[0],
+    cups: [], swaps: [], stepIndex: 0, lift: 0, resultLift: 0, result: null,
+    rounds: 0, wins: 0, streak: 0, best: 0, hoverSlot: -1
+  };
+
+  // ---------------------------------------------------------- 构建舞台元素
+  var cupEls = [], itemEls = [], shadowEls = [], labelEls = [], hitEls = [];
+  for (var i = 0; i < 3; i++) {
+    var sh = document.createElement('div');
+    sh.className = 'cup-shadow';
+    sh.setAttribute('aria-hidden', 'true');
+    stage.appendChild(sh);
+    shadowEls.push(sh);
+
+    var it = document.createElement('div');
+    it.className = 'item';
+    it.setAttribute('aria-hidden', 'true');
+    stage.appendChild(it);
+    itemEls.push(it);
+
+    var cup = document.createElement('div');
+    cup.className = 'cup';
+    cup.innerHTML = '<div class="cup-body"></div><div class="cup-rim"></div><div class="cup-shine"></div>';
+    cup.setAttribute('aria-hidden', 'true');
+    stage.appendChild(cup);
+    cupEls.push(cup);
+
+    var lb = document.createElement('div');
+    lb.className = 'slot-label';
+    lb.textContent = '位置 ' + (i + 1);
+    stage.appendChild(lb);
+    labelEls.push(lb);
+  }
+  hitEls = Array.prototype.slice.call(document.querySelectorAll('.slot-hit'));
+
+  var stageW = 0, slotXs = [0, 0, 0], cupW = 0, itemW = 0, shadowW = 0, LIFT = 120;
+  function metrics() {
+    stageW = stage.clientWidth;
+    slotXs = [stageW / 6, stageW / 2, stageW * 5 / 6];
+    cupW = cupEls[0].offsetWidth;
+    itemW = itemEls[0].offsetWidth;
+    shadowW = shadowEls[0].offsetWidth;
+    LIFT = cupEls[0].offsetHeight * 0.9;
+    for (var k = 0; k < 3; k++) {
+      labelEls[k].style.left = slotXs[k] + 'px';
+    }
+  }
+  window.addEventListener('resize', metrics);
+
+  // ---------------------------------------------------------- 工具
+  function ease(t) { t = Math.max(0, Math.min(1, t)); return t * t * (3 - 2 * t); }
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function shuffle(arr) {
+    for (var j = arr.length - 1; j > 0; j--) {
+      var k = Math.floor(Math.random() * (j + 1));
+      var tmp = arr[j]; arr[j] = arr[k]; arr[k] = tmp;
+    }
+    return arr;
+  }
+
+  function setupBoard() {
+    var phoneCid = Math.floor(Math.random() * 3);
+    var slots = shuffle([0, 1, 2]);
+    state.cups = [0, 1, 2].map(function (cid) {
+      return { cid: cid, item: cid === phoneCid ? 'phone' : 'homework', slot: slots[cid] };
+    });
+    state.cups.forEach(function (c) {
+      var el = itemEls[c.cid];
+      el.className = 'item ' + c.item;
+      el.innerHTML = c.item === 'phone'
+        ? '<div class="speaker"></div><div class="screen">手机</div><div class="home"></div>'
+        : '<div class="spine"></div><div class="lines"></div><span class="label">作业</span>';
+    });
+  }
+
+  function buildSwaps(count) {
+    var pairs = [[0, 1], [0, 2], [1, 2]], out = [], last = null;
+    for (var n = 0; n < count; n++) {
+      var pool = pairs.filter(function (p) { return p !== last; });
+      if (!pool.length) pool = pairs;
+      var pick = pool[Math.floor(Math.random() * pool.length)];
+      out.push(pick);
+      last = pick;
+    }
+    return out;
+  }
+
+  function applySwap(pair) {
+    var a = pair[0], b = pair[1], ca = null, cb = null;
+    state.cups.forEach(function (c) {
+      if (c.slot === a) ca = c;
+      if (c.slot === b) cb = c;
+    });
+    if (ca && cb) { ca.slot = b; cb.slot = a; }
+  }
+
+  function correctSlot() {
+    var found = 0;
+    state.cups.forEach(function (c) { if (c.item === 'phone') found = c.slot; });
+    return found;
+  }
+
+  // ---------------------------------------------------------- 状态流转
+  function start(index) {
+    state.diffIndex = index;
+    state.diff = DIFFS[index];
+    setupBoard();
+    state.swaps = buildSwaps(state.diff.swaps);
+    state.stepIndex = 0;
+    state.phase = PHASE.REVEAL;
+    state.t = 0;
+    state.lift = 0;
+    state.resultLift = 0;
+    state.result = null;
+    state.hoverSlot = -1;
+    syncChrome();
+  }
+
+  function toMenu() {
+    state.phase = PHASE.MENU;
+    state.t = 0;
+    state.lift = 0;
+    state.result = null;
+    setupBoard();
+    syncChrome();
+  }
+
+  function choose(slot) {
+    if (state.phase !== PHASE.CHOOSE || slot < 0 || slot > 2) return false;
+    var correct = correctSlot();
+    var win = (slot === correct);
+    state.rounds += 1;
+    if (win) {
+      state.wins += 1;
+      state.streak += 1;
+      state.best = Math.max(state.best, state.streak);
+    } else {
+      state.streak = 0;
+    }
+    state.result = { win: win, chosen: slot, correct: correct };
+    state.phase = PHASE.RESULT;
+    state.t = 0;
+    state.resultLift = 0;
+    syncChrome();
+    return true;
+  }
+
+  function update(dt) {
+    if (state.phase === PHASE.MENU || state.phase === PHASE.CHOOSE) return;
+    state.t += dt;
+
+    if (state.phase === PHASE.REVEAL) {
+      var mem = state.diff.memory;
+      var total = LIFT_IN + mem + LIFT_OUT;
+      if (state.t < LIFT_IN) {
+        state.lift = LIFT * ease(state.t / LIFT_IN);
+      } else if (state.t < LIFT_IN + mem) {
+        state.lift = LIFT;
+      } else if (state.t < total) {
+        state.lift = LIFT * (1 - ease((state.t - LIFT_IN - mem) / LIFT_OUT));
+      } else {
+        state.lift = 0;
+        state.phase = PHASE.PREP; state.t = 0;
+        syncChrome();
+      }
+    } else if (state.phase === PHASE.PREP) {
+      if (state.t >= PREP_TIME) {
+        state.phase = PHASE.SHUFFLE; state.t = 0; state.stepIndex = 0;
+        syncChrome();
+      }
+    } else if (state.phase === PHASE.SHUFFLE) {
+      var n = state.swaps.length;
+      var stepDur = state.diff.duration / n;
+      if (state.t >= state.diff.duration) {
+        while (state.stepIndex < n) {
+          applySwap(state.swaps[state.stepIndex]);
+          state.stepIndex += 1;
+        }
+        state.phase = PHASE.CHOOSE; state.t = 0;
+        syncChrome();
+      } else {
+        var idx = Math.min(Math.floor(state.t / stepDur), n - 1);
+        while (state.stepIndex < idx) {
+          applySwap(state.swaps[state.stepIndex]);
+          state.stepIndex += 1;
+        }
+      }
+    } else if (state.phase === PHASE.RESULT) {
+      state.resultLift = ease(state.t / 0.5);
+    }
+  }
+
+  // ---------------------------------------------------------- 文案 / 控件
+  function syncChrome() {
+    els.overlay.hidden = (state.phase !== PHASE.MENU);
+    els.actionButtons.hidden = (state.phase !== PHASE.RESULT);
+    els.actionsHint.hidden = (state.phase === PHASE.RESULT);
+    hitEls.forEach(function (b, idx) {
+      b.disabled = (state.phase !== PHASE.CHOOSE);
+      b.setAttribute('aria-disabled', b.disabled ? 'true' : 'false');
+    });
+    els.sRounds.textContent = state.rounds;
+    els.sWins.textContent = state.wins;
+    els.sStreak.textContent = state.streak;
+    els.sBest.textContent = state.best;
+    // 状态切换立刻同步文案，不等下一帧（否则点击瞬间会残留上一阶段的提示）
+    updateHud();
+  }
+
+  function updateHud() {
+    var msg = '', sub = '', progress = 0;
+    var p = state.phase, t = state.t, d = state.diff;
+
+    if (p === PHASE.MENU) {
+      msg = '先选个难度吧';
+      sub = '一个杯子下面藏着手机，另外两个是作业';
+    } else if (p === PHASE.REVEAL) {
+      if (t < LIFT_IN) {
+        msg = '看清楚啦，杯子升起来了';
+        sub = '下面藏着一部手机和两本作业';
+      } else if (t < LIFT_IN + d.memory) {
+        var left = Math.max(1, Math.ceil(LIFT_IN + d.memory - t));
+        msg = '记住！手机在第几个位置？ ' + left;
+        sub = '三只杯子一模一样，只能靠盯住位置来跟';
+        progress = (t - LIFT_IN) / d.memory;
+      } else {
+        msg = '盖上了……'; sub = '记住了吗？';
+      }
+    } else if (p === PHASE.PREP) {
+      msg = '准备好，杯子要动了！'; sub = '眼睛别离开';
+    } else if (p === PHASE.SHUFFLE) {
+      msg = '开始洗牌，跟紧那只杯子！';
+      sub = '第 ' + Math.min(state.stepIndex + 1, state.swaps.length) + ' / ' +
+            state.swaps.length + ' 次交换 · 总时长 6.0 秒';
+      progress = t / d.duration;
+    } else if (p === PHASE.CHOOSE) {
+      msg = '手机在哪个杯子下面？点它！';
+      sub = '也可以按数字键 1 / 2 / 3';
+      progress = 1;
+    } else if (p === PHASE.RESULT) {
+      if (state.result.win) {
+        msg = '找到了！就是这部手机';
+        sub = '漂亮，注意力很稳 · 连胜 ' + state.streak + ' 局';
+      } else {
+        msg = '哎呀，翻开是作业本';
+        sub = '正确答案已经揭开了（金色光圈那只）· 连胜归零';
+      }
+      progress = 1;
+    }
+
+    els.phaseText.textContent = msg;
+    els.phaseText.setAttribute('data-phase', p);
+    if (p === PHASE.RESULT) {
+      els.phaseText.setAttribute('data-win', state.result.win ? 'true' : 'false');
+      els.phaseText.className = 'hud-msg ' + (state.result.win ? 'is-win' : 'is-lose');
+    } else {
+      els.phaseText.removeAttribute('data-win');
+      els.phaseText.className = 'hud-msg';
+    }
+    els.phaseSub.textContent = sub;
+    els.barFill.style.width = (Math.min(1, progress) * 100) + '%';
+    els.barFill.style.background = d.color;
+
+    if (p !== PHASE.RESULT) {
+      els.actionsHint.textContent = (p === PHASE.CHOOSE)
+        ? '点一个杯子，或按 1 / 2 / 3 —— 手机就在你选的那只下面吗？'
+        : '难度越高，记忆越短、杯子动得越快；洗牌总时长始终 6 秒';
+    }
+  }
+
+  // ---------------------------------------------------------- 渲染
+  function cupLayout() {
+    var out = [], d = state.diff;
+    if (state.phase === PHASE.SHUFFLE && state.swaps.length) {
+      var n = state.swaps.length;
+      var idx = Math.min(state.stepIndex, n - 1);
+      var pair = state.swaps[idx];
+      var a = pair[0], b = pair[1];
+      var stepDur = d.duration / n;
+      var local = (state.t - idx * stepDur) / stepDur;
+      var e = ease(local);
+      var arc = Math.sin(Math.PI * e) * 36;
+      state.cups.forEach(function (c) {
+        if (c.slot === a) out.push({ cup: c, x: lerp(slotXs[a], slotXs[b], e), dy: -arc, order: 2 });
+        else if (c.slot === b) out.push({ cup: c, x: lerp(slotXs[b], slotXs[a], e), dy: arc, order: 0 });
+        else out.push({ cup: c, x: slotXs[c.slot], dy: 0, order: 1 });
+      });
+    } else {
+      state.cups.forEach(function (c) {
+        var dy = 0;
+        if (state.phase === PHASE.REVEAL) dy = state.lift;
+        else if (state.phase === PHASE.RESULT && state.result &&
+                 (c.slot === state.result.correct || c.slot === state.result.chosen)) {
+          dy = LIFT * state.resultLift;
+        }
+        out.push({ cup: c, x: slotXs[c.slot], dy: dy, order: 1 });
+      });
+    }
+    return out;
+  }
+
+  function render() {
+    // 容器宽度也可能在 window resize 之外变化（缩放 / 嵌入），每帧自检一次
+    if (stage.clientWidth !== stageW) metrics();
+    var layout = cupLayout();
+    var showPin = (state.phase === PHASE.REVEAL && state.lift > LIFT * 0.5);
+    var pinX = 0;
+    // 洗牌时杯子走交叉弧线会抬起 36px：若物品仍可见，抬起的杯子会露出
+    // 下面手机/作业的颜色，等于直接报答案。只在记忆 / 结果揭晓时显示物品。
+    var showItems = (state.phase === PHASE.REVEAL || state.phase === PHASE.RESULT);
+    itemEls.forEach(function (el) {
+      el.style.visibility = showItems ? 'visible' : 'hidden';
+    });
+
+    layout.forEach(function (o) {
+      var c = o.cup;
+      itemEls[c.cid].style.transform = 'translate(' + (o.x - itemW / 2) + 'px, 0)';
+      shadowEls[c.cid].style.transform =
+        'translate(' + (o.x - shadowW / 2) + 'px, 0) scale(' + (1 - o.dy / 900) + ')';
+      var el = cupEls[c.cid];
+      el.style.transform = 'translate(' + (o.x - cupW / 2) + 'px, ' + (-o.dy) + 'px)';
+      el.style.zIndex = String(10 + o.order);
+      el.classList.toggle('is-hover',
+        state.phase === PHASE.CHOOSE && c.slot === state.hoverSlot);
+      el.classList.toggle('is-right',
+        state.phase === PHASE.RESULT && state.result && c.slot === state.result.correct);
+      if (c.item === 'phone') pinX = o.x;
+    });
+
+    if (showPin) {
+      els.pin.style.opacity = '1';
+      els.pin.style.transform = 'translate(' + pinX + 'px, 0) translateX(-50%)';
+    } else {
+      els.pin.style.opacity = '0';
+    }
+    updateHud();
+  }
+
+  // ---------------------------------------------------------- 交互
+  ['diff-easy', 'diff-normal', 'diff-hard'].forEach(function (id, idx) {
+    $(id).addEventListener('click', function () { start(idx); });
+  });
+  hitEls.forEach(function (btn, idx) {
+    btn.addEventListener('click', function () { choose(idx); });
+  });
+  $('btn-again').addEventListener('click', function () { start(state.diffIndex); });
+  $('btn-menu').addEventListener('click', toMenu);
+
+  stage.addEventListener('mousemove', function (ev) {
+    var rect = stage.getBoundingClientRect();
+    var idx = Math.floor(((ev.clientX - rect.left) / rect.width) * 3);
+    state.hoverSlot = (idx >= 0 && idx < 3) ? idx : -1;
+  });
+  stage.addEventListener('mouseleave', function () { state.hoverSlot = -1; });
+
+  document.addEventListener('keydown', function (ev) {
+    var k = ev.key;
+    if (k === 'Escape') { toMenu(); return; }
+    if (k === 'r' || k === 'R') {
+      if (state.phase === PHASE.RESULT) start(state.diffIndex);
+      return;
+    }
+    if (k === '1' || k === '2' || k === '3') {
+      var idx = parseInt(k, 10) - 1;
+      if (state.phase === PHASE.MENU) start(idx);
+      else if (state.phase === PHASE.CHOOSE) choose(idx);
+    }
+  });
+
+  // 只读调试快照，供自动化验收断言；玩家界面不显示
+  window.gameDebug = function () {
+    return {
+      phase: state.phase, diff: state.diff.key, t: Number(state.t.toFixed(2)),
+      memory: state.diff.memory, duration: state.diff.duration, swaps: state.swaps.length,
+      stepIndex: state.stepIndex, correctSlot: correctSlot(),
+      slots: state.cups.map(function (c) { return c.slot; }),
+      result: state.result ? JSON.parse(JSON.stringify(state.result)) : null,
+      rounds: state.rounds, wins: state.wins, streak: state.streak,
+      message: document.getElementById('phaseText').textContent
+    };
+  };
+
+  // ---------------------------------------------------------- 启动
+  metrics();
+  setupBoard();
+  syncChrome();
+  render();
+
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  revealEls.forEach(function (el, idx) {
+    setTimeout(function () { el.classList.add('in'); }, 80 * idx);
+  });
+
+  var last = performance.now();
+  function frame(now) {
+    var dt = Math.min((now - last) / 1000, 0.1);
+    last = now;
+    update(dt * SPEED);
+    render();
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
