@@ -373,7 +373,7 @@ footer p { margin: 2px 0; }
       <h1>三杯猜手机</h1>
       <p class="tagline">记住手机 · 盯紧杯子 · 把它找出来</p>
     </div>
-    <div class="scorecard reveal" aria-label="本局成绩">
+    <div class="scorecard reveal" aria-label="累计成绩">
       <div class="score-row"><span>局数</span><b id="sRounds">0</b></div>
       <div class="score-row"><span>答对</span><b id="sWins">0</b></div>
       <div class="score-row"><span>连胜</span><b id="sStreak">0</b></div>
@@ -469,6 +469,54 @@ footer p { margin: 2px 0; }
     cups: [], swaps: [], stepIndex: 0, lift: 0, resultLift: 0, result: null,
     rounds: 0, wins: 0, streak: 0, best: 0, hoverSlot: -1
   };
+
+  // ---------------------------------------------------------- 成绩本地保存
+  // 刷新 / 退出重进后保留累计成绩与「最佳」纪录。
+  // localStorage 不可用（隐私模式、部分 file:// 环境）时静默降级为内存态，游戏照常可玩。
+  var STATS_KEY = 'cupPhoneGame.stats.v1';
+  var STATS_FIELDS = ['rounds', 'wins', 'streak', 'best'];
+  var storageOk = true;
+
+  function cleanStat(v) {
+    if (typeof v !== 'number' || !isFinite(v) || v < 0 || v > 1e9) return null;
+    return Math.floor(v);
+  }
+
+  function loadStats() {
+    try {
+      var raw = window.localStorage.getItem(STATS_KEY);
+      if (!raw) return;
+      var obj = JSON.parse(raw);
+      if (!obj || typeof obj !== 'object') return;
+      var vals = {};
+      for (var i = 0; i < STATS_FIELDS.length; i++) {
+        var v = cleanStat(obj[STATS_FIELDS[i]]);
+        if (v === null) return;         // 任一字段损坏就整组丢弃，不写入半套脏数据
+        vals[STATS_FIELDS[i]] = v;
+      }
+      if (vals.wins > vals.rounds || vals.best < vals.streak) return;  // 不变量校验
+      for (var j = 0; j < STATS_FIELDS.length; j++) {
+        state[STATS_FIELDS[j]] = vals[STATS_FIELDS[j]];
+      }
+    } catch (e) {
+      storageOk = false;
+    }
+  }
+
+  function saveStats() {
+    if (!storageOk) return;
+    try {
+      var obj = { v: 1 };
+      for (var i = 0; i < STATS_FIELDS.length; i++) {
+        obj[STATS_FIELDS[i]] = state[STATS_FIELDS[i]];
+      }
+      window.localStorage.setItem(STATS_KEY, JSON.stringify(obj));
+    } catch (e) {
+      storageOk = false;
+    }
+  }
+
+  loadStats();
 
   // ---------------------------------------------------------- 构建舞台元素
   var cupEls = [], itemEls = [], shadowEls = [], labelEls = [], hitEls = [];
@@ -608,6 +656,7 @@ footer p { margin: 2px 0; }
     state.phase = PHASE.RESULT;
     state.t = 0;
     state.resultLift = 0;
+    saveStats();          // 计分一更新就落盘，关闭页面也不会丢
     syncChrome();
     return true;
   }
@@ -843,6 +892,7 @@ footer p { margin: 2px 0; }
       slots: state.cups.map(function (c) { return c.slot; }),
       result: state.result ? JSON.parse(JSON.stringify(state.result)) : null,
       rounds: state.rounds, wins: state.wins, streak: state.streak,
+      best: state.best, storageOk: storageOk, statsKey: STATS_KEY,
       message: document.getElementById('phaseText').textContent
     };
   };
