@@ -54,6 +54,8 @@ header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0
 .btn:disabled{opacity:.42;cursor:not-allowed;background:#fff}
 .btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
 .btn.primary:hover{background:var(--blue-deep);border-color:var(--blue-deep);color:#fff}
+.btn.land{background:var(--blue-soft);border-color:#bcd0f5;color:var(--blue-deep);font-weight:700}
+.btn.land:hover{background:#dce8fd;border-color:var(--blue);color:var(--blue-deep)}
 .btn.danger{background:#fff;border-color:#f2c7c7;color:var(--red)}
 .btn.danger:hover{background:var(--red-soft);border-color:var(--red);color:var(--red)}
 .btn.solid-danger{background:var(--red);border-color:var(--red);color:#fff}
@@ -171,7 +173,7 @@ input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue);cursor:poin
 .empty b{display:block;color:var(--sub);font-size:15px;margin-bottom:4px}
 
 /* ---------- 底部操作条 ---------- */
-.selbar{position:fixed;left:50%;bottom:18px;transform:translate(-50%,140%);width:min(940px,calc(100vw - 36px));
+.selbar{position:fixed;left:50%;bottom:18px;transform:translate(-50%,140%);width:min(1200px,calc(100vw - 36px));
   background:#fff;border:1px solid #d9e3f5;border-radius:15px;box-shadow:0 14px 45px rgba(30,58,110,.20);
   z-index:40;padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
   transition:transform .25s cubic-bezier(.2,.8,.3,1)}
@@ -405,7 +407,8 @@ input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue);cursor:poin
       <span class="li"><b>先说最重要的一句：</b>网页<b>不能自己扫描你电脑的硬盘</b>。你能在这里操作的，只有两类文件 —— ① 页面自带的<b>演示文件</b>；② 你亲手<b>导入进来</b>的文件副本。没导入进来的文件，网页既看不见、也碰不到。</span>
       <span class="li">页面里已经放好了一批<b>演示文件</b>（来自 week5_planner 文件夹和一份 Word 报告），可以直接拿它们练习批量整理。</span>
       <span class="li">想整理<b>你自己电脑里的文件</b>：点左下角「从我的电脑导入文件夹」，选一个文件夹，它会连着目录结构一起<b>复制一份进来</b>，每个文件的位置都看得见；你电脑上的原文件不会被改动、移动或删除。</span>
-      <span class="li"><b>请一定记住：</b>这里整理的是<b>浏览器里的副本</b>，不是原件；网页里的复制、移动、删除只作用于这份副本，不会自动改动你电脑上的真实文件夹 —— 这是所有网页的安全规矩。要让整理结果真正出现在电脑里，整理完请点「导出到电脑（ZIP）」或「写回到电脑」。</span>
+      <span class="li"><b>请一定记住：</b>这里整理的是<b>浏览器里的副本</b>，不是原件；网页里的复制、移动、删除只作用于这份副本，不会自动改动你电脑上的真实文件夹 —— 这是所有网页的安全规矩。要让整理结果真正出现在电脑里，用「<b>写回到电脑（覆盖不重复）</b>」：直接写进你选的文件夹，同名就覆盖，不会多出重复文件。</span>
+      <span class="li"><b>「导出副本（ZIP）」什么时候用？</b>只在这个浏览器不支持直接写回时才用它。它下载的是一份<b>全新副本</b>，解压回原文件夹时如果选「保留两者」，就会出现「文件名 (1)」这样的重复 —— 想覆盖请选「替换」。</span>
       <span class="li">点文件名字或眼睛图标，就能<b>直接在这个界面里查看文件内容</b>（Word、PPT、PDF、图片、文本都支持）。</span>
       <span class="li">整理完点右上角「存储空间」，可以把导入的副本<b>彻底清掉、不再占硬盘</b>。</span>
       <span class="li">所有删除都会先进入<b>回收站</b>；每一步操作都写在<b>操作记录</b>里；复制、移动、删除全都能<b>撤回</b>，撤回之后还能<b>撤销撤回</b>（重做）。</span>
@@ -463,7 +466,7 @@ input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue);cursor:poin
         双击文件夹名字可以进入该文件夹。<br>
         勾选文件夹 = 把它和里面所有文件一起操作。<br>
         网页只能整理文件库里已有的文件：演示文件 + 你导入的副本。<br>
-        要落实到电脑，用「导出到电脑」或「写回到电脑」。
+        要落实到电脑，优先用「写回到电脑（覆盖不重复）」；只有浏览器不支持时才用「导出副本（ZIP）」，那份是新的副本。
       </div>
     </aside>
 
@@ -494,9 +497,9 @@ input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue);cursor:poin
     <div><b id="selTitle">已选中 0 项</b><span id="selSub">勾好之后，在右边选要做的操作</span></div>
   </div>
   <button class="sel-view" id="btnViewSel">查看已选清单</button>
-  <button class="btn" id="btnExportSel"><svg class="ic sm"><use href="#i-download"/></svg>导出到电脑（ZIP）</button>
-  <button class="btn" id="btnWriteBack"><svg class="ic sm"><use href="#i-upload"/></svg>写回到电脑</button>
-  <button class="btn primary" id="btnCopy"><svg class="ic sm"><use href="#i-copy"/></svg>复制到…</button>
+  <button class="btn" id="btnExportSel" title="会生成一份新的 ZIP 副本，可能产生重复文件"><svg class="ic sm"><use href="#i-download"/></svg>导出副本（ZIP）</button>
+  <button class="btn land" id="btnWriteBack" title="直接写进你选的文件夹，同名覆盖，不产生重复"><svg class="ic sm"><use href="#i-upload"/></svg>写回到电脑（覆盖不重复）</button>
+  <button class="btn" id="btnCopy"><svg class="ic sm"><use href="#i-copy"/></svg>复制到…</button>
   <button class="btn" id="btnMove"><svg class="ic sm"><use href="#i-move"/></svg>移动到…</button>
   <button class="btn danger" id="btnDelete"><svg class="ic sm"><use href="#i-trash"/></svg>删除</button>
 </div>
@@ -2215,13 +2218,29 @@ async function openExportConfirm(){
   if(!items.length){ toast('所选项目里没有可导出的文件', 'err'); return; }
   vwPlan = items;
   const total = items.reduce(function(a, b){ return a + b.size; }, 0);
-  openConfirm('export', '确认导出到电脑吗',
-    '<div class="notice info">' + ic('i-info') + '<div><b>会发生什么</b>' +
-      '下面这些文件会打包成一个 ZIP，下载到这个浏览器的「下载」文件夹。' +
-      '解压之后就是电脑里实实在在的文件，可以放到任何位置。你电脑上的原文件不会被改动。</div></div>' +
-      '<div class="vw-sec">共 ' + items.length + ' 个文件 · 约 ' + humanSize(total) + '，保留文件夹结构：</div>' +
-      vwPlanList(items.map(function(x){ return x.rel; })),
-    '确认下载 ZIP', false, '我看明白了，确认下载');
+  openConfirm('export', '注意：这一步是「复制副本」，不是覆盖',
+    '<div class="notice warn">' + ic('i-warn') + '<div><b>先把话说明白：这样会多出一份文件</b>' +
+      '点下面的按钮，只会把文件打包成一个 ZIP，存进浏览器的「下载」文件夹。<br>' +
+      'ZIP 本身是一份新副本，解压出来又是一份新副本。<br>' +
+      '如果解压回原来那个文件夹、系统问「是否替换」时选了「保留两者」，就会出现「文件名 (1)」这种重复文件。<br>' +
+      '你电脑上的原件不会被改 —— 但你会因此多占一份空间。</div></div>' +
+    '<div class="notice info">' + ic('i-shield') + '<div><b>想原地覆盖、绝不产生重复？用「写回到电脑」</b>' +
+      '直接写进你选的文件夹：同名当场覆盖，不多套一层目录，也不用解压。<br>' +
+      '连着写十次，文件数量也不会变多。</div></div>' +
+    '<div style="margin:0 0 16px"><button class="btn primary lg" id="exportSwitchWb" type="button">' +
+      '改用「写回到电脑」（推荐，不重复）</button></div>' +
+    '<div class="vw-sec">如果确实要下载 ZIP，下面是将被打包的 ' + items.length + ' 个文件 · 约 ' + humanSize(total) + '（保留文件夹结构）：</div>' +
+    vwPlanList(items.map(function(x){ return x.rel; })),
+    '我还是要下载副本', false, '我知道会多一份副本，确认下载');
+  const sw = $('#exportSwitchWb');
+  if(sw) sw.onclick = function(){
+    if(!window.showDirectoryPicker){
+      toast('这个浏览器不支持直接写回文件夹，只能用 ZIP 副本（请用 Chrome / Edge）', 'err');
+      return;
+    }
+    hideMask('purgeMask');
+    openWriteBackConfirm();
+  };
 }
 function doExport(){
   const entries = vwPlan.filter(function(it){ return DB.files[it.rel]; }).map(function(it){
@@ -2232,7 +2251,7 @@ function doExport(){
     '文件整理器_导出_' + stamp().replace(/[: ]/g, '-') + '.zip');
   logOp({event:'export_zip', count:entries.length, files:vwPlan.map(function(x){ return x.rel; })});
   hideMask('purgeMask');
-  toast('已下载 ZIP：' + entries.length + ' 个文件，去浏览器「下载」里解压即可', 'ok');
+  toast('已下载 ZIP：' + entries.length + ' 个文件（这是一份副本）。解压时如问「是否替换」，选替换才不重复', 'ok');
 }
 async function openWriteBackConfirm(){
   await loadDB();
