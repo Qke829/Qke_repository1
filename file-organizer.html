@@ -221,6 +221,32 @@ input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue);cursor:poin
 .notice ul{margin:6px 0 0;padding-left:18px}
 .notice li{margin:2px 0}
 
+/* ---------- 文件查看器 / 本地存储 ---------- */
+.btn.danger{background:var(--red);border-color:var(--red);color:#fff}
+.btn.danger:hover{background:#b91c1c;border-color:#b91c1c;color:#fff}
+.btn.danger:disabled{opacity:.45;cursor:not-allowed}
+.modal.viewer{width:min(980px,100%)}
+.viewer-body{padding:0;background:#fbfcfe;min-height:200px;max-height:64vh;overflow:auto}
+.vw-text{margin:0;padding:20px 22px;white-space:pre-wrap;word-break:break-word;
+  font:13px/1.8 "Microsoft YaHei",Consolas,monospace;color:var(--ink)}
+.vw-img{display:block;margin:0 auto;max-width:100%;padding:18px;background:#fff}
+.vw-frame{display:block;width:100%;height:60vh;border:0;background:#fff}
+.vw-pad{padding:18px 22px}
+.vw-sec{margin:0 0 10px;font-size:13px;font-weight:700;color:var(--sub)}
+.vw-hex{font:12px/1.7 Consolas,monospace;color:var(--sub);white-space:pre-wrap;word-break:break-all}
+.vw-line{border-bottom:1px solid var(--line2);padding:6px 2px;font-size:13px;color:var(--sub)}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:12px}
+.stat-cell{border:1px solid var(--line);border-radius:11px;padding:12px 14px;background:#fcfdff}
+.stat-cell b{display:block;font-size:20px;color:var(--ink);line-height:1.4}
+.stat-cell span{font-size:12px;color:var(--muted)}
+.stat-bar{height:9px;border-radius:6px;background:#eaf0f8;overflow:hidden;margin:4px 0 16px;display:flex}
+.stat-bar i{display:block;height:100%}
+.purge-list{max-height:170px;overflow:auto;border:1px solid var(--line);border-radius:10px;
+  padding:8px 12px;font-size:12.5px;line-height:1.9;color:var(--sub)}
+.chk-line{display:flex;gap:9px;align-items:flex-start;font-size:13px;line-height:1.7;
+  color:var(--sub);cursor:pointer;margin-right:auto}
+.chk-line input{margin:4px 0 0;accent-color:var(--red);flex:none}
+
 .form-row{margin-bottom:15px}
 .form-row>label{display:block;font-size:13px;font-weight:700;color:var(--sub);margin-bottom:7px}
 .form-row .hint{font-size:12px;color:var(--muted);font-weight:400;margin-left:6px}
@@ -362,6 +388,7 @@ input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue);cursor:poin
       <button class="btn" id="btnUndo" disabled><svg class="ic sm"><use href="#i-undo"/></svg>撤回 <span id="undoN">0</span></button>
       <button class="btn" id="btnRedo" disabled><svg class="ic sm"><use href="#i-redo"/></svg>撤销撤回 <span id="redoN">0</span></button>
       <button class="btn" id="btnHistory"><svg class="ic sm"><use href="#i-history"/></svg>操作记录</button>
+      <button class="btn" id="btnStorage"><svg class="ic sm"><use href="#i-chart"/></svg>存储空间</button>
       <a class="btn" href="file-organizer-guide.html" target="_blank" rel="noopener" style="text-decoration:none"><svg class="ic sm"><use href="#i-info"/></svg>使用教程</a>
     </div>
   </div>
@@ -375,9 +402,12 @@ input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue);cursor:poin
       <span class="tag">文件库保存在你自己的浏览器里，每位访客互不干扰</span>
     </div>
     <div class="intro-body" id="introBody">
+      <span class="li"><b>先说最重要的一句：</b>网页<b>不能自己扫描你电脑的硬盘</b>。你能在这里操作的，只有两类文件 —— ① 页面自带的<b>演示文件</b>；② 你亲手<b>导入进来</b>的文件副本。没导入进来的文件，网页既看不见、也碰不到。</span>
       <span class="li">页面里已经放好了一批<b>演示文件</b>（来自 week5_planner 文件夹和一份 Word 报告），可以直接拿它们练习批量整理。</span>
-      <span class="li">想整理<b>你自己电脑里的文件</b>：点左下角「从我的电脑导入文件夹」，选一个文件夹，它会连着目录结构一起进来，每个文件的位置都看得见。</span>
-      <span class="li">整理完点「导出所选」，会把选中的文件打包下载回你自己的电脑。</span>
+      <span class="li">想整理<b>你自己电脑里的文件</b>：点左下角「从我的电脑导入文件夹」，选一个文件夹，它会连着目录结构一起<b>复制一份进来</b>，每个文件的位置都看得见；你电脑上的原文件不会被改动、移动或删除。</span>
+      <span class="li"><b>请一定记住：</b>这里整理的是<b>浏览器里的副本</b>，不是原件；网页里的复制、移动、删除只作用于这份副本，不会自动改动你电脑上的真实文件夹 —— 这是所有网页的安全规矩。要让整理结果真正出现在电脑里，整理完请点「导出到电脑（ZIP）」或「写回到电脑」。</span>
+      <span class="li">点文件名字或眼睛图标，就能<b>直接在这个界面里查看文件内容</b>（Word、PPT、PDF、图片、文本都支持）。</span>
+      <span class="li">整理完点右上角「存储空间」，可以把导入的副本<b>彻底清掉、不再占硬盘</b>。</span>
       <span class="li">所有删除都会先进入<b>回收站</b>；每一步操作都写在<b>操作记录</b>里；复制、移动、删除全都能<b>撤回</b>，撤回之后还能<b>撤销撤回</b>（重做）。</span>
       <span class="li">浏览器出于安全，不允许网页直接改动你电脑磁盘上的文件；所以流程是<b>读取 / 导入 → 在网页里整理 → 导出下载回电脑</b>，原文件始终安全。</span>
     </div>
@@ -420,19 +450,20 @@ input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue);cursor:poin
       <div class="side-sep"></div>
       <div class="side-title"><svg class="ic sm"><use href="#i-upload"/></svg>放进我自己的文件</div>
       <div class="import-box">
-        <p>选一个你电脑上的文件夹，里面的文件和目录结构会一起进来，位置看得清清楚楚。</p>
+        <p>网页看不到你没导入的文件。选一个你电脑上的文件夹，它会<b>复制一份</b>进文件库，只有进来的文件才能整理；原文件不受影响。</p>
         <button class="btn" id="btnImportDir"><svg class="ic sm"><use href="#i-folder"/></svg>从我的电脑导入文件夹</button>
         <button class="btn" id="btnImportFiles"><svg class="ic sm"><use href="#i-file"/></svg>只导入几个文件</button>
         <input type="file" id="importDir" webkitdirectory directory multiple class="hide">
         <input type="file" id="importFiles" multiple class="hide">
-        <button class="btn" id="btnOpenLive"><svg class="ic sm"><use href="#i-eye"/></svg>实时读取我电脑的文件夹</button>
+        <button class="btn" id="btnOpenLive"><svg class="ic sm"><use href="#i-eye"/></svg>挑一个电脑文件夹查看</button>
       </div>
       <div class="side-sep"></div>
       <div class="side-title"><svg class="ic sm"><use href="#i-info"/></svg>小提示</div>
       <div style="font-size:12.5px;color:var(--muted);padding:0 6px;line-height:1.85">
         双击文件夹名字可以进入该文件夹。<br>
         勾选文件夹 = 把它和里面所有文件一起操作。<br>
-        页面每 3 秒自动检查一次文件变化。
+        网页只能整理文件库里已有的文件：演示文件 + 你导入的副本。<br>
+        要落实到电脑，用「导出到电脑」或「写回到电脑」。
       </div>
     </aside>
 
@@ -463,7 +494,8 @@ input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue);cursor:poin
     <div><b id="selTitle">已选中 0 项</b><span id="selSub">勾好之后，在右边选要做的操作</span></div>
   </div>
   <button class="sel-view" id="btnViewSel">查看已选清单</button>
-  <button class="btn" id="btnExportSel"><svg class="ic sm"><use href="#i-download"/></svg>导出所选</button>
+  <button class="btn" id="btnExportSel"><svg class="ic sm"><use href="#i-download"/></svg>导出到电脑（ZIP）</button>
+  <button class="btn" id="btnWriteBack"><svg class="ic sm"><use href="#i-upload"/></svg>写回到电脑</button>
   <button class="btn primary" id="btnCopy"><svg class="ic sm"><use href="#i-copy"/></svg>复制到…</button>
   <button class="btn" id="btnMove"><svg class="ic sm"><use href="#i-move"/></svg>移动到…</button>
   <button class="btn danger" id="btnDelete"><svg class="ic sm"><use href="#i-trash"/></svg>删除</button>
@@ -574,7 +606,7 @@ input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue);cursor:poin
       <p>导入只是往你自己的文件库里放副本，不会改动、也不会删除你电脑上的原文件。</p></div>
       <button class="x" data-close="importMask"><svg class="ic"><use href="#i-close"/></svg></button></div>
     <div class="mb" id="importBody"></div>
-    <div class="mf"><span class="left">确认后才会开始上传</span>
+    <div class="mf"><span class="left">确认后才会把副本放进文件库</span>
       <button class="btn" data-close="importMask">取消</button>
       <button class="btn primary" id="btnImportGo">确认导入</button></div>
   </div>
@@ -597,17 +629,57 @@ input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue);cursor:poin
   <div class="mb" id="historyBody"></div>
 </div>
 
+<!-- 文件查看器：直接在这个界面里看文件内容 -->
+<div class="mask hide" id="viewerMask">
+  <div class="modal viewer">
+    <div class="mh"><div class="mt"><h3 id="vTitle">查看文件内容</h3><p id="vMeta">正在读取…</p></div>
+      <button class="x" data-close="viewerMask"><svg class="ic"><use href="#i-close"/></svg></button></div>
+    <div class="mb viewer-body" id="viewerBody"></div>
+    <div class="mf"><span class="left" id="vHint">内容只在这台电脑的浏览器里显示，不会上传</span>
+      <button class="btn" id="btnVDownload"><svg class="ic sm"><use href="#i-download"/></svg>下载此文件</button>
+      <button class="btn primary" data-close="viewerMask">关闭</button></div>
+  </div>
+</div>
 
-<!-- 实时读取我电脑上的文件夹 -->
+<!-- 本地存储空间：查看占用、清掉导入的文件 -->
+<div class="mask hide" id="storageMask">
+  <div class="modal narrow">
+    <div class="mh"><div class="mt"><h3>本地存储空间</h3>
+      <p>文件副本只存在你自己这台电脑的浏览器里，不上传、不占云端。整理完可以清掉。</p></div>
+      <button class="x" data-close="storageMask"><svg class="ic"><use href="#i-close"/></svg></button></div>
+    <div class="mb" id="storageBody"></div>
+    <div class="mf"><span class="left">清理后不可撤回 · 操作记录会保留</span>
+      <button class="btn" data-close="storageMask">关闭</button>
+      <button class="btn" id="btnResetAll">恢复演示库</button>
+      <button class="btn primary" id="btnPurge">移除我导入的文件</button></div>
+  </div>
+</div>
+
+<!-- 清理前二次确认 -->
+<div class="mask hide" id="purgeMask">
+  <div class="modal narrow">
+    <div class="mh"><div class="mt"><h3 id="pTitle">最后确认一下</h3>
+      <p>请看清下面要清理的内容，勾上确认后才会真的执行。</p></div>
+      <button class="x" data-close="purgeMask"><svg class="ic"><use href="#i-close"/></svg></button></div>
+    <div class="mb" id="purgeBody"></div>
+    <div class="mf">
+      <label class="chk-line"><input type="checkbox" id="purgeChk"><span id="purgeChkText">我看明白了，确认执行</span></label>
+      <button class="btn" data-close="purgeMask">取消</button>
+      <button class="btn danger" id="btnPurgeGo" disabled>确认移除</button></div>
+  </div>
+</div>
+
+
+<!-- 挑一个电脑文件夹查看 -->
 <div class="mask hide" id="liveMask">
   <div class="modal">
-    <div class="mh"><div class="mt"><h3>实时读取我电脑里的文件</h3>
-      <p>选一个文件夹，网页会每 3 秒自动重新读一次，把里面所有文件及其所在位置列出来。</p></div>
+    <div class="mh"><div class="mt"><h3>选一个文件夹，看看里面有什么</h3>
+      <p>必须由你亲手选一个文件夹并授权，网页才能看见里面的内容；没选的文件夹，网页一概看不到。</p></div>
       <button class="x" data-close="liveMask"><svg class="ic"><use href="#i-close"/></svg></button></div>
     <div class="mb">
       <div class="notice info"><svg class="ic"><use href="#i-shield"/></svg>
-        <div><b>这一步只是「看」，不会改动你电脑上的任何文件</b>
-        浏览器不允许网页直接整理磁盘文件。看清之后，勾选想整理的文件点「加入文件库」，就能在网页里复制 / 移动 / 删除，最后导出下载回电脑。</div></div>
+        <div><b>网页不能自己扫描硬盘；这一步只是「看」，也不会改动任何原文件</b>
+        浏览器不允许网页直接整理磁盘文件。看到的文件还不属于文件库，勾选后点「把勾选的文件加入文件库」，才会复制一份进来、才能复制 / 移动 / 删除；整理完再导出或写回，电脑上才会变。</div></div>
       <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:11px">
         <button class="btn primary" id="btnLiveConnect"><svg class="ic sm"><use href="#i-folder"/></svg>选择我电脑上的文件夹</button>
         <span id="liveState" class="t-muted">尚未连接</span>
@@ -686,14 +758,19 @@ let dbPromise = null;
 let saveTimer = null;
 const IDB_NAME = 'file_organizer_standalone_v1';
 
+let IDB_CONN = null;
 function idbOpen(){
+  if(IDB_CONN) return Promise.resolve(IDB_CONN);
   return new Promise((res, rej)=>{
     const q = indexedDB.open(IDB_NAME, 1);
     q.onupgradeneeded = ()=>{ try{ q.result.createObjectStore('kv'); }catch(e){} };
-    q.onsuccess = ()=>res(q.result);
+    q.onsuccess = ()=>{ IDB_CONN=q.result;
+      IDB_CONN.onversionchange=()=>{ try{IDB_CONN.close();}catch(e){} IDB_CONN=null; };
+      res(IDB_CONN); };
     q.onerror = ()=>rej(q.error);
   });
 }
+function idbClose(){ if(IDB_CONN){ try{IDB_CONN.close();}catch(e){} IDB_CONN=null; } }
 async function idbGet(k){
   try{
     const d = await idbOpen();
@@ -1073,18 +1150,18 @@ function downloadRecordsJS(fmt){
   toast('操作记录已下载到你的电脑','ok');
 }
 
-/* ---- 实时读取我电脑上的文件夹（File System Access API，Chromium 系浏览器） ---- */
+/* ---- 挑一个电脑文件夹查看（File System Access API，Chromium 系浏览器） ---- */
 let liveHandle=null,liveList=[],liveTimer=null,liveSel=new Set(),liveInited=false;
 async function connectLive(){
   if(!window.showDirectoryPicker){
-    toast('当前浏览器不支持实时读取，请改用左边的「从我的电脑导入文件夹」','err'); return; }
+    toast('当前浏览器不支持这个查看方式，请改用左边的「从我的电脑导入文件夹」','err'); return; }
   try{
     liveHandle=await window.showDirectoryPicker({mode:'read'});
     $('#liveState').innerHTML='<span class="badge ok">已连接 · 每 3 秒自动重新读取</span>';
     $('#btnLiveImport').disabled=false;
     await refreshLive();
     clearInterval(liveTimer);liveTimer=setInterval(refreshLive,3000);
-  }catch(e){ if(e.name!=='AbortError') toast('连接失败：'+e.message,'err'); }
+  }catch(e){ if(e.name!=='AbortError') toast('仅存本机：'+e.message,'err'); }
 }
 async function refreshLive(){
   if(!liveHandle) return;
@@ -1283,7 +1360,7 @@ function renderTable(){
     return;
   }
   let h = '<table><thead><tr><th class="ck"><input type="checkbox" id="ckAll"></th>'+
-    '<th>名称</th><th>类型</th><th>大小</th><th>修改时间</th><th>所在位置</th><th style="width:110px;text-align:right">快速操作</th></tr></thead><tbody>';
+    '<th>名称</th><th>类型</th><th>大小</th><th>修改时间</th><th>所在位置</th><th style="width:140px;text-align:right">快速操作</th></tr></thead><tbody>';
   rows.forEach(r=>{
     const on = S.selected.has(r.rel);
     h += '<tr class="'+(on?'checked':'')+'" data-rel="'+esc(r.rel)+'">'+
@@ -1297,6 +1374,7 @@ function renderTable(){
       '<td class="t-muted">'+fmtTime(r.mtime)+'</td>'+
       '<td class="loc">'+esc(r.dir || '文件库根目录')+'</td>'+
       '<td><div class="row-btns">'+
+        (r.is_dir?'':'<button class="icon-btn" title="查看内容" data-act="view" data-rel="'+esc(r.rel)+'">'+ic('i-eye','sm')+'</button>')+
         '<button class="icon-btn" title="复制到…" data-act="copy" data-rel="'+esc(r.rel)+'">'+ic('i-copy','sm')+'</button>'+
         '<button class="icon-btn" title="移动到…" data-act="move" data-rel="'+esc(r.rel)+'">'+ic('i-move','sm')+'</button>'+
         '<button class="icon-btn del" title="删除" data-act="delete" data-rel="'+esc(r.rel)+'">'+ic('i-trash','sm')+'</button>'+
@@ -1319,15 +1397,22 @@ function renderTable(){
     el.onclick = ()=>{
       if(el.getAttribute('data-dir')==='1'){ S.cur=el.getAttribute('data-open'); S.view='list'; S.search='';
         $('#searchInput').value=''; $('#searchClr').classList.add('hide'); refreshList(); renderSide(); }
+      else if(typeof openViewer==='function') openViewer(el.getAttribute('data-open'));
       else toast('「'+el.textContent+'」是文件，勾选后可复制、移动、删除或导出');
     };
   });
   $$('[data-act]').forEach(b=>{
     b.onclick = ()=>{
       const rel = b.getAttribute('data-rel');
+      const act = b.getAttribute('data-act');
+      if(act==='view'){
+        if(typeof openViewer==='function') openViewer(rel);
+        else toast('这个版本暂不支持查看文件内容','err');
+        return;
+      }
       S.selected = new Set([rel]);
       renderTable(); renderSelbar();
-      startAction(b.getAttribute('data-act'));
+      startAction(act);
     };
   });
 }
@@ -1361,6 +1446,10 @@ async function reloadData(){
     S.all = a.all; S.overview = a.overview; S.list = l;
     const t = await api('/api/tree'); S.tree = t.tree;
     const valid = new Set(S.all.map(x=>x.rel));
+    // /api/allfiles 只列文件。若直接用它校验勾选，自动刷新时会把用户勾选的
+    // 「整个文件夹」误判为已不存在而悄悄取消。这里把目录树里的目录 rel 补进来。
+    (function collect(n){ if(!n) return; if(n.rel) valid.add(n.rel);
+      (n.children||[]).forEach(collect); })(S.tree);
     Array.from(S.selected).forEach(r=>{ if(!valid.has(r)) S.selected.delete(r); });
     renderAll();
   }catch(e){ toast('刷新失败：'+e.message,'err'); }
@@ -1373,11 +1462,11 @@ async function init(){
     S.list = await api('/api/list?path=');
     renderAll();
     $('#liveBox').classList.add('on');
-    $('#liveText').textContent = '实时同步中 · ' + (j.server_time||'').slice(11);
+    $('#liveText').textContent = '本地数据已保存 · ' + (j.server_time||'').slice(11);
     mirror('open', {sid:S.sid, note:'打开文件整理器'});
     startPoll();
   }catch(e){
-    $('#liveText').textContent = '连接失败';
+    $('#liveText').textContent = '仅存本机';
     toast('初始化失败：'+e.message,'err');
   }
 }
@@ -1389,14 +1478,14 @@ function startPoll(){
       S.undoN=j.undo_count; S.redoN=j.redo_count; S.histN=j.history_count;
       renderSelbar();
       $('#liveBox').classList.add('on');
-      $('#liveText').textContent = '实时同步中 · ' + (j.server_time||'').slice(11);
+      $('#liveText').textContent = '本地数据已保存 · ' + (j.server_time||'').slice(11);
       if(j.signature !== S.sig){
         S.sig = j.signature;
         await reloadData();
       }
     }catch(e){
       $('#liveBox').classList.remove('on');
-      $('#liveText').textContent = '连接中断，正在重试';
+      $('#liveText').textContent = '仅存本机';
     }
   }, 3000);
 }
@@ -1706,6 +1795,536 @@ function bind(){
       $('#historyDrawer').classList.add('hide'); hideMask('drawerMask'); }
   });
 }
+/* ==========================================================
+   文件整理器 · 增强模块（纯前端版，零外部依赖）
+   1) 在界面里直接查看文件内容（文本 / 图片 / PDF / Office / ZIP）
+   2) 本地存储统计与彻底清理（真正释放 IndexedDB 占用的硬盘）
+   3) 把整理结果落实到真实电脑（ZIP 导出 / 写回本机文件夹）
+   写回规则：同名即覆盖、路径不叠加、同一目标只写一次，默认只覆盖不新建。
+   ========================================================== */
+
+let vwRel = '', vwObjectUrl = null, vwMode = 'purge', vwPlan = [], wrHandle = null;
+
+const VW_INNER_ROOTS = ['从我的电脑导入', '我的文件库'];
+const VW_TEXT_EXT = new Set(['txt','md','markdown','json','py','js','ts','jsx','tsx','html','htm',
+  'css','scss','csv','tsv','xml','yml','yaml','log','ini','conf','sh','bat','sql','tex','rtf',
+  'toml','svg','gitignore','env','properties','c','cpp','h','java','go','rs','php','rb','mdx']);
+const VW_IMG_EXT = new Set(['png','jpg','jpeg','gif','webp','bmp','ico','avif']);
+
+function vwEsc(s){
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+function vwExt(rel){ return (String(rel).split('.').pop() || '').toLowerCase(); }
+function vwName(rel){ return String(rel).split('/').pop(); }
+function vwBytes(rec){ return b64ToBytes((rec && rec.b64) || ''); }
+function vwNote(kind, title, text){
+  return '<div class="vw-pad"><div class="notice ' + kind + '">' + ic('i-info') +
+    '<div><b>' + vwEsc(title) + '</b>' + vwEsc(text) + '</div></div></div>';
+}
+function vwMime(ext){
+  const m = {png:'image/png',jpg:'image/jpeg',jpeg:'image/jpeg',gif:'image/gif',
+    webp:'image/webp',bmp:'image/bmp',ico:'image/x-icon',svg:'image/svg+xml',
+    avif:'image/avif',pdf:'application/pdf'};
+  return m[ext] || 'application/octet-stream';
+}
+function vwDecode(bytes){
+  try{ return new TextDecoder('utf-8', {fatal:true}).decode(bytes); }catch(e){}
+  try{ return new TextDecoder('gbk').decode(bytes); }catch(e){}
+  return new TextDecoder('utf-8').decode(bytes);
+}
+function vwLooksText(bytes){
+  const n = Math.min(bytes.length, 512);
+  if(!n) return true;
+  let bad = 0;
+  for(let i=0;i<n;i++){
+    const b = bytes[i];
+    if(b === 0 || b < 9 || (b > 13 && b < 32)) bad++;
+  }
+  return bad / n < 0.02;
+}
+function vwXmlText(xml){
+  return String(xml)
+    .replace(/<w:tab\b[^>]*\/>/g, '\t')
+    .replace(/<w:br\b[^>]*\/>/g, '\n')
+    .replace(/<a:br\b[^>]*\/>/g, '\n')
+    .replace(/<\/w:p>/g, '\n')
+    .replace(/<\/a:p>/g, '\n')
+    .replace(/<\/si>/g, '\n')
+    .replace(/<\/row>/g, '\n')
+    .replace(/<[^>]*>/g, '')
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&#(\d+);/g, function(_, n){ return String.fromCharCode(parseInt(n, 10)); })
+    .replace(/&amp;/g, '&')
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n{3,}/g, '\n\n').trim();
+}
+
+/* ---- 极简 ZIP 读取：只用于从 docx / pptx / xlsx / zip 里取文本或清单 ---- */
+function vwZipEntries(bytes){
+  const dv = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  let eocd = -1;
+  const floor = Math.max(0, bytes.length - 66000);
+  for(let i = bytes.length - 22; i >= floor; i--){
+    if(i >= 0 && i + 22 <= bytes.length && dv.getUint32(i, true) === 0x06054b50){ eocd = i; break; }
+  }
+  if(eocd < 0) throw new Error('不是有效的 ZIP / Office 文件');
+  const count = dv.getUint16(eocd + 10, true);
+  let off = dv.getUint32(eocd + 16, true);
+  const entries = [];
+  for(let i = 0; i < count && off + 46 <= bytes.length; i++){
+    if(dv.getUint32(off, true) !== 0x02014b50) break;
+    const method = dv.getUint16(off + 10, true);
+    const compSize = dv.getUint32(off + 20, true);
+    const nameLen = dv.getUint16(off + 28, true);
+    const extraLen = dv.getUint16(off + 30, true);
+    const cmtLen = dv.getUint16(off + 32, true);
+    const localOff = dv.getUint32(off + 42, true);
+    const name = new TextDecoder('utf-8').decode(bytes.subarray(off + 46, off + 46 + nameLen));
+    entries.push({name:name, method:method, compSize:compSize, localOff:localOff});
+    off += 46 + nameLen + extraLen + cmtLen;
+  }
+  return {bytes:bytes, dv:dv, entries:entries};
+}
+async function vwInflate(z, e){
+  if(e.localOff + 30 > z.bytes.length) throw new Error('ZIP 数据不完整');
+  const nameLen = z.dv.getUint16(e.localOff + 26, true);
+  const extraLen = z.dv.getUint16(e.localOff + 28, true);
+  const start = e.localOff + 30 + nameLen + extraLen;
+  const raw = z.bytes.subarray(start, start + e.compSize);
+  if(e.method === 0) return raw;
+  if(typeof DecompressionStream === 'undefined') throw new Error('当前浏览器不支持解压');
+  const ds = new DecompressionStream('deflate-raw');
+  const stream = new Blob([raw]).stream().pipeThrough(ds);
+  return new Uint8Array(await new Response(stream).arrayBuffer());
+}
+async function vwOfficeText(bytes, ext){
+  const z = vwZipEntries(bytes);
+  let picked = [];
+  if(ext === 'docx'){
+    picked = z.entries.filter(function(e){
+      return e.name === 'word/document.xml' || /^word\/(header|footer)\d*\.xml$/.test(e.name);
+    });
+  }else if(ext === 'pptx'){
+    picked = z.entries.filter(function(e){ return /^ppt\/slides\/slide\d+\.xml$/.test(e.name); })
+      .sort(function(a, b){
+        return parseInt(a.name.match(/slide(\d+)/)[1], 10) - parseInt(b.name.match(/slide(\d+)/)[1], 10);
+      });
+  }else{
+    picked = z.entries.filter(function(e){
+      return e.name === 'xl/sharedStrings.xml' || /^xl\/worksheets\/sheet\d+\.xml$/.test(e.name);
+    });
+  }
+  if(!picked.length) return null;
+  const chunks = [];
+  for(let i = 0; i < picked.length; i++){
+    try{
+      const u = await vwInflate(z, picked[i]);
+      const t = vwXmlText(new TextDecoder('utf-8').decode(u));
+      if(t) chunks.push(ext === 'pptx' ? '【第 ' + (i + 1) + ' 页】\n' + t : t);
+    }catch(e){ /* 单个部件坏了不影响其它页 */ }
+  }
+  return chunks.join('\n\n').trim() || null;
+}
+
+/* ---- 查看器 ---- */
+async function openViewer(rel){
+  await loadDB();
+  const rec = DB.files[rel];
+  if(!rec || rec.t !== 'f'){ toast('这个文件已经不在文件库里了', 'err'); return; }
+  vwRel = rel;
+  const ext = vwExt(rel), name = vwName(rel), bytes = vwBytes(rec);
+  $('#vTitle').textContent = name;
+  $('#vMeta').textContent = rel + ' · ' + humanSize(bytes.length) + ' · ' + kindOfJS(name);
+  $('#vHint').textContent = '内容只在这台电脑的浏览器里显示，不会上传';
+  $('#viewerBody').innerHTML = '<div class="vw-pad t-muted">正在读取…</div>';
+  showMask('viewerMask');
+  vwReleaseUrl();
+  try{
+    if(!bytes.length){
+      $('#viewerBody').innerHTML = vwNote('info', '这是个空文件', '文件里没有内容（0 字节）。');
+    }else if(VW_IMG_EXT.has(ext) || ext === 'svg'){
+      vwObjectUrl = URL.createObjectURL(new Blob([bytes], {type:vwMime(ext)}));
+      $('#viewerBody').innerHTML = '<img class="vw-img" src="' + vwObjectUrl + '" alt="' + vwEsc(name) + '">';
+    }else if(ext === 'pdf'){
+      vwObjectUrl = URL.createObjectURL(new Blob([bytes], {type:'application/pdf'}));
+      $('#viewerBody').innerHTML = '<iframe class="vw-frame" src="' + vwObjectUrl + '" title="PDF 预览"></iframe>';
+    }else if(ext === 'docx' || ext === 'pptx' || ext === 'xlsx'){
+      const txt = await vwOfficeText(bytes, ext);
+      $('#viewerBody').innerHTML = txt
+        ? '<pre class="vw-text">' + vwEsc(txt) + '</pre>'
+        : vwNote('warn', '暂时读不出文字', '这个 Office 文档里没有可提取的文字（可能全是图片）。请点「下载此文件」用 Word / PowerPoint 打开。');
+      $('#vHint').textContent = '已从文档里提取文字；要看排版和图片，请点「下载此文件」';
+    }else if(ext === 'zip'){
+      const z = vwZipEntries(bytes);
+      const names = z.entries.filter(function(e){ return !e.name.endsWith('/'); });
+      $('#viewerBody').innerHTML = '<div class="vw-pad"><div class="vw-sec">压缩包里有 ' + names.length + ' 个文件</div>' +
+        '<div class="purge-list">' + names.slice(0, 300).map(function(e){
+          return '<div class="vw-line">' + vwEsc(e.name) + '</div>';
+        }).join('') + (names.length > 300 ? '<div>…还有 ' + (names.length - 300) + ' 个</div>' : '') +
+        '</div></div>';
+    }else if(VW_TEXT_EXT.has(ext) || vwLooksText(bytes)){
+      const t = vwDecode(bytes);
+      const shown = t.length > 200000 ? t.slice(0, 200000) + '\n\n…（内容太长，只显示前 20 万字，完整内容请下载）' : t;
+      $('#viewerBody').innerHTML = '<pre class="vw-text">' + vwEsc(shown) + '</pre>';
+    }else{
+      let hex = '';
+      const n = Math.min(bytes.length, 512);
+      for(let i = 0; i < n; i += 16){
+        const row = Array.from(bytes.subarray(i, i + 16));
+        hex += String(i).padStart(8, '0') + '  ' +
+          row.map(function(b){ return b.toString(16).padStart(2, '0'); }).join(' ').padEnd(48, ' ') +
+          ' |' + row.map(function(b){ return b >= 32 && b < 127 ? String.fromCharCode(b) : '.'; }).join('') + '|\n';
+      }
+      $('#viewerBody').innerHTML = '<div class="vw-pad"><div class="vw-sec">这个格式没法直接显示在网页里，下面是文件开头的内容</div>' +
+        '<pre class="vw-hex">' + vwEsc(hex) + '</pre></div>';
+      $('#vHint').textContent = '点「下载此文件」保存到电脑，用对应软件打开';
+    }
+  }catch(e){
+    $('#viewerBody').innerHTML = vwNote('warn', '读取内容时出了点问题',
+      String(e && e.message || e) + '。文件本身没受影响，可以点「下载此文件」保存后查看。');
+  }
+}
+function vwReleaseUrl(){
+  if(vwObjectUrl){ try{ URL.revokeObjectURL(vwObjectUrl); }catch(e){} vwObjectUrl = null; }
+}
+function vwDownload(){
+  const rec = DB.files[vwRel];
+  if(!rec){ toast('请先打开一个文件', 'err'); return; }
+  const url = URL.createObjectURL(new Blob([vwBytes(rec)]));
+  const a = document.createElement('a');
+  a.href = url; a.download = vwName(vwRel);
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(url); a.remove(); }, 2000);
+  logOp({event:'download_one', path:vwRel});
+  toast('已下载到电脑：' + vwName(vwRel), 'ok');
+}
+
+/* ---- 本地存储统计 / 彻底清理 ---- */
+function vwIsImported(rel){
+  return rel === VW_INNER_ROOTS[0] || rel.indexOf(VW_INNER_ROOTS[0] + '/') === 0;
+}
+function vwStats(){
+  let total = 0, imported = 0, importedCount = 0, fileCount = 0, trashBytes = 0, trashItems = 0;
+  Object.keys(DB.files).forEach(function(rel){
+    const r = DB.files[rel];
+    if(r.t !== 'f') return;
+    const n = (r.b64 || '').length;
+    total += n; fileCount++;
+    if(vwIsImported(rel)){ imported += n; importedCount++; }
+  });
+  (DB.trash || []).forEach(function(t){
+    trashBytes += ((t.entry && t.entry.b64) || '').length; trashItems++;
+  });
+  return {total:total, imported:imported, importedCount:importedCount, fileCount:fileCount,
+    trashBytes:trashBytes, trashItems:trashItems, ops:(DB.ops || []).length};
+}
+function vwDBBytes(db){
+  let n = 0;
+  Object.keys(db.files).forEach(function(k){ if(db.files[k].t === 'f') n += (db.files[k].b64 || '').length; });
+  (db.trash || []).forEach(function(t){ n += ((t.entry && t.entry.b64) || '').length; });
+  return n;
+}
+async function openStorage(){
+  await loadDB();
+  const s = vwStats();
+  const all = s.total + s.trashBytes;
+  const pct = all ? Math.max(2, Math.round(s.imported / all * 100)) : 0;
+  let quotaLine = '';
+  if(navigator.storage && navigator.storage.estimate){
+    try{
+      const q = await navigator.storage.estimate();
+      quotaLine = '浏览器报告的本站占用：约 ' + humanSize(q.usage || 0) +
+        '（可用配额约 ' + humanSize(q.quota || 0) + '）';
+    }catch(e){}
+  }
+  $('#storageBody').innerHTML =
+    '<div class="notice info">' + ic('i-shield') + '<div><b>这些数字是什么</b>' +
+      '你导入的文件以副本形式存在这个浏览器里，只有这台电脑能看见。关掉网页不会自动删除，' +
+      '点下面的按钮才会真正清掉、把硬盘空间还给你。</div></div>' +
+    '<div class="stat-grid">' +
+      '<div class="stat-cell"><b>' + humanSize(all) + '</b><span>本地副本合计（含回收站）</span></div>' +
+      '<div class="stat-cell"><b>' + s.fileCount + ' 个</b><span>文件库里的文件总数</span></div>' +
+      '<div class="stat-cell"><b>' + humanSize(s.imported) + '</b><span>我导入的 ' + s.importedCount + ' 个文件</span></div>' +
+      '<div class="stat-cell"><b>' + humanSize(s.trashBytes) + '</b><span>回收站副本 ' + s.trashItems + ' 项</span></div>' +
+    '</div>' +
+    '<div class="stat-bar"><i style="width:' + pct + '%;background:var(--blue)"></i></div>' +
+    (quotaLine ? '<div style="font-size:12px;color:var(--muted);margin-bottom:14px">' + vwEsc(quotaLine) + '</div>' : '') +
+    '<div class="notice warn">' + ic('i-warn') + '<div><b>整理完记得清一下</b>' +
+      '「移除我导入的文件」会删掉导入副本、回收站里的相关副本，并重建本地数据库，空间真正释放；' +
+      '操作记录会保留。要把整理出来的文件也一起清掉，用「恢复演示库」。</div></div>' +
+    (s.importedCount ? '' : '<div class="notice ok">' + ic('i-check') +
+      '<div><b>目前没有导入的文件</b>文件库里只有演示文件，不用清理。</div></div>');
+  showMask('storageMask');
+}
+function vwPlanList(rels){
+  return '<div class="purge-list">' + rels.slice(0, 60).map(function(r){
+    return '<div class="vw-line">' + vwEsc(r) + '</div>';
+  }).join('') + (rels.length > 60 ? '<div>…还有 ' + (rels.length - 60) + ' 个</div>' : '') + '</div>';
+}
+function openConfirm(mode, title, body, btnText, danger, chkText){
+  vwMode = mode;
+  $('#pTitle').textContent = title;
+  $('#purgeBody').innerHTML = body;
+  $('#purgeChk').checked = false;
+  $('#purgeChkText').textContent = chkText || '我看明白了，确认执行';
+  $('#btnPurgeGo').disabled = true;
+  $('#btnPurgeGo').textContent = btnText;
+  $('#btnPurgeGo').className = 'btn ' + (danger ? 'danger' : 'primary');
+  showMask('purgeMask');
+}
+function openPurgeConfirm(mode){
+  const s = vwStats();
+  const keys = Object.keys(DB.files).filter(vwIsImported);
+  const files = keys.filter(function(k){ return DB.files[k].t === 'f'; });
+  if(mode === 'purge' && !files.length && !s.trashItems){
+    toast('现在没有需要清理的导入文件', 'ok'); return;
+  }
+  const body = mode === 'purge'
+    ? '<div class="notice danger">' + ic('i-warn') + '<div><b>这一步会真的删掉本地副本，不能撤回</b>' +
+        '你电脑上的原文件不会受任何影响；删的只是浏览器里存的副本。</div></div>' +
+      '<div class="vw-sec">将从文件库移除 ' + files.length + ' 个导入文件（约 ' + humanSize(s.imported) + '）：</div>' +
+      vwPlanList(files) +
+      '<div class="notice warn" style="margin-top:14px">' + ic('i-info') + '<div><b>同时会处理</b>' +
+        '回收站里的相关副本、与这些文件有关的撤回记录；<b>操作记录会保留</b>。' +
+        '如果你把导入文件复制到了「归档区」等别处，那些副本不会被删 —— 需要一起清掉请用「恢复演示库」。</div></div>'
+    : '<div class="notice danger">' + ic('i-warn') + '<div><b>会清空文件库里所有文件副本</b>' +
+        '包括演示文件、导入文件、复制/移动出来的结果和回收站，然后恢复成刚打开网页时的干净演示库。' +
+        '操作记录会保留，撤回/重做会清空。你电脑上的原文件不受影响。</div></div>' +
+      '<div class="vw-sec">当前共 ' + s.fileCount + ' 个文件，约 ' + humanSize(s.total + s.trashBytes) + '</div>';
+  openConfirm(mode, mode === 'purge' ? '确认移除我导入的文件吗' : '确认恢复到演示库吗',
+    body, '确认移除', true);
+}
+async function vwRebuildDB(newDB){
+  clearTimeout(saveTimer);
+  if(typeof idbClose === 'function') idbClose();
+  await new Promise(function(res){
+    let done = false;
+    const fin = function(){ if(!done){ done = true; res(); } };
+    try{
+      const q = indexedDB.deleteDatabase(IDB_NAME);
+      q.onsuccess = fin; q.onerror = fin;
+      q.onblocked = function(){ setTimeout(fin, 1200); };
+    }catch(e){ fin(); }
+    setTimeout(fin, 4000);
+  });
+  DB = newDB; dbPromise = null;
+  await idbSet('main', DB);
+}
+async function vwAfterChange(){
+  S.selected.clear(); S.cur = ''; S.view = 'list'; S.search = '';
+  const inp = $('#searchInput'); if(inp) inp.value = '';
+  await reloadData();
+  const st = await api('/api/status');
+  S.sig = st.signature; S.undoN = st.undo_count; S.redoN = st.redo_count; S.histN = st.history_count;
+  renderSelbar();
+}
+async function doPurge(){
+  const before = vwStats();
+  const mode = vwMode;
+  const keepOps = (DB.ops || []).slice();
+  let removed = 0, nextDB = DB;
+  if(mode === 'reset'){
+    removed = before.fileCount;
+    nextDB = seedDB(); nextDB.ops = keepOps;
+  }else{
+    Object.keys(DB.files).forEach(function(k){
+      if(vwIsImported(k)){ if(DB.files[k].t === 'f') removed++; delete DB.files[k]; }
+    });
+    DB.trash = (DB.trash || []).filter(function(t){ return !vwIsImported(t.orig || ''); });
+    const touches = function(b){
+      return (b.ops || []).some(function(op){
+        return [op.src, op.dst].some(function(p){ return p && vwIsImported(p); });
+      });
+    };
+    DB.undo = (DB.undo || []).filter(function(b){ return !touches(b); });
+    DB.redo = (DB.redo || []).filter(function(b){ return !touches(b); });
+    DB.ops = keepOps;
+    nextDB = DB;
+  }
+  const freed = Math.max(0, before.total + before.trashBytes - vwDBBytes(nextDB));
+  nextDB.ops.push({ts:stamp(), event:'purge', mode:mode, removed:removed,
+    freed_bytes:freed, note:'清理本地副本，释放浏览器存储空间'});
+  await vwRebuildDB(nextDB);
+  hideMask('purgeMask'); hideMask('storageMask'); hideMask('viewerMask');
+  await vwAfterChange();
+  toast('已移除 ' + removed + ' 个文件副本，释放约 ' + humanSize(freed), 'ok');
+}
+
+/* ---- 落实到真实电脑 ---- */
+function vwCollectFiles(rels){
+  const seen = new Set(), out = [];
+  rels.forEach(function(r){
+    Object.keys(DB.files).forEach(function(p){
+      if(!(p === r || p.indexOf(r + '/') === 0)) return;
+      if(DB.files[p].t !== 'f' || pathHidden(p) || seen.has(p)) return;
+      const segs = p.split('/');
+      if(segs.some(function(s){ return !s || s === '.' || s === '..' || /[\x00-\x1f<>:*"\\|?]/.test(s); })) return;
+      seen.add(p);
+      out.push({rel:p, size:vwBytes(DB.files[p]).length});
+    });
+  });
+  return out;
+}
+/* 纯函数：把网页路径映射成真实文件夹里的相对路径。
+   保证 ① 不叠加网页内部前缀 ② 不嵌套目标同名目录 ③ 同一目标只保留一条（覆盖而非新建副本）。
+   独立成纯函数便于自动化断言，不依赖任何浏览器 API。 */
+function vwBuildWritePlan(items, targetName){
+  const idxByTarget = new Map(), out = [];
+  const tn = String(targetName || '').trim();
+  items.forEach(function(it){
+    const parts = String(it.rel).split('/').filter(Boolean);
+    while(parts.length > 1 && VW_INNER_ROOTS.indexOf(parts[0]) >= 0) parts.shift();
+    if(tn){
+      let hit = -1;
+      for(let j = 0; j < parts.length - 1; j++){ if(parts[j] === tn){ hit = j; break; } }
+      if(hit >= 0) parts.splice(0, hit + 1);
+    }
+    if(!parts.length) return;
+    if(parts.some(function(p){ return p === '.' || p === '..' || !p.trim() || /[\x00-\x1f]/.test(p); })) return;
+    const target = parts.join('/');
+    if(idxByTarget.has(target)){
+      const old = out[idxByTarget.get(target)];
+      old.rel = it.rel; old.size = it.size; old.collapsed = true;
+      return;
+    }
+    idxByTarget.set(target, out.length);
+    out.push({rel:it.rel, target:target, size:it.size, exists:false, mode:'new', collapsed:false});
+  });
+  return out;
+}
+async function vwMarkExisting(plan, root){
+  for(const p of plan){
+    try{
+      const parts = p.target.split('/');
+      let d = root;
+      for(let i = 0; i < parts.length - 1; i++) d = await d.getDirectoryHandle(parts[i]);
+      await d.getFileHandle(parts[parts.length - 1]);
+      p.exists = true; p.mode = 'overwrite';
+    }catch(e){ p.exists = false; p.mode = 'new'; }
+  }
+  return plan;
+}
+async function openExportConfirm(){
+  await loadDB();
+  const rels = Array.from(S.selected);
+  if(!rels.length){ toast('请先勾选要导出到电脑的文件', 'err'); return; }
+  const items = vwCollectFiles(rels);
+  if(!items.length){ toast('所选项目里没有可导出的文件', 'err'); return; }
+  vwPlan = items;
+  const total = items.reduce(function(a, b){ return a + b.size; }, 0);
+  openConfirm('export', '确认导出到电脑吗',
+    '<div class="notice info">' + ic('i-info') + '<div><b>会发生什么</b>' +
+      '下面这些文件会打包成一个 ZIP，下载到这个浏览器的「下载」文件夹。' +
+      '解压之后就是电脑里实实在在的文件，可以放到任何位置。你电脑上的原文件不会被改动。</div></div>' +
+      '<div class="vw-sec">共 ' + items.length + ' 个文件 · 约 ' + humanSize(total) + '，保留文件夹结构：</div>' +
+      vwPlanList(items.map(function(x){ return x.rel; })),
+    '确认下载 ZIP', false, '我看明白了，确认下载');
+}
+function doExport(){
+  const entries = vwPlan.filter(function(it){ return DB.files[it.rel]; }).map(function(it){
+    return {name:it.rel, bytes:vwBytes(DB.files[it.rel])};
+  });
+  if(!entries.length){ toast('没有可导出的文件', 'err'); return; }
+  saveBlob(new Blob([makeZip(entries)], {type:'application/zip'}),
+    '文件整理器_导出_' + stamp().replace(/[: ]/g, '-') + '.zip');
+  logOp({event:'export_zip', count:entries.length, files:vwPlan.map(function(x){ return x.rel; })});
+  hideMask('purgeMask');
+  toast('已下载 ZIP：' + entries.length + ' 个文件，去浏览器「下载」里解压即可', 'ok');
+}
+async function openWriteBackConfirm(){
+  await loadDB();
+  const rels = Array.from(S.selected);
+  if(!rels.length){ toast('请先勾选要写回电脑的文件', 'err'); return; }
+  if(!window.showDirectoryPicker){
+    toast('这个浏览器不支持直接写回文件夹，请改用「导出到电脑（ZIP）」', 'err'); return;
+  }
+  const items = vwCollectFiles(rels);
+  if(!items.length){ toast('所选项目里没有可写回的文件', 'err'); return; }
+  let h;
+  try{ h = await window.showDirectoryPicker({mode:'readwrite'}); }
+  catch(e){ if(e && e.name !== 'AbortError') toast('没能打开文件夹：' + e.message, 'err'); return; }
+  wrHandle = h;
+  vwPlan = await vwMarkExisting(vwBuildWritePlan(items, h.name), h);
+  const over = vwPlan.filter(function(p){ return p.exists; }).length;
+  const fresh = vwPlan.length - over;
+  const total = vwPlan.reduce(function(a, b){ return a + b.size; }, 0);
+  const rows = vwPlan.slice(0, 60).map(function(p){
+    return '<div class="vw-line">' + (p.exists ? '覆盖' : '新建') + ' · ' + vwEsc(p.target) + '</div>';
+  }).join('');
+  openConfirm('writeback', '确认写回到这个文件夹吗',
+    '<div class="notice danger">' + ic('i-warn') + '<div><b>这是真正写入你电脑的操作</b>' +
+      '同名文件会被<b>直接覆盖</b>，不会生成「文件 (1)」之类的副本；路径不会多套一层文件夹。' +
+      '不会删除、也不会移动电脑上的任何文件。重复执行，文件数量不会变多。</div></div>' +
+    '<div class="stat-grid" style="margin-bottom:12px">' +
+      '<div class="stat-cell"><b>' + over + ' 个</b><span>同名覆盖</span></div>' +
+      '<div class="stat-cell"><b>' + fresh + ' 个</b><span>目标里原本没有</span></div>' +
+    '</div>' +
+    '<div class="vw-sec">共 ' + vwPlan.length + ' 个文件 · 约 ' + humanSize(total) + '，写入「' + vwEsc(h.name) + '」：</div>' +
+    '<div class="purge-list">' + rows + (vwPlan.length > 60 ? '<div>…还有 ' + (vwPlan.length - 60) + ' 个</div>' : '') + '</div>' +
+    '<label class="chk-line" style="margin:14px 0 0"><input type="checkbox" id="wrOnlyOverwrite" checked>' +
+      '<span>只覆盖已存在的同名文件，不新建（最保险，默认勾选）</span></label>' +
+    (fresh ? '<div class="notice warn" style="margin-top:12px">' + ic('i-info') +
+      '<div>目标文件夹里没有上面标「新建」的 ' + fresh + ' 个文件。默认会跳过它们，' +
+      '所以不会多出任何新文件；如果你确实想把它们也写进去，取消上面的勾选。</div></div>' : ''),
+    '确认写入电脑', true, '我看明白了，确认写入');
+}
+async function doWriteBack(){
+  const h = wrHandle, plan = vwPlan;
+  if(!h){ toast('请先选择电脑上的目标文件夹', 'err'); return; }
+  const onlyOverwriteEl = $('#wrOnlyOverwrite');
+  const onlyOverwrite = !onlyOverwriteEl || onlyOverwriteEl.checked;
+  let done = 0, skipped = 0;
+  const fails = [];
+  $('#btnPurgeGo').disabled = true;
+  $('#btnPurgeGo').textContent = '正在写入…';
+  for(const p of plan){
+    if(onlyOverwrite && !p.exists){ skipped++; continue; }
+    try{
+      const parts = p.target.split('/');
+      let d = h;
+      for(let i = 0; i < parts.length - 1; i++) d = await d.getDirectoryHandle(parts[i], {create:true});
+      const fh = await d.getFileHandle(parts[parts.length - 1], {create:true});
+      // createWritable() 默认 keepExistingData=false，会先清空原文件 → 同名即覆盖，绝不产生 (1) 副本
+      const w = await fh.createWritable();
+      await w.write(new Blob([vwBytes(DB.files[p.rel])]));
+      await w.close();
+      done++;
+    }catch(e){ fails.push(p.target + '：' + String(e && e.message || e)); }
+  }
+  logOp({event:'writeback', count:done, skipped:skipped, failed:fails.length,
+    only_overwrite:onlyOverwrite, files:plan.map(function(x){ return x.target; }), details:fails.slice(0, 20)});
+  hideMask('purgeMask');
+  $('#btnPurgeGo').textContent = '确认写入电脑';
+  toast('已覆盖写入 ' + done + ' 个文件' +
+    (skipped ? '，跳过 ' + skipped + ' 个（目标里没有，未新建）' : '') +
+    (fails.length ? '，失败 ' + fails.length + ' 个' : ''), fails.length ? 'err' : 'ok');
+  if(fails.length) console.warn('写回失败明细：', fails);
+}
+async function vwConfirmGo(){
+  if(vwMode === 'export'){ doExport(); return; }
+  if(vwMode === 'writeback'){ await doWriteBack(); return; }
+  if(vwMode === 'purge' || vwMode === 'reset'){ await doPurge(); return; }
+}
+
+/* ---- 绑定（在 bind() 之后调用，覆盖导出按钮的默认行为） ---- */
+function bindFeature(){
+  $('#btnStorage').onclick = openStorage;
+  $('#btnPurge').onclick = function(){ openPurgeConfirm('purge'); };
+  $('#btnResetAll').onclick = function(){ openPurgeConfirm('reset'); };
+  $('#btnVDownload').onclick = vwDownload;
+  $('#purgeChk').onchange = function(e){ $('#btnPurgeGo').disabled = !e.target.checked; };
+  $('#btnPurgeGo').onclick = vwConfirmGo;
+  $('#btnExportSel').onclick = openExportConfirm;
+  $('#btnWriteBack').onclick = openWriteBackConfirm;
+  const vx = document.querySelector('[data-close="viewerMask"]');
+  if(vx) vx.addEventListener('click', vwReleaseUrl);
+  const vm = $('#viewerMask');
+  if(vm) vm.addEventListener('click', function(e){ if(e.target === vm) vwReleaseUrl(); });
+}
+
 function bindStandalone(){
   $('#btnOpenLive').onclick = ()=>{ showMask('liveMask'); };
   $('#btnLiveConnect').onclick = connectLive;
@@ -1714,6 +2333,7 @@ function bindStandalone(){
 }
 bind();
 bindStandalone();
+bindFeature();
 init();
 </script>
 </body>
