@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>狗公园 · Virtual Dog Park</title>
+<!--
+  虚拟狗公园 —— 单文件网页游戏
+  所有结构 / 样式 / 脚本 / 插图均内联，零外部依赖：
+  · 用 VS Code Live Server 打开本文件即可玩
+  · 或运行 app.py，它会自动起本地服务并打开浏览器
+  数据只保存在浏览器 localStorage，不会上传到任何账号。
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ 设计令牌 ============ */
+:root{
+  --bg:#FFF7E9;
+  --bg-2:#FFEFD6;
+  --surface:#FFFFFF;
+  --ink:#3B2E24;
+  --muted:#8A7560;
+  --grass:#5FA05A;
+  --grass-deep:#3E7A46;
+  --accent:#FF8A3D;
+  --accent-deep:#E86A1E;
+  --line:rgba(95,160,90,.22);
+  --good:#4CA65C;
+  --warn:#E9A23B;
+  --bad:#E2653F;
+  --r-sm:12px;
+  --r-md:20px;
+  --r-lg:30px;
+  --sp:8px;
+  --shadow-1:0 2px 8px rgba(94,71,40,.10);
+  --shadow-2:0 10px 26px rgba(94,71,40,.14);
+  --shadow-3:0 24px 54px rgba(94,71,40,.20);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --dur:320ms;
+  --font-display:"Fredoka","PingFang SC","Microsoft YaHei",sans-serif;
+  --font-body:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  line-height:1.7;
+  background:
+    radial-gradient(60rem 40rem at 10% -5%,rgba(255,138,61,.16),transparent 60%),
+    radial-gradient(50rem 40rem at 100% 0%,rgba(95,160,90,.20),transparent 55%),
+    linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);
+  background-attachment:fixed;
+  position:relative;
+  overflow-x:hidden;
+}
+/* 波点氛围层 */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:radial-gradient(rgba(95,160,90,.16) 1.5px,transparent 1.6px);
+  background-size:26px 26px;
+  mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent);
+}
+.wrap{position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:32px 22px 64px}
+
+/* ============ 顶部标题 ============ */
+.site-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;flex-wrap:wrap}
+.paw{
+  width:52px;height:52px;flex:none;display:grid;place-items:center;
+  background:var(--accent);border-radius:16px;box-shadow:var(--shadow-2);
+  transform:rotate(-8deg);
+}
+.paw svg{width:30px;height:30px}
+h1.title{
+  font-family:var(--font-display);font-weight:700;letter-spacing:-.02em;
+  font-size:clamp(30px,5vw,52px);line-height:1.05;color:var(--grass-deep);
+}
+h1.title small{display:block;font-size:.32em;letter-spacing:.22em;color:var(--muted);font-weight:600;margin-top:6px}
+.badge-local{
+  margin-left:auto;font-size:12px;color:var(--grass-deep);background:rgba(95,160,90,.12);
+  border:1px solid var(--line);padding:7px 13px;border-radius:999px;font-weight:600;white-space:nowrap;
+}
+
+/* ============ 屏幕切换 ============ */
+.screen{display:none;animation:screenIn 520ms var(--ease) both}
+.screen.active{display:block}
+@keyframes screenIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+.lead{color:var(--muted);max-width:56ch;margin:10px 0 26px;font-size:15px}
+.lead strong{color:var(--ink)}
+
+/* ============ 步骤指示 ============ */
+.steps{display:flex;gap:8px;margin:0 0 26px;flex-wrap:wrap}
+.step{
+  display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;
+  color:var(--muted);padding:6px 14px;border-radius:999px;border:1.5px solid var(--line);
+  background:rgba(255,255,255,.6);
+}
+.step b{
+  width:22px;height:22px;display:grid;place-items:center;border-radius:50%;
+  background:var(--line);color:var(--grass-deep);font-size:12px;font-family:var(--font-display);
+}
+.step.on{color:var(--grass-deep);border-color:var(--grass);background:#fff}
+.step.on b{background:var(--grass);color:#fff}
+.step.done b{background:var(--grass-deep);color:#fff}
+
+/* ============ 大厅卡片网格 ============ */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+
+.dog-card{
+  position:relative;background:var(--surface);border-radius:var(--r-lg);
+  border:2px solid transparent;padding:22px 20px 20px;cursor:pointer;
+  box-shadow:var(--shadow-1);transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease),border-color var(--dur);
+  opacity:0;transform:translateY(24px);
+}
+.dog-card.in{opacity:1;transform:none;transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease),border-color var(--dur)}
+.dog-card.in:nth-child(1){transition-delay:60ms}
+.dog-card.in:nth-child(2){transition-delay:120ms}
+.dog-card.in:nth-child(3){transition-delay:180ms}
+.dog-card.in:nth-child(4){transition-delay:240ms}
+.dog-card.in:nth-child(5){transition-delay:300ms}
+.dog-card.in:nth-child(6){transition-delay:360ms}
+.dog-card:hover{transform:translateY(-8px) rotate(-.6deg);box-shadow:var(--shadow-3)}
+.dog-card:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.dog-card.selected{border-color:var(--grass);box-shadow:var(--shadow-2),0 0 0 4px rgba(95,160,90,.14)}
+.dog-card.selected:hover{transform:translateY(-8px) rotate(0)}
+
+.pick{
+  position:absolute;top:16px;right:16px;width:28px;height:28px;border-radius:50%;
+  border:2px solid var(--line);background:#fff;display:grid;place-items:center;
+  color:#fff;font-weight:800;transition:background var(--dur),border-color var(--dur),transform var(--dur) var(--ease);
+}
+.pick svg{width:15px;height:15px;opacity:0;transform:scale(.4);transition:opacity var(--dur),transform var(--dur) var(--ease)}
+.dog-card.selected .pick{background:var(--grass);border-color:var(--grass);transform:rotate(8deg)}
+.dog-card.selected .pick svg{opacity:1;transform:none}
+
+.dog-portrait{
+  height:130px;display:grid;place-items:center;margin-bottom:12px;
+  border-radius:var(--r-md);background:linear-gradient(160deg,#FFFDF7,#FFF1DA);
+  border:1px dashed var(--line);
+}
+.dog-portrait svg{width:112px;height:112px;filter:drop-shadow(0 8px 8px rgba(94,71,40,.14))}
+
+.dog-name{font-family:var(--font-display);font-size:21px;font-weight:600;color:var(--grass-deep);line-height:1.2}
+.dog-en{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tag{font-size:12px;font-weight:600;padding:4px 11px;border-radius:999px;background:rgba(95,160,90,.12);color:var(--grass-deep)}
+.tag.size{background:rgba(255,138,61,.14);color:var(--accent-deep)}
+.info-line{font-size:13px;color:var(--muted);margin-top:5px}
+.info-line b{color:var(--ink);font-weight:600}
+
+/* ============ 底部操作条 ============ */
+.action-bar{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  margin-top:28px;padding:18px 22px;background:rgba(255,255,255,.75);
+  border:1.5px solid var(--line);border-radius:var(--r-md);backdrop-filter:blur(6px);
+}
+.action-bar .hint{font-size:14px;color:var(--muted)}
+.action-bar .hint b{color:var(--grass-deep);font-family:var(--font-display);font-size:18px}
+.btn{
+  font-family:var(--font-display);font-weight:600;font-size:16px;
+  border:none;border-radius:999px;padding:13px 30px;min-height:48px;cursor:pointer;
+  background:var(--accent);color:#fff;box-shadow:var(--shadow-2);
+  transition:transform 180ms var(--ease),box-shadow 180ms var(--ease),background 180ms;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-3);background:var(--accent-deep)}
+.btn:active{transform:translateY(0) scale(.97)}
+.btn:focus-visible{outline:3px solid var(--grass-deep);outline-offset:3px}
+.btn:disabled{background:#D9CFC0;color:#fff;cursor:not-allowed;box-shadow:none;transform:none}
+.btn.ghost{background:transparent;color:var(--grass-deep);border:2px solid var(--grass);box-shadow:none}
+.btn.ghost:hover{background:rgba(95,160,90,.10);box-shadow:none}
+.push-right{margin-left:auto}
+
+/* ============ 取名屏 ============ */
+.name-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.name-cards{grid-template-columns:1fr}}
+.name-card{
+  background:var(--surface);border-radius:var(--r-lg);padding:24px;
+  border:2px solid var(--line);box-shadow:var(--shadow-1);
+}
+.name-card .mini{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.name-card .mini svg{width:72px;height:72px;flex:none;filter:drop-shadow(0 5px 6px rgba(94,71,40,.14))}
+.name-card .mini h3{font-family:var(--font-display);font-size:20px;color:var(--grass-deep);line-height:1.2}
+.name-card .mini span{font-size:12px;color:var(--muted)}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.field input{
+  width:100%;font-family:var(--font-body);font-size:17px;color:var(--ink);
+  padding:13px 16px;min-height:48px;border:2px solid var(--line);border-radius:14px;
+  background:#FFFDF9;transition:border-color 180ms,box-shadow 180ms;
+}
+.field input::placeholder{color:#BDAE9C}
+.field input:focus{outline:none;border-color:var(--grass);box-shadow:0 0 0 4px rgba(95,160,90,.14)}
+.field input.err{border-color:var(--bad);box-shadow:0 0 0 4px rgba(226,101,63,.14)}
+.err-msg{color:var(--bad);font-size:13px;min-height:20px;margin-top:7px;font-weight:600}
+
+/* ============ 饲养屏 ============ */
+.care-head{
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  background:var(--surface);border-radius:var(--r-lg);padding:20px 24px;
+  border:2px solid var(--line);box-shadow:var(--shadow-1);margin-bottom:24px;
+}
+.care-stat{display:flex;flex-direction:column;min-width:92px}
+.care-stat .k{font-size:12px;color:var(--muted);font-weight:600}
+.care-stat .v{font-family:var(--font-display);font-size:30px;color:var(--grass-deep);line-height:1.1;font-weight:700}
+.stage-chip{
+  margin-left:auto;font-family:var(--font-display);font-weight:600;font-size:15px;
+  padding:9px 18px;border-radius:999px;background:var(--grass);color:#fff;box-shadow:var(--shadow-1);
+}
+.care-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.care-grid{grid-template-columns:1fr}}
+.pet-panel{
+  background:var(--surface);border-radius:var(--r-lg);padding:24px;
+  border:2px solid var(--line);box-shadow:var(--shadow-1);text-align:center;
+}
+.pet-stage-badge{
+  display:inline-block;font-size:12px;font-weight:700;color:var(--accent-deep);
+  background:rgba(255,138,61,.14);padding:4px 12px;border-radius:999px;margin-bottom:6px;
+}
+.pet-avatar{height:150px;display:grid;place-items:center}
+.pet-avatar svg{filter:drop-shadow(0 10px 10px rgba(94,71,40,.16))}
+.pet-name{font-family:var(--font-display);font-size:24px;color:var(--grass-deep);font-weight:600}
+.pet-breed{font-size:12px;color:var(--muted);margin-bottom:16px}
+
+.mood-bar-wrap{text-align:left;margin:6px 0 18px}
+.mood-label{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:7px}
+.mood-label .val{font-family:var(--font-display);font-variant-numeric:tabular-nums}
+.bar{height:14px;border-radius:999px;background:#F0E7DA;overflow:hidden;border:1px solid var(--line)}
+.bar>i{
+  display:block;height:100%;border-radius:999px;width:50%;
+  transition:width 600ms var(--ease),background 400ms;
+}
+.pet-actions{display:flex;gap:12px}
+.pet-actions .btn{flex:1;font-size:15px;padding:12px 10px}
+.btn.feed{background:var(--grass)}
+.btn.feed:hover{background:var(--grass-deep)}
+
+.toast{
+  position:fixed;left:50%;bottom:36px;transform:translate(-50%,20px);
+  background:var(--ink);color:#fff;font-family:var(--font-display);font-weight:600;
+  padding:12px 24px;border-radius:999px;box-shadow:var(--shadow-3);
+  opacity:0;pointer-events:none;z-index:50;transition:opacity 260ms,transform 260ms var(--ease);
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* 情绪表情动画：开心时轻轻跳 */
+@keyframes happyBounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-12px) rotate(-4deg)}70%{transform:translateY(-4px) rotate(3deg)}}
+.avatar-bounce{animation:happyBounce 620ms var(--ease)}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .dog-card{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-head">
+    <div class="paw" aria-hidden="true">
+      <!-- 爪印图标 -->
+      <svg viewBox="0 0 32 32" fill="#fff"><ellipse cx="16" cy="20" rx="8" ry="6.5"/><circle cx="7" cy="12" r="3"/><circle cx="13" cy="7.5" r="3"/><circle cx="20" cy="7.5" r="3"/><circle cx="26" cy="12" r="3"/></svg>
+    </div>
+    <h1 class="title">狗公园<small>VIRTUAL DOG PARK</small></h1>
+    <span class="badge-local">进度仅存于此浏览器</span>
+  </header>
+
+  <!-- 步骤指示 -->
+  <nav class="steps" aria-label="游戏步骤">
+    <div class="step on" data-step="1"><b>1</b> 挑选狗狗</div>
+    <div class="step" data-step="2"><b>2</b> 给它取名</div>
+    <div class="step" data-step="3"><b>3</b> 开始饲养</div>
+  </nav>
+
+  <!-- ========== 屏幕 1：大厅 ========== -->
+  <section id="screen-hall" class="screen active" aria-labelledby="hall-h">
+    <h2 id="hall-h" style="position:absolute;left:-9999px">选择两只狗狗</h2>
+    <p class="lead">从下面 <strong>六只狗狗</strong> 里挑出你想照顾的 <strong>两只</strong>。每张卡片都写了它的体型、性格和饲养指南。</p>
+    <div class="grid" id="dogGrid" role="group" aria-label="可选的六只狗狗"></div>
+    <div class="action-bar">
+      <span class="hint">已选择 <b id="pickCount">0</b> / 2 只</span>
+      <button class="btn push-right" id="toNameBtn" disabled>下一步 · 给狗狗取名</button>
+    </div>
+  </section>
+
+  <!-- ========== 屏幕 2：取名 ========== -->
+  <section id="screen-name" class="screen" aria-labelledby="name-h">
+    <h2 id="name-h" style="position:absolute;left:-9999px">给狗狗取名字</h2>
+    <p class="lead">给两位新伙伴各取一个名字吧。名字不能空着哦——空着的话得重新填。</p>
+    <form id="nameForm" novalidate>
+      <div class="name-cards" id="nameCards"></div>
+      <div class="action-bar">
+        <button type="button" class="btn ghost" id="backHallBtn">返回重选</button>
+        <button type="submit" class="btn push-right">确认名字 · 开始饲养</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- ========== 屏幕 3：饲养 ========== -->
+  <section id="screen-care" class="screen" aria-labelledby="care-h">
+    <h2 id="care-h" style="position:absolute;left:-9999px">饲养狗狗</h2>
+    <div class="care-head">
+      <div class="care-stat"><span class="k">已饲养天数</span><span class="v" id="dayCount">第 1 天</span></div>
+      <div class="care-stat"><span class="k">成长状态</span><span class="v" id="stageName" style="font-size:24px">幼年</span></div>
+      <span class="stage-chip" id="stageHint">刚来到公园的小奶狗</span>
+    </div>
+    <p class="lead">点 <strong>喂养</strong> 或 <strong>陪玩</strong> 能让狗狗开心值上升；如果你一直不理它，开心值会随时间自然下降。</p>
+    <div class="care-grid" id="careGrid"></div>
+    <div class="action-bar">
+      <span class="hint">开心值 0–100，初始 50。数据只保存在这台设备的浏览器里。</span>
+      <button class="btn ghost push-right" id="restartBtn">重新开始</button>
+    </div>
+  </section>
+
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =========================================================
+   数据层：六只狗狗（插图为本项目原创 SVG，非真实照片）
+   ========================================================= */
+const DOGS = [
+  {id:'golden', name:'金毛寻回犬', en:'Golden Retriever', size:'大型犬',
+   personality:'温顺友善、耐心十足', guide:'每天需要充足运动与陪伴；毛发较长，建议每周梳理 2–3 次。',
+   color:'#E7A94B', ear:'floppy', face:'#F6D9A8'},
+  {id:'corgi', name:'威尔士柯基', en:'Welsh Corgi', size:'小型犬',
+   personality:'活泼贪吃、腿短跑得快', guide:'易发胖，需控制零食和体重；每天保持规律散步。',
+   color:'#D98B45', ear:'pointy', face:'#FFF1DC'},
+  {id:'shiba', name:'柴犬', en:'Shiba Inu', size:'中型犬',
+   personality:'独立倔强、爱干净', guide:'需要从小耐心训练与社交；掉毛量中等，定期梳毛即可。',
+   color:'#D9743A', ear:'pointy', face:'#FBEBD9'},
+  {id:'husky', name:'西伯利亚哈士奇', en:'Siberian Husky', size:'大型犬',
+   personality:'精力旺盛、拆家高手', guide:'需要大量运动和宽敞空间；厚毛怕热，夏天注意降温。',
+   color:'#7E8C99', ear:'pointy', face:'#F4F6F7'},
+  {id:'poodle', name:'贵宾犬', en:'Poodle', size:'小型犬',
+   personality:'聪明机警、学得快', guide:'智商高，适合做训练；基本不掉毛，但需定期美容修剪。',
+   color:'#B98BC9', ear:'floppy', face:'#F3E4F7'},
+  {id:'samoyed', name:'萨摩耶', en:'Samoyed', size:'大型犬',
+   personality:'温柔爱笑、顺时针粘人', guide:'毛发浓密需勤梳理；性格友善，喜欢和人一起活动。',
+   color:'#EFE7DA', ear:'pointy', face:'#FFFFFF'}
+];
+
+const STORAGE_KEY = 'virtual-dog-park-v1';
+const DECAY_MS = 10000;   // 每 10 秒自然下降 1 点开心值
+const FEED_GAIN = 15;     // 喂养增加
+const PLAY_GAIN = 20;     // 陪玩增加
+
+/* =========================================================
+   工具：原创 SVG 狗头插图
+   mood: 'happy' | 'normal' | 'sad'   stage: 幼年/青年/成年 决定大小
+   ========================================================= */
+function dogFace(dog, mood='normal', stage='青年'){
+  const scale = stage==='幼年' ? 0.78 : stage==='成年' ? 1.08 : 1;
+  const c = dog.color, f = dog.face;
+  let ear='';
+  if(dog.ear==='floppy'){
+    ear = `<ellipse cx="30" cy="52" rx="13" ry="26" fill="${c}" transform="rotate(-18 30 52)"/>
+           <ellipse cx="90" cy="52" rx="13" ry="26" fill="${c}" transform="rotate(18 90 52)"/>`;
+  }else{
+    ear = `<path d="M30 46 L24 14 Q40 22 48 44 Z" fill="${c}"/>
+           <path d="M90 46 L96 14 Q80 22 72 44 Z" fill="${c}"/>
+           <path d="M31 42 L28 22 Q39 28 44 42 Z" fill="#F3B9AE" opacity=".7"/>
+           <path d="M89 42 L92 22 Q81 28 76 42 Z" fill="#F3B9AE" opacity=".7"/>`;
+  }
+  // 眼睛随心情变化
+  let eyes='';
+  if(mood==='happy'){
+    eyes = `<path d="M39 58 q7 -9 14 0" stroke="#3B2E24" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M67 58 q7 -9 14 0" stroke="#3B2E24" stroke-width="3.5" fill="none" stroke-linecap="round"/>`;
+  }else if(mood==='sad'){
+    eyes = `<path d="M39 56 q7 7 14 0" stroke="#3B2E24" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M67 56 q7 7 14 0" stroke="#3B2E24" stroke-width="3.5" fill="none" stroke-linecap="round"/>`;
+  }else{
+    eyes = `<circle cx="46" cy="57" r="4.5" fill="#3B2E24"/><circle cx="74" cy="57" r="4.5" fill="#3B2E24"/>
+            <circle cx="47.5" cy="55.5" r="1.5" fill="#fff"/><circle cx="75.5" cy="55.5" r="1.5" fill="#fff"/>`;
+  }
+  // 嘴巴随心情变化
+  let mouth='';
+  if(mood==='happy'){
+    mouth = `<path d="M46 74 q14 16 28 0 q-14 6 -28 0 Z" fill="#3B2E24"/>
+             <path d="M53 80 q7 8 14 0" fill="#E8748A"/>`;
+  }else{
+    mouth = `<path d="M47 76 q13 9 26 0" stroke="#3B2E24" stroke-width="3" fill="none" stroke-linecap="round"/>`;
+  }
+  return `<svg viewBox="0 0 120 120" role="img" aria-label="${dog.name}插图" style="width:100%;height:100%;transform:scale(${scale})">
+    ${ear}
+    <ellipse cx="60" cy="66" rx="34" ry="31" fill="${c}"/>
+    <ellipse cx="60" cy="78" rx="22" ry="17" fill="${f}"/>
+    <ellipse cx="37" cy="70" rx="6" ry="4" fill="#E8748A" opacity=".45"/>
+    <ellipse cx="83" cy="70" rx="6" ry="4" fill="#E8748A" opacity=".45"/>
+    ${eyes}
+    <ellipse cx="60" cy="70" rx="7" ry="5.5" fill="#3B2E24"/>
+    <ellipse cx="58" cy="68.5" rx="2" ry="1.4" fill="#fff" opacity=".8"/>
+    ${mouth}
+  </svg>`;
+}
+function moodOf(v){ return v>=70?'happy':v>=40?'normal':'sad'; }
+function stageOf(day){
+  if(day<=2) return {name:'幼年', hint:'刚来到公园的小奶狗'};
+  if(day<=6) return {name:'青年', hint:'活力满满的青春期'};
+  return {name:'成年', hint:'稳重可靠的大孩子'};
+}
+function dayOf(adoptedAt){
+  return Math.floor((Date.now()-adoptedAt)/86400000)+1;
+}
+
+/* =========================================================
+   状态与本地存储（坏数据兜底）
+   ========================================================= */
+let state = load();
+function fresh(){ return {selected:[], names:{}, adoptedAt:null, happiness:{}, lastUpdate:Date.now(), started:false}; }
+
+function load(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return fresh();
+    const d = JSON.parse(raw);
+    // 结构校验：不合法就当新档
+    if(!d || !Array.isArray(d.selected) || typeof d.happiness!=='object' || typeof d.names!=='object') return fresh();
+    d.selected = d.selected.filter(id=>DOGS.some(x=>x.id===id)).slice(0,2);
+    d.lastUpdate = Number.isFinite(d.lastUpdate)?d.lastUpdate:Date.now();
+    d.adoptedAt = Number.isFinite(d.adoptedAt)?d.adoptedAt:Date.now();
+    for(const id of d.selected){
+      const v = Number(d.happiness[id]);
+      d.happiness[id] = Number.isFinite(v) ? Math.max(0,Math.min(100,v)) : 50;
+    }
+    return d;
+  }catch(e){ return fresh(); }
+}
+function save(){
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){}
+}
+
+/* =========================================================
+   自然衰减：按经过时间补算，关闭网页再回来也会下降
+   ========================================================= */
+function applyDecay(){
+  if(!state.started) return;
+  const now = Date.now();
+  const steps = Math.floor((now - state.lastUpdate)/DECAY_MS);
+  if(steps>0){
+    for(const id of state.selected){
+      state.happiness[id] = Math.max(0, state.happiness[id]-steps);
+    }
+    state.lastUpdate += steps*DECAY_MS;
+    save();
+  }
+}
+
+/* =========================================================
+   界面渲染
+   ========================================================= */
+const $ = s=>document.querySelector(s);
+const grid = $('#dogGrid'), nameCards = $('#nameCards'), careGrid = $('#careGrid');
+const toastEl = $('#toast');
+let toastTimer=null;
+function toast(msg){
+  toastEl.textContent=msg; toastEl.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>toastEl.classList.remove('show'),1600);
+}
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  $('#'+id).classList.add('active');
+  const n = id==='screen-hall'?1:id==='screen-name'?2:3;
+  document.querySelectorAll('.step').forEach(el=>{
+    const k=+el.dataset.step;
+    el.classList.toggle('on',k===n);
+    el.classList.toggle('done',k<n);
+  });
+}
+
+function renderHall(){
+  grid.innerHTML='';
+  DOGS.forEach(dog=>{
+    const card=document.createElement('div');
+    card.className='dog-card'+(state.selected.includes(dog.id)?' selected':'');
+    card.tabIndex=0;
+    card.setAttribute('role','button');
+    card.setAttribute('aria-pressed',state.selected.includes(dog.id)?'true':'false');
+    card.setAttribute('aria-label',`选择${dog.name}，${dog.size}，性格${dog.personality}`);
+    card.innerHTML=`
+      <div class="pick" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="dog-portrait">${dogFace(dog,'happy')}</div>
+      <div class="dog-name">${dog.name}</div>
+      <div class="dog-en">${dog.en}</div>
+      <div class="tag-row"><span class="tag size">${dog.size}</span><span class="tag">${dog.personality.split('、')[0]}</span></div>
+      <div class="info-line">性格：<b>${dog.personality}</b></div>
+      <div class="info-line">饲养指南：<b>${dog.guide}</b></div>`;
+    const toggle=()=>{
+      const i=state.selected.indexOf(dog.id);
+      if(i>=0) state.selected.splice(i,1);
+      else{
+        if(state.selected.length>=2){ toast('最多只能选两只狗狗哦'); return; }
+        state.selected.push(dog.id);
+      }
+      save(); renderHall();
+    };
+    card.addEventListener('click',toggle);
+    card.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();} });
+    grid.appendChild(card);
+  });
+  requestAnimationFrame(()=>document.querySelectorAll('.dog-card').forEach(c=>c.classList.add('in')));
+  $('#pickCount').textContent=state.selected.length;
+  $('#toNameBtn').disabled = state.selected.length!==2;
+}
+
+function renderNames(){
+  nameCards.innerHTML='';
+  state.selected.forEach((id,idx)=>{
+    const dog=DOGS.find(x=>x.id===id);
+    const div=document.createElement('div');
+    div.className='name-card';
+    const inputId='petName'+idx;
+    div.innerHTML=`
+      <div class="mini">${dogFace(dog,'normal')}<div><h3>${dog.name}</h3><span>${dog.size} · ${dog.personality.split('、')[0]}</span></div></div>
+      <div class="field">
+        <label for="${inputId}">给第 ${idx+1} 只狗狗取个名字</label>
+        <input id="${inputId}" type="text" maxlength="16" autocomplete="off"
+               placeholder="例如：旺财" value="${escapeAttr(state.names[id]||'')}" aria-describedby="err${idx}">
+        <div class="err-msg" id="err${idx}" role="alert"></div>
+      </div>`;
+    nameCards.appendChild(div);
+  });
+}
+function escapeAttr(s){ return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function renderCare(bounceIds=[]){
+  applyDecay();
+  const day=dayOf(state.adoptedAt);
+  const stage=stageOf(day);
+  $('#dayCount').textContent='第 '+day+' 天';
+  $('#stageName').textContent=stage.name;
+  $('#stageHint').textContent=stage.hint;
+  careGrid.innerHTML='';
+  state.selected.forEach(id=>{
+    const dog=DOGS.find(x=>x.id===id);
+    const v=Math.round(state.happiness[id]);
+    const m=moodOf(v), moodText=m==='happy'?'很开心':m==='normal'?'还不错':'有点低落';
+    const barColor = v>=70?'var(--good)':v>=40?'var(--warn)':'var(--bad)';
+    const p=document.createElement('div');
+    p.className='pet-panel';
+    p.innerHTML=`
+      <span class="pet-stage-badge">${stage.name}</span>
+      <div class="pet-avatar ${bounceIds.includes(id)?'avatar-bounce':''}" data-avatar="${id}">${dogFace(dog,m,stage.name)}</div>
+      <div class="pet-name">${escapeAttr(state.names[id]||dog.name)}</div>
+      <div class="pet-breed">${dog.name} · ${dog.size}</div>
+      <div class="mood-bar-wrap">
+        <div class="mood-label"><span>开心值 · ${moodText}</span><span class="val">${v} / 100</span></div>
+        <div class="bar" role="progressbar" aria-label="开心值" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${v}"><i style="width:${v}%;background:${barColor}"></i></div>
+      </div>
+      <div class="pet-actions">
+        <button class="btn feed" data-act="feed" data-id="${id}">喂养 +${FEED_GAIN}</button>
+        <button class="btn" data-act="play" data-id="${id}">陪玩 +${PLAY_GAIN}</button>
+      </div>`;
+    careGrid.appendChild(p);
+  });
+  careGrid.querySelectorAll('button[data-act]').forEach(b=>{
+    b.addEventListener('click',()=>{
+      const id=b.dataset.id, act=b.dataset.act;
+      applyDecay();
+      const gain=act==='feed'?FEED_GAIN:PLAY_GAIN;
+      state.happiness[id]=Math.min(100,state.happiness[id]+gain);
+      save(); renderCare([id]);
+      toast(`${escapeAttr(state.names[id])} ${act==='feed'?'吃饱啦':'玩得好开心'}！+${gain}`);
+    });
+  });
+}
+
+/* =========================================================
+   流程事件
+   ========================================================= */
+$('#toNameBtn').addEventListener('click',()=>{
+  if(state.selected.length!==2) return;
+  renderNames(); showScreen('screen-name');
+});
+$('#backHallBtn').addEventListener('click',()=>{ showScreen('screen-hall'); });
+
+$('#nameForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  let ok=true;
+  state.selected.forEach((id,idx)=>{
+    const input=document.getElementById('petName'+idx);
+    const err=document.getElementById('err'+idx);
+    const val=input.value.trim();
+    if(!val){
+      ok=false; input.classList.add('err');
+      err.textContent='名字不能空着，请重新输入～';
+      input.focus();
+    }else{
+      input.classList.remove('err'); err.textContent='';
+      state.names[id]=val;
+    }
+  });
+  if(!ok) return;
+  if(!state.started){
+    state.started=true;
+    state.adoptedAt=Date.now();
+    state.lastUpdate=Date.now();
+    state.selected.forEach(id=>{ if(!Number.isFinite(state.happiness[id])) state.happiness[id]=50; });
+  }
+  save(); renderCare(); showScreen('screen-care');
+  toast('饲养开始啦，好好照顾它们！');
+});
+
+$('#restartBtn').addEventListener('click',()=>{
+  if(!confirm('确定要重新开始吗？当前两只狗狗的进度会被清空。')) return;
+  state=fresh(); save(); renderHall(); showScreen('screen-hall');
+});
+
+/* 每秒刷新天数与衰减（成长 / 自然下降实时生效） */
+setInterval(()=>{ if(state.started && $('#screen-care').classList.contains('active')) renderCare(); },1000);
+
+/* =========================================================
+   启动：若已有存档，直接进入饲养界面
+   ========================================================= */
+(function init(){
+  applyDecay();
+  if(state.started && state.selected.length===2){
+    renderCare(); showScreen('screen-care');
+  }else{
+    renderHall(); showScreen('screen-hall');
+  }
+})();
+</script>
+</body>
+</html>
