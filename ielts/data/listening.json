@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "title": "The Power of Small Habits",
+    "speaker": "James Carter",
+    "duration": "5:45",
+    "category": "自我提升",
+    "description": "微小习惯如何日积月累改变你的人生",
+    "audio_file": "ted_1.mp3",
+    "transcript": "Good evening, everyone. I want to start with a simple question. Have you ever decided to change your life completely starting tomorrow? Maybe you decided to wake up at five in the morning, run for an hour, eat nothing but vegetables, and read a hundred pages of a book. And how long did that last? For most of us, about three days.\n\nThe problem is not that we lack willpower. The problem is that we are trying to change too much, too fast. Tonight, I want to talk about a different approach to change, one that is so small it almost seems too simple to work. I call it the power of small habits.\n\nLet me give you an example. A few years ago, I wanted to get fit. I bought a gym membership, planned to go every day for an hour. I went three times in the first week, twice in the second, and by the third week, I had completely stopped. The gym membership became a monthly donation to a business I never visited.\n\nThen I tried something different. I decided to do just one push-up every morning. One. Not ten, not twenty. Just one. And here is the interesting part. Most days, once I was on the floor doing that one push-up, I ended up doing five or ten. But even on the days I only did one, I had still exercised. The habit was established.\n\nWithin three months, I was doing thirty push-ups every morning without thinking about it. The one push-up had grown into something substantial, but it started so small that I never resisted it.\n\nThis is the first principle of small habits: make it so easy that you cannot say no. When a habit is tiny, it does not require motivation. It does not require willpower. It requires almost no effort. And because it requires no effort, you do it every day. And doing something every day, even something small, is what creates change.\n\nThe second principle is about compound interest. We understand compound interest with money. A small amount, invested regularly over time, grows exponentially. The same is true of habits. If you improve by just one percent every day for a year, you will be thirty-seven times better by the end of that year. Not one percent better. Thirty-seven times better. That is the mathematics of compound improvement.\n\nBut here is the difficult part. In the beginning, the results are invisible. If you save a dollar a day, after a week you have seven dollars. That does not feel like progress. If you read one page a day, after a week you have read seven pages. That does not feel like a book. And this is where most people quit. They quit because they cannot see the results yet.\n\nI want you to think about how ice melts. If you have a block of ice at twenty-five degrees Fahrenheit, it is still solid ice. You raise the temperature to thirty degrees. Still solid. Thirty-two degrees. Still solid. But at thirty-three degrees, suddenly it begins to melt. The one-degree change from thirty-two to thirty-three seems small, but it is the tipping point. All the warming from twenty-five to thirty-two was stored, waiting. It was not wasted. It was building toward the moment of change.\n\nHabits work the same way. The early days, the early weeks, feel like nothing is happening. But you are storing energy. You are raising the temperature. And then, one day, the ice melts. The change becomes visible.\n\nThe third principle is about identity. Most people focus on what they want to achieve. I want to run a marathon. I want to lose twenty pounds. I want to write a book. But the most effective way to change your behavior is to change who you believe you are. Instead of saying I want to run a marathon, say I am a runner. Instead of I want to write a book, say I am a writer.\n\nWhen you change your identity, your habits follow naturally. A runner does not have to force themselves to run. A writer does not have to force themselves to write. The behavior becomes an expression of who they are, not a task they are trying to complete.\n\nAnd here is the beautiful thing. Every time you do a small habit, you are casting a vote for that identity. One push-up is a vote for being an athlete. One page read is a vote for being a reader. One sentence written is a vote for being a writer. You do not need to cast every vote. You just need to cast most of them.\n\nSo tonight, I want to leave you with one challenge. Pick one thing you want to change. Not ten things. One thing. And make it ridiculously small. If you want to exercise, do one push-up. If you want to read, read one page. If you want to meditate, sit quietly for one minute. Do it tomorrow morning. And the morning after that. Do not worry about the results. The results will come, in time, the way ice melts when the temperature is right.\n\nThank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "What is the speaker's main argument in this talk?",
+        "options": [
+          "Willpower is the key to forming lasting habits",
+          "Small, easy habits are more effective than large, difficult ones",
+          "Exercise is the most important habit to develop",
+          "Reading one page a day will make you a writer"
+        ],
+        "answer": "B",
+        "explanation": "演讲的核心论点是：微小的、几乎不需要意志力的习惯比试图一次性做出巨大改变更有效。B 准确概括了这一主旨。A 与原文相反（\"The problem is not that we lack willpower\"），C 和 D 只是具体例子，非主旨。"
+      },
+      {
+        "type": "single",
+        "question": "What happened when the speaker first tried to get fit with a gym membership?",
+        "options": [
+          "He went every day for a month",
+          "He stopped going after about three weeks",
+          "He injured himself and had to quit",
+          "He hired a personal trainer"
+        ],
+        "answer": "B",
+        "explanation": "原文：\"I went three times in the first week, twice in the second, and by the third week, I had completely stopped\"。B 准确。"
+      },
+      {
+        "type": "single",
+        "question": "According to the speaker, if you improve by one percent every day for a year, how much better will you be by the end?",
+        "options": [
+          "One percent better",
+          "Twelve percent better",
+          "Thirty-seven times better",
+          "One hundred times better"
+        ],
+        "answer": "C",
+        "explanation": "原文：\"If you improve by just one percent every day for a year, you will be thirty-seven times better by the end of that year\"。C 正确。"
+      },
+      {
+        "type": "multiple",
+        "question": "Which of the following are mentioned as principles of small habits? (Choose all that apply)",
+        "options": [
+          "Make the habit so easy you cannot say no",
+          "Always exercise for at least one hour",
+          "Focus on compound improvement over time",
+          "Change your identity rather than just your goals"
+        ],
+        "answer": [
+          "A",
+          "C",
+          "D"
+        ],
+        "explanation": "演讲提到三个原则：①Make it so easy that you cannot say no（A）；②Compound interest/compound improvement（C）；③Change identity（D）。B\"always exercise for one hour\"与原文相反，原文强调从one push-up开始。"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Why Sleep Matters More Than You Think",
+    "speaker": "Dr. Sarah Mitchell",
+    "duration": "5:27",
+    "category": "健康科学",
+    "description": "睡眠对身体和大脑的深远影响",
+    "audio_file": "ted_2.mp3",
+    "transcript": "Good afternoon. Let me ask you a question. How many of you got eight hours of sleep last night? Let me guess. Not many. And I understand. We live in a world that celebrates busy. We wear our exhaustion like a badge of honor. We say things like, I will sleep when I am dead. Well, tonight, I want to tell you that the shorter your sleep, the sooner that day may come.\n\nI am a neuroscientist, and I have spent the last fifteen years studying sleep. And what I have discovered is that sleep is not a luxury. It is not an indulgence. It is the most important thing you can do for your brain and your body. Every major organ, every system in your body, is enhanced by sleep and impaired by a lack of it.\n\nLet us start with the brain. When you are awake, your brain is constantly producing metabolic waste. These are toxic byproducts of neural activity. During the day, this waste accumulates. If it is not cleared away, it damages the brain. Now, your brain has a cleaning system called the glymphatic system. And here is the remarkable thing. This system is active almost exclusively during deep sleep.\n\nThink of your brain like a city. During the day, the city is busy. Traffic is flowing, factories are running, waste is being produced. At night, when the city quietens down, the sanitation workers come out. They clear the streets, remove the waste, and prepare the city for the next day. If the sanitation workers do not come, the waste accumulates. The streets become filthy. The city cannot function properly.\n\nThat is what happens to your brain when you do not sleep. The waste accumulates. And one of the proteins that accumulates is called amyloid-beta. Amyloid-beta is the same protein that builds up in the brains of people with Alzheimer's disease. In fact, studies have shown that people who chronically sleep less than six hours a night have a significantly higher risk of developing Alzheimer's disease later in life.\n\nNow let us talk about learning and memory. You probably know that you need sleep after learning to consolidate new information. But what you may not know is that you also need sleep before learning, to prepare your brain to absorb new information like a dry sponge. We did a study where we had two groups of people. One group slept a full eight hours. The other group was kept awake all night. The next day, we showed them new information to learn. The sleep-deprived group had a forty percent deficit in their ability to form new memories. Forty percent. That is the difference between an A and a failing grade.\n\nAnd it gets worse. Sleep deprivation does not just affect your brain. It affects your entire body. After just one night of four hours of sleep, the number of natural killer cells in your immune system drops by seventy percent. Natural killer cells are your body's defense against infections and tumors. After one week of sleeping five hours instead of eight, testosterone levels in men drop to levels equivalent to aging ten years. Insulin sensitivity, which is crucial for regulating blood sugar, decreases significantly. You become, in a very real sense, metabolically older.\n\nAnd then there is the cardiovascular system. We studied the effect of daylight saving time on heart attacks. In the spring, when we lose an hour of sleep, heart attacks spike by twenty-four percent the following day. In the autumn, when we gain an hour, heart attacks drop by twenty-one percent. One hour of sleep, in one direction or another, produces a measurable change in cardiovascular health. That is how sensitive the human body is to sleep.\n\nSo what is the solution? First, prioritize sleep. Treat it with the same respect you give to your work or your family. Second, consistency is key. Going to bed and waking up at the same time every day, even on weekends, is one of the most effective things you can do. Third, create a cool, dark environment. Your bedroom should be cool, around eighteen degrees Celsius. Your brain needs to drop its core temperature to initiate sleep. Fourth, avoid screens before bed. The blue light suppresses melatonin, the hormone that signals your brain that it is time to sleep. And fifth, avoid caffeine late in the day. Caffeine has a half-life of five to seven hours. That cup of coffee at four in the afternoon is still in your system at ten or eleven at night.\n\nSleep is not the enemy of productivity. It is the foundation of it. The most productive people, the most creative people, the healthiest people, are almost always the best sleepers. So tonight, I want you to do one thing. Go to bed an hour earlier. Your brain, your body, and your future self will thank you.\n\nThank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "What is the speaker's main message about sleep?",
+        "options": [
+          "Sleep is a luxury that busy people can skip",
+          "Sleep is the most important thing for brain and body health",
+          "Eight hours of sleep is unnecessary for most people",
+          "Caffeine has no effect on sleep quality"
+        ],
+        "answer": "B",
+        "explanation": "演讲核心：\"sleep is not a luxury... it is the most important thing you can do for your brain and your body\"。B 准确概括。A 相反，C 与原文建议矛盾，D 与原文相反（caffeine的半衰期5-7小时影响睡眠）。"
+      },
+      {
+        "type": "single",
+        "question": "According to the speaker, when is the brain's cleaning system (glymphatic system) most active?",
+        "options": [
+          "During waking hours",
+          "Only during exercise",
+          "Almost exclusively during deep sleep",
+          "After drinking coffee"
+        ],
+        "answer": "C",
+        "explanation": "原文：\"This system is active almost exclusively during deep sleep\"。C 正确。"
+      },
+      {
+        "type": "single",
+        "question": "In the study comparing sleep-deprived and well-rested groups, what was the memory deficit in the sleep-deprived group?",
+        "options": [
+          "Ten percent",
+          "Twenty-five percent",
+          "Forty percent",
+          "Fifty percent"
+        ],
+        "answer": "C",
+        "explanation": "原文：\"The sleep-deprived group had a forty percent deficit in their ability to form new memories\"。C 正确。"
+      },
+      {
+        "type": "multiple",
+        "question": "Which of the following sleep recommendations does the speaker mention? (Choose all that apply)",
+        "options": [
+          "Go to bed and wake up at consistent times",
+          "Keep the bedroom cool around 18°C",
+          "Exercise vigorously right before bed",
+          "Avoid screens before bedtime"
+        ],
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "演讲提到的建议包括：①consistent sleep schedule（A）；②cool environment around 18°C（B）；③avoid screens before bed（D）。C\"睡前剧烈运动\"原文未提及，且与良好睡眠习惯相悖。"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "The Hidden World of Coral Reefs",
+    "speaker": "Dr. David Chen",
+    "duration": "5:43",
+    "category": "环境科学",
+    "description": "珊瑚礁的生态价值与面临的危机",
+    "audio_file": "ted_3.mp3",
+    "transcript": "Hello, everyone. I want to take you on a journey to a place that most of you have never seen, but which is more important to your survival than you might imagine. I am talking about coral reefs.\n\nNow, when I say coral reef, what do you picture? Probably a beautiful underwater scene. Colorful fish, clear blue water, maybe a sea turtle gliding by. And that image is correct. But it is only a tiny fraction of the story. Coral reefs are not just beautiful. They are one of the most complex, most ancient, and most valuable ecosystems on our planet.\n\nLet me give you some perspective. Coral reefs cover less than one percent of the ocean floor. Less than one percent. And yet, they are home to twenty-five percent of all marine species. One quarter of all life in the ocean depends on reefs for survival. If reefs disappear, those species disappear. It is that simple.\n\nBut the importance of reefs goes far beyond biodiversity. Let us talk about economics. Coral reefs provide economic value to humans worth approximately three hundred and seventy-five billion dollars per year. They support fishing industries that feed hundreds of millions of people. They protect coastlines from storms and erosion, reducing wave energy by up to ninety-seven percent. Without reefs, coastal cities from Miami to Mumbai would face far greater damage from hurricanes and typhoons.\n\nAnd then there is medicine. You have probably heard that many medicines come from plants on land. But did you know that some of the most promising medical breakthroughs are coming from coral reefs? A compound derived from a sponge found on Caribbean reefs is already used in a drug that treats certain types of cancer. Another compound, from a soft coral, is being developed as an anti-inflammatory agent. Reefs are a living pharmacy, and we have barely begun to explore their potential.\n\nSo what exactly is a coral reef? It is a living structure built by tiny animals called polyps. Each polyp is about the size of a pinhead. It secretes a calcium carbonate skeleton, and over thousands of years, these skeletons accumulate, building the massive structures we call reefs. The Great Barrier Reef in Australia, for example, is so large that it can be seen from space. It is the largest living structure on Earth.\n\nBut here is the part that most people do not understand. The coral polyp itself is colorless. The brilliant colors of a reef come from tiny algae called zooxanthellae that live inside the coral's tissue. These algae photosynthesize, converting sunlight into food, and they share up to ninety percent of that food with the coral. In return, the coral provides the algae with a safe home and the nutrients they need. It is one of the most remarkable partnerships in nature.\n\nAnd this partnership is fragile. When the ocean gets too warm, the coral becomes stressed. And when coral is stressed, it expels the algae. Without the algae, the coral loses its color. It turns white. This is what we call coral bleaching. Bleached coral is not dead, but it is starving. It has lost its primary source of food. If the temperature returns to normal quickly, the coral can recover. If it does not, the coral dies.\n\nAnd this is happening on a massive scale. In 2016 and 2017, the Great Barrier Reef experienced back-to-back bleaching events that affected nearly half of the reef. In the Caribbean, coral cover has declined by eighty percent over the past four decades. Globally, we have lost about half of the world's coral reefs in the past thirty years. Let me repeat that. We have lost half of the world's coral reefs in thirty years.\n\nThe primary cause is climate change. When ocean temperatures rise even one or two degrees above normal, corals bleach. And as global temperatures continue to rise, these events are becoming more frequent and more severe. What used to happen once a decade now happens every few years. The coral does not have time to recover.\n\nBut there is hope. Scientists around the world are working on solutions. Some are breeding heat-resistant coral in laboratories and transplanting it onto degraded reefs. Others are developing techniques to cool small areas of reef during heat waves. Marine protected areas, where fishing and other human activities are restricted, give reefs the best chance to recover and adapt.\n\nBut ultimately, the fate of coral reefs depends on what we do about climate change. If we can limit global warming to one and a half degrees above pre-industrial levels, as the Paris Agreement calls for, we may save a significant portion of the world's reefs. If we fail, we could lose virtually all of them by the end of this century.\n\nSo the next time you hear about coral reefs, I want you to remember this. They are not just pretty underwater scenery. They are the foundation of marine life, the protector of our coasts, a source of medicine, and a living structure that has existed for millions of years. They are worth fighting for. And the fight is not over yet.\n\nThank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "According to the speaker, approximately what percentage of marine species depend on coral reefs?",
+        "options": [
+          "One percent",
+          "Ten percent",
+          "Twenty-five percent",
+          "Fifty percent"
+        ],
+        "answer": "C",
+        "explanation": "原文：\"they are home to twenty-five percent of all marine species\"。C 正确。"
+      },
+      {
+        "type": "single",
+        "question": "What causes the brilliant colors of coral reefs?",
+        "options": [
+          "The coral polyps themselves",
+          "Tiny algae called zooxanthellae living inside the coral",
+          "Minerals in the ocean water",
+          "Sunlight reflecting off calcium carbonate"
+        ],
+        "answer": "B",
+        "explanation": "原文：\"The brilliant colors of a reef come from tiny algae called zooxanthellae that live inside the coral's tissue\"。B 正确。"
+      },
+      {
+        "type": "single",
+        "question": "What happens during coral bleaching?",
+        "options": [
+          "The coral produces more algae",
+          "The coral turns a deeper red color",
+          "The coral expels its algae and turns white",
+          "The coral grows larger"
+        ],
+        "answer": "C",
+        "explanation": "原文：\"When the ocean gets too warm, the coral becomes stressed. And when coral is stressed, it expels the algae. Without the algae, the coral loses its color. It turns white.\" C 正确。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which of the following are benefits that coral reefs provide? (Choose all that apply)",
+        "options": [
+          "Supporting fishing industries that feed millions of people",
+          "Protecting coastlines from storms and erosion",
+          "Producing oxygen for the atmosphere",
+          "Providing compounds used in medicines"
+        ],
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "演讲提到的珊瑚礁价值包括：①支持渔业养活数亿人（A）；②保护海岸线免受风暴和侵蚀（B）；④提供药物化合物（D）。C\"为大气产氧\"原文未提及，珊瑚礁的主要贡献不是产氧（那主要是浮游植物的功劳）。"
+      }
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "part": "Part 1",
+    "topic": "Hometown",
+    "category": "日常话题",
+    "prompt": "Let's talk about your hometown.\n1. Where is your hometown?\n2. What is your hometown known for?\n3. Would you say it's a good place to live? Why or why not?\n4. Has your hometown changed much since you were a child?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：每题回答 2-3 句即可，不要只答 Yes/No。\n• 先直接回答，再补充一点细节或原因\n• 用自己真实的经历，不要背模板\n• 保持自然流畅，像日常聊天\n• 注意时态：问\"since you were a child\"用现在完成时"
+  },
+  {
+    "id": 2,
+    "part": "Part 1",
+    "topic": "Hobbies and Free Time",
+    "category": "日常话题",
+    "prompt": "Let's talk about what you do in your free time.\n1. Do you have any hobbies or interests?\n2. How long have you been interested in this?\n3. Is it important to have hobbies? Why?\n4. Do you prefer spending your free time alone or with others?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 用 \"I've been doing X for...\" 句式回答时长问题\n• 解释原因时用 \"because\" 或 \"since\" 连接\n• 对比类问题可以用 \"It depends on...\" 开头\n• 自然使用 some, quite, rather 等程度副词"
+  },
+  {
+    "id": 3,
+    "part": "Part 2",
+    "topic": "Describe a person who has influenced you",
+    "category": "人物描述",
+    "prompt": "Describe a person who has had a significant influence on your life.\n\nYou should say:\n• who this person is\n• how you know them\n• what they are like\n• and explain why they have influenced you so much.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think you have influenced this person in any way?\n• Do you think role models are important for young people?",
+    "tips": "Part 2 答题要领（CPR 结构）：\n• C - Character：先介绍这个人是谁、和你什么关系\n• P - Particulars：用具体细节描写这个人的性格、行为\n• R - Reflection：解释为什么受影响，给出具体例子\n• 用过去时描述具体事件，现在时描述一般特征\n• 注意时间管理，讲满 1 分 30 秒以上"
+  },
+  {
+    "id": 4,
+    "part": "Part 2",
+    "topic": "Describe a beautiful place you have visited",
+    "category": "地点描述",
+    "prompt": "Describe a beautiful place that you have visited.\n\nYou should say:\n• where this place is\n• when you went there\n• what you did there\n• and explain why you found it so beautiful.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think this place will change much in the future?\n• What makes a place beautiful to you?",
+    "tips": "Part 2 答题要领：\n• 用方位词交代位置：situated, located, in the north of...\n• 感官描写：视觉（scenery, breathtaking）、听觉、嗅觉\n• 用叙事推进：arrived → explored → felt\n• 情感词：mesmerized, overwhelmed, at peace\n• 避免罗列景点，要有个人体验和感受"
+  },
+  {
+    "id": 5,
+    "part": "Part 3",
+    "topic": "The importance of preserving beautiful places",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to beautiful places.\n1. Do you think it's important to maintain beautiful places in cities? Why?\n2. How has tourism affected some of the world's most beautiful places?\n3. Should governments restrict the number of visitors to certain natural sites? Why or why not?\n4. Do you think economic development and environmental preservation can coexist?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领（四步法）：\n• 第一步：直接表态（I believe / In my view）\n• 第二步：给理由（The main reason is that...）\n• 第三步：举例（For instance / A good example would be...）\n• 第四步：补充或对比（However / On the other hand...）\n• 用抽象表达：sustainable development, carrying capacity, cultural heritage\n• 语气更正式，句式更复杂"
+  }
+]

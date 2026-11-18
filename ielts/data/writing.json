@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "task": "Task 1",
+    "type": "Line Graph",
+    "topic": "互联网用户增长趋势",
+    "word_limit": 150,
+    "time_limit": "20 分钟",
+    "prompt": "The graph below shows the percentage of people using the internet in three different regions from 2010 to 2020.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chart": "图表说明（模拟线图）：\n\n• 纵轴：Internet Users (%)，0% 到 100%\n• 横轴：年份 2010 → 2020\n• 线 A — North America：2010 年 65% → 2014 年 78% → 2020 年 92%（持续上升）\n• 线 B — Europe：2010 年 55% → 2014 年 72% → 2020 年 88%（上升，与北美差距缩小）\n• 线 C — Africa：2010 年 12% → 2014 年 22% → 2020 年 40%（增长最快但总量最低）\n\n三条线均呈上升趋势；北美始终领先；非洲增速最快（2010-2020 增长 28 个百分点）；欧洲与北美差距从 10% 缩小到 4%。",
+    "tips": "Task 1 高分要点：\n• 开头用一句话概述图表内容（paraphrase 题目）\n• 第二句写总体趋势（overview），这是拿分关键\n• 主体段选 2-3 个最显著的对比来写，不要罗列所有数据\n• 时态：过去时描述历史数据\n• 用 while, whereas, compared to 做对比\n• 不发表个人观点，只客观描述"
+  },
+  {
+    "id": 2,
+    "task": "Task 1",
+    "type": "Bar Chart",
+    "topic": "不同年龄段的教育支出",
+    "word_limit": 150,
+    "time_limit": "20 分钟",
+    "prompt": "The bar chart below shows the average annual spending on education per person in four age groups in a European country in 2015.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chart": "图表说明（模拟柱状图）：\n\n• 纵轴：Annual Spending (€)，0 到 5000\n• 横轴：四个年龄段\n• 18-24 岁：€3,200（大学阶段，支出最高）\n• 25-35 岁：€1,500（明显下降）\n• 36-50 岁：€800（最低）\n• 51-65 岁：€1,100（小幅回升，可能为再培训）\n\n总体呈 V 形：18-24 最高 → 36-50 最低 → 51-65 回升；最高与最低差距 €2,400。",
+    "tips": "Task 1 柱图要点：\n• 找最高、最低、转折点\n• 用 rose, fell, peaked at, dropped to 等动词\n• 分组对比比逐个罗列更有效\n• overview 写在第二句：\"Overall, spending was highest among...\""
+  },
+  {
+    "id": 3,
+    "task": "Task 2",
+    "type": "Agree / Disagree",
+    "topic": "远程工作取代办公室工作",
+    "word_limit": 250,
+    "time_limit": "40 分钟",
+    "prompt": "Some people think that in the future, most work will be done from home rather than in traditional offices, and this will bring more benefits than drawbacks.\n\nTo what extent do you agree or disagree with this statement?",
+    "chart": "",
+    "tips": "Task 2 议论文要点：\n• 引言段：背景引入 + 明确表态（完全同意/部分同意/不同意）\n• 主体段每段一个核心论点，用 PEEL 结构：Point → Evidence → Explain → Link\n• 全文立场一致，不要中途转向\n• 用 however, nevertheless, in contrast 做让步和转折\n• 结论段重申立场，不要引入新观点\n• 字数 250+，但不要超过 300 太多"
+  },
+  {
+    "id": 4,
+    "task": "Task 2",
+    "type": "Discuss Both Views",
+    "topic": "大学教育是否应免费",
+    "word_limit": 250,
+    "time_limit": "40 分钟",
+    "prompt": "Some people believe that university education should be free for all students, while others argue that students should pay for their own education.\n\nDiscuss both these views and give your own opinion.",
+    "chart": "",
+    "tips": "Discuss Both Views 要点：\n• 主体段一：讨论观点 A（支持免费的理由）\n• 主体段二：讨论观点 B（支持付费的理由）\n• 两段篇幅大致相等，不要偏袒\n• 引言段说明两种观点都存在\n• 结论段给出自己的立场并简述理由\n• 用 \"Proponents of free education argue that...\" 和 \"On the other hand, those who favour tuition fees point out that...\""
+  },
+  {
+    "id": 5,
+    "task": "Task 2",
+    "type": "Advantages / Disadvantages",
+    "topic": "社交媒体对人际关系的影响",
+    "word_limit": 250,
+    "time_limit": "40 分钟",
+    "prompt": "Social media has become an integral part of modern life. Many people now maintain their friendships primarily through online platforms.\n\nWhat are the advantages and disadvantages of maintaining friendships through social media?",
+    "chart": "",
+    "tips": "优缺点类要点：\n• 如果问 \"Do the advantages outweigh the disadvantages?\"，需要在结论表明哪一方更大\n• 如果只问 \"What are the advantages and disadvantages?\"，客观列出即可\n• 主体段一写 2 个优点，主体段二写 2 个缺点\n• 每个优点/缺点都要有具体例子\n• 用 \"One significant advantage is...\" / \"However, a major drawback is...\""
+  }
+]

@@ -1,0 +1,251 @@
+[
+  {
+    "id": 1,
+    "title": "The Plastic Tide: Ocean Pollution in the Twenty-First Century",
+    "source": "Adapted from environmental science journals",
+    "word_count": 1250,
+    "category": "环境科学",
+    "description": "海洋塑料污染的来源、影响与应对策略",
+    "content": "The world's oceans, covering more than seventy percent of the Earth's surface, have long been regarded as the planet's final frontier — a vast, mysterious realm seemingly capable of absorbing and recycling whatever humanity discards into it. This assumption, once taken for granted, has been shattered by a crisis that has unfolded over the past several decades: the contamination of marine environments by plastic waste on a scale that defies comprehension.\n\nThe numbers are staggering. According to estimates published by the United Nations Environment Programme, approximately eight million tonnes of plastic enter the oceans each year. This is equivalent to dumping a garbage truck full of plastic into the sea every single minute. By 2050, if current trends continue, the weight of plastic in the oceans could exceed that of all fish combined. Unlike organic materials, which decompose relatively quickly, conventional plastics persist in the marine environment for hundreds of years, fragmenting into ever smaller pieces but never truly disappearing.\n\nThe sources of this pollution are diverse, but a handful of rivers are responsible for the lion's share. A study published in the journal Environmental Science & Technology found that just ten river systems — eight in Asia and two in Africa — carry roughly ninety percent of the global input of land-based plastic waste into the oceans. These rivers flow through regions with rapidly growing populations, inadequate waste management infrastructure, and high consumption of single-use packaging. The Yangtze River alone is estimated to transport approximately 1.5 million tonnes of plastic into the East China Sea each year.\n\nOnce plastic enters the ocean, it does not remain stationary. Ocean currents, wind, and wave action distribute it across the globe, from the surface waters of tropical seas to the deepest trenches on Earth. In 2018, a team of researchers exploring the Mariana Trench — the deepest known point in the ocean, at a depth of nearly eleven kilometres — discovered plastic bags littering the seafloor. The discovery was a sobering reminder that no corner of the marine environment, however remote, remains untouched by human waste.\n\nThe consequences for marine life are profound and multifaceted. Large pieces of plastic pose an immediate physical threat: sea turtles mistake floating plastic bags for jellyfish, their primary food source, while seabirds ingest bottle caps and lighters, which accumulate in their stomachs and eventually cause starvation. A study by the Ocean Conservancy found that plastic has been documented in the digestive tracts of over seven hundred marine species, including endangered ones such as the Hawaiian monk seal and the loggerhead turtle.\n\nEqually alarming is the phenomenon of microplastics — plastic fragments smaller than five millimetres in diameter. These tiny particles result from the breakdown of larger items as well as from the direct release of microbeads used in personal care products. Microplastics have been found in every ocean basin on Earth, from the surface to the deep sea, and even in Arctic ice. Because they are small enough to be ingested by plankton and other organisms at the base of the food chain, microplastics bioaccumulate as they move upward, eventually reaching the fish and shellfish that humans consume. A 2019 study commissioned by the World Wildlife Fund estimated that the average person ingests approximately five grams of plastic every week — roughly the equivalent of a credit card — through contaminated food and water.\n\nThe chemical dimension of the problem adds another layer of complexity. Plastics are not inert; they contain a range of additives, including plasticisers, flame retardants, and colourants, many of which are known to be toxic. When plastics degrade in seawater, these chemicals are released into the surrounding environment. Moreover, microplastics act like sponges, adsorbing persistent organic pollutants such as PCBs and DDT from the surrounding water. When marine organisms ingest these contaminated particles, the toxins are released into their tissues, where they can disrupt endocrine systems, impair reproduction, and cause developmental abnormalities.\n\nAddressing a problem of this magnitude requires action on multiple fronts. At the international level, there is growing momentum for a legally binding treaty on plastic pollution, akin to the Paris Agreement on climate change. In March 2022, representatives from 175 nations meeting in Nairobi endorsed a resolution to develop such a treaty by 2024, a move widely hailed as the most significant environmental accord since the 2015 climate agreement. The proposed treaty would address the full lifecycle of plastics, from production and design to disposal and recycling.\n\nAt the national level, a number of countries have already taken decisive steps. Rwanda, remarkably, banned single-use plastic bags as early as 2008, imposing strict penalties on their manufacture, use, and importation. Kenya followed suit in 2017 with one of the world's most stringent bans, carrying fines of up to $40,000 or prison sentences of up to four years. The European Union's Single-Use Plastics Directive, adopted in 2019, prohibits a range of plastic products — including cutlery, cotton buds, and polystyrene food containers — and requires member states to collect and recycle ninety percent of plastic bottles by 2029.\n\nTechnological innovation also plays a critical role. Advances in chemical recycling, which breaks plastics down into their molecular components for reuse, offer the prospect of a truly circular plastics economy. Researchers are also developing biodegradable alternatives derived from plant-based materials such as cornstarch and seaweed. However, these solutions are not without limitations: biodegradable plastics often require specific industrial composting conditions to break down, and scaling up production remains expensive.\n\nConsumer behaviour, ultimately, is perhaps the most powerful lever of all. The choices made by billions of individuals — whether to use a reusable water bottle, to refuse a plastic straw, to purchase products with minimal packaging — collectively shape market demand and, in turn, industrial production. While individual actions alone cannot solve a crisis of this scale, they create the social and economic conditions that make systemic change possible.\n\nThe plastic tide, in other words, is not inevitable. It is the product of decisions — by manufacturers, policymakers, and consumers — and it can be reversed by different decisions. What is required is not a single solution but a sustained, coordinated effort across every level of society. The oceans, for all their vastness, have limits, and those limits have been reached. What happens next will depend on whether humanity treats this crisis with the urgency it demands.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "What is the main purpose of this passage?",
+        "options": [
+          "To compare plastic pollution in different oceans",
+          "To provide a comprehensive overview of ocean plastic pollution and potential solutions",
+          "To argue that plastic pollution is less serious than climate change",
+          "To describe the chemical composition of different plastics"
+        ],
+        "answer": "B",
+        "explanation": "文章从污染规模、来源、对海洋生物的影响、微塑料危害、化学毒性、国际/国家/技术/消费者层面的解决方案等多个角度全面阐述了海洋塑料污染问题，因此主旨是 B。A 只涉及一方面，C 与原文立场相反，D 只是一个细节。"
+      },
+      {
+        "type": "single",
+        "question": "According to the passage, approximately how much plastic enters the oceans each year?",
+        "options": [
+          "1.5 million tonnes",
+          "5 million tonnes",
+          "8 million tonnes",
+          "10 million tonnes"
+        ],
+        "answer": "C",
+        "explanation": "第二段明确指出 \"approximately eight million tonnes of plastic enter the oceans each year\"，对应 C。1.5 million tonnes 是长江单独的排放量（第三段），不是全球总量。"
+      },
+      {
+        "type": "single",
+        "question": "The study published in Environmental Science & Technology found that approximately what percentage of global land-based plastic waste enters the ocean via just ten rivers?",
+        "options": [
+          "50 percent",
+          "70 percent",
+          "80 percent",
+          "90 percent"
+        ],
+        "answer": "D",
+        "explanation": "第三段原文：\"just ten river systems... carry roughly ninety percent of the global input of land-based plastic waste into the oceans\"，对应 D。"
+      },
+      {
+        "type": "single",
+        "question": "The word \"adsorbing\" in the sixth paragraph is closest in meaning to:",
+        "options": [
+          "dissolving completely",
+          "attracting and holding on the surface",
+          "breaking down into smaller pieces",
+          "repelling and pushing away"
+        ],
+        "answer": "B",
+        "explanation": "在原文语境中，微塑料像海绵一样\"adsorbing\"持久性有机污染物，即在其表面吸附和持留这些化学物质。B\"attracting and holding on the surface\"最准确。A 是溶解，C 是分解，D 是排斥，均不符合语境。"
+      },
+      {
+        "type": "single",
+        "question": "What can be inferred about biodegradable plastics from the passage?",
+        "options": [
+          "They are the definitive solution to ocean plastic pollution",
+          "They can break down naturally in any marine environment",
+          "They have limitations, including requiring specific conditions and being costly to produce",
+          "They are already widely used and have replaced conventional plastics"
+        ],
+        "answer": "C",
+        "explanation": "第八段指出：\"these solutions are not without limitations: biodegradable plastics often require specific industrial composting conditions to break down, and scaling up production remains expensive\"，C 准确概括了这两点局限。A 和 B 与原文相反，D 与原文不符（还在发展中）。"
+      },
+      {
+        "type": "single",
+        "question": "The author's overall tone in this passage can best be described as:",
+        "options": [
+          "Optimistic and dismissive of the problem",
+          "Objective and concerned, with a call to action",
+          "Angry and accusatory toward specific countries",
+          "Indifferent and purely academic"
+        ],
+        "answer": "B",
+        "explanation": "作者用大量数据和事实客观呈现问题（concerned），最后以\"What is required is... a sustained, coordinated effort\"结尾呼吁行动（call to action），但并未愤怒指责特定国家或漠不关心。B 最准确。"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "The Silicon Workforce: How Artificial Intelligence Is Reshaping Employment",
+    "source": "Adapted from technology and economics publications",
+    "word_count": 1280,
+    "category": "科技与社会",
+    "description": "人工智能对就业市场的冲击、机遇与未来趋势",
+    "content": "In March 2023, the investment bank Goldman Sachs published a report that sent shockwaves through boardrooms and government ministries alike. The study concluded that generative artificial intelligence — the technology behind systems such as ChatGPT — could automate tasks equivalent to roughly three hundred million full-time jobs worldwide. Within a decade, the report suggested, two-thirds of occupations in the United States and Europe would be exposed to some degree of automation by AI. The headline was dramatic, but beneath it lay a far more nuanced reality that demands careful examination.\n\nTo understand the impact of AI on employment, it is helpful to distinguish between jobs and tasks. A job is a collection of tasks; AI rarely replaces an entire job outright. Instead, it automates specific tasks within a job, transforming how the work is done rather than eliminating the person who does it. A lawyer, for instance, may spend hours reviewing contracts for specific clauses — a task that AI can now perform in seconds. But the lawyer's broader role — advising clients, negotiating settlements, arguing in court — remains distinctly human, at least for the foreseeable future. The World Economic Forum's Future of Jobs Report, published in 2023, estimated that while AI and automation could displace approximately eighty-three million jobs globally by 2027, they would also create sixty-nine million new ones — a net loss of fourteen million, or roughly two percent of current employment.\n\nHistorically, this pattern of destruction and creation is not new. The Industrial Revolution eliminated countless agricultural and artisanal jobs, but it generated entire industries that employed far more people at higher wages. The advent of the personal computer destroyed typewriter manufacturing and entire categories of clerical work, yet it gave rise to a software industry that now employs tens of millions worldwide. The economist Joseph Schumpeter coined the term \"creative destruction\" to describe this process, arguing that it is the essential engine of economic progress. AI, its proponents argue, is simply the latest iteration of a phenomenon that has been reshaping labour markets for two centuries.\n\nThis analogy, however, has its limits. Previous waves of automation primarily replaced physical labour, freeing humans to pursue cognitive work. AI, by contrast, is automating cognitive work itself — writing, analysing, summarising, even creative tasks such as graphic design and music composition. This raises a question that previous generations did not face: if machines can perform both manual and intellectual tasks, what is left for humans to do?\n\nThe answer, according to most labour economists, lies in the qualities that remain stubbornly difficult to automate. Empathy, for instance, is a capacity that no algorithm can genuinely replicate, however convincingly a chatbot may simulate concern. A nurse comforting a frightened patient, a teacher reading a child's frustration, a social worker building trust with a vulnerable family — these are tasks that require not just knowledge but genuine human connection. Similarly, tasks involving complex physical dexterity in unpredictable environments — plumbing, electrical repair, construction — remain extraordinarily difficult for robots to perform reliably. The philosopher Hubert Dreyfus argued decades ago that true intelligence is embodied, rooted in physical experience and social context, and that purely computational systems would always struggle with tasks that humans perform intuitively.\n\nMoreover, AI is creating entirely new categories of employment that did not exist a decade ago. Prompt engineers — specialists who design and refine the inputs given to AI systems to elicit useful outputs — command salaries exceeding three hundred thousand dollars in Silicon Valley. AI ethicists, data curators, machine learning auditors, and algorithmic bias testers are all roles that have emerged in direct response to the proliferation of AI. The World Economic Forum identified AI and machine learning specialists as the fastest-growing job category globally, projecting thirty percent growth over five years.\n\nThe challenge, then, is not so much a lack of jobs as a mismatch between the skills that workers currently possess and those that the new economy demands. This mismatch is particularly acute for workers in middle-skill occupations — bookkeepers, data entry clerks, assembly line workers — whose tasks are most susceptible to automation. A study by the Organisation for Economic Co-operation and Development found that workers without tertiary education are three to four times more likely to be displaced by automation than those with university degrees. The result, if left unaddressed, is a widening inequality gap: highly educated workers reap the benefits of the AI revolution, while those with fewer qualifications face stagnation or decline.\n\nBridging this gap requires a fundamental rethinking of education and training systems. Traditional models, in which individuals complete their education in their early twenties and rely on that knowledge for the remainder of their careers, are increasingly inadequate in a world where the half-life of technical skills is estimated at just two and a half years. Continuous, lifelong learning is no longer a luxury but a necessity. Countries such as Singapore have pioneered national skills-development programmes — the SkillsFuture initiative, for example, provides every citizen with training credits that can be used throughout their working lives. Denmark's flexicurity model, which combines flexible labour markets (making it relatively easy for employers to hire and fire) with robust social safety nets and active retraining programmes, offers another template.\n\nGovernments also face difficult questions about regulation. The European Union's Artificial Intelligence Act, provisionally agreed in December 2023, represents the world's first comprehensive legal framework for AI. It classifies AI systems by risk level, banning those deemed to pose \"unacceptable risk\" — such as social scoring systems — and imposing strict requirements on \"high-risk\" applications, including those used in recruitment, education, and law enforcement. Critics argue that such regulation may stifle innovation; proponents counter that public trust, fostered by sensible oversight, is itself a prerequisite for widespread adoption.\n\nThe transformative potential of AI in the workplace is undeniable. It promises productivity gains that could boost global GDP by seven percent over a decade, according to Goldman Sachs. AI-powered diagnostic tools are already improving the accuracy and speed of medical diagnoses. Automated translation is breaking down language barriers in international commerce. Predictive analytics are helping farmers optimise crop yields and reducing food waste. These are not trivial benefits.\n\nYet the distribution of those benefits is not predetermined. Left to market forces alone, AI is likely to concentrate wealth in the hands of those who own and control the technology, while hollowing out the middle of the income distribution. Whether AI becomes a force for shared prosperity or deepening inequality depends on choices — about education, regulation, social safety nets, and the values embedded in the technology itself — that societies must make deliberately and soon. The machines are here. The question is whether humanity will shape them, or be shaped by them.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "According to the Goldman Sachs report mentioned in the first paragraph, approximately how many full-time jobs could generative AI automate worldwide?",
+        "options": [
+          "69 million",
+          "83 million",
+          "300 million",
+          "2 percent of all jobs"
+        ],
+        "answer": "C",
+        "explanation": "第一段原文：\"generative artificial intelligence... could automate tasks equivalent to roughly three hundred million full-time jobs worldwide\"。69 million 和 83 million 是世界经济论坛报告中的新增和消失岗位数（第二段），2% 是净损失比例。"
+      },
+      {
+        "type": "single",
+        "question": "The author uses the example of the lawyer in the second paragraph primarily to illustrate that:",
+        "options": [
+          "AI will soon replace all lawyers completely",
+          "AI automates specific tasks within a job rather than replacing the entire job",
+          "Lawyers are among the most threatened professionals",
+          "Contract review is the only task AI can perform in law"
+        ],
+        "answer": "B",
+        "explanation": "第二段明确区分了\"job\"和\"task\"，用律师的例子说明AI自动化的是任务（审阅合同条款），而非整个职业（律师还要为客户提供咨询、谈判、法庭辩护等），因此 B 正确。A 与原文\"remains distinctly human\"矛盾，C 和 D 过于绝对。"
+      },
+      {
+        "type": "single",
+        "question": "What is a key difference between previous waves of automation and the AI revolution, according to the passage?",
+        "options": [
+          "Previous automation created more jobs than it destroyed, while AI will only destroy jobs",
+          "Previous automation primarily replaced physical labour, while AI is automating cognitive work",
+          "Previous automation happened faster, while AI adoption is slower",
+          "Previous automation affected only developed countries, while AI affects all countries equally"
+        ],
+        "answer": "B",
+        "explanation": "第四段明确指出：\"Previous waves of automation primarily replaced physical labour, freeing humans to pursue cognitive work. AI, by contrast, is automating cognitive work itself — writing, analysing, summarising, even creative tasks\"。B 准确概括了这一关键区别。A 错（AI也会创造新岗位），C 和 D 原文未提及。"
+      },
+      {
+        "type": "single",
+        "question": "The phrase \"creative destruction\" in the third paragraph refers to:",
+        "options": [
+          "The damage caused by AI to creative industries",
+          "The process by which old jobs are destroyed and new ones created, driving economic progress",
+          "The destruction of physical products by digital alternatives",
+          "The negative impact of technology on workplace creativity"
+        ],
+        "answer": "B",
+        "explanation": "第三段引用经济学家熊彼特的概念\"creative destruction\"，随后解释其为\"the essential engine of economic progress\"，即旧岗位被摧毁、新岗位被创造的过程。B 准确。A、C、D 都曲解了原文含义。"
+      },
+      {
+        "type": "single",
+        "question": "According to the passage, which of the following is NOT mentioned as a quality that remains difficult for AI to automate?",
+        "options": [
+          "Empathy and genuine human connection",
+          "Complex physical dexterity in unpredictable environments",
+          "Speed of processing large datasets",
+          "Tasks rooted in physical experience and social context"
+        ],
+        "answer": "C",
+        "explanation": "第五段提到 empathy（A）、physical dexterity in unpredictable environments（B）和 Dreyfus 的\"embodied intelligence\"理论（D）都是难以自动化的。C\"大规模数据处理速度\"恰恰是 AI 擅长的，不是\"难以自动化\"的品质，因此答案是 C。"
+      },
+      {
+        "type": "single",
+        "question": "What does the author suggest is the most significant challenge regarding AI and employment?",
+        "options": [
+          "A complete lack of new job creation",
+          "The mismatch between workers' current skills and the skills the new economy demands",
+          "The refusal of governments to regulate AI at all",
+          "The inability of AI to improve productivity"
+        ],
+        "answer": "B",
+        "explanation": "第七段明确指出：\"The challenge, then, is not so much a lack of jobs as a mismatch between the skills that workers currently possess and those that the new economy demands\"。B 准确。A 与原文矛盾（新岗位正在创造），C 过于绝对（欧盟已在立法），D 与原文\"productivity gains\"矛盾。"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "The Urban Surge: How City Growth Is Reshaping Society",
+    "source": "Adapted from urban studies and development publications",
+    "word_count": 1150,
+    "category": "社会与城市化",
+    "description": "全球城市化进程的驱动因素、挑战与可持续发展方向",
+    "content": "In 2007, for the first time in human history, more than half of the world's population lived in cities. By 2050, according to projections from the United Nations, that figure will rise to nearly seventy percent. The urban population, currently around 4.5 billion, is expected to approach seven billion within three decades. This transformation — the largest migration in human history — is reshaping not only where people live, but how they live, work, interact, and govern themselves.\n\nThe drivers of urbanisation are well understood. In developing nations, the primary force is rural-to-urban migration, fuelled by the search for economic opportunity. A farmer in Bangladesh earning two dollars a day can earn five times that amount in a garment factory in Dhaka. In developed nations, urban growth is driven less by migration and more by the concentration of high-value economic activity — finance, technology, research — in metropolitan areas that offer the dense networks of talent and capital that modern industries require. The economist Edward Glaeser has called cities \"humanity's greatest invention,\" arguing that density fosters innovation, productivity, and creativity in ways that dispersed settlement patterns cannot match.\n\nYet the very density that makes cities engines of prosperity also generates extraordinary challenges. Housing is perhaps the most acute. In London, the median house price now exceeds twelve times the median annual income; in Hong Kong, the ratio is an astonishing twenty-one. The result is a generation of urban residents who are effectively priced out of homeownership, condemned to spend disproportionate shares of their income on rent or to endure long commutes from increasingly distant peripheries. In the developing world, the housing crisis takes a different form: the proliferation of informal settlements, or slums, where an estimated one billion people currently live without adequate sanitation, clean water, or secure land tenure.\n\nTransportation presents a parallel challenge. As cities grow, the distance between where people live and where they work increases, placing enormous strain on infrastructure. Traffic congestion in megacities such as Jakarta, Manila, and Lagos costs billions in lost productivity each year. In Lagos, Nigeria's commercial capital, the average commuter spends an estimated thirty hours per week in traffic — nearly the equivalent of a full working day. The environmental consequences are equally severe: urban transport accounts for roughly forty percent of transport-related carbon emissions globally, and the air pollution it generates contributes to millions of premature deaths annually.\n\nThe response to these challenges has taken various forms. Some cities have invested heavily in public transit. Tokyo's rail network, widely regarded as the most efficient in the world, carries over eight million passengers daily with an average delay of less than one minute per train. Bogotá's TransMilenio bus rapid transit system, launched in 2000, demonstrated that world-class public transport is achievable even in cities of the Global South, reducing commute times by nearly a third and inspiring similar systems in dozens of cities worldwide. Cycling infrastructure, once dismissed as impractical in large cities, has become a priority: Copenhagen's cycling network now handles more journeys than its public transit system, with sixty-two percent of residents commuting to work or school by bicycle.\n\nA more recent development is the concept of the \"smart city\" — the use of data, sensors, and digital technology to optimise urban services. Singapore, often cited as the world's leading smart city, uses a network of sensors to monitor traffic flow, adjust traffic signals in real time, and predict congestion before it occurs. Barcelona's smart water management system, which uses sensors to detect leaks and optimise irrigation in public parks, has reduced water consumption by twenty-five percent. In Songdo, South Korea, a city built from scratch as a smart city experiment, pneumatic waste collection systems eliminate the need for garbage trucks, while telepresence screens in every home connect residents to government services.\n\nYet the smart city vision has its critics. Privacy advocates warn that the proliferation of surveillance technology — cameras, facial recognition, licence plate readers — risks creating what Shoshana Zuboff, a Harvard Business School professor, has termed \"surveillance capitalism,\" in which the data generated by urban life is harvested and monetised, often without the knowledge or consent of residents. In 2018, a leaked document revealed that Sidewalk Labs, a subsidiary of Google's parent company Alphabet, had proposed building a sensor-laden neighbourhood on Toronto's waterfront — a project that was eventually abandoned in 2020 amid public backlash over data governance concerns. The episode highlighted a fundamental tension: the technologies that promise to make cities more efficient also threaten to make them less free.\n\nThere is also the question of who benefits from urban innovation. Smart city technologies tend to be deployed first in affluent neighbourhoods, where infrastructure is already robust and residents have the political voice to demand improvement. Low-income areas, where the need is often greatest, are frequently left waiting. In Mumbai, the city's first metro line, opened in 2014, serves the affluent western suburbs; the densely populated eastern neighbourhoods, home to many of the city's poorest residents, remain dependent on overcrowded suburban trains. The risk is that technology exacerbates rather than ameliorates urban inequality.\n\nPerhaps the most promising approach is one that does not rely on technology alone. The concept of the \"fifteen-minute city,\" popularised by the urban planner Carlos Moreno, envisions neighbourhoods in which most daily needs — work, shopping, education, healthcare, recreation — are accessible within a fifteen-minute walk or bicycle ride. Paris, under Mayor Anne Hidalgo, has adopted this concept as the guiding principle of its urban planning, converting roads to bicycle lanes, repurposing parking spaces, and decentralising public services. The appeal of the fifteen-minute city lies in its simplicity: it does not require sensors or algorithms, only thoughtful design and political will.\n\nThe urban surge of the coming decades is, in one sense, inevitable. The question is not whether cities will grow but whether they will grow well — whether they become places of opportunity and flourishing for all their residents, or places of division, congestion, and environmental degradation. The answer will depend not on any single technology or policy, but on the willingness of societies to invest in people as much as in infrastructure, to prioritise equity as much as efficiency, and to remember that a city, at its best, is not merely a machine for living but a community for thriving.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "According to the passage, approximately how many people currently live in cities worldwide?",
+        "options": [
+          "2.5 billion",
+          "4.5 billion",
+          "7 billion",
+          "Over 10 billion"
+        ],
+        "answer": "B",
+        "explanation": "第一段原文：\"The urban population, currently around 4.5 billion, is expected to approach seven billion within three decades\"。7 billion 是2050年预计值，B 是当前值。"
+      },
+      {
+        "type": "single",
+        "question": "What does Edward Glaeser mean when he calls cities \"humanity's greatest invention\"?",
+        "options": [
+          "Cities are the most technologically advanced human creation",
+          "Cities foster innovation, productivity, and creativity through density",
+          "Cities are the only place where economic growth can occur",
+          "Cities were the first form of human settlement"
+        ],
+        "answer": "B",
+        "explanation": "第二段原文：Glaeser \"arguing that density fosters innovation, productivity, and creativity in ways that dispersed settlement patterns cannot match\"，即城市的密度促进了创新、生产力和创造力。B 准确。A、C、D 都曲解了原意。"
+      },
+      {
+        "type": "single",
+        "question": "In Hong Kong, the ratio of median house price to median annual income is approximately:",
+        "options": [
+          "8 times",
+          "12 times",
+          "15 times",
+          "21 times"
+        ],
+        "answer": "D",
+        "explanation": "第三段原文：\"in Hong Kong, the ratio is an astonishing twenty-one\"。12 times 是伦敦的比例。D 正确。"
+      },
+      {
+        "type": "single",
+        "question": "The example of Lagos is used in the passage to illustrate:",
+        "options": [
+          "The success of smart city technology in Africa",
+          "The severe impact of traffic congestion on urban productivity",
+          "The effectiveness of public transit systems in developing nations",
+          "The housing crisis in informal settlements"
+        ],
+        "answer": "B",
+        "explanation": "第四段用拉各斯的例子说明交通拥堵的严重性：\"the average commuter spends an estimated thirty hours per week in traffic\"，强调生产力损失。B 正确。A 与原文不符（拉各斯不是智慧城市案例），C 相反，D 是第三段的内容（贫民窟住房问题），与拉各斯交通例子无关。"
+      },
+      {
+        "type": "single",
+        "question": "What happened to the Sidewalk Labs project in Toronto?",
+        "options": [
+          "It was successfully completed and became a model for other cities",
+          "It was modified to exclude all surveillance technology",
+          "It was abandoned amid public backlash over data governance concerns",
+          "It was relocated to Songdo, South Korea"
+        ],
+        "answer": "C",
+        "explanation": "第七段原文：\"a project that was eventually abandoned in 2020 amid public backlash over data governance concerns\"。Sidewalk Labs 因公众对数据治理的强烈反对而被放弃。C 正确。"
+      },
+      {
+        "type": "single",
+        "question": "The \"fifteen-minute city\" concept described in the passage is notable because it:",
+        "options": [
+          "Relies entirely on advanced AI and sensor technology",
+          "Was first implemented in Singapore",
+          "Does not require technology, only thoughtful design and political will",
+          "Focuses on reducing urban population density"
+        ],
+        "answer": "C",
+        "explanation": "第九段原文：\"The appeal of the fifteen-minute city lies in its simplicity: it does not require sensors or algorithms, only thoughtful design and political will\"。十五分钟城市不需要技术，只需周到的设计和政治意愿。C 正确。A 相反，B 错（是巴黎），D 错（不是减少密度）。"
+      }
+    ]
+  }
+]
