@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>英语学习中心 · 看图就会用（新手版）</title>
+<style>
+  :root{
+    --ink:#1f2937; --sub:#5b6779; --line:#e3e9f2; --bg:#f5f8fc;
+    --blue:#2563eb; --blue-soft:#eaf1ff; --green:#0f8a5f; --green-soft:#e8f7f0;
+    --amber:#b45309; --amber-soft:#fff5e3; --red:#c0392b; --red-soft:#fdeceb; --teal:#0284c7; --teal-soft:#e6f6fd;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Microsoft YaHei","PingFang SC",sans-serif;
+    font-size:17px; line-height:1.75;
+  }
+  h1,h2,h3{font-family:"SimSun","STZhongsong",serif}
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px 80px}
+  .hero{
+    background:linear-gradient(135deg,#0284c7,#38bdf8); color:#fff;
+    padding:44px 22px 40px; text-align:center; margin-bottom:30px;
+  }
+  .hero h1{font-size:34px;margin:0 0 12px;letter-spacing:1px}
+  .hero p{margin:0 auto 8px;max-width:680px;font-size:17px;line-height:1.7}
+  .hero .pill{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);
+    border-radius:99px;padding:5px 16px;font-size:14px;margin-top:10px}
+  .btn-main{
+    display:inline-block;margin-top:20px;background:#fff;color:#026aa2;font-weight:700;
+    text-decoration:none;padding:13px 30px;border-radius:10px;font-size:18px;
+    box-shadow:0 4px 14px rgba(0,0,0,.15)
+  }
+  .btn-main:hover{background:#eef8ff}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:26px 30px;margin:0 0 22px;box-shadow:0 2px 10px rgba(31,45,75,.045)
+  }
+  h2{font-size:25px;margin:0 0 6px;line-height:1.45}
+  .lead{color:var(--sub);margin:0 0 18px;font-size:16px}
+  .stepno{
+    display:inline-block;background:var(--teal);color:#fff;font-family:"Microsoft YaHei",sans-serif;
+    font-size:14px;font-weight:700;border-radius:8px;padding:3px 12px;margin-right:10px;vertical-align:3px
+  }
+  p{margin:0 0 12px}
+  ul,ol{margin:0 0 14px;padding-left:24px}
+  li{margin:0 0 9px}
+  b,strong{color:#12325f}
+  .note{border-left:4px solid var(--blue);background:var(--blue-soft);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0}
+  .good{border-left:4px solid var(--green);background:var(--green-soft);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0}
+  .warn{border-left:4px solid var(--amber);background:var(--amber-soft);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0}
+  .danger{border-left:4px solid var(--red);background:var(--red-soft);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 4px}
+  .two{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0 4px}
+  .three div,.two div{background:var(--teal-soft);border:1px solid #bae6fd;border-radius:10px;padding:16px 16px 12px}
+  .three b,.two b{display:block;font-size:17px;margin-bottom:6px}
+  .three p,.two p{font-size:15px;margin:0;color:#33526b}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:16px}
+  th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
+  th{background:#f1f6fd;font-weight:700}
+  td:first-child{white-space:nowrap;font-weight:700;color:#12325f}
+  .faq{margin:0 0 16px}
+  .faq .q{font-weight:700;color:#12325f;margin:0 0 5px}
+  .faq .a{color:#41506a;margin:0}
+  .kbd{background:#eef2f8;border:1px solid #d6dfec;border-radius:5px;padding:1px 7px;font-size:15px}
+  .foot{text-align:center;color:var(--sub);font-size:14px;padding:24px 10px 0}
+  .foot a{color:var(--teal)}
+  @media(max-width:700px){.three,.two{grid-template-columns:1fr}.card{padding:20px 18px}.hero h1{font-size:27px}}
+  @media print{
+    body{background:#fff;font-size:13px;line-height:1.55}
+    .hero{background:#0284c7 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:24px}
+    .card{box-shadow:none;break-inside:avoid;page-break-inside:avoid;padding:16px 18px;margin-bottom:14px}
+    .btn-main{display:none}
+    .note,.good,.warn,.danger,.three div,.two div{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    h2{font-size:19px}
+  }
+</style>
+    <link rel="icon" type="image/svg+xml" href="/Qke_repository1/ielts/favicon.svg">
+</head>
+<body>
+
+<div class="hero">
+  <h1>看图就会用 · 英语学习中心</h1>
+  <p>这份教程是给「第一次打开这个网站」的人写的。不用记术语，照着一步一步点就行。</p>
+  <p>全程只需要：打开网页 → 选一个卡片 → 做题 → 看解析。</p>
+  <span class="pill">不用安装 · 不用注册 · 手机电脑都能用 · 可以打印成纸</span><br>
+  <a class="btn-main" href="/Qke_repository1/ielts/" target="_blank" rel="noopener">打开学习中心（新窗口）</a>
+</div>
+
+<div class="wrap">
+
+<div class="card">
+  <h2>先看一眼：大厅里的七个卡片都是干嘛的</h2>
+  <p class="lead">打开网站首页，第一眼看到的就是这七张卡片。每张卡片点进去就是一个练习区。</p>
+  <table>
+    <tr><th>卡片</th><th>干什么用</th></tr>
+    <tr><td>🎧 听力训练</td><td>TED 风格精听：听音频（可调倍速）+ 做 4 道题（3 单选 + 1 多选），提交后看得分和解析。</td></tr>
+    <tr><td>📖 阅读训练</td><td>外刊精读：读一篇 1000～1500 词的文章，做 6 道单选题，提交后看得分和解析。</td></tr>
+    <tr><td>🗣️ 口语训练</td><td>雅思口语话题卡（Part 1/2/3）：自己开口练，练完手动把这道题标记为「已完成」。</td></tr>
+    <tr><td>✍️ 写作训练</td><td>雅思写作题（Task 1 图表 / Task 2 议论文）：自己动笔写，写完手动标记「已完成」。</td></tr>
+    <tr><td>📕 错题本</td><td>听力、阅读里做错的题会<b>自动收进来</b>，方便回头重练。详见下面专门一章。</td></tr>
+    <tr><td>💡 使用教程</td><td>就是您现在看的这一页。</td></tr>
+    <tr><td>📚 词汇积累</td><td>还没开放，敬请期待。</td></tr>
+  </table>
+  <div class="good"><b>不用怕点坏：</b>这是个纯练习网站，随便点、随便做，没有任何操作会弄坏它。进度和记录都会自动保存。</div>
+</div>
+
+<div class="card">
+  <h2>听力训练怎么用</h2>
+  <p class="lead">每段听力 4 道题：3 道单选 + 1 道多选。做题界面上的一切都会自动保存。</p>
+  <p><span class="stepno">第 1 步</span>点「听力训练」卡片进入列表。已完成篇目的右边会显示绿色「已完成」标签。</p>
+  <p><span class="stepno">第 2 步</span>点任意一篇进入做题页。页面上半部分是音频播放器：</p>
+  <ul>
+    <li><b>倍速按钮</b>：0.75× / 1.0× / 1.25× / 1.5×，点一下就切换，觉得语速快就调慢。</li>
+    <li><b>显示原文 ▾</b>：点它展开听力原文。建议先盲听 2 遍、做完题再看原文。</li>
+  </ul>
+  <p><span class="stepno">第 3 步</span>下半部分是 4 道题，点选项作答。多选题可以选多个。</p>
+  <p><span class="stepno">第 4 步</span>点底部「提交答案」，立刻出结果：</p>
+  <ul>
+    <li>绿色选项 = 正确答案；红色选项 = 你错选的。</li>
+    <li>每题下方展开「解析」和正确答案。</li>
+    <li>顶部得分框显示「对了几题」，本篇自动标记为「已完成」。</li>
+    <li>后悔了想重练？点结果框里的「<b>重做本篇</b>」，记录清空重新来。</li>
+  </ul>
+  <div class="note"><b>自动保存：</b>提交的那一刻，你的答案、得分、解析界面全部保存。下次再打开这一篇，直接还原成提交后的样子（不用重听也能复习解析）。</div>
+</div>
+
+<div class="card">
+  <h2>阅读训练怎么用</h2>
+  <p class="lead">每篇 6 道单选题，操作和听力几乎一样，只是把「听」换成「读」。</p>
+  <p><span class="stepno">第 1 步</span>点「阅读训练」卡片进入列表（50 篇，建议每篇留 15～18 分钟）。</p>
+  <p><span class="stepno">第 2 步</span>点开一篇，上半部分是文章正文，往下翻是 6 道题。</p>
+  <p><span class="stepno">第 3 步</span>做题、点「提交答案」，得分、标色、解析、自动完成、重做按钮 —— 和听力完全一样。</p>
+</div>
+
+<div class="card">
+  <h2>口语和写作怎么用</h2>
+  <p class="lead">这两项没有标准答案可以机器判分，所以是你自己练、自己标记。</p>
+  <div class="two">
+    <div><b>🗣️ 口语训练</b><p>点开一张话题卡，里面有题目、延伸问题和答题建议。对着题开口说（可以录音回听自己的表现），练完了把页面下方的开关拨到「已完成」。</p></div>
+    <div><b>✍️ 写作训练</b><p>点开一道题，里面有题目、图表信息和写作要求（词数、建议用时）。写在纸上或电脑里都行，写完了把开关拨到「已完成」。</p></div>
+  </div>
+  <div class="note"><b>列表筛选：</b>列表页顶部有「Part 1 / Part 2 / Part 3」或「Task 1 / Task 2」筛选按钮，点一下只看对应类型的题。</div>
+</div>
+
+<div class="card">
+  <h2>错题本怎么用</h2>
+  <p class="lead">错题本是自动的，你什么都不用做，做错了它自己会记。</p>
+  <p><span class="stepno">规矩 1</span><b>自动收集</b>：听力、阅读里只要提交的答案有错，错题立刻进错题本。口语、写作没有客观对错，不进错题本。</p>
+  <p><span class="stepno">规矩 2</span><b>新的在上</b>：最近做错的篇目排最上面，方便先复习最新的。</p>
+  <p><span class="stepno">规矩 3</span><b>分类罗列</b>：听力错题一栏、阅读错题一栏，每栏右上角显示错题数量。每道错题都写着：篇目号 + 题号、题干、全部选项（正确标绿、你错选的标红）、你的答案、正确答案、解析。</p>
+  <p><span class="stepno">规矩 4</span><b>跳转原题</b>：每道错题右上角有「跳转原题 ↗」按钮，点一下直接回到那篇听力的做题页（重新听、重新做）。</p>
+  <div class="good"><b>错题会自己消失：</b>回到原题重做、并且做对了，这道错题就自动从错题本里移除。错题越练越少，就是这个意思。</div>
+</div>
+
+<div class="card">
+  <h2>学习记录存在哪？会不会丢？</h2>
+  <p class="lead">一句话：存到你电脑里的一个记录文件，所有浏览器共用。</p>
+  <p>只要<b>电脑上的本机服务在运行</b>（就是那个 8765 端口的小程序），你在微信里做的题、在 Edge 里做的题、在 Chrome 里做的题，记录全部汇到同一个文件里 —— 任何浏览器打开都能看到完整进度。</p>
+  <div class="note"><b>首次使用要点一次「允许」：</b>新版 Chrome / Edge 第一次打开网站时会弹一个询问框「允许此网站访问本地网络？」—— 点<b>允许</b>，只问这一次，以后都不再问。微信内置浏览器一般不会问。</div>
+  <div class="note"><b>怎么确认同步正常：</b>大厅页面最底下有一行同步状态：</div>
+  <ul>
+    <li>绿色「✓ 学习记录已同步到本机服务」= 一切正常，各浏览器通用。</li>
+    <li>橙色「⚠ 记录暂存当前浏览器」= 本机服务没在运行，记录只存在当前这个浏览器里（不会丢，但换浏览器看不到）。此时启动本机服务、刷新页面即可恢复同步。</li>
+  </ul>
+  <div class="warn"><b>手机上的限制：</b>手机上没有你电脑的本机服务，所以手机上做的题只保存在手机那个浏览器里，没法和电脑同步。想认真练、想留记录，建议用电脑。</div>
+  <div class="good"><b>兜底机制：</b>就算服务没开，记录也实时存在浏览器里，关闭页面、重启电脑都不会丢。服务恢复后，两边记录按时间自动合并，谁的新用谁的。</div>
+</div>
+
+<div class="card">
+  <h2>常见问题</h2>
+  <div class="faq"><p class="q">Q1：打开页面一直转圈 / 数据加载失败？</p>
+    <p class="a">电脑上的本机服务没运行。把它启动起来（运行 8765 端口那个程序），然后刷新页面。</p></div>
+  <div class="faq"><p class="q">Q2：提交完答案，怎么没有反应？</p>
+    <p class="a">每道题都必须作答。有题空着时点提交，会先弹窗问「还有题目未作答，确定要提交吗？」—— 空着的题计为错误，点确定才会出分。</p></div>
+  <div class="faq"><p class="q">Q3：明明做完了，列表里还是显示「未完成」？</p>
+    <p class="a">听力、阅读要<b>点「提交答案」</b>才算完成（做完自动标记）；口语、写作要手动拨「已完成」开关。只做题不提交，是不会记进度的。</p></div>
+  <div class="faq"><p class="q">Q4：想重做一篇已经做过的题，怎么清掉重来？</p>
+    <p class="a">打开那篇题，结果框里有「重做本篇」按钮，点它记录就清空了，重新做题重新提交。</p></div>
+  <div class="faq"><p class="q">Q5：网站更新了，但我看到的还是老样子？</p>
+    <p class="a">浏览器缓存了旧页面。按 <span class="kbd">Ctrl + F5</span> 强制刷新一次就好（手机浏览器下拉刷新两次或清缓存）。</p></div>
+  <div class="faq"><p class="q">Q6：微信里打开弹不弹「允许访问本地网络」？手机上做的记录去哪了？</p>
+    <p class="a">电脑版微信一般不弹。手机上没有本机服务，记录只存在手机当前浏览器里，暂无法和电脑同步（见上一章「手机上的限制」）。</p></div>
+</div>
+
+<div class="card">
+  <h2>一图流：推荐的学习节奏</h2>
+  <div class="three">
+    <div><b>① 学一篇</b><p>听力或阅读选一篇没做过的，完整做完并提交。</p></div>
+    <div><b>② 看错题</b><p>去错题本看错在哪，读解析弄懂为什么错。</p></div>
+    <div><b>③ 重练</b><p>点「跳转原题」回去重做，做对了错题自动消失。</p></div>
+  </div>
+  <div class="good"><b>坚持这个节奏</b>：错题本清零一轮，就升一个台阶。祝学习顺利！</div>
+</div>
+
+<div class="foot">
+  <p>本教程随网站更新同步修订 · 最近更新：2026-11-19（新增错题本、使用教程）</p>
+  <p><a href="/Qke_repository1/ielts/" target="_blank" rel="noopener">← 返回英语学习中心</a></p>
+</div>
+
+</div>
+</body>
+</html>
