@@ -1,7 +1,9 @@
 // reading.js - 阅读训练：列表 + 详情（文章+6道单选+答案解析）
+// 提交结果（答案+得分+解析界面）会持久化；重开已完成的篇目自动还原提交后界面
 const app = document.getElementById('app');
 
 async function init(){
+  await Record.loadAll();
   const params = new URLSearchParams(location.search);
   const id = params.get('id');
   if(id){ await renderDetail(parseInt(id)); }
@@ -13,10 +15,10 @@ async function renderList(){
   try{
     const list = await API.readingList();
     if(!list.length){ app.innerHTML += '<div class="empty-hint">暂无阅读内容</div>'; return; }
-    const done = Record._read('reading');
+    const done = Record.all('reading');
     const wrap = el('div','item-list');
     list.forEach((it,i)=>{
-      const d = done[it.id] || {completed:false};
+      const d = done[it.id] || done[String(it.id)] || {completed:false};
       const row = el('div', 'item-row '+(d.completed?'done':'undone'));
       row.innerHTML = `
         <div class="item-num">No.${String(i+1).padStart(2,'0')}</div>
@@ -50,7 +52,6 @@ async function renderDetail(id){
     document.getElementById('article').innerHTML = `<div style="font-size:15px;line-height:2;color:#1f2937">${(it.content||'').replace(/\n/g,'<br>')}</div>`;
 
     const qWrap = document.getElementById('questions');
-    const saved = Record.get('reading', id).answers || {};
     it.questions.forEach((q,qi)=>{
       const block = el('div','question-block');
       block.innerHTML = `
@@ -62,24 +63,14 @@ async function renderDetail(id){
       const optWrap = block.querySelector(`#q-${qi}`);
       q.options.forEach((opt,oi)=>{
         const letter = String.fromCharCode(65+oi);
-        const inp = `<input type="radio" name="q${qi}" value="${letter}" ${(saved[qi]===letter)?'checked':''}>`;
+        const inp = `<input type="radio" name="q${qi}" value="${letter}">`;
         const o = el('label','q-option',`${inp}<span class="q-option-text">${letter}. ${opt}</span>`);
         optWrap.appendChild(o);
       });
     });
 
-    document.getElementById('submit-btn').onclick = ()=>{
-      const answers = {};
-      let allAnswered = true;
-      it.questions.forEach((q,qi)=>{
-        const checked = document.querySelector(`input[name="q${qi}"]:checked`);
-        answers[qi] = checked?checked.value:'';
-        if(!checked) allAnswered = false;
-      });
-      if(!allAnswered){
-        if(!confirm('还有题目未作答，确定要提交吗？（未作答的题计为错误）')) return;
-      }
-      Record.saveAnswers('reading', id, answers);
+    // 判分 + 标色 + 解析 + 结果框（persist=false 用于还原历史提交，不重复落盘）
+    function gradeAndShow(answers, persist){
       let correct = 0;
       it.questions.forEach((q,qi)=>{
         const ex = document.getElementById(`ex-${qi}`);
@@ -94,16 +85,52 @@ async function renderDetail(id){
         });
         ex.querySelector(`.ans-${qi}`).textContent = q.answer;
       });
-      Record.setCompleted('reading', id);
       const total = it.questions.length;
       document.getElementById('result').innerHTML = `
         <div class="result-box">
           <div class="score">${correct} / ${total}</div>
           <div style="margin-top:6px;color:#166534">本篇已自动标记为「已完成」</div>
+          <button class="btn btn-outline" id="redo-btn" style="margin-top:14px">重做本篇</button>
         </div>`;
-      document.getElementById('submit-btn').disabled = true;
-      document.getElementById('submit-btn').textContent = '已提交';
+      const sb = document.getElementById('submit-btn');
+      sb.disabled = true;
+      sb.textContent = '已提交';
+      document.getElementById('redo-btn').onclick = async ()=>{
+        await Record.reset('reading', id);
+        location.reload();
+      };
+      if(persist){
+        Record.setSubmitted('reading', id, answers, correct, total);
+      }
+      return correct;
+    }
+
+    document.getElementById('submit-btn').onclick = ()=>{
+      const answers = {};
+      let allAnswered = true;
+      it.questions.forEach((q,qi)=>{
+        const checked = document.querySelector(`input[name="q${qi}"]:checked`);
+        answers[qi] = checked?checked.value:'';
+        if(!checked) allAnswered = false;
+      });
+      if(!allAnswered){
+        if(!confirm('还有题目未作答，确定要提交吗？（未作答的题计为错误）')) return;
+      }
+      gradeAndShow(answers, true);
     };
+
+    // 还原历史提交：已完成且存有答案 → 直接呈现提交后的界面
+    const rec = Record.get('reading', id);
+    const savedAns = rec.answers || {};
+    if(rec.completed && Object.keys(savedAns).length > 0){
+      it.questions.forEach((q,qi)=>{
+        if(savedAns[qi]){
+          const c = document.querySelector(`input[name="q${qi}"][value="${savedAns[qi]}"]`);
+          if(c) c.checked = true;
+        }
+      });
+      gradeAndShow(savedAns, false);
+    }
   }catch(e){ app.innerHTML = pageHeader('阅读训练')+`<div class="empty-hint">加载失败：${e.message}</div>`; }
 }
 

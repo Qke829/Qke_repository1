@@ -1,6 +1,7 @@
 // hall.js - 大厅页逻辑
 (async function(){
   try{
+    await Record.loadAll();
     const stats = await API.stats();
     const m = {listening:'听力',reading:'阅读',speaking:'口语',writing:'写作'};
     for(const k of ['listening','reading','speaking','writing']){

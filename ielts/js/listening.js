@@ -1,7 +1,9 @@
 // listening.js - 听力训练：列表 + 详情（播放器+倍速+题目+答案解析）
+// 提交结果（答案+得分+解析界面）会持久化；重开已完成的题自动还原提交后界面
 const app = document.getElementById('app');
 
 async function init(){
+  await Record.loadAll();
   const params = new URLSearchParams(location.search);
   const id = params.get('id');
   if(id){ await renderDetail(parseInt(id)); }
@@ -13,10 +15,10 @@ async function renderList(){
   try{
     const list = await API.listeningList();
     if(!list.length){ app.innerHTML += '<div class="empty-hint">暂无听力内容</div>'; return; }
-    const done = Record._read('listening');
+    const done = Record.all('listening');
     const wrap = el('div','item-list');
     list.forEach((it,i)=>{
-      const d = done[it.id] || {completed:false};
+      const d = done[it.id] || done[String(it.id)] || {completed:false};
       const row = el('div', 'item-row '+(d.completed?'done':'undone'));
       row.innerHTML = `
         <div class="item-num">No.${String(i+1).padStart(2,'0')}</div>
@@ -77,7 +79,6 @@ async function renderDetail(id){
 
     // 渲染题目
     const qWrap = document.getElementById('questions');
-    const saved = Record.get('listening', id).answers || {};
     it.questions.forEach((q,qi)=>{
       const block = el('div','question-block');
       const typeTag = q.type==='multiple'?'多选':'单选';
@@ -91,12 +92,56 @@ async function renderDetail(id){
       q.options.forEach((opt,oi)=>{
         const letter = String.fromCharCode(65+oi);
         const inp = q.type==='multiple'
-          ? `<input type="checkbox" name="q${qi}" value="${letter}" ${((saved[qi]||[]).includes(letter))?'checked':''}>`
-          : `<input type="radio" name="q${qi}" value="${letter}" ${(saved[qi]===letter)?'checked':''}>`;
+          ? `<input type="checkbox" name="q${qi}" value="${letter}">`
+          : `<input type="radio" name="q${qi}" value="${letter}">`;
         const o = el('label','q-option',`${inp}<span class="q-option-text">${letter}. ${opt}</span>`);
         optWrap.appendChild(o);
       });
     });
+
+    // 判分 + 标色 + 解析 + 结果框（persist=false 用于还原历史提交，不重复落盘）
+    function gradeAndShow(answers, persist){
+      let correct = 0;
+      it.questions.forEach((q,qi)=>{
+        const ex = document.getElementById(`ex-${qi}`);
+        ex.classList.add('show');
+        const correctAns = Array.isArray(q.answer)?[...q.answer].sort():q.answer;
+        const userAns = answers[qi];
+        const isRight = Array.isArray(correctAns)
+          ? JSON.stringify(userAns)===JSON.stringify(correctAns)
+          : userAns===correctAns;
+        if(isRight) correct++;
+        const opts = $$(`#q-${qi} .q-option`);
+        opts.forEach((optEl,oi)=>{
+          const letter = String.fromCharCode(65+oi);
+          optEl.classList.remove('selected','correct','wrong');
+          const shouldCorrect = Array.isArray(correctAns)?correctAns.includes(letter):letter===correctAns;
+          const userPicked = Array.isArray(userAns)?userAns.includes(letter):letter===userAns;
+          if(shouldCorrect) optEl.classList.add('correct');
+          else if(userPicked) optEl.classList.add('wrong');
+        });
+        const ansSpan = ex.querySelector(`.ans-${qi}`);
+        ansSpan.textContent = Array.isArray(correctAns)?correctAns.join(', '):correctAns;
+      });
+      const total = it.questions.length;
+      document.getElementById('result').innerHTML = `
+        <div class="result-box">
+          <div class="score">${correct} / ${total}</div>
+          <div style="margin-top:6px;color:#166534">本题已自动标记为「已完成」</div>
+          <button class="btn btn-outline" id="redo-btn" style="margin-top:14px">重做本篇</button>
+        </div>`;
+      const sb = document.getElementById('submit-btn');
+      sb.disabled = true;
+      sb.textContent = '已提交';
+      document.getElementById('redo-btn').onclick = async ()=>{
+        await Record.reset('listening', id);
+        location.reload();
+      };
+      if(persist){
+        Record.setSubmitted('listening', id, answers, correct, total);
+      }
+      return correct;
+    }
 
     // 提交
     document.getElementById('submit-btn').onclick = ()=>{
@@ -116,43 +161,28 @@ async function renderDetail(id){
       if(!allAnswered){
         if(!confirm('还有题目未作答，确定要提交吗？（未作答的题计为错误）')) return;
       }
-      // 保存答案
-      Record.saveAnswers('listening', id, answers);
-      // 判分
-      let correct = 0;
-      it.questions.forEach((q,qi)=>{
-        const ex = document.getElementById(`ex-${qi}`);
-        ex.classList.add('show');
-        const correctAns = Array.isArray(q.answer)?[...q.answer].sort():q.answer;
-        const userAns = answers[qi];
-        const isRight = Array.isArray(correctAns)
-          ? JSON.stringify(userAns)===JSON.stringify(correctAns)
-          : userAns===correctAns;
-        if(isRight) correct++;
-        // 标色
-        const opts = $$(`#q-${qi} .q-option`);
-        opts.forEach((optEl,oi)=>{
-          const letter = String.fromCharCode(65+oi);
-          optEl.classList.remove('selected','correct','wrong');
-          const shouldCorrect = Array.isArray(correctAns)?correctAns.includes(letter):letter===correctAns;
-          const userPicked = Array.isArray(userAns)?userAns.includes(letter):letter===userAns;
-          if(shouldCorrect) optEl.classList.add('correct');
-          else if(userPicked) optEl.classList.add('wrong');
-        });
-        const ansSpan = ex.querySelector(`.ans-${qi}`);
-        ansSpan.textContent = Array.isArray(correctAns)?correctAns.join(', '):correctAns;
-      });
-      // 自动标记完成
-      Record.setCompleted('listening', id);
-      const total = it.questions.length;
-      document.getElementById('result').innerHTML = `
-        <div class="result-box">
-          <div class="score">${correct} / ${total}</div>
-          <div style="margin-top:6px;color:#166534">本题已自动标记为「已完成」</div>
-        </div>`;
-      document.getElementById('submit-btn').disabled = true;
-      document.getElementById('submit-btn').textContent = '已提交';
+      gradeAndShow(answers, true);
     };
+
+    // 还原历史提交：已完成且存有答案 → 直接呈现提交后的界面
+    const rec = Record.get('listening', id);
+    const savedAns = rec.answers || {};
+    if(rec.completed && Object.keys(savedAns).length > 0){
+      // 先把保存的选项勾上，再走判分还原
+      it.questions.forEach((q,qi)=>{
+        const ua = savedAns[qi];
+        if(q.type==='multiple'){
+          (Array.isArray(ua)?ua:[]).forEach(v=>{
+            const c = document.querySelector(`input[name="q${qi}"][value="${v}"]`);
+            if(c) c.checked = true;
+          });
+        }else if(ua){
+          const c = document.querySelector(`input[name="q${qi}"][value="${ua}"]`);
+          if(c) c.checked = true;
+        }
+      });
+      gradeAndShow(savedAns, false);
+    }
   }catch(e){ app.innerHTML = pageHeader('听力训练')+`<div class="empty-hint">加载失败：${e.message}</div>`; }
 }
 

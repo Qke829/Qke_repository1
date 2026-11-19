@@ -1,7 +1,7 @@
-// common.js (静态版) - localStorage 学习记录 + 读静态JSON的API
-// BUILD_VER=1795059161 —— 每次构建注入版本号，fetch 带 ?v= 绕开浏览器缓存
+// common.js (静态版) - 读静态JSON的API（学习记录在 record.js）
+// BUILD_VER=1795063635 —— 每次构建注入版本号，fetch 带 ?v= 绕开浏览器缓存
 const BASE = "/Qke_repository1/ielts";
-const BUILD_VER = "1795059161";
+const BUILD_VER = "1795063635";
 const API = {
   async get(path){
     const sep = path.includes('?') ? '&' : '?';
@@ -24,34 +24,6 @@ const API = {
     ]);
     return {listening:l.length, reading:r.length, speaking:s.length, writing:w.length};
   },
-};
-
-// 学习记录管理 —— 全部存 localStorage
-const Record = {
-  _key(module){ return `ielts_progress_${module}`; },
-  _read(module){
-    try{ return JSON.parse(localStorage.getItem(this._key(module))) || {}; }
-    catch{ return {}; }
-  },
-  _write(module, data){ localStorage.setItem(this._key(module), JSON.stringify(data)); },
-  get(module, id){ const all=this._read(module); return all[id] || {completed:false, answers:{}}; },
-  saveAnswers(module, id, answers){
-    const all=this._read(module);
-    if(!all[id]) all[id]={completed:false, answers:{}};
-    all[id].answers=answers; this._write(module, all);
-  },
-  setCompleted(module, id){
-    const all=this._read(module);
-    if(!all[id]) all[id]={completed:false, answers:{}};
-    all[id].completed=true; this._write(module, all);
-  },
-  toggleCompleted(module, id){
-    const all=this._read(module);
-    if(!all[id]) all[id]={completed:false, answers:{}};
-    all[id].completed=!all[id].completed; this._write(module, all);
-    return all[id].completed;
-  },
-  countDone(module){ return Object.values(this._read(module)).filter(x=>x.completed).length; }
 };
 
 function el(tag, cls, html){ const e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; }

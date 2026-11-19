@@ -2,6 +2,7 @@
 const app = document.getElementById('app');
 
 async function init(){
+  await Record.loadAll();
   const params = new URLSearchParams(location.search);
   const id = params.get('id');
   if(id){ await renderDetail(parseInt(id)); }
@@ -30,10 +31,10 @@ async function renderList(){
     renderItems('全部');
     function renderItems(task){
       wrap.innerHTML='';
-      const done = Record._read('writing');
+      const done = Record.all('writing');
       list.forEach((it,i)=>{
         if(task!=='全部' && it.task!==task) return;
-        const d = done[it.id] || {completed:false};
+        const d = done[it.id] || done[String(it.id)] || {completed:false};
         const row = el('div','item-row '+(d.completed?'done':'undone'));
         row.innerHTML = `
           <div class="item-num">No.${String(i+1).padStart(2,'0')}</div>
@@ -72,8 +73,8 @@ async function renderDetail(id){
         <a class="btn btn-outline" href="/pages/writing.html">← 返回列表</a>
       </div>`;
     app.appendChild(card);
-    document.getElementById('done-toggle').onchange = function(){
-      const done = Record.toggleCompleted('writing', id);
+    document.getElementById('done-toggle').onchange = async function(){
+      const done = await Record.toggleCompleted('writing', id);
       document.getElementById('done-label').textContent = done?'已完成':'标记为已完成';
     };
   }catch(e){ app.innerHTML = pageHeader('写作训练')+`<div class="empty-hint">加载失败：${e.message}</div>`; }
