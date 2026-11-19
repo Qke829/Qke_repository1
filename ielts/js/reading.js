@@ -101,6 +101,14 @@ async function renderDetail(id){
       };
       if(persist){
         Record.setSubmitted('reading', id, answers, correct, total);
+        // 错题本：显式记录错题（答对不消失 → 标记已解决）
+        const wrongList = it.questions.map((q,qi)=>({
+          qi,
+          userAns: answers[qi],
+          correctAns: q.answer,
+          wrong: ansIsWrong(q.answer, answers[qi]),
+        }));
+        Record.syncWrong('reading', id, wrongList);
       }
       return correct;
     }

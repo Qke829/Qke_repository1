@@ -3,7 +3,7 @@
 // 服务没跑时自动降级为 localStorage，数据不丢。两边数据按 updated_at 新者胜合并。
 const Record = {
   _srv: 'http://127.0.0.1:8765',
-  _modules: ['listening', 'reading', 'speaking', 'writing'],
+  _modules: ['listening', 'reading', 'speaking', 'writing', 'wrongbook'],
   _cache: {},
   _loaded: false,
   _srvOk: null, // null=未知 true=可用 false=不可用
@@ -122,4 +122,38 @@ const Record = {
   countDone(module){
     return Object.values(this.all(module)).filter(x => x.completed).length;
   },
+
+  // ===== 错题本（显式存储：不随重做消失，答对标记「已解决」，可手动删除）=====
+  // wrongList: [{qi, userAns, correctAns, wrong}] —— 听力/阅读提交时调用
+  async syncWrong(module, id, wrongList){
+    for(const w of wrongList){
+      const key = `${module}_${id}_${w.qi}`;
+      const prev = this.all('wrongbook')[key];
+      if(w.wrong){
+        // 错了 → 新建或更新条目（保留首次做错时间 first_at，用于排序）
+        await this._save('wrongbook', key, {
+          module, itemId: String(id), qi: w.qi,
+          userAns: Array.isArray(w.userAns) ? [...w.userAns].sort() : (w.userAns || ''),
+          correctAns: w.correctAns,
+          resolved: false,
+          first_at: prev ? (prev.first_at || prev.updated_at) : Date.now(),
+        });
+      } else if(prev && !prev.resolved){
+        // 重做答对且此前记过错 → 标记「已解决」（不删除）
+        await this._save('wrongbook', key, Object.assign({}, prev, { resolved: true, userAns: w.userAns }));
+      }
+    }
+  },
+  // 手动删除一条错题
+  async removeWrong(key){
+    await this._remove('wrongbook', key);
+  },
 };
+
+// 判定一道题是否做错（单选：字符串比较；多选：排序后数组比较）
+function ansIsWrong(correctAns, ua){
+  const c = Array.isArray(correctAns) ? [...correctAns].sort() : correctAns;
+  const u = Array.isArray(ua) ? [...ua].sort() : (ua || '');
+  if(Array.isArray(c)) return JSON.stringify(u) !== JSON.stringify(c);
+  return u !== c;
+}
