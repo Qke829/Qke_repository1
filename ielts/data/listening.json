@@ -190,5 +190,446 @@
         "explanation": "演讲提到的珊瑚礁价值包括：①支持渔业养活数亿人（A）；②保护海岸线免受风暴和侵蚀（B）；④提供药物化合物（D）。C\"为大气产氧\"原文未提及，珊瑚礁的主要贡献不是产氧（那主要是浮游植物的功劳）。"
       }
     ]
+  },
+  {
+    "id": 4,
+    "title": "The Bias We Don't See: How Mental Shortcuts Shape Our Decisions",
+    "speaker": "Prof. Thomas Reid",
+    "duration": "5:20",
+    "category": "社会心理",
+    "description": "认知偏差如何不知不觉影响我们的判断与选择",
+    "audio_file": "ted_4.mp3",
+    "transcript": "Right, so before we start, I want you to picture something. You walk into a car dealership, yeah? You've done your research, you know roughly what the car's worth, and you're feeling pretty confident. Then the salesman names a price, and suddenly every number after that feels like a bargain compared with the first one. Well, that right there is the first thing I want to talk about today, 'cause it sets up everything else.\n\nI'm Thomas Reid, and I study the shortcuts our brains take when we're making decisions. You know, we like to think of ourselves as rational creatures, don't we? We weigh the evidence, we compare the options, we pick the sensible one. But here's the awkward truth: most of the time we're not doing that at all. We're running on autopilot, and we're sorta proud of it, actually, because it's fast and it feels good.\n\nLet me give you a proper example. There was this study — I'm gonna simplify it a bit — where researchers asked people to estimate how many African countries were in the United Nations. But first they spun a wheel, a literal wheel of fortune, that landed on either ten or sixty. Totally random, had nothing to do with the question. Well, the people who saw sixty gave much higher estimates than the people who saw ten. I mean, they knew the wheel was random. Everyone did. And still, that meaningless number stuck in their heads like glue. That's what we call anchoring, and, um, it's sneaky precisely because you don't feel it happening.\n\nNow, anchoring's just the beginning. Once you've got an anchor, your brain goes looking for evidence that supports it. You know how it is — you decide someone's a bit of a jerk in the first five minutes, and then suddenly everything they do confirms it. They're late? Obviously they're a jerk. They hold the door for someone? Well, they're probably just showing off, sort of trying to look good in front of others. That's confirmation bias, and it's basically a filter you didn't know you'd switched on.\n\nAnd here's the thing about confirmation bias: it doesn't just affect your opinion of people. It affects what you read, who you follow, which news you trust. You've probably noticed, like, your social media feed kind of agrees with you, right? That's not an accident, and it's not the algorithm being clever — well, not entirely. It's you clicking on the stuff that feels right and scrolling past the stuff that doesn't. We're building our own little echo chambers, one click at a time. Simple as that.\n\nOkay, so let's talk about the third shortcut, and this one's my favourite, I gotta admit. It's called the availability heuristic. Basically, we judge how likely something is by how easily we can picture it. So after a plane crash on the news, everybody's terrified of flying, even though, statistically, driving to the airport is way more dangerous. I mean, you can't picture a thousand uneventful car journeys, can you? But one dramatic crash, that sticks. And the media, well, they're not exactly going to report on the plane that landed safely, are they? Right, so the vivid story wins every time over the dull statistics.\n\nNow here's where it gets interesting, and this is the bit that always surprises my students. You might think, right, now I know about these biases, I'll be fine. I'll just avoid them. But that's not how it works. Knowing about a bias doesn't switch it off. There was a study where they told people all about confirmation bias, in detail, and then gave them a task — and they fell for it just as badly as everyone else. I'm not making this up. It's almost like the knowledge becomes another tool you use to feel smart while you're making the exact same mistake. Look, I've been guilty of it myself. I once wrote a whole article arguing that a certain policy was doomed, and I only cited sources that agreed with me. I felt so clever. And then a colleague pointed out, very politely, that I'd ignored half the evidence. I dunno, maybe I was just embarrassed, but it took me a while to accept it.\n\nSo where does that leave us? Am I telling you we're all doomed to be irrational? Not quite. The trick isn't to eliminate these shortcuts — you can't, they're built in, and honestly you wouldn't want to, because without them you'd never get out of bed in the morning. The trick is to notice them. When you catch yourself feeling really, really certain about something, that's exactly the moment to pause. Ask yourself: what would it take to change my mind? If the answer's nothing, well, you're probably in the grip of a bias. And that, my friends, is a genuinely useful skill. It's not glamorous, it's not gonna win you arguments at parties, but it's the best defence we've got. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker open his talk with the story about buying a car at a dealership?",
+        "options": [
+          "To illustrate how an initial figure can quietly reshape what we later regard as a reasonable price.",
+          "To criticise the sales tactics commonly used in the car industry for being deliberately dishonest.",
+          "To show that careful research before a purchase reliably protects shoppers from any kind of manipulation.",
+          "To entertain the audience with a funny personal anecdote before he moves on to the real statistics."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'Then the salesman names a price, and suddenly every number after that feels like a bargain.' 这是典型的锚定效应：第一个出现的数字成了后续判断的参照，使后面的一切显得便宜。题干问的是'为什么用买车开场'，答案 A 用 'an initial figure can quietly reshape what we later regard as a reasonable price' 对这句话做了同义替换（initial figure 对应 salesman's price，reshape 对应 feels like a bargain），且没有照搬原文原词。干扰项 B 把举例曲解为'批评汽车行业不诚实'，原文并无道德批判；C 说'研究能保护消费者'，与讲话人'我们并不理性'的主旨相反；D 说'只是活跃气氛的趣事'，低估了例子的论证功能，迷惑性在于它确实是个人故事，但答非所问。"
+      },
+      {
+        "type": "single",
+        "question": "In the wheel-of-fortune experiment, what does the speaker suggest about the participants' behaviour?",
+        "options": [
+          "They deliberately gave extreme estimates in order to influence the researchers' final results.",
+          "They knowingly relied on a figure that they themselves recognised as completely arbitrary.",
+          "They assumed the wheel had been secretly designed to match the correct answer in advance.",
+          "They changed their minds once the real number of countries was finally revealed to them."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'I mean, they knew the wheel was random. Everyone did. And still, that meaningless number stuck in their heads like glue.' 推理链很清楚：受试者明知数字是随机的（knew the wheel was random），却依然被它影响（stuck like glue）。答案 B 的 'knowingly relied on a figure they recognised as completely arbitrary' 正是对这层的同义替换——'knowingly' 对应 'knew'，'arbitrary' 对应 'random / meaningless'。干扰项 A 的'故意给极端答案'无中生有；C 的'以为轮子被设计成正确答案'与 'they knew the wheel was random' 直接矛盾，这类干扰项借用了原文的'轮子'和'数字'，最容易骗到人；D 的'揭晓后改变想法'原文根本没有后续环节。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply when he describes the study in which people were taught about confirmation bias?",
+        "options": [
+          "Formal training in psychology guarantees that a person will make better decisions every day.",
+          "The researchers designed the experiment to be impossible for any ordinary participant to solve.",
+          "Being aware of a mental trap can perfectly coexist with repeatedly falling into it anyway.",
+          "Students who attend university lectures are far less susceptible than the general population."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'Knowing about a bias doesn't switch it off... they fell for it just as badly as everyone else.' 讲话人用自己写文章只引用同意观点的自嘲，进一步说明'知道偏差≠免疫偏差'。答案 C 的 'aware of a mental trap can coexist with repeatedly falling into it' 是对 'knowing doesn't switch it off' 的言外之意概括——这正是讲话人要我们推断的态度。干扰项 A 把'了解偏差'过度引申为'保证日常决策更好'，正是讲话人反对的天真想法，迷惑性最强；B 说'实验故意设计成无人能解'，原文强调任务普通、人人都中招，而非题目本身不可能；D 拿'大学生 vs 普通人'作对比，原文未涉及，属于张冠李戴。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO claims about mental shortcuts are supported by his examples? (Choose TWO)",
+        "options": [
+          "People who have studied cognitive biases are largely immune to the errors they learn about.",
+          "We tend to judge how likely an event is by how vividly and easily it comes to mind.",
+          "Confirmation bias only ever operates when we are judging the character of other people.",
+          "A meaningless figure can sway our answers even when we know it has no real relevance."
+        ],
+        "answer": [
+          "B",
+          "D"
+        ],
+        "explanation": "本题需要跨段落归纳。音频关键句一：'we judge how likely something is by how easily we can picture it'（可得性启发），对应 B 的 'how vividly and easily it comes to mind'，是同义替换。关键句二：'they knew the wheel was random... that meaningless number stuck'（锚定），对应 D 的 'a meaningless figure can sway our answers even when we know it has no real relevance'。两者都是原文观点的合理转述。干扰项 A 与关键研究结论 'knowing about a bias doesn't switch it off' 直接冲突，却披着'学习偏差'的正确外衣，最迷惑；C 把确认偏差限定为'只发生在评价他人时'，但讲话人明确说它 'affects what you read, who you follow, which news you trust'，属于以偏概全式的半对半错。"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "What Ancient Rome Can Teach Us About Modern Concrete",
+    "speaker": "Dr. Emily Hartley",
+    "duration": "5:03",
+    "category": "历史与科技",
+    "description": "古罗马混凝土的耐久之谜及其对现代工程的启示",
+    "audio_file": "ted_5.mp3",
+    "transcript": "G'day everyone, and thanks for coming along. Now, I want you to imagine you're standing in the middle of Rome, right, surrounded by buildings that have been there for two thousand years. The Pantheon's still got the largest unreinforced concrete dome on the planet, and it's been standing since, well, since before anyone here was even a twinkle in their parents' eyes. So here's my question for you today: how on earth did they do it?\n\nI'm Emily Hartley, and I look at ancient materials — well, mostly I look at why the Romans were better at making concrete than we are. And I know that sounds a bit odd, because, you know, we've got all this modern technology, we've got steel and computers and, like, super-strong cement. You'd think we'd have nailed it. But honestly, our concrete starts falling apart after fifty or a hundred years. The Romans? Some of their stuff is still basically brand new after two millennia. I'm not exaggerating — go and have a look at the harbour at Pozzuoli. The piers are still there, underwater, and they're fine. Not bad for a very old trick.\n\nRight, so what's the difference? Well, for ages, people assumed the Romans just had some secret ingredient we'd lost track of. Maybe it was a special volcanic ash from a particular mountain, or, um, I dunno, some magic additive. And there was a bit of truth to that — they did use volcanic ash, this stuff called pozzolana, which reacts with lime and water to form a really durable cement. But here's the thing: we know about pozzolana. We can buy the stuff. So that alone doesn't explain why theirs outlasts ours by such a huge margin, like forty times longer.\n\nThe real breakthrough, and this is what got me properly excited, came from looking really closely at the material under a microscope. You see, Roman concrete has these little white bits in it, these chalky lumps of lime. And for years, scientists looked at those and thought, right, that's a defect. That's sloppy mixing, kinda carelessness. I mean, you're not supposed to have chunks of unreacted lime in your concrete, are you? It's gotta be a mistake. Well, it turns out those lumps are the whole point.\n\nHere's how it works, and I'm gonna keep this simple. When water gets into a crack — and water always gets into cracks, that's what water does — it dissolves those lime lumps. Then the dissolved lime reacts with the volcanic ash and forms new crystals that fill the crack back up. So the concrete, sort of, heals itself. It's like it's got its own immune system. How cool is that? And the Romans did this on purpose, probably. They used a technique we now call hot mixing, where they added the lime really hot, almost boiling, which created those brittle little clasts. So what looked like a flaw was actually a feature. Makes you think, doesn't it?\n\nNow, there's an important contrast I want you to hold in your head, because this is where the modern stuff falls down. Our concrete is reinforced with steel bars, right, rebar. It makes it incredibly strong, initially. But steel rusts. And when it rusts, it expands, and when it expands, it cracks the concrete from the inside. So our buildings are, basically, fighting a losing battle against their own skeleton. The Romans didn't use steel at all. Their concrete was kinda weaker in the short term, but it got stronger over time, and it could last for centuries without falling apart. So, you know, there's a real lesson in there about trading short-term strength for long-term survival.\n\nAnd here's the twist I didn't expect when I started this research. We've actually started making self-healing concrete in the lab now, inspired by the Romans. But it's tricky, 'cause modern building rules are written for concrete that behaves a certain predictable way, and this new stuff behaves differently. So the barrier isn't really scientific any more. It's bureaucratic. We've known, or at least suspected, the secret for a decade, and we're still arguing about paperwork. Wanna guess how long that's taken?\n\nSo what do I want you to take away? Not that we should all go back to building like the Romans — I'm not saying that, and honestly their buildings weren't exactly comfy. I'm saying that sometimes the answer to a modern problem is sitting in the past, and we walk past it because we've decided we're more clever than our ancestors. We're not, always. Look, next time you walk past an old building, don't just see a relic. See a bit of engineering that's still teaching us. Right, thank you very much.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker refer to the Pantheon and the harbour at Pozzuoli near the beginning of her talk?",
+        "options": [
+          "To argue that Roman engineers were more gifted at architecture than at any other craft.",
+          "To complain that tourists cause lasting damage to ancient monuments by visiting in large numbers.",
+          "To prove that domes without reinforcement are superior to every modern structural design.",
+          "To stress that Roman construction has endured far longer than the structures we build today."
+        ],
+        "answer": "D",
+        "explanation": "音频关键句：'The Pantheon's still got the largest unreinforced concrete dome... the piers are still there, underwater, and they're fine.' 两处例子都在强调古罗马建筑的'长寿'——两千年后仍完好。答案 D 用 'Roman construction has endured far longer than the structures we build today' 概括，是把 'still standing / still fine' 和前文的 'our concrete starts falling apart after fifty or a hundred years' 对比后的同义转述，避开原文数字原词。干扰项 A 说'罗马人更擅长建筑而非其他工艺'，讲话人从未做这种横向比较；B 的'游客破坏古迹'完全无中生有；C 说'无筋穹顶优于一切现代设计'，属于过度引申，原文只说它是'最大的无筋穹顶'，并未宣称全面优越，这类把细节夸大成绝对结论的选项很有迷惑性。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker say about the white lumps found inside Roman concrete?",
+        "options": [
+          "They were added on purpose to make the finished surface look brighter and more decorative.",
+          "They were long dismissed as careless workmanship but in fact help repair damage in the material.",
+          "They are the result of modern pollution from decades of restoration work on the monuments.",
+          "They weaken the material but were tolerated because Roman builders lacked any better tools."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'scientists looked at those and thought, right, that's a defect. That's sloppy mixing... Well, it turns out those lumps are the whole point.' 后面又解释这些石灰块遇水溶解、生成新晶体填补裂缝（form new crystals that fill the crack back up）。推理链：过去被视为缺陷 → 其实是自修复的关键。答案 B 的 'long dismissed as careless workmanship but in fact help repair damage' 精准对应 'defect / sloppy mixing' 与 'fill the crack back up'。干扰项 A 说'为了美观'，原文否认了装饰用途；C 说'现代污染'与 'Romans used hot mixing on purpose' 矛盾；D 说'只是因为没更好工具才容忍'，正好和 'those lumps are the whole point' 相反——它前半句承认'削弱材料'，是典型的半对半错干扰项。"
+      },
+      {
+        "type": "single",
+        "question": "What does the contrast between Roman and modern concrete mainly illustrate, according to the speaker?",
+        "options": [
+          "Modern engineers have completely abandoned the use of steel reinforcement in their buildings.",
+          "Seeking immediate strength can create hidden problems that only surface many years later.",
+          "Roman concrete was stronger than modern concrete from the very first day it was poured.",
+          "The essential difference between the two materials lies in their colour and surface texture."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'Our concrete is reinforced with steel bars... It makes it incredibly strong, initially. But steel rusts... cracks the concrete from the inside.' 紧接着 'Their concrete was kinda weaker in the short term, but it got stronger over time.' 推理链：现代追求初期高强度 → 钢筋锈蚀 → 从内部开裂；罗马初期较弱 → 随时间变强。答案 B 的 'seeking immediate strength can create hidden problems that only surface many years later' 正是对这组对比的言外之意概括（initially strong 对应 immediate strength，rusts later 对应 surface years later）。干扰项 A 说'完全弃用钢筋'与原文 'our concrete is reinforced with steel bars' 矛盾；C 说'罗马混凝土从第一天就更强'与 'weaker in the short term' 正面冲突，是数字/方向对调的迷惑项；D 把差异归结为'颜色和纹理'，讲话人讲的是化学成分与结构，属于答非所问。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO processes allow Roman concrete to repair its own cracks? (Choose TWO)",
+        "options": [
+          "Water entering a crack dissolves the lime pieces, enabling new minerals to fill the gap.",
+          "Steel bars inside the mixture expand and push the crack edges back together again.",
+          "The hot mixing method leaves brittle lime pieces that later react with the volcanic ash.",
+          "Conservators regularly seal the cracks with fresh mortar before they can spread further."
+        ],
+        "answer": [
+          "A",
+          "C"
+        ],
+        "explanation": "本题要求归纳'自修复'的两个环节。音频关键句一：'When water gets into a crack... it dissolves those lime lumps. Then the dissolved lime reacts with the volcanic ash and forms new crystals that fill the crack back up.' 对应 A 的 'water dissolving lime pieces, new minerals fill the gap'（new crystals → new minerals，同义替换）。关键句二：'hot mixing... added the lime really hot... which created those brittle little clasts'，对应 C 的 'hot mixing leaves brittle lime pieces that react with volcanic ash'，这是产生石灰块的前提步骤。干扰项 B 把现代钢筋混凝土的'膨胀'（rusts → expands → cracks）错误地搬成'修复裂缝'，方向完全相反，迷惑性在于膨胀一词原文出现过；D 说'文物保护人员定期修补'，原文从未提及人工维护，属于无中生有。"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "The Business of Free: Why \"No Charge\" Often Costs You More",
+    "speaker": "Rachel Simmons",
+    "duration": "4:37",
+    "category": "经济与社会",
+    "description": "免费商业模式背后的隐性代价与数据经济",
+    "audio_file": "ted_6.mp3",
+    "transcript": "Hey everyone, so let me start with a question. How many free apps are on your phone right now? Go on, actually count them in your head. I'll wait. Right, probably more than you think. And here's the thing: none of those companies are charities. Nobody's paying your electricity bill out of the goodness of their heart. So the real question isn't whether something's free. It's what you're giving up in exchange. That's what I wanna talk about today, and I promise you'll look at that phone of yours a little differently by the time I've finished.\n\nI'm Rachel Simmons, and I study digital business models — basically, how companies make money when they don't charge you a cent. And, you know, the word 'free' is doing an enormous amount of work in our economy. It's like this magic label that makes us stop thinking. You see 'free download' and your brain goes, well, there's no downside, right? Simple as that. But that's exactly the reaction these companies are counting on.\n\nLet me give you an example I use with my students. There's this whole genre of mobile games that are, technically, free. You download them, you play them, you don't pay anything. But then you hit a level you can't beat, and the game says, hey, you wanna an extra life? Just watch this thirty-second ad. Or, you know, you can pay two dollars to skip it. Now, think about what's actually happening there. The company isn't really selling you a game. It's selling your attention to advertisers. And the 'free' players? They're the product, not the customer. I mean, that sounds harsh, but it's basically true.\n\nNow, there's another layer to this, and this is where it gets a bit more serious. A lot of these services aren't collecting your money — they're collecting you. I'm talking about your data. Where you go, what you buy, who your friends are, what time you go to bed. And, look, individually none of that sounds threatening. Who cares if an app knows I like coffee? But when you put millions of those little pieces together, you get something incredibly valuable. Companies will pay serious money for a detailed picture of your habits. So the price of 'free' isn't dollars, it's information about your life. And that, honestly, is worth more to them than a few dollars ever would be.\n\nHere's another thing worth mentioning — the free trial. You've all seen it, right? 'Try it free for thirty days.' And the whole design is built around you forgetting to cancel. I'm not gonna say it's a scam, but, um, let's just say the odds are not exactly in your favour. They're betting that you'll get used to the product, and then, boom, you're paying. And cancelling? That's deliberately made awkward. I once spent, well, I dunno, twenty minutes trying to cancel a subscription I'd signed up for in, like, two clicks. That's not an accident. That's a business model. Crazy, right?\n\nSo where's the surprise, you ask? Well, here's the bit that really gets me. We complain about the cost, but we rarely complain about the thing that actually costs us most — our time. Think about it. You're scrolling through a free feed, and an hour disappears. That hour is the most valuable thing you own, and you traded it for, what, a few jokes and some cat videos? The money you didn't spend is trivial compared with the time you did. And the companies know it. Their entire goal is to keep you on the platform as long as possible. Every minute you spend is another minute of data, another ad, another chance to sell you something.\n\nLook, I'm not saying never use free stuff. That'd be ridiculous — some of it's genuinely brilliant, and I use plenty of it myself. All I'm asking is that you go in with your eyes open. Ask yourself: if I'm not paying, what am I actually paying with? Is it my data? My attention? My time? And read the terms — I know, I know, nobody reads the terms — but just skim the important bits. 'Cause a little scepticism goes a long way. Your attention's not worthless. It's the most valuable currency you've got. Spend it like you mean it. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "What is the speaker's main purpose in asking listeners to count the free apps on their phones?",
+        "options": [
+          "To compare the popularity of different mobile operating systems among the student audience.",
+          "To urge everyone to delete unnecessary applications in order to free up valuable storage space.",
+          "To make the audience aware of how deeply familiar no-cost services have become in everyday life.",
+          "To demonstrate that free applications are generally more useful than their paid alternatives."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'How many free apps are on your phone right now?... probably more than you think... none of those companies are charities.' 讲话人用'数一数手机里有多少免费应用'开场，紧接'没有公司是慈善机构'，目的是让我们意识到'免费'早已渗透生活，却没人想过代价。答案 C 的 'make the audience aware of how deeply familiar no-cost services have become' 是对这一开场意图的概括——familiar 对应 'more than you think'，no-cost services 对应 free apps，且避开了 free 原词。干扰项 A 比较'不同操作系统的流行度'，原文毫无此意；B 说'删应用省空间'，讲话人从没提存储；D 断言'免费应用比付费更有用'，原文未作高低比较。A、B、D 都借用了'应用'这个话题外壳，所以有一定迷惑性。"
+      },
+      {
+        "type": "single",
+        "question": "In the mobile game example, what point does the speaker make about players who never spend any money?",
+        "options": [
+          "They receive a noticeably poorer standard of service than those who choose to pay for extras.",
+          "They are secretly charged a small fee each time they complete a level in the game.",
+          "They will eventually grow bored and switch to a rival product offered by a competitor.",
+          "Their watching of advertisements is the activity that actually generates revenue for the company."
+        ],
+        "answer": "D",
+        "explanation": "音频关键句：'The company isn't really selling you a game. It's selling your attention to advertisers. And the 'free' players? They're the product, not the customer.' 推理链：不付钱的玩家只要看了三十秒广告（watch this ad），公司就靠把他们的注意力卖给广告主赚钱。答案 D 的 'their watching of advertisements is the activity that actually generates revenue' 正是对 'selling your attention to advertisers' 的同义替换（attention → watching of advertisements，is selling → generates revenue）。干扰项 A 说'服务更差'，原文只说看广告换命，未比较服务质量；B 说'每过一关偷偷收费'与全文 'free / don't pay anything' 相悖；C 说'最终会跳槽到竞品'，原文没有讨论用户流失——这些都是围绕'免费玩家'编出的合理猜测，但答非所问。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply about the design of free trials when she describes her own cancellation experience?",
+        "options": [
+          "Companies rely on friction and forgetfulness to turn people who try a service into payers.",
+          "Most people who begin a free trial manage to cancel before any money is taken from them.",
+          "The subscription service she mentioned was simple to leave but difficult to register for.",
+          "Free trials are illegal in most countries because they deliberately mislead unsuspecting consumers."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'the whole design is built around you forgetting to cancel... They're betting that you'll get used to the product, and then, boom, you're paying. And cancelling? That's deliberately made awkward.' 又用自己'两下Subscribe，二十分钟退订'的例子佐证。推理链：设计依赖'忘记取消'+'退订困难'→把试用者变成付费者。答案 A 的 'rely on friction and forgetfulness to turn triers into payers' 精准概括（friction 对应 made awkward，forgetfulness 对应 forgetting to cancel）。干扰项 B 说'多数人能及时取消'与 'odds are not in your favour' 相反；C 把'两下订阅、二十分钟退订'说反成'难注册易退出'，是典型的细节对调；D 说'在多数国家违法'，原文只说 'I'm not gonna say it's a scam'，并未上升到法律，属于过度引申。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO things do people effectively pay with when a digital service is 'free'? (Choose TWO)",
+        "options": [
+          "A small monthly charge that is hidden somewhere in the long terms and conditions.",
+          "Personal details about their habits, location and social connections that firms can exploit.",
+          "A single one-off payment required before the application can be downloaded at all.",
+          "Their attention and the minutes of their time spent on the platform each day."
+        ],
+        "answer": [
+          "B",
+          "D"
+        ],
+        "explanation": "本题要求跨段落归纳'免费的隐性代价'。音频关键句一：'the price of free isn't dollars, it's information about your life'，对应 B 的 'personal details about habits, location and social connections'（information about your life 的具体化，前面还列举了 where you go / what you buy / who your friends are）。关键句二：'the thing that actually costs us most — our time... Every minute you spend is another minute of data, another ad'，对应 D 的 'attention and minutes of time'。干扰项 A 暗示'藏在条款里的小额月费'，但讲话人的核心恰恰是'不是钱'，它借用 terms 一词制造迷惑；C 说'下载前需一次性付费'，与 'download them, you don't pay anything' 直接矛盾，属于无中生有且方向相反。"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Bringing Wild Nature Back to Our Cities",
+    "speaker": "James Whitfield",
+    "duration": "5:23",
+    "category": "环境科学",
+    "description": "城市再野化：让自然重新进入城市的设计与实践",
+    "audio_file": "ted_7.mp3",
+    "transcript": "Right, so before we begin, I want you to try something. Picture a typical city street in your head — the cars, the pavements, the shop fronts, maybe a pigeon pecking at a dropped chip. Now, where's the wild stuff? I mean the frogs, the tall grass, the beetles hiding under a stone. You probably can't, can you? And that, my friends, is the whole reason I wanna talk to you today.\n\nI'm James Whitfield, and I spend my days thinking about how we can let nature back into the places we've built. We usually call it rewilding. Now, I know what you're thinking — surely that just means planting a few trees and, like, making it look nice? Well, no, not really. It's a bit subtler than that, and, um, it's also a lot more interesting than it sounds.\n\nHere's the basic idea. A conventional park is designed. Someone decides where every shrub goes, which grass to mow, which path to lay. It's nice, don't get me wrong, but it's kinda like a garden on a grand scale. Rewilding flips that. It's sort of the opposite of gardening — you step back, you remove the fences and the concrete, and then you let natural processes take over. You let the river flood where it wants to. You let the plants compete and the beetles arrive on their own. The job of us humans is mostly to get out of the way. Sounds simple, right? Actually, it's harder than it sounds, and I'm gonna come back to why in a minute.\n\nLet me give you an example that still blows my mind. There was an old rail yard in a European city — a big concrete slab that had been abandoned for decades. Nobody looked after it. Then, gradually, weeds started pushing through the cracks, then shrubs, then small trees. Birds came. And here's the number I want you to hold onto: within about twenty years, more than a hundred and fifty species of bird had been recorded there. A hundred and fifty! On a piece of ground that everyone had written off as useless. And the remarkable thing isn't just the number. It's that nobody planted any of it. We didn't do the hard work. We just stopped interfering, and the place healed itself. Not bad, eh?\n\nSo that's the first lesson: nature is stubborn, and it's waiting quietly under our pavements. But rewilding isn't only about having more birds around, though that's a lovely bonus. There are practical reasons too. A city with more trees and wild ground is a cooler city — I don't mean cooler in the trendy sense. I mean actual degrees. Concrete bakes in summer, but plants shade the ground and release water, so the whole neighbourhood drops in temperature. And when heavy rain comes, wild soil soaks it up instead of sending it straight outta the drains into the river. So you get fewer floods as well. Simple as that.\n\nAnd there's a human side to this as well, which I care about a lot. When people get a bit of genuine green space — not a manicured lawn, but somewhere a bit messy and alive — they report feeling calmer, less stressed. You know how it feels when you hear birds in the morning rather than traffic? That's not nothing. A city that's good for wildlife turns out to be good for us too. Funny how that works.\n\nNow here's the twist, and this is the bit that genuinely surprises people. You'd think the hard part would be the science — working out which plants to encourage, how to move animals back. But it's not. The science is mostly sorted. The real obstacle is us. You see, we've got this idea in our heads that nature should look tidy. A wild patch looks untidy. It looks, uh, unfinished. And the moment it looks a bit scruffy, someone complains. I've seen it a hundred times — a council leaves a corner of a park to grow wild, and, well, I dunno, within a week there are letters saying it looks like a mess, that nobody's maintaining it. But that mess is exactly the point. We've confused being cared for with being neat, and those two things aren't the same at all.\n\nSo where does that leave us? Look, I'm not saying we should turn every city centre into a jungle — some of us still need somewhere to park a bus. What I'm saying is that we can leave a little more room for the wild. Let the verge grow. Put a pond in, even a tiny one. Accept that a hedge doesn't need trimming every fortnight — you've gotta let it be a bit messy sometimes. 'Cause the truth is, we don't need to do more. We mostly need to do less, and then be patient. Nature's been at this a lot longer than we have. It knows what it's doing. Give it half a chance and it'll surprise you. Thank you very much.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker begin his talk by asking listeners to picture an ordinary city street?",
+        "options": [
+          "To argue that city planners ought to spend far more money on decorative public gardens.",
+          "To draw attention to how thoroughly nature has vanished from the places people know best.",
+          "To suggest that pigeons are the only wild creatures still able to survive in built-up areas.",
+          "To entertain the audience with an imaginary tour before he reveals his research findings."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'where's the wild stuff? I mean the frogs, the tall grass, the beetles hiding under a stone. You probably can't, can you?' 讲话人用'街上有蛙、草、甲虫吗？你想不出来'开场，是为了让我们意识到自然已从最熟悉的日常场景里消失。答案 B 的 'how thoroughly nature has vanished from the places people know best' 是对这层的同义概括——'vanished' 对应 'you can't [picture them]'，'places people know best' 对应 'a typical city street'，没有照搬原词。干扰项 A 说'应该花钱建装饰性花园'，恰恰与后文'公园像大号花园、但再野化不是这样'相反；C 把随口提到的鸽子当成'唯一能存活的野生动物'，是抓住原文细节的断章取义；D 说'只是逗乐热身'，低估了开场设问的论证功能，迷惑性在于它确实是引入话题，但答非所问。"
+      },
+      {
+        "type": "single",
+        "question": "According to the speaker, what does rewilding actually involve in practice, as opposed to designing a conventional garden?",
+        "options": [
+          "Stepping back so natural processes can re-establish themselves with little human direction.",
+          "Carefully selecting native plants and arranging them within neatly structured public spaces.",
+          "Bringing in specialists to manage every single stage of a habitat's recovery in detail.",
+          "Turning whole city centres into dense woodland while preserving the existing road network."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'It's sort of the opposite of gardening — you step back, you remove the fences and the concrete, and then you let natural processes take over.' 后面又说 'We didn't do the hard work. We just stopped interfering.' 推理链：再野化的核心不是'做更多'，而是'人类退后、让自然自己恢复'。答案 A 的 'stepping back so natural processes can re-establish themselves with little human direction' 精准同义替换（step back → stepping back，let natural processes take over → re-establish themselves）。干扰项 B 描述的是传统公园 'someone decides where every shrub goes'，正好是讲话人要对比否定的对象；C 的'专家全程精细管理'与 'get out of the way' 相反；D 把'留一点野性空间'夸大成'把整个市中心变森林'，是典型的过度引申，迷惑性在于讲话人确实提过'我不是要把每个市中心变成丛林'。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply by contrasting the neglected rail yard with a carefully maintained park?",
+        "options": [
+          "Well-kept green spaces normally support a much wider range of wildlife than abandoned ones.",
+          "The main reason people value parks is the chance to observe rare birds at close range.",
+          "Human intervention is often unnecessary and may even hold back nature's own recovery.",
+          "Abandoned industrial sites are always more attractive than purpose-built recreational areas."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'within about twenty years, more than a hundred and fifty species of bird had been recorded there... nobody planted any of it. We just stopped interfering, and the place healed itself.' 数字考点在这里要'绕'：题目选项不写'一百五十种'，而问这个对比说明了什么。推理链：无人打理的废弃地反而鸟类众多 → 因为没人干预 → 人类插手往往没必要甚至妨碍自然恢复。答案 C 的 'human intervention is often unnecessary and may even hold back nature's own recovery' 正是对该数字的言外之意概括。干扰项 A 说'精心维护的绿地野生动物更多'，与例子的结论方向完全相反，是最强的迷惑项；B 说'人们重视公园是为了近距离看珍稀鸟'，原文无此动机；D 说'废弃地总是比休闲区更好看'，把个别案例夸大成'always'的绝对结论，属于过度引申。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO advantages of bringing more wildness into cities does he mention? (Choose TWO)",
+        "options": [
+          "A noticeable drop in temperature across neighbourhoods during the hottest months of summer.",
+          "A significant reduction in traffic congestion on the roads surrounding the city centre.",
+          "Improved mental wellbeing among residents who live close to genuinely wild green space.",
+          "Lower construction costs for new housing built on previously unused industrial land."
+        ],
+        "answer": [
+          "A",
+          "C"
+        ],
+        "explanation": "本题要求跨段落归纳'让城市更野'的两项好处。音频关键句一：'plants shade the ground and release water, so the whole neighbourhood drops in temperature'，对应 A 的 'a drop in temperature... during the hottest months'（降温，同义替换，避开原文的 cool/degrees 原词）。关键句二：'they report feeling calmer, less stressed'，对应 C 的 'improved mental wellbeing among residents'（calmer, less stressed → mental wellbeing）。这两个都是讲话人明确提到的好处。干扰项 B 的'减少交通拥堵'原文从未涉及，却披着'城市问题'的外衣，最迷惑；D 的'降低住房建设成本'同样无中生有，讲话人只说废弃地'人人以为没用'，并未讨论建房成本，属于凭常识编造。"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "The Language of Lies: What Our Words Reveal",
+    "speaker": "Dr. Laura Bennett",
+    "duration": "5:23",
+    "category": "心理与语言",
+    "description": "说谎时的语言特征及其可靠性的心理学研究",
+    "audio_file": "ted_8.mp3",
+    "transcript": "Right, let's start with a little test. Imagine someone telling you a story, and you suspect they're not being entirely honest. What do you look at? I dunno — most people say the same thing: the eyes. If they look away, they're lying. Well, I've spent about fifteen years studying this, and I'm gonna be straight with you, that's basically wrong. It's a kinda lovely idea, and it's in every film you've ever seen, but the evidence just doesn't back it up.\n\nI'm Laura Bennett, and I work on language and deception — that is, what our words give away when we're not being straight with someone. And the first thing I want to do today is clear away some of the myths, 'cause they're surprisingly stubborn.\n\nSo, the eye-contact thing. Loads of studies have looked at it. And the finding, again and again, is that liars don't necessarily look away more than anyone else. In fact, some of them stare at you harder, precisely because they know the stereotype and they're, like, trying far too hard to seem honest. I mean, you can see the problem, can't you? If you believe a false clue, you'll misread an honest person as a liar, and a nervous liar as... well, who knows. It goes wrong in both directions.\n\nNow, if the body's not giving much away, what about the words? This is where it gets interesting. When researchers analyse what people actually say, they do find differences — just not the ones you'd expect. Here's one. People who are lying tend to use fewer words like \"I\" and \"me\". And I don't mean they're being modest. It's this unconscious thing where they sorta pull themselves out of the story. They'll say \"that happened\" or \"there was an argument\" instead of \"I did it\" or \"we argued\". It's like they're editing themselves out of their own account. We call it psychological distance, and it shows up more often than you'd think.\n\nAnd here's a number for you. In one set of experiments, um, the people who were deceiving others used first-person words roughly thirty percent less often than the people telling the truth. Thirty percent — that's a big gap in a study like this. But here's what I want you to take from that figure: it isn't about how often you say \"I\" as a party trick. What it tells us is that lying feels different from the inside. It's, uh, effortful. You're managing a version of events, keeping track of what you said, and that mental work quietly changes your language.\n\nThere's another shift as well. Liars often use more negative words — words like \"angry\" or \"awful\" — even when the story itself isn't especially negative. And their accounts tend to be shorter and less detailed. You ask them what happened and you get the bare bones, whereas a truthful person will wander a bit, throw in odd little details, mention a smell or a colour that doesn't matter. Sounds counterintuitive, right? You'd think a liar would pile on the detail to convince you. But making stuff up is hard work, so they keep it simple. Makes sense when you put it that way.\n\nSo, can we use all this to catch a liar? Well, if you wanna judge one person from their word choice, honestly, no. And here's the bit people don't like. Every one of these cues is a tendency, not a rule. Plenty of honest people speak in short, low-detail sentences. Plenty of liars are calm and fluent. If you take a single individual and try to read them from their language, you'll be right barely more often than if you flipped a coin. That's not a failure of the research. It's just the reality of human behaviour.\n\nBut the research is still useful. Where it helps is with larger patterns — a whole set of statements, or comparing one account against another over time. If a story keeps changing shape, if the details keep shifting, that's worth noticing. And, look, there's a serious point here. A lot of people are far too happy to announce that someone's lying based on nothing but a hunch about how they spoke. I worry about that. You've gotta be careful — once you start treating a vague linguistic tip-off as proof, you can do real damage to someone who's telling the truth.\n\nSo what do I want you to take away? Be a little more humble about your own instincts. That feeling that something sounds off might be right, but it might just be a stereotype doing its work. Pay attention to consistency over time rather than a single moment. And if you're ever in a position where it really matters — a job interview, a dispute, anything serious — don't rely on folk wisdom about shifty eyes. Ask better questions, check the facts, and give people a fair hearing. Our words do reveal things, just not in the simple way the films would have you believe. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker bring up the widespread belief that liars avoid eye contact?",
+        "options": [
+          "To prove that nervous body language is the single most dependable clue to deception.",
+          "To show that a popular intuition about lying is not supported by the research evidence.",
+          "To advise the audience to watch people's eyes very carefully during everyday conversations.",
+          "To explain why researchers find it remarkably easy to identify liars in ordinary settings."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'Most people say the same thing: the eyes. If they look away, they're lying... I'm gonna be straight with you, that's basically wrong... the evidence just doesn't back it up.' 讲话人先摆出'回避眼神=说谎'的大众直觉，再用自己十五年研究和'证据不支持'来推翻它。答案 B 的 'a popular intuition about lying is not supported by the research evidence' 精准概括这一意图（popular intuition 对应 most people say，not supported 对应 doesn't back it up）。干扰项 A 说'紧张肢体语言是最可靠线索'，与全文主旨正面冲突；C 的'仔细盯着眼睛看'正是讲话人要纠正的做法，迷惑性在于它复刻了原文场景；D 说'研究者很容易识破谎言'，与结尾'单个人判断只比抛硬币强一点'矛盾。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker say about the reduced use of first-person words by people who are lying?",
+        "options": [
+          "It shows that liars are generally far more nervous than people who are telling the truth.",
+          "It proves that the speaker is deliberately trying to sound more authoritative and convincing.",
+          "It occurs because liars have memorised a detailed and carefully rehearsed version of events.",
+          "It reflects an unconscious attempt to distance oneself from the account being presented."
+        ],
+        "answer": "D",
+        "explanation": "音频关键句：'they sorta pull themselves out of the story... It's like they're editing themselves out of their own account. We call it psychological distance.' 数字考点要'绕'：文中说'说谎者第一人称少用约百分之三十'，但选项不写数字，而问这个现象说明什么。推理链：少用 I/me → 把自己从叙述里'编辑掉' → 心理距离。答案 D 的 'an unconscious attempt to distance oneself from the account' 正是对 'psychological distance / unconscious thing' 的同义替换。干扰项 A 把原因归为'紧张'，恰是讲话人开头否定的刻板印象，最迷惑；B 说'故意显得权威'，原文强调是 'unconscious'；C 说'因为记住了详细、排练过的版本'，与后文'说谎者叙述更短、更少细节'直接相反，是细节对调的迷惑项。"
+      },
+      {
+        "type": "single",
+        "question": "What does the contrast between truthful and deceptive accounts suggest about the act of lying?",
+        "options": [
+          "Liars tend to produce less vivid stories because inventing events consumes mental effort.",
+          "Truthful people generally speak in much shorter sentences than those who are deceiving them.",
+          "The clearest difference between the two lies in how often the speakers make eye contact.",
+          "Deceptive accounts typically contain far more factual detail than completely honest ones."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'their accounts tend to be shorter and less detailed... a truthful person will wander a bit, throw in odd little details... But making stuff up is hard work, so they keep it simple.' 推理链：诚实者叙述有无关细节、更生动 → 说谎者只讲骨架、更少细节 → 因为编故事耗脑力（hard work / effortful）。答案 A 的 'less vivid stories because inventing events consumes mental effort' 是对这组对比的言外之意概括（less vivid 对应 less detailed / bare bones，consumes mental effort 对应 hard work）。干扰项 B 把'短句'安到诚实者头上，与原文说谎者 'shorter' 相反，是方向对调；C 又绕回被否定的'眼神接触'，答非所问；D 说'说谎细节更多'，与 'keep it simple' 正面矛盾。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO statements about judging liars from their language are correct? (Choose TWO)",
+        "options": [
+          "A single person's honesty can be detected from their word choice with very high accuracy.",
+          "Some linguistic shifts are real but far too subtle to judge one individual person by.",
+          "People should be cautious about accusing others on the basis of how they happen to speak.",
+          "Researchers have identified one dependable word that exposes every dishonest speaker."
+        ],
+        "answer": [
+          "B",
+          "C"
+        ],
+        "explanation": "本题要求归纳'通过语言识谎'的两个正确结论。音频关键句一：'Every one of these cues is a tendency, not a rule... you'll be right barely more often than if you flipped a coin'，对应 B 的 'real but far too subtle to judge one individual'——线索真实存在，但无法用于判断单个人。关键句二：'once you start treating a vague linguistic tip-off as proof, you can do real damage to someone who's telling the truth'，对应 C 的 'be cautious about accusing others'——不要凭说话方式随意指控。干扰项 A 说'单凭措辞即可高精度识人'，与 'barely more than a coin flip' 直接冲突，却披着'语言线索真实'的外衣，最迷惑；D 说'找到一个揭穿所有骗子的可靠词'，原文从未宣称有万能词，属于无中生有且绝对化。"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Grid Locked: Why Fixing the Power Grid Is Harder Than It Sounds",
+    "speaker": "Michael Torres",
+    "duration": "4:38",
+    "category": "科技与能源",
+    "description": "电网升级的技术、经济与监管障碍",
+    "audio_file": "ted_9.mp3",
+    "transcript": "Right, so here's a little thought experiment. You flip a switch, the light comes on, and you think nothing of it. Well, I want you to think about it again. Behind that tiny click is this enormous, mostly invisible machine — the power grid — and honestly, it's one of the most overlooked bits of engineering on the planet. I'm Michael Torres, and I've spent my whole career trying to keep that machine from falling over.\n\nNow, when most people picture the grid, they picture, like, big power stations and pylons marching off into the distance. And that's not wrong, but it's the old picture. You see, the whole thing was built around one simple idea: a handful of big plants make electricity, and it flows one way, outward, to the rest of us. Kinda like a one-way street. That worked fine for decades. But then we started putting solar panels on roofs, and wind farms out in the middle of nowhere, and suddenly power wants to move in both directions. And the thing is, the grid was never built for that.\n\nLet me put it another way. Picture a motorway designed for steady streams of cars all heading into town. Now imagine thousands of little vans and delivery trucks feeding in from every side, going every which way. What do you get? Jams. And that's basically what's happening on the grid. We've got generation in places the old wires never expected, so the lines get congested. You know, you can have a wind farm producing cheap power and still be unable to move it to the city that needs it. I mean, the energy's right there. It just can't get outta the wind farm and into the wires.\n\nSo the obvious answer seems to be: build more lines. And look, partly that's true. But here's where it gets painful. Putting up a transmission line is not, you know, like putting up a garden fence. First you've gotta get permission — and I don't mean one signature. I mean dozens of agencies, layers of rules, public hearings, and a whole lot of argument. There's a stack of paperwork taller than most people realise. In a lot of places, getting one new line approved can take the better part of a decade. A decade! That's long enough to, you know, raise a kid through primary school, just to get permission to start digging. And that number isn't there to scare you. What it tells you is that the bottleneck isn't really about engineering at all.\n\nAnd then there's the money, which is just as messy. Who pays for all this? Sounds like a boring question, but it's actually the crux of the whole thing. See, power lines don't respect borders. A line might start in one state, cross a second, and benefit a third. So everybody wants the electricity, but, uh, nobody wanna pay for a line that mostly helps somebody else. And nobody wants a giant pylon at the end of their street, either. Basically, the costs stay local while the benefits get spread around, and that mismatch makes everybody dig their heels in.\n\nNow here's the twist I find genuinely fascinating. You'd assume the hard part is the technology — that we're waiting for some brilliant invention to make the grid smart. But, well, we've already got most of the technology. The transformers, the sensors, the high-voltage cables — they exist. What we're short of is permission and coordination. It's paperwork and politics, not physics. Sort of ironic, really, when you think about it. I dunno about you, but I find that both frustrating and sorta hopeful, 'cause paperwork is something you can actually fix.\n\nSo where does that leave us? Look, I'm not gonna stand here and tell you it's easy. It isn't. But I think the first step is to stop seeing the grid as a pile of separate bits owned by separate people, and start seeing it as one shared system. Streamline the permitting, yes, but keep the safeguards that protect communities. Plan ahead instead of patching things together at the last minute. And accept that keeping the lights on is, you know, a collective job. Next time you flip that switch, spare a thought for the invisible machine behind it. It deserves a bit more of our attention. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker open his talk by asking listeners to picture a light switch being flipped on?",
+        "options": [
+          "To persuade the audience that households should cut back sharply on their electricity consumption.",
+          "To reveal how an effortless everyday action conceals a vast and fragile system people ignore.",
+          "To demonstrate that modern lighting technology has improved dramatically over the past few decades.",
+          "To complain about the rising cost of energy bills that families face in winter months."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'You flip a switch, the light comes on, and you think nothing of it. Well, I want you to think about it again. Behind that tiny click is this enormous, mostly invisible machine — the power grid.' 推理链：讲话人先用'开灯这种不假思索的小动作'作引子，紧接着转折让我们'rethink'，点出背后是'庞大、隐形、被忽视的机器'。答案 B 的 'an effortless everyday action conceals a vast and fragile system people ignore' 正是对这层的同义概括（flip a switch → effortless everyday action，invisible machine → conceals a vast system，think nothing of it → people ignore），没有照搬原词。干扰项 A 说'劝大家少用电'，讲话人通篇讲的是如何升级电网，从未号召节约，属于把话题偷换成环保倡议；C 说'照明技术进步'，把开关例子误读成灯具发展史，答非所问；D 说'抱怨电费上涨'，原文根本没提账单，是借日常场景凭空编造的动机，迷惑性在于开灯确实与用电成本有关。"
+      },
+      {
+        "type": "single",
+        "question": "According to the speaker, what does the time needed to approve a new power line truly indicate about the grid problem?",
+        "options": [
+          "That the real obstacle is administrative delay rather than any shortage of engineering expertise.",
+          "That construction crews need far more training before they can safely lay modern high-voltage cables.",
+          "That the approval process has already been speeded up considerably in most countries today.",
+          "That designers should be granted more years to draw up plans for new transmission routes."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'getting one new line approved can take the better part of a decade... And that number isn't there to scare you. What it tells you is that the bottleneck isn't really about engineering at all.' 数字考点要'绕'：选项不直接写'十年'，而问这段时间说明了什么。推理链：审批要拖近十年 → 讲话人明确说'这个数字不是吓唬你，它说明瓶颈根本不在工程' → 真正卡点在审批流程。答案 A 的 'the real obstacle is administrative delay rather than any shortage of engineering expertise' 是对 'bottleneck isn't really about engineering' 的言外之意展开（administrative delay 对应审批耗时，not a shortage of engineering 对应 isn't about engineering）。干扰项 B 把原因归为'工人培训不足'，原文说技术都存在，与'not about engineering'矛盾；C 说'审批已经大幅加快'，与原文'要拖十年'方向相反；D 说'设计者需要更多年来画图'，把'审批耗时'错当成'设计耗时'，是张冠李戴式的强迷惑项——数字对，但归错了环节。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply by remarking that the costs stay local while the benefits get spread around?",
+        "options": [
+          "That electricity ought to be generated much closer to the places where it is finally consumed.",
+          "That rural residents are simply unwilling to accept any kind of new energy infrastructure at all.",
+          "That paying for new lines is hard because those who bear the costs are not the main beneficiaries.",
+          "That the advantages of the upgraded grid are shared evenly among every region and household."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'A line might start in one state, cross a second, and benefit a third. So everybody wants the electricity, but nobody wanna pay for a line that mostly helps somebody else... the costs stay local while the benefits get spread around, and that mismatch makes everybody dig their heels in.' 推理链：一条线路跨越多个地区、好处外溢，但成本落在本地 → 出钱的人不是主要受益者 → 大家互相推诿、不肯配合（dig their heels in）。答案 C 的 'paying for new lines is hard because those who bear the costs are not the main beneficiaries' 精准概括了 'costs stay local, benefits spread around' 的含义。干扰项 A 说'应把发电放在消费地附近'，原文是在解释出资难题，并未主张分布式发电，答非所问；B 说'农村居民拒绝一切能源设施'，讲话人只说没人想要家附近的电塔，是抓住细节的以偏概全和绝对化；D 说'好处均匀分配'，与原文'好处外溢、分配不均'正好相反，方向对调是典型陷阱。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO factors make upgrading the power grid so difficult? (Choose TWO)",
+        "options": [
+          "Power now flows in directions the original network was never designed to handle.",
+          "The country lacks the raw materials needed to manufacture high-voltage transmission cables.",
+          "Approval battles and disputes over funding hold new projects up for many years.",
+          "There is a serious shortage of skilled engineers able to design a smarter modern grid."
+        ],
+        "answer": [
+          "A",
+          "C"
+        ],
+        "explanation": "本题要求跨段落归纳'电网升级为何难'的两大原因。音频关键句一：'the whole thing was built around one simple idea... it flows one way... suddenly power wants to move in both directions... the grid was never built for that'，对应 A 的 'power now flows in directions the original network was never designed to handle'（技术/设计层面的不适配，同义替换 one-way → never designed for both directions）。关键句二：'getting one new line approved can take the better part of a decade... nobody wanna pay... everybody dig their heels in'，对应 C 的 'approval battles and disputes over funding hold new projects up'（审批与出资争执）。干扰项 B 说'缺乏制造电缆的原材料'，讲话人明确说 'the high-voltage cables — they exist'，属于凭能源话题常识无中生有；D 说'缺少能设计智能电网的工程师'，同样与 'we've already got most of the technology' 和 'bottleneck isn't really about engineering' 冲突，迷惑性在于它披着'技术难题'的外衣，而讲话人恰恰强调难题不是技术。"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "The Attention Economy: When Your Focus Is the Product",
+    "speaker": "Priya Sharma",
+    "duration": "5:04",
+    "category": "社会与科技",
+    "description": "注意力经济如何重塑媒体、广告与我们的心智",
+    "audio_file": "ted_10.mp3",
+    "transcript": "Right, let me start with a question. How many of you, when you woke up this morning, reached for your phone before you'd even, you know, had a drink of water? Yeah. Most of you. Well, don't feel bad — I do it too. But I want to look at what that little habit actually means, because it's not just a habit. It's the engine of a whole industry. I'm Priya Sharma, and I study the way digital products compete for our attention.\n\nHere's the idea I want you to sit with. When something online is free — a search engine, a social network, a news site — you tend to think, well, great, free stuff. But there's no such thing as free, really. If you're not paying with money, you're paying with something else. And that something is your attention. You know the old saying: if the product is free, you're the product? I'd go one step further. It's not just that you're the product. Your focus is the product. That's literally what's being bought and sold.\n\nLet me unpack that. These companies make their money from advertising, right? And what an advertiser wants is for you to look at an ad — ideally for a while, and ideally when you're actually paying attention. So the platform's job is to get your eyes on the screen and keep them there. And the thing is, they've gotta do it better than their rivals, every single day. I mean, these are some of the smartest people around, working with enormous budgets, and their entire brief is: make it hard to look away.\n\nNow, how do they do it? Well, there are a few tricks, and once you see them you can't unsee them. First, there's the endless feed — you know, you scroll and scroll and there's no bottom, no natural stopping point. Then there are notifications — like, little pings that pull you back in. And then the big one: variable rewards. Sometimes you open an app and there's something exciting waiting, sometimes there's nothing. That unpredictability is, uh, basically the same trick that makes slot machines so addictive. You keep checking 'cause you never know what you'll get. Sorta clever, sorta sinister, depending on how you look at it.\n\nHere's a number I think is more revealing than it looks. Researchers reckon the average person checks their phone around fifty times a day. Now, fifty sounds like a lot, but honestly, that's not the bit I want you to focus on. What strikes me is that most of those checks aren't decisions at all. You don't think, right, I shall now check my phone. Your hand just does it. So the figure isn't really about how busy we are. It's about how much of our behaviour has quietly become automatic. We're not choosing to be interrupted; we've been trained to expect the interruption. Next time you reach for it, you might wanna notice whether you actually meant to.\n\nAnd that has a cost, but not the cost you'd expect. It's not just that we waste time, though we do. The deeper cost is what happens to our minds. When you're used to constant, quick stimulation, sustained attention starts to feel, well, painful. Sitting with one difficult idea for twenty minutes feels unbearable. We've sort of forgotten how to be bored, and boredom, it turns out, is where a lot of good thinking happens. I dunno about you, but that worries me more than the lost hours.\n\nNow here's the twist. The business model doesn't just waste our time — it shapes what we see. 'Cause the things that hold attention best are usually the things that make us feel something strong: outrage, fear, novelty, surprise. So the system quietly favours the extreme over the measured, the loud over the careful. And look, that's not a conspiracy. Nobody's sitting in a room going, let's make everybody angry. It's just that angry, startling stuff keeps people scrolling, so the machine promotes it over and over. Basically, what we give our attention to ends up shaping what we believe about the world and about each other.\n\nSo where does that leave us? I'm not gonna tell you to throw your phone in the bin — that's not realistic, and I'm not sure I'd do it myself. But I do think we should get deliberate. Turn off the notifications you don't need. Notice when your hand reaches for the phone without you. Give yourself a bit of real boredom now and then. Look, your attention is yours. It's probably the most valuable thing you own. Once you realise it's being traded, you can start deciding, for yourself, who gets to spend it. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker begin by asking whether listeners checked their phones before drinking water?",
+        "options": [
+          "To embarrass the audience for wasting time on their devices first thing every morning.",
+          "To show that an unconscious daily routine is the entry point to a massive industry.",
+          "To argue that staying hydrated is far more important than reading any online news.",
+          "To prove that people consciously choose how they spend their time on digital products."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'How many of you... reached for your phone before you'd even had a drink of water? Yeah. Most of you. Well, don't feel bad — I do it too... it's not just a habit. It's the engine of a whole industry.' 推理链：讲话人用'起床先摸手机'这个几乎人人有份、却意识不到的动作开场，自嘲'我也一样'拉近距离，随即点明小习惯背后是'整个行业的引擎'。答案 B 的 'an unconscious daily routine is the entry point to a massive industry' 是对 'not just a habit, it's the engine of a whole industry' 的同义概括（unconscious routine 对应 reached for the phone without thinking，entry point 对应开头的第一件事）。干扰项 A 说'让玩家难堪'，但讲话人明确 'don't feel bad — I do it too'，态度是共情而非指责，与原文态度相反；C 说'喝水比看新闻重要'，纯属把字面细节当论点，荒谬且答非所问；D 说'人们是有意识地在分配时间'，与全文'行为已变自动'的核心正好相反，迷惑性在于它看似正面，实则与作者意图冲突。"
+      },
+      {
+        "type": "single",
+        "question": "According to the speaker, what does the figure of roughly fifty phone checks a day really reveal?",
+        "options": [
+          "That people today are considerably busier than they were in previous decades.",
+          "That much of our phone use has become automatic instead of the result of deliberate choices.",
+          "That manufacturers ought to design devices with much longer battery life than at present.",
+          "That most individuals only reach for their phones when they have urgent messages to answer."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'the average person checks their phone around fifty times a day... What strikes me is that most of those checks aren't decisions at all. Your hand just does it... the figure isn't really about how busy we are. It's about how much of our behaviour has quietly become automatic.' 数字考点要'绕'：选项不写'五十次'说明了什么，而问这个数字的言外之意。推理链：一天五十次 → 讲话人强调关键不在数字大小，而在'大多数查看根本不是决定、手自己就动了' → 说明行为已自动化。答案 B 的 'much of our phone use has become automatic instead of deliberate choices' 正是对 'aren't decisions at all / quietly become automatic' 的同义替换。干扰项 A 说'人们比以前更忙'，讲话人明确否认 'isn't really about how busy we are'，是最贴合数字直觉的强迷惑项；C 说'该造续航更久的手机'，原文毫无提及，属于无中生有；D 说'只在有紧急消息时才查看'，与 'most checks aren't decisions' 直接矛盾，是把'查看'合理化为有目的行为的错误推断。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker suggest about the link between intense emotions and the content platforms promote?",
+        "options": [
+          "Material provoking strong reactions gets amplified, quietly skewing what people come to believe.",
+          "The platforms secretly conspire in meetings to make all of their users feel angry.",
+          "Calm and carefully reasoned content is promoted because it keeps people scrolling the longest.",
+          "Anger is the only emotion that digital companies are technically able to measure."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'the things that hold attention best are usually the things that make us feel something strong: outrage, fear, novelty, surprise. So the system quietly favours the extreme over the measured... angry, startling stuff keeps people scrolling, so the machine promotes it over and over. Basically, what we give our attention to ends up shaping what we believe.' 推理链：强烈情绪最能留住注意力 → 系统反复推送极端内容 → 进而塑造我们的信念。答案 A 的 'material provoking strong reactions gets amplified, quietly skewing what people come to believe' 精准对应 'favours the extreme / promotes it over and over / shaping what we believe'。干扰项 B 说'平台开会密谋让用户生气'，讲话人明确否认 'that's not a conspiracy. Nobody's sitting in a room going, let's make everybody angry'，这是抓住'愤怒'一词的断章取义；C 说'冷静理性的内容被推得最多'，与 'favours the extreme over the measured' 方向完全相反；D 说'愤怒是唯一能测量的情绪'，原文从未谈测量能力，属于无中生有加绝对化。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO effects of the attention economy on people does she describe? (Choose TWO)",
+        "options": [
+          "A sharp fall in the number of people who own and regularly use digital devices.",
+          "A weakening of the capacity for sustained thought as quick stimulation becomes the norm.",
+          "A serious shortage of raw materials for manufacturing the latest smartphones.",
+          "An information environment that favours extreme, emotionally charged material over calm content."
+        ],
+        "answer": [
+          "B",
+          "D"
+        ],
+        "explanation": "本题要求归纳'注意力经济对人的影响'的两个正确结论。音频关键句一：'When you're used to constant, quick stimulation, sustained attention starts to feel, well, painful... We've sort of forgotten how to be bored'，对应 B 的 'a weakening of the capacity for sustained thought as quick stimulation becomes the norm'（持续专注力变弱，同义替换 sustained attention feels painful → weakening capacity for sustained thought）。关键句二：'the system quietly favours the extreme over the measured, the loud over the careful'，对应 D 的 'an information environment that favours extreme, emotionally charged material over calm content'（极端情绪内容更受青睐）。干扰项 A 说'拥有数字设备的人数骤降'，与常识和原文'人人起床摸手机'完全相反，属于方向性错误；C 说'制造手机缺乏原材料'，原文根本没讨论硬件生产，是凭科技话题硬编的无关项，迷惑性在于它像一条像样的产业新闻，却答非所问。"
+      }
+    ]
   }
 ]
