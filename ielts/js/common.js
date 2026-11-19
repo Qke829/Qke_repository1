@@ -1,7 +1,7 @@
 // common.js (静态版) - localStorage 学习记录 + 读静态JSON的API
-// BUILD_VER=1795051516 —— 每次构建注入版本号，fetch 带 ?v= 绕开浏览器缓存
+// BUILD_VER=1795056544 —— 每次构建注入版本号，fetch 带 ?v= 绕开浏览器缓存
 const BASE = "/Qke_repository1/ielts";
-const BUILD_VER = "1795051516";
+const BUILD_VER = "1795056544";
 const API = {
   async get(path){
     const sep = path.includes('?') ? '&' : '?';

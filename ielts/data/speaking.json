@@ -43,5 +43,410 @@
     "prompt": "Now let's discuss some more general questions related to beautiful places.\n1. Do you think it's important to maintain beautiful places in cities? Why?\n2. How has tourism affected some of the world's most beautiful places?\n3. Should governments restrict the number of visitors to certain natural sites? Why or why not?\n4. Do you think economic development and environmental preservation can coexist?",
     "follow_up": "",
     "tips": "Part 3 答题要领（四步法）：\n• 第一步：直接表态（I believe / In my view）\n• 第二步：给理由（The main reason is that...）\n• 第三步：举例（For instance / A good example would be...）\n• 第四步：补充或对比（However / On the other hand...）\n• 用抽象表达：sustainable development, carrying capacity, cultural heritage\n• 语气更正式，句式更复杂"
+  },
+  {
+    "id": 6,
+    "part": "Part 1",
+    "topic": "Food and Cooking",
+    "category": "日常话题",
+    "prompt": "Let's talk about food and cooking.\n1. What kind of food do you like most?\n2. Do you often cook for yourself at home?\n3. Do you think it is important to learn how to cook?\n4. Has the way you eat changed since you were a child?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题用 2-3 句作答：先直接回答问题，再用一句原因或例子展开。\n• 谈到烹饪时可用现在完成时描述经验，如 I have never tried baking bread。\n• 积累地道词汇，如 home-cooked meal、spicy、recipe，避免只会说 delicious。\n• 第 4 题是变化对比题，用 used to 和 nowadays 形成今昔对照。\n• 保持自然口语化，不要背诵长篇模板，考官更看重真实交流。"
+  },
+  {
+    "id": 7,
+    "part": "Part 1",
+    "topic": "Travel and Holidays",
+    "category": "日常话题",
+    "prompt": "Let's talk about travel and holidays.\n1. Where do you usually go for your holidays?\n2. Can you describe a trip that you really enjoyed?\n3. Why do you think travelling is important for people?\n4. Do you prefer travelling alone or with friends and family?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题 2-3 句，先给直接答案再补一句细节或原因。\n• 描述旅行经历时用一般过去时，谈偏好用一般现在时，注意时态切换。\n• 可用地道表达，如 go sightseeing、off the beaten track、a change of scenery。\n• 第 4 题用 I prefer A to B 句型做对比，并给出明确理由。\n• 不要背模板，结合自己的真实经历说，语气自然放松。"
+  },
+  {
+    "id": 8,
+    "part": "Part 1",
+    "topic": "Work and Studies",
+    "category": "日常话题",
+    "prompt": "Let's talk about work and studies.\n1. Are you a student or do you work full-time?\n2. What do you like most about your job or course?\n3. Do you think your studies or job are useful for your future?\n4. Has your attitude towards work changed over the last few years?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 用 2-3 句回答，先正面作答再补充原因或具体例子。\n• 谈当前工作或学习用一般现在时，谈过去经历用一般过去时。\n• 积累相关词汇，如 deadline、coursework、colleague、promotion。\n• 第 4 题是变化题，可用 I used to...but now... 展示语言弹性。\n• 避免套用模板答案，给出真实感受更自然可信。"
+  },
+  {
+    "id": 9,
+    "part": "Part 1",
+    "topic": "Weather and Seasons",
+    "category": "日常话题",
+    "prompt": "Let's talk about weather and seasons.\n1. What is the weather like where you live?\n2. Which season do you like best, and why?\n3. Do you think the weather affects your mood?\n4. Has the weather in your hometown changed in recent years?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题 2-3 句，先回答再简单展开，不要过度延伸。\n• 描述天气用一般现在时，谈近年变化可用现在完成时。\n• 用丰富词汇替代 nice weather，如 humid、mild、chilly、forecast。\n• 第 4 题做变化对比，可用 used to 和 these days 组织答案。\n• 保持口语化，不要背模板，注意发音清晰。"
+  },
+  {
+    "id": 10,
+    "part": "Part 1",
+    "topic": "Music and Singing",
+    "category": "兴趣爱好",
+    "prompt": "Let's talk about music and singing.\n1. What kind of music do you usually listen to?\n2. Do you play any musical instruments or sing?\n3. Why do you think music is important in people's lives?\n4. Do you prefer listening to live music or recorded music?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题 2-3 句，先答核心再补一句理由或例子。\n• 谈音乐偏好用一般现在时，描述一次经历用一般过去时。\n• 积累地道搭配，如 catchy tune、play an instrument、sing along。\n• 第 4 题用比较句型，如 I'd rather... 或 I prefer...to... 明确表态。\n• 不要背模板，说真实的音乐喜好，让表达更自然。"
+  },
+  {
+    "id": 11,
+    "part": "Part 1",
+    "topic": "Reading and Books",
+    "category": "兴趣爱好",
+    "prompt": "Let's talk about reading and books.\n1. How often do you read books or magazines?\n2. What was the last book you read?\n3. Do you think reading is still important in the digital age?\n4. Do you prefer reading physical books or e-books?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题 2-3 句，先给答案再展开一点细节。\n• 描述最近读的书用一般过去时，谈习惯用一般现在时。\n• 用地道词汇，如 page-turner、novel、non-fiction、e-book reader。\n• 第 4 题做二者对比，用 While... 或 compared with 句型增强逻辑。\n• 别背模板，真实表达阅读习惯更得分。"
+  },
+  {
+    "id": 12,
+    "part": "Part 1",
+    "topic": "Sports and Exercise",
+    "category": "兴趣爱好",
+    "prompt": "Let's talk about sports and exercise.\n1. What sports do you like watching or playing?\n2. How often do you exercise in a typical week?\n3. Why do you think it is important to stay active?\n4. Do you prefer exercising indoors or outdoors?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题 2-3 句，先直接回答再补一句原因或频率细节。\n• 谈运动习惯用一般现在时，谈一次经历用一般过去时。\n• 积累词汇，如 work out、keep fit、team sport、jogging。\n• 第 4 题用 I prefer...because... 做对比并说明理由。\n• 不要套模板，结合自身情况自然作答。"
+  },
+  {
+    "id": 13,
+    "part": "Part 1",
+    "topic": "Family and Friends",
+    "category": "日常话题",
+    "prompt": "Let's talk about family and friends.\n1. How many people are there in your family?\n2. What do you usually do with your friends at weekends?\n3. Who do you turn to when you have a problem?\n4. Has your relationship with your family changed as you have grown older?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题 2-3 句，先回答问题再给一个具体例子。\n• 谈家庭现状用一般现在时，谈成长变化可用现在完成时。\n• 用自然表达，如 get on well with、take after、close-knit family。\n• 第 4 题是变化题，可用 As I've grown older... 组织今昔对比。\n• 避免背模板，真实的家庭故事更打动考官。"
+  },
+  {
+    "id": 14,
+    "part": "Part 1",
+    "topic": "Technology and Smartphones",
+    "category": "科技生活",
+    "prompt": "Let's talk about technology and smartphones.\n1. How long do you use your smartphone each day?\n2. What do you use your phone for most often?\n3. Do you think smartphones make our lives easier?\n4. How have smartphones changed the way you communicate?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题 2-3 句，先给直接答案再展开一句细节。\n• 描述使用习惯用一般现在时，谈变化用现在完成时。\n• 积累地道词汇，如 screen time、app、stay connected、notification。\n• 第 4 题用对比结构说明现在与过去的沟通方式差异。\n• 不要背模板，谈自己真实的手机使用习惯。"
+  },
+  {
+    "id": 15,
+    "part": "Part 1",
+    "topic": "Neighbourhood and Community",
+    "category": "日常话题",
+    "prompt": "Let's talk about your neighbourhood and community.\n1. What is your neighbourhood like?\n2. How long have you lived there?\n3. Do you think it is a good place to live?\n4. Has your neighbourhood changed much since you moved there?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题 2-3 句，先描述再补充一点感受或例子。\n• 谈居住时长用现在完成时，如 I have lived there for...。\n• 用丰富词汇，如 residential area、friendly neighbours、local facilities。\n• 第 4 题做变化对比，可用 used to 和 now 突出今昔差异。\n• 保持自然口语化，不要背模板答案。"
+  },
+  {
+    "id": 16,
+    "part": "Part 1",
+    "topic": "Sleep and Rest",
+    "category": "生活方式",
+    "prompt": "Let's talk about sleep and rest.\n1. How many hours do you usually sleep at night?\n2. What do you do to relax before going to bed?\n3. Do you think getting enough sleep is important?\n4. Has your sleep pattern changed compared with a few years ago?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题 2-3 句，先回答再补一句原因或做法。\n• 谈睡眠习惯用一般现在时，谈变化用现在完成时。\n• 积累地道表达，如 fall asleep、sleep pattern、well-rested、relax。\n• 第 4 题是变化题，用 compared with 或 used to 做对比。\n• 不要背模板，说真实的作息习惯更自然。"
+  },
+  {
+    "id": 17,
+    "part": "Part 1",
+    "topic": "Clothes and Fashion",
+    "category": "生活方式",
+    "prompt": "Let's talk about clothes and fashion.\n1. What kind of clothes do you usually wear?\n2. Where do you like to buy your clothes?\n3. Is fashion important to you?\n4. Has your sense of style changed since you were a teenager?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题 2-3 句，先作答再补一句偏好或理由。\n• 谈穿着习惯用一般现在时，谈风格变化用现在完成时。\n• 用地道词汇，如 casual、outfit、brand、dress up。\n• 第 4 题做今昔对比，可用 I used to...but now... 结构。\n• 避免背模板，真实表达穿衣风格更好。"
+  },
+  {
+    "id": 18,
+    "part": "Part 1",
+    "topic": "Pets and Animals",
+    "category": "兴趣爱好",
+    "prompt": "Let's talk about pets and animals.\n1. Do you have any pets?\n2. What animals do you like most, and why?\n3. Do you think children should learn to look after animals?\n4. Would you prefer to have a dog or a cat?",
+    "follow_up": "",
+    "tips": "Part 1 答题要领：\n• 每题 2-3 句，先回答再补一句原因或经历。\n• 谈喜好用一般现在时，谈过去经历用一般过去时。\n• 积累词汇，如 feed、look after、pet owner、companion。\n• 第 4 题用 I'd prefer...because... 做选择对比并给出理由。\n• 不要套用模板，真实的动物故事更生动。"
+  },
+  {
+    "id": 19,
+    "part": "Part 2",
+    "topic": "Describe a memorable journey you have taken",
+    "category": "经历描述",
+    "prompt": "Describe a memorable journey you have taken.\n\nYou should say:\n• where you went and who you travelled with\n• how you got there and how long the journey took\n• what you did and saw along the way\n• and explain why this journey was so memorable for you.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• What did this journey teach you about yourself?\n• Would you like to take the same journey again one day? Why or why not?",
+    "tips": "Part 2 答题要领（叙事结构）：\n• 用 CPR 结构展开：Context（时间地点人物）→ Problem/Process（途中经过）→ Result（结果感受）。\n• 讲过去经历以一般过去时为主，穿插过去进行时描写当时正在发生的事。\n• 多用方位词与感官描写，如 stunning scenery、the sound of the waves、breathtaking views，让画面更生动。\n• 加入情感词，如 excited、nervous、overwhelmed，突出\"memorable\"这一核心。\n• 控制在 1-2 分钟：准备时列好四个要点的关键词，按提示逐点展开。"
+  },
+  {
+    "id": 20,
+    "part": "Part 2",
+    "topic": "Describe a book that you have recently read",
+    "category": "物品描述",
+    "prompt": "Describe a book that you have recently read.\n\nYou should say:\n• what the book is and who wrote it\n• how you came across this book\n• what the book is mainly about\n• and explain why you would recommend it to others.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• How does reading compare with watching a film of the same story?\n• Do you prefer fiction or non-fiction? Why?",
+    "tips": "Part 2 答题要领（物品描述）：\n• 按\"书名—来源—内容—评价\"顺序展开，四个 bullet 都要回应。\n• 介绍情节用一般现在时（the story follows...），谈自己读后感受用现在完成时或过去时。\n• 积累地道表达，如 page-turner、gripping plot、relatable characters、thought-provoking。\n• 不要复述整本书，挑一两个印象最深的情节或人物重点讲。\n• 结尾用 and explain why 点明推荐理由，呼应题目并自然收尾。"
+  },
+  {
+    "id": 21,
+    "part": "Part 2",
+    "topic": "Describe a film that impressed you",
+    "category": "物品描述",
+    "prompt": "Describe a film that impressed you.\n\nYou should say:\n• what the film is and when you watched it\n• what kind of film it is and who stars in it\n• what the film is about\n• and explain why it left such a deep impression on you.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think this film would appeal to people from other countries? Why?\n• What is the difference between watching a film at home and in a cinema?",
+    "tips": "Part 2 答题要领（物品描述）：\n• 用\"影片信息—类型阵容—剧情—个人感受\"四步展开，条理清晰。\n• 剧情概述用一般现在时，观看经历用一般过去时，注意时态区分。\n• 用生动词汇，如 visually stunning、moving performance、gripping storyline、special effects。\n• 可举一个具体场景或台词说明它为何打动你，比泛泛而谈更有说服力。\n• 避免剧透式流水账，重点落在 impressed 的原因和情感共鸣上。"
+  },
+  {
+    "id": 22,
+    "part": "Part 2",
+    "topic": "Describe a skill you would like to learn",
+    "category": "愿望描述",
+    "prompt": "Describe a skill you would like to learn.\n\nYou should say:\n• what the skill is and why you are interested in it\n• how and where you would like to learn it\n• how much time and effort it would take\n• and explain why this skill would be useful to you in the future.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• What is the hardest part about learning a new skill as an adult?\n• Do you think schools should teach more practical skills? Why?",
+    "tips": "Part 2 答题要领（愿望描述）：\n• 围绕\"想学什么—怎么学—付出什么—为何有用\"展开，注意使用将来时与条件句。\n• 多用表达意愿的结构，如 I'd love to、I'm keen on、If I had the chance, I would...。\n• 说明学习计划时用具体细节，如 take an online course、practise regularly、find a tutor。\n• 用高级句式，如 Once I master it, I will be able to...，体现语言层次。\n• 结尾落到技能的实际价值，如 career prospects、personal growth、daily convenience。"
+  },
+  {
+    "id": 23,
+    "part": "Part 2",
+    "topic": "Describe a goal you want to achieve in the future",
+    "category": "愿望描述",
+    "prompt": "Describe a goal you want to achieve in the future.\n\nYou should say:\n• what the goal is and when you hope to achieve it\n• why you set this goal for yourself\n• what steps you need to take to reach it\n• and explain why achieving this goal would change your life.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Who has influenced you most in setting this goal?\n• How would you deal with failure if you could not reach your goal?",
+    "tips": "Part 2 答题要领（愿望描述）：\n• 按\"目标—动机—步骤—意义\"组织，逻辑层层递进。\n• 谈未来多用将来时、计划类表达，如 I intend to、I'm planning to、by the time I...。\n• 说明步骤时可用顺序词，如 first of all、then、finally，让叙述更有条理。\n• 加入虚拟语气提升表达，如 If I achieved it, I would feel...，展示语法功底。\n• 时间分配上把重点放在\"why\"和\"how it would change your life\"两处。"
+  },
+  {
+    "id": 24,
+    "part": "Part 2",
+    "topic": "Describe a friend you have known for a long time",
+    "category": "人物描述",
+    "prompt": "Describe a friend you have known for a long time.\n\nYou should say:\n• who this friend is and how you first met\n• how long you have known each other\n• what kind of person he or she is\n• and explain why this friendship has lasted so long.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• What qualities do you think are most important in a lasting friendship?\n• Do you find it easy to make new friends? Why or why not?",
+    "tips": "Part 2 答题要领（人物描述）：\n• 按\"是谁—如何认识—性格—友谊长久原因\"展开，人物描写要有细节支撑。\n• 认识已久用现在完成时，如 We have known each other since childhood。\n• 用具体性格词并配例子，如 considerate、reliable、has a great sense of humour。\n• 用一个小故事体现对方品质，比单纯罗列形容词更生动可信。\n• 结尾解释 why the friendship has lasted，回应题目并升华主题。"
+  },
+  {
+    "id": 25,
+    "part": "Part 2",
+    "topic": "Describe a time when you helped someone",
+    "category": "经历描述",
+    "prompt": "Describe a time when you helped someone.\n\nYou should say:\n• who you helped and what the situation was\n• how you offered your help\n• what the result of your help was\n• and explain why helping that person was rewarding for you.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think people are becoming less willing to help strangers? Why?\n• Should children be taught the importance of helping others at school?",
+    "tips": "Part 2 答题要领（叙事结构）：\n• 用叙事结构讲清来龙去脉：背景→你如何帮忙→结果→感受。\n• 全程以一般过去时为主，描述当时场景可穿插过去进行时。\n• 用连接词推进情节，如 at first、then、eventually、in the end。\n• 加入动作和情绪细节，如 I rushed to、she was relieved、it was really rewarding。\n• 结尾谈感受时呼应题目，说明这次经历对你的意义。"
+  },
+  {
+    "id": 26,
+    "part": "Part 2",
+    "topic": "Describe a difficult decision you had to make",
+    "category": "经历描述",
+    "prompt": "Describe a difficult decision you had to make.\n\nYou should say:\n• what the decision was and when you faced it\n• what the two or more options were\n• how you made up your mind\n• and explain why it was such a difficult decision for you.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you usually make decisions quickly or do you take your time? Why?\n• Has the way you make decisions changed as you have grown older?",
+    "tips": "Part 2 答题要领（叙事结构）：\n• 按\"决定是什么—有哪些选择—如何决断—为何艰难\"四步展开。\n• 讲过去决定用一般过去时，回顾两难时可用 might / could 表达当时的可能性。\n• 用对比结构呈现选项，如 on the one hand... on the other hand...、the pros and cons。\n• 用高级词汇体现犹豫与权衡，如 I was torn、it was a tough call、after weighing it up。\n• 结尾聚焦 why it was difficult，可谈取舍、风险或情感冲突。"
+  },
+  {
+    "id": 27,
+    "part": "Part 2",
+    "topic": "Describe a memorable event in your life",
+    "category": "事件描述",
+    "prompt": "Describe a memorable event in your life.\n\nYou should say:\n• what the event was and when it took place\n• who was involved and where it happened\n• what actually happened during the event\n• and explain why it is so memorable to you.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think memorable events are always happy ones? Why or why not?\n• How do people in your culture commemorate important life events?",
+    "tips": "Part 2 答题要领（事件描述）：\n• 用时间线叙事：事件背景→人物地点→经过→意义，层层推进。\n• 叙述过去事件以一般过去时为主，用过去完成时交代更早的铺垫。\n• 用具体时间表达定位，如 a couple of years ago、it was on a cold winter morning。\n• 加入感官和情感描写营造画面感，如 the atmosphere was electric、I was over the moon。\n• 结尾突出 memorable 的原因，说明它为何在记忆中留下深刻印记。"
+  },
+  {
+    "id": 28,
+    "part": "Part 2",
+    "topic": "Describe a place where you like to relax",
+    "category": "地点描述",
+    "prompt": "Describe a place where you like to relax.\n\nYou should say:\n• where this place is and how you found it\n• what it looks like and what you can see there\n• what you usually do when you are there\n• and explain why it is the perfect place for you to relax.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think public places like parks are important for city life? Why?\n• How do you usually relax after a busy day at work or school?",
+    "tips": "Part 2 答题要领（地点描述）：\n• 用方位词开头定位，如 in the corner of、a short walk from、overlooking the river，让听者立刻有画面感。\n• 用感官描写铺陈环境，如 the sound of running water、fresh air、soft sunlight，突出\"放松\"的氛围。\n• 描述现在的状态用一般现在时，讲第一次发现它的经历用一般过去时。\n• 加入情感词，如 peaceful、calm、recharged、a breath of fresh air，点明放松感。\n• 结尾用 and explain why 说明为何这里最能让你放松，控制在 1-2 分钟。"
+  },
+  {
+    "id": 29,
+    "part": "Part 2",
+    "topic": "Describe an object that is special to you",
+    "category": "物品描述",
+    "prompt": "Describe an object that is special to you.\n\nYou should say:\n• what this object is and what it looks like\n• where you got it and how long you have had it\n• how you use it or what it reminds you of\n• and explain why it is so special to you.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think people today value material things too much? Why?\n• What kind of object would you like to pass on to your children?",
+    "tips": "Part 2 答题要领（物品描述）：\n• 按\"外观—来历—用途与回忆—意义\"顺序展开，四个 bullet 逐一回应。\n• 外观用一般现在时，得到它的过程用一般过去时，拥有多久用现在完成时。\n• 积累地道表达，如 sentimental value、well-worn、a keepsake、brings back fond memories。\n• 不要只罗列外观，重点讲清它背后的故事和情感联结。\n• 结尾用 and explain why 点明\"special\"的深层原因，自然收束。"
+  },
+  {
+    "id": 30,
+    "part": "Part 2",
+    "topic": "Describe a traditional festival in your country",
+    "category": "事件描述",
+    "prompt": "Describe a traditional festival in your country.\n\nYou should say:\n• what the festival is and when it is celebrated\n• how people prepare for it\n• what people usually do during the festival\n• and explain why this festival is important to your culture.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think traditional festivals are losing their meaning among young people? Why?\n• How are festivals in your country different from those in other countries?",
+    "tips": "Part 2 答题要领（事件描述）：\n• 用\"名称时间—准备—庆祝活动—文化意义\"四步展开，结构清晰。\n• 介绍习俗用一般现在时，讲自己某次过节的经历用一般过去时。\n• 用生动词汇，如 vibrant、festive atmosphere、decorations、traditional customs、family reunion。\n• 举一两个具体细节，如特定的食物或仪式，让描述更真实可感。\n• 结尾用 and explain why 升华到文化价值，注意时间控制。"
+  },
+  {
+    "id": 31,
+    "part": "Part 2",
+    "topic": "Describe a piece of technology you use every day",
+    "category": "物品描述",
+    "prompt": "Describe a piece of technology you use every day.\n\nYou should say:\n• what this piece of technology is\n• when and how you started using it\n• what you mainly use it for\n• and explain why it has become such an important part of your daily life.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Could you live without this device for a week? Why or why not?\n• Do you think technology makes people's lives easier or more complicated?",
+    "tips": "Part 2 答题要领（物品描述）：\n• 按\"是什么—何时开始用—主要用途—重要性\"顺序展开，避免泛泛而谈。\n• 讲开始使用的时间点用一般过去时，谈日常用途用一般现在时。\n• 用科技类表达，如 indispensable、user-friendly、stay connected、boost productivity。\n• 用具体场景代替空泛陈述，如 checking messages on the go、working remotely。\n• 结尾用 and explain why 强调它为何不可或缺，回应题目。"
+  },
+  {
+    "id": 32,
+    "part": "Part 2",
+    "topic": "Describe a situation when you were late",
+    "category": "经历描述",
+    "prompt": "Describe a situation when you were late.\n\nYou should say:\n• when and where you were supposed to be\n• what caused you to be late\n• what happened as a result\n• and explain why you felt so embarrassed about it.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think being late is a serious problem in your culture? Why?\n• What do you usually do to make sure you arrive on time?",
+    "tips": "Part 2 答题要领（叙事结构）：\n• 用 CPR 结构：Context（约定时间地点）→ Problem（迟到原因）→ Result（后果与感受）。\n• 讲过去经历全程以一般过去时为主，用过去完成时描述\"本该发生却没发生\"的事。\n• 用时间连接词推进情节，如 at first、then、to make matters worse、in the end。\n• 加入情感词，如 anxious、embarrassed、relieved，突出心理变化。\n• 结尾用 and explain why 说明感受与反思，控制在 1-2 分钟。"
+  },
+  {
+    "id": 33,
+    "part": "Part 2",
+    "topic": "Describe a teacher who has taught you",
+    "category": "人物描述",
+    "prompt": "Describe a teacher who has taught you.\n\nYou should say:\n• who this teacher is and what subject they taught\n• what they were like as a person\n• a specific memory or lesson you still remember\n• and explain why this teacher had such an influence on you.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• What qualities do you think make a great teacher?\n• Do you think technology will replace teachers in the future? Why or why not?",
+    "tips": "Part 2 答题要领（人物描述）：\n• 按\"身份科目—性格特点—具体事例—影响\"四步展开，用一个人的故事串联。\n• 描述老师用一般现在时或过去时，讲具体往事用一般过去时。\n• 用人物描写词汇，如 patient、encouraging、dedicated、a natural storyteller、went out of their way。\n• 用一个具体事例（一次鼓励或一堂特别的课）代替空泛赞美，更有说服力。\n• 结尾用 and explain why 点明老师对你的影响，呼应题目并收尾。"
+  },
+  {
+    "id": 34,
+    "part": "Part 2",
+    "topic": "Describe a song that you really like",
+    "category": "物品描述",
+    "prompt": "Describe a song that you really like.\n\nYou should say:\n• what the song is and who sings it\n• when and how you first heard it\n• what the song is about\n• and explain why this song means so much to you.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think music can bring people from different cultures together? Why?\n• What kind of music do you usually listen to when you are feeling down?",
+    "tips": "Part 2 答题要领（物品描述）：\n• 按\"歌名歌手—初识经历—歌词内容—个人意义\"展开，四要点逐一回应。\n• 介绍歌曲本身用一般现在时，讲第一次听到的情景用一般过去时。\n• 用音乐类表达，如 catchy melody、meaningful lyrics、uplifting、strikes a chord、on repeat。\n• 结合个人经历与情感，说明这首歌为何触动你，避免只谈音乐风格。\n• 结尾用 and explain why 点明意义，控制在 1-2 分钟。"
+  },
+  {
+    "id": 35,
+    "part": "Part 2",
+    "topic": "Describe a time when you received good news",
+    "category": "事件描述",
+    "prompt": "Describe a time when you received good news.\n\nYou should say:\n• what the good news was\n• when and how you heard it\n• what you did to celebrate\n• and explain why the news meant so much to you.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think people share good news differently from bad news? Why?\n• What is the best piece of news you have ever received in your life?",
+    "tips": "Part 2 答题要领（事件描述）：\n• 用叙事结构：消息内容—得知经过—庆祝方式—意义，层层递进。\n• 讲过去的事以一般过去时为主，用过去完成时交代消息之前的背景。\n• 用情感词描写反应，如 thrilled、over the moon、a weight off my shoulders、couldn't stop smiling。\n• 加入细节（是谁告诉你的、当时在哪）让故事更具体生动。\n• 结尾用 and explain why 说明这条消息的重要性，自然收尾。"
+  },
+  {
+    "id": 36,
+    "part": "Part 2",
+    "topic": "Describe something you learned from a failure",
+    "category": "经历描述",
+    "prompt": "Describe something you learned from a failure.\n\nYou should say:\n• what the failure or mistake was\n• when and why it happened\n• how you dealt with the situation\n• and explain why this lesson has stayed with you ever since.\n\nYou will have one minute to prepare. You should speak for one to two minutes.",
+    "follow_up": "• Do you think people learn more from failure or from success? Why?\n• How do you usually react when you make a mistake?",
+    "tips": "Part 2 答题要领（经历描述）：\n• 用 CPR 结构：Context（失败的经过）→ Problem（当时的问题）→ Result（收获与改变）。\n• 讲过去经历用一般过去时，谈现在的改变用现在完成时或一般现在时。\n• 用表达成长的词汇，如 a wake-up call、learned my lesson、bounce back、look on the bright side。\n• 诚实描述失败但不沉溺于负面情绪，重点放在反思与改变上。\n• 结尾用 and explain why 强调教训的持久影响，呼应题目。"
+  },
+  {
+    "id": 37,
+    "part": "Part 3",
+    "topic": "The role of technology in education",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to the role of technology in education.\n1. Do you think technology has improved the quality of education? Why or why not?\n2. How has the internet affected the way students learn outside the classroom?\n3. Should schools rely more on digital tools than on traditional teaching methods? Why or why not?\n4. What role can technology play in reducing educational inequality between different regions?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 采用四步法展开：明确表态 → 给出理由 → 举具体例子 → 做对比或让步，让答案更有层次。\n• 多用抽象名词和正式表达，如 access to information、digital divide、personalised learning，避免过于口语化。\n• 使用复杂句式展示语法实力，如 While technology can..., it cannot replace...。\n• 谈教育科技时注意时态：描述现状用一般现在时，谈近年变化用现在完成时。\n• 第 4 题属宏观社会问题，可从城乡差距、经济条件、政府投入等角度切入，体现思辨深度。"
+  },
+  {
+    "id": 38,
+    "part": "Part 3",
+    "topic": "Work-life balance in modern society",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to work-life balance in modern society.\n1. Do you think it is difficult for people to achieve a good work-life balance today? Why?\n2. How has technology changed the boundary between work and personal life?\n3. Should employers be responsible for the mental well-being of their staff? Why or why not?\n4. What measures can governments take to help workers lead a more balanced life?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 坚持四步法：先亮观点，再给原因，配上例子，最后做对比或补充让步。\n• 提升表达抽象度，用 stress level、burnout、flexible working、personal time 等词替代简单说法。\n• 保持正式客观的语气，可用 It is widely argued that... 或 There is a growing concern that...。\n• 用让步转折句增强逻辑，如 Although flexible hours offer benefits, they can also blur boundaries。\n• 第 4 题从政策层面展开，如带薪休假、劳动法、远程办公规范，展现宏观视角。"
+  },
+  {
+    "id": 39,
+    "part": "Part 3",
+    "topic": "Environmental responsibility of individuals",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to the environmental responsibility of individuals.\n1. Do you think individuals can make a real difference to environmental protection? Why?\n2. How have people's attitudes towards recycling changed in recent years?\n3. Should the government do more than individuals to tackle climate change? Why or why not?\n4. What can be done to encourage ordinary citizens to adopt a more sustainable lifestyle?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 用四步法搭建答案：表态 → 理由 → 例证 → 对比，避免观点空洞。\n• 使用抽象正式的词汇，如 carbon footprint、sustainable、environmental awareness、conservation。\n• 多用复杂句体现语法层次，如 Only when individuals change their habits can...。\n• 谈近年态度变化用现在完成时，描述普遍现象用一般现在时。\n• 第 4 题可从教育宣传、经济激励、基础设施建设等宏观层面提出解决方案。"
+  },
+  {
+    "id": 40,
+    "part": "Part 3",
+    "topic": "The value of reading in the digital age",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to the value of reading in the digital age.\n1. Do you think reading books is still valuable when so much information is online? Why?\n2. How has digital technology affected people's reading habits?\n3. Should children be encouraged to read printed books rather than screens? Why or why not?\n4. What impact has the decline of reading had on society as a whole?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 按四步法作答：表态 → 理由 → 例子 → 对比，让论述更有说服力。\n• 用抽象表达提升档次，如 critical thinking、attention span、digital distraction、deep reading。\n• 保持正式语气，可用 It is often argued that... 引出观点。\n• 熟练使用对比句型，如 Compared with skimming online, reading a book fosters...。\n• 第 4 题是宏观社会影响题，可从知识积累、专注力、文化传递等角度深入分析。"
+  },
+  {
+    "id": 41,
+    "part": "Part 3",
+    "topic": "Changes in the way people communicate",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to changes in the way people communicate.\n1. Do you think modern communication has made people closer or more distant? Why?\n2. How have smartphones changed the way people keep in touch with each other?\n3. Should people value face-to-face conversation more than online interaction? Why or why not?\n4. What are the social consequences of relying heavily on digital communication?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 遵循四步法：明确观点 → 说明理由 → 举例 → 对比或让步，使答案充实有条理。\n• 使用抽象正式的词汇，如 face-to-face interaction、social connection、non-verbal cues、misunderstanding。\n• 善用复杂句，如 While digital tools keep us connected, they may weaken the quality of...\n• 描述沟通方式的变化用现在完成时，对比今昔可用 used to 与 nowadays。\n• 第 4 题从社会层面讨论，如人际关系疏离、信息误读、代际差异，体现思辨深度。"
+  },
+  {
+    "id": 42,
+    "part": "Part 3",
+    "topic": "The importance of learning a second language",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to the importance of learning a second language.\n1. Do you think everyone should learn a second language? Why or why not?\n2. How has learning a foreign language benefited you or people you know?\n3. Should schools start teaching a second language at a younger age? Why or why not?\n4. What role does language learning play in promoting cultural understanding between countries?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 用四步法组织回答：表态 → 理由 → 例子 → 对比，避免泛泛而谈。\n• 提升词汇层次，如 bilingual、cross-cultural communication、cognitive benefits、global citizenship。\n• 保持正式语气，可用 There is no doubt that... 或 It is widely believed that...。\n• 用复杂句式展示语法，如 Not only does it improve..., but it also broadens...。\n• 第 4 题上升到宏观层面，可从国际交流、文化包容、经济合作等角度展开。"
+  },
+  {
+    "id": 43,
+    "part": "Part 3",
+    "topic": "Urbanization and its challenges",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to urbanization and its challenges.\n1. Do you think living in a large city offers more opportunities than living in a small town? Why?\n2. How has rapid urbanization affected the environment in many cities?\n3. Should the government limit the growth of big cities? Why or why not?\n4. What challenges does urbanization pose to housing and public services?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 坚持四步法：亮观点 → 给理由 → 举例子 → 做对比，确保逻辑完整清晰。\n• 使用抽象正式的词汇，如 urban sprawl、overcrowding、infrastructure、migration、living standards。\n• 多用复杂句式，如 As cities expand, the pressure on public services grows accordingly。\n• 谈城市化进程用现在完成时或一般现在时，描述趋势可用 an increasing number of。\n• 第 4 题属宏观社会议题，可从住房价格、交通拥堵、医疗教育资源的角度深入分析。"
+  },
+  {
+    "id": 44,
+    "part": "Part 3",
+    "topic": "The impact of social media on society",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to the impact of social media on society.\n1. Do you think social media has done more harm than good to society? Why or why not?\n2. How has social media affected the way people form and maintain relationships?\n3. Should the government introduce stricter regulations to control misinformation online? Why or why not?\n4. What impact does the widespread use of social media have on mental health, particularly among young people?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 坚持四步法：明确表态 → 给出理由 → 举具体例子 → 做对比或让步，使答案层次分明。\n• 提升表达抽象度，用 social interaction、misinformation、online community、digital well-being 等词替代简单说法。\n• 保持正式客观的语气，可用 It is widely argued that... 或 There is a growing concern that... 引出观点。\n• 熟练使用让步转折句，如 While social media connects people, it can also contribute to feelings of isolation。\n• 第 4 题聚焦心理健康这一社会问题，可从攀比心理、网络欺凌、注意力分散等角度深入分析。"
+  },
+  {
+    "id": 45,
+    "part": "Part 3",
+    "topic": "Health and lifestyle in the modern world",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to health and lifestyle in the modern world.\n1. Do you think people today are less healthy than previous generations? Why or why not?\n2. How has modern technology changed the way people take care of their health?\n3. Should employers take responsibility for encouraging employees to live a healthier lifestyle? Why or why not?\n4. What role can schools play in teaching children the importance of a healthy lifestyle?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 用四步法搭建答案：表态 → 理由 → 例证 → 对比，避免观点空洞。\n• 使用抽象正式的词汇，如 sedentary lifestyle、chronic illness、well-being、preventive care、balanced diet。\n• 多用复杂句体现语法层次，如 Sedentary as modern jobs may be, regular exercise can offset the risks。\n• 谈今昔健康对比时用 used to 与 nowadays，描述趋势可用 an increasing number of people。\n• 第 4 题从教育层面展开，可从体育课程、营养知识、心理健康教育的角度提出具体建议。"
+  },
+  {
+    "id": 46,
+    "part": "Part 3",
+    "topic": "The role of government in public services",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to the role of government in public services.\n1. Do you think the government should be responsible for providing free healthcare for all citizens? Why or why not?\n2. How has the quality of public services in your country changed over the past few decades?\n3. Should private companies be allowed to run essential public services such as transport and education? Why or why not?\n4. What challenges do governments face when trying to improve public services in rural or remote areas?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 按四步法作答：表态 → 理由 → 例子 → 对比，让论述更有说服力。\n• 提升词汇层次，如 public funding、universal healthcare、infrastructure、accountability、accessibility。\n• 保持正式语气，可用 It is often argued that... 或 The government has a duty to... 引出观点。\n• 用复杂句式展示语法，如 Although private firms may improve efficiency, they can prioritise profit over quality。\n• 第 4 题属宏观治理问题，可从资金投入、地理条件、人才短缺等角度分析，体现思辨深度。"
+  },
+  {
+    "id": 47,
+    "part": "Part 3",
+    "topic": "Cultural traditions in a globalized world",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to cultural traditions in a globalized world.\n1. Do you think globalization is destroying local cultures and traditions? Why or why not?\n2. How has globalization affected traditional festivals and customs in your country?\n3. Should governments take measures to protect traditional culture from foreign influence? Why or why not?\n4. What are the benefits of preserving cultural diversity in an increasingly interconnected world?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 遵循四步法：明确观点 → 说明理由 → 举例 → 对比或让步，使答案充实有条理。\n• 使用抽象正式的词汇，如 cultural identity、cultural heritage、globalization、homogenization、preservation。\n• 善用复杂句，如 While globalization brings cultures closer, it may also erode unique local traditions。\n• 描述文化变化用现在完成时，对比今昔可用 traditionally 与 nowadays。\n• 第 4 题上升到宏观层面，可从文化多样性、旅游经济、民族认同等角度展开论述。"
+  },
+  {
+    "id": 48,
+    "part": "Part 3",
+    "topic": "Education and career preparation",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to education and career preparation.\n1. Do you think universities do enough to prepare students for the working world? Why or why not?\n2. How has the changing job market affected the way young people choose their education and careers?\n3. Should students be encouraged to learn practical skills rather than purely academic subjects? Why or why not?\n4. What role should governments play in ensuring that education meets the needs of employers?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 用四步法组织回答：表态 → 理由 → 例子 → 对比，避免泛泛而谈。\n• 提升词汇层次，如 employability、vocational training、curriculum、job market、transferable skills。\n• 保持正式语气，可用 There is no doubt that... 或 It is widely believed that...。\n• 用复杂句式展示语法，如 Not only should schools teach theory, but they should also equip students with practical skills。\n• 第 4 题从政策与合作层面展开，可从校企合作、课程改革、职业规划服务等角度提出建议。"
+  },
+  {
+    "id": 49,
+    "part": "Part 3",
+    "topic": "Transportation and city planning",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to transportation and city planning.\n1. Do you think public transport should be made free in large cities? Why or why not?\n2. How has the growth of cities changed the way people travel on a daily basis?\n3. Should city governments do more to discourage people from driving private cars? Why or why not?\n4. What challenges do rapidly growing cities face when planning their transport systems?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 坚持四步法：亮观点 → 给理由 → 举例子 → 做对比，确保逻辑完整清晰。\n• 使用抽象正式的词汇，如 public transport、congestion、urban sprawl、sustainable、infrastructure。\n• 多用复杂句式，如 As cities expand, the demand for reliable public transport grows accordingly。\n• 谈城市发展用现在完成时或一般现在时，描述趋势可用 a growing number of commuters。\n• 第 4 题属宏观城市规划议题，可从资金、土地、人口增长、环保等角度深入分析。"
+  },
+  {
+    "id": 50,
+    "part": "Part 3",
+    "topic": "The future of artificial intelligence",
+    "category": "深度讨论",
+    "prompt": "Now let's discuss some more general questions related to the future of artificial intelligence.\n1. Do you think artificial intelligence will create more jobs than it eliminates? Why or why not?\n2. How has artificial intelligence already changed the way people work and communicate?\n3. Should stricter rules be introduced to control the development of artificial intelligence? Why or why not?\n4. What ethical challenges does the rapid advancement of artificial intelligence pose to society?",
+    "follow_up": "",
+    "tips": "Part 3 答题要领：\n• 采用四步法展开：明确表态 → 给出理由 → 举具体例子 → 做对比或让步，让答案更有层次。\n• 多用抽象名词和正式表达，如 automation、job displacement、data privacy、ethical、algorithm。\n• 使用复杂句式展示语法实力，如 While AI can boost efficiency, it also raises serious ethical concerns。\n• 谈 already 发生的变化用现在完成时，谈未来趋势可用 is likely to 或 will probably。\n• 第 4 题属宏观科技伦理问题，可从隐私、就业、算法偏见、责任归属等角度切入，体现思辨深度。"
   }
 ]
