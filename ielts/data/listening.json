@@ -631,5 +631,950 @@
         "explanation": "本题要求归纳'注意力经济对人的影响'的两个正确结论。音频关键句一：'When you're used to constant, quick stimulation, sustained attention starts to feel, well, painful... We've sort of forgotten how to be bored'，对应 B 的 'a weakening of the capacity for sustained thought as quick stimulation becomes the norm'（持续专注力变弱，同义替换 sustained attention feels painful → weakening capacity for sustained thought）。关键句二：'the system quietly favours the extreme over the measured, the loud over the careful'，对应 D 的 'an information environment that favours extreme, emotionally charged material over calm content'（极端情绪内容更受青睐）。干扰项 A 说'拥有数字设备的人数骤降'，与常识和原文'人人起床摸手机'完全相反，属于方向性错误；C 说'制造手机缺乏原材料'，原文根本没讨论硬件生产，是凭科技话题硬编的无关项，迷惑性在于它像一条像样的产业新闻，却答非所问。"
       }
     ]
+  },
+  {
+    "id": 11,
+    "title": "Why Cities Are Relearning to Slow Down",
+    "speaker": "Clara Bennett",
+    "duration": "5:16",
+    "category": "城市规划",
+    "description": "“慢城市”运动：为什么城市开始主动放慢生活节奏",
+    "audio_file": "ted_11.mp3",
+    "transcript": "Right, let me start with something a bit personal. A few years ago I found myself standing on a street corner in a small Italian town, waiting for a traffic light that never seemed to change. And I remember thinking, why is nobody in a hurry here? Nobody's checking their watch, nobody's honking, everybody's just, well, standing around talking. At first I found it kinda irritating, honestly. I'm a city person, I like things moving. But by the end of that week I realised something. I'd stopped checking my phone. That, believe it or not, is the whole idea behind the movement I wanna talk about today.\n\nI'm Clara Bennett, and I study how cities are designed — or, more accurately, how they've forgotten to be designed for people. The movement I just stumbled onto is called the slow city movement. It started in Italy in the late nineteen nineties, growing out of the slow food idea, you know, the one that pushed back against fast food. A handful of small towns decided they'd had enough of being treated as lesser versions of big cities. They wanted to protect what made them distinctive — their local shops, their markets, the way neighbours actually spoke to one another. Basically, they asked a simple question: what if a city measured its success by how good it feels to live there, not just by how fast its economy grows?\n\nNow, I know what you're thinking. Slow sounds like, well, giving up. Like someone's asking us to go back to the horse and cart. But that's not it at all, and this is the bit people always get wrong. It isn't about doing things slowly. It's about making room for the things that actually matter. Let me give you an example. In one of these towns, they took a road that used to carry thousands of cars a day through the centre, and they gave it back to pedestrians. I mean, they ripped out the traffic, planted trees, put in benches. The shopkeepers were terrified. They were sure they'd lose business. Guess what happened? Footfall went up, not down, 'cause suddenly people wanted to linger. When you're walking, you stop. When you're driving, you just pass through.\n\nThere's real evidence behind this, by the way. Researchers have looked at neighbourhoods where streets are calm and green, and the differences are, well, they're striking. People report lower stress. Kids play outside more, instead of being stuck indoors. Air quality improves because there's simply less exhaust. And, uh, here's something I didn't expect — people actually eat better. When there are markets within walking distance, you buy fresh food. When your only option is a drive-through, well, you can guess the rest. So the slow city isn't some romantic idea about cobblestones and nostalgia. It's a public health policy, basically, disguised as an urban design movement.\n\nRight, so here's the twist, and it's the part that convinces the sceptics. Because, look, mayors aren't going to sign up to something just because it makes people feel nice. They care about money. Well, it turns out slow cities are good for the local economy. They attract visitors who stay longer and spend more in independent shops, rather than rushing through on a coach tour. Property values in these places tend to hold up. Local produce gets a premium because it's got a story attached. So being slow, in a funny sort of way, becomes a competitive advantage. You're selling an experience, a pace of life. And honestly, who wouldn't want to live somewhere like that?\n\nNow, I don't wanna pretend it's all straightforward, 'cause it isn't. There are genuine tensions here. If a town becomes famous for being slow, it can get overrun by tourists looking for that quaint atmosphere, and then you've sort of destroyed the thing people came for. I've seen it happen. There's also the question of who gets to decide what \"character\" means. Sometimes preservation becomes an excuse to freeze a place in time, to keep it, well, exactly as it was, which isn't fair on the people who actually live there. A city's gotta be allowed to change. The trick, I think, is to slow down the pace of life, not the process of change itself.\n\nSo what do I want you to take away from all this? Not that we should all move to a small Italian hilltop town, though, um, I can see the appeal. I'm asking you to notice the pace of your own streets. Next time you're walking to work, look around. Is there anywhere to sit? Do people talk to each other, or does everybody just stare at a screen? A city doesn't become slow by installing a few benches. It becomes slow when we decide that a conversation on a corner is worth as much as getting somewhere five minutes quicker. That's the real shift. Right, thank you very much.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker open her talk by describing a moment on a street corner in Italy?",
+        "options": [
+          "To illustrate how an unhurried street can quietly make a visitor reconsider their own daily habits.",
+          "To complain about the poor traffic management typical of small Italian towns during the summer.",
+          "To suggest that people living in quiet towns are naturally lazier than residents of busy large cities.",
+          "To entertain the audience with a funny story about getting lost while travelling abroad."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'why is nobody in a hurry here?... by the end of that week I realised something. I'd stopped checking my phone. That... is the whole idea behind the movement.' 推理链：开场描述一个没人赶时间的意大利小镇，结果讲话人自己不再看手机，由此引出慢城市理念。答案 A 用 'an unhurried street can quietly make a visitor reconsider their own daily habits' 对这段做了同义替换（unhurried 对应 nobody in a hurry，reconsider their own habits 对应 I'd stopped checking my phone），避开原文原词。干扰项 B 说'抱怨交通管理'，原文 'nobody's honking' 恰恰是赞赏而非抱怨，无中生有；C 说小镇人'天生更懒'，是对'不赶时间'的恶意曲解，原文充满正面评价；D 说'迷路的趣事'作消遣，原文并未迷路，低估了开场事例的论证功能，答非所问。"
+      },
+      {
+        "type": "single",
+        "question": "According to the speaker, what is a widespread misunderstanding of what a 'slow city' actually means?",
+        "options": [
+          "Cutting the number of vehicles allowed into the historic centre of a town.",
+          "Simply carrying out everyday activities at a noticeably slower physical pace.",
+          "Turning a quiet town into a tourist attraction built around nostalgia.",
+          "Urging local shops to sell only food and goods produced within the region."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'Slow sounds like, well, giving up... But that's not it at all... It isn't about doing things slowly. It's about making room for the things that actually matter.' 推理链：民众常误以为慢城市等于'做事放慢/放弃发展'，而讲话人明确否认，强调它是为重要的事情腾出空间。答案 B 的 'simply carrying out everyday activities at a noticeably slower physical pace' 正是对这一误解的同义替换。干扰项 A '减少市中心车辆'确实是文中提到的做法，但它属于正确的实施措施而非'误解'，迷惑性在于它是真实细节；C '变成怀旧旅游景点'是后文讨论的风险，不是对定义本身的普遍误解；D '只卖本地产品'原文根本没有这样的要求，属于无中生有。"
+      },
+      {
+        "type": "single",
+        "question": "What does the story of the pedestrianised road suggest about the shopkeepers' initial reaction?",
+        "options": [
+          "Their worries proved correct as customers drifted towards out-of-town shopping centres.",
+          "They were reluctant to admit, even later, that the change had benefited them at all.",
+          "Their grim predictions about losing trade were overturned by what actually followed.",
+          "They had campaigned for many years to have the traffic removed from their street."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'The shopkeepers were terrified. They were sure they'd lose business. Guess what happened? Footfall went up, not down, 'cause suddenly people wanted to linger.' 推理链：店主担心失去生意，结果客流量反而上升。答案 C 的 'their grim predictions about losing trade were overturned by what actually followed' 中 overturned（被推翻）精准对应 'Footfall went up, not down'。干扰项 A 说担忧成真、客流转向郊区，与原文结果直接相反；B 说店主事后仍不愿承认好处，原文只讲他们的担心，未描述事后的态度；D 说店主多年游说移除交通，原文是规划者 'took a road... gave it back to pedestrians'，从未说店主主动争取，属于张冠李戴。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO benefits of the slow city movement does she identify? (Choose TWO)",
+        "options": [
+          "It encourages residents to depend more heavily on cars for their everyday journeys.",
+          "It can improve wellbeing by creating calmer, greener public spaces to spend time in.",
+          "It guarantees that local property prices will rise sharply within only a few short years.",
+          "It attracts visitors who stay longer and spend their money in independent local shops."
+        ],
+        "answer": [
+          "B",
+          "D"
+        ],
+        "explanation": "本题需要跨段落归纳。音频关键句一：'People report lower stress. Kids play outside more... Air quality improves'，对应 B 的 'improve wellbeing by creating calmer, greener public spaces'（lower stress → wellbeing，calm and green → greener public spaces）。关键句二：'They attract visitors who stay longer and spend more in independent shops'，对应 D 的同义转述。干扰项 A 与 'gave it back to pedestrians / less exhaust' 方向完全相反；C 把原文的 'Property values... tend to hold up'（趋于稳定）夸大成 'guarantees... rise sharply'（保证暴涨），既改了程度又改了确定性，是典型的半对半错——它借用了 property values 这个词，最容易骗到人。"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "The Strange Economics of Tips",
+    "speaker": "Marcus Hale",
+    "duration": "5:26",
+    "category": "经济与社会",
+    "description": "小费制度背后的心理与经济逻辑及其不合理之处",
+    "audio_file": "ted_12.mp3",
+    "transcript": "Alright, so here's a situation I'm sure you all know. You finish a meal, the bill arrives, and suddenly there's this awkward little moment where you're doing maths in your head. Fifteen percent? Eighteen? Twenty? And you're thinking, well, why am I doing this? The food was already priced. The service was included, surely. I mean, in most of the world, you just pay the number on the menu and walk out. But here in the States, we've built this whole elaborate ritual around handing extra cash to a stranger. So today I wanna dig into that, 'cause the economics behind tipping are genuinely strange when you stop and think about them.\n\nI'm Marcus Hale, and I teach behavioural economics. I'm gonna start with where this even came from, because it's weirder than you'd guess. Tipping wasn't always an American thing. It arrived from Europe in the late eighteen hundreds, brought over by wealthy travellers who'd picked up the habit abroad. And early on, it had a slightly different feel — some people say the acronym stood for 'to insure promptness', which is probably a made-up story, but it tells you something. The idea was you paid a little extra up front to make sure your drink came quickly. Over time though, it flipped. Instead of a reward for good service, it became an obligation you paid after the fact. Basically, we turned a bonus into a bill.\n\nSo why do we keep doing it? Well, a lot of it is pure social pressure, and I'll be honest, that's kinda fascinating. There's this thing called reciprocity — when someone does something nice for you, you feel this urge to give something back. A waiter refills your water, smiles, and suddenly you're reaching for your wallet. And there's guilt, too. You know how it is, like, when the server is standing right there while you're staring at the little suggestion box on the card? Everyone can see what you're choosing. Researchers have found that people tip more when they're being watched, and more when they're with a group, 'cause nobody wants to look cheap in front of friends. So a lot of it is, sort of, pressure rather than genuine gratitude, and very little has to do with how good the service actually was.\n\nNow here's where the economics gets proper troubling. For the restaurant owner, tipping is basically a way of moving the wage bill onto the customer. In many states, servers are paid what's called a tipped minimum wage, which can be as low as two dollars and thirteen cents an hour. The logic is that tips will make up the difference. But think about what that means. Your income depends on whether a stranger had a good day, whether the weather was nice, whether the table next to you was annoying. That's, uh, a wildly unstable way to earn a living. And it creates this weird power imbalance, where the server is kind of performing emotional labour, smiling and flattering, because their rent depends on it.\n\nAnd here's the thing that really got me — the research on what actually predicts a tip. You'd assume it's the quality of service, right? That's the whole justification. But study after study has found the link is surprisingly weak. One researcher looked at restaurant data and found the single biggest factor was the weather. Sunny days, bigger tips. Group size mattered, too — the more people at the table, the less each one chipped in. Whether the server actually repeated the customers' names? Barely made a difference. Um, and payment method — people tipped more in cash than by card. So the 'reward for good service' story we tell ourselves is, well, it's mostly a myth we've invented to feel better about the whole ritual.\n\nSo who actually wins here? Follow the money, and the answer's uncomfortable. It isn't the customer, who's paying extra for something they were already going to get. It isn't really the server either, whose income swings wildly with factors nobody controls. The clear winner is the business owner, who gets to keep labour costs low and shift the risk onto everyone else. Some places have tried abolishing tipping entirely — they raise prices, pay staff a proper living wage, and, interestingly, customers often end up paying about the same. The difference is that the money goes to the worker instead of depending on a guilt-trip at the table.\n\nLook, I'm not here to tell you never to tip again. If you're in the States and service was genuinely great, by all means reward it. But I want you to see the system for what it is. It's not a simple act of gratitude — it's a complicated economic arrangement dressed up as manners, and it lets businesses off the hook. Next time that bill arrives and you're doing the mental arithmetic, ask yourself a different question. Why is it on me to make sure this person earns a decent wage? 'Cause that question, honestly, is where the whole conversation starts. Alright, thanks for listening.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "What does the figure of two dollars and thirteen cents in the talk mainly serve to illustrate?",
+        "options": [
+          "The typical amount a customer leaves behind as a reward for genuinely excellent service.",
+          "How little restaurants may pay their servers directly, relying on tips to fill the gap.",
+          "The average hourly wage earned by staff in countries with no tipping culture at all.",
+          "The extra charge that is automatically added to bills in larger American cities."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'servers are paid what's called a tipped minimum wage, which can be as low as two dollars and thirteen cents an hour. The logic is that tips will make up the difference.' 推理链：这个数字说明雇主直接付给服务员的工资极低，制度设计让小费来补齐差额。答案 B 的 'how little restaurants may pay their servers directly, relying on tips to fill the gap' 正是对这段话的同义替换。干扰项 A 把这个工资数字误当成顾客给的小费数额，因为它同为钱数而极具迷惑性，但原文明确说是 'paid'（雇主支付）；C 说'无小费国家的平均工资'，原文只谈美国低工资，无中生有；D 说'账单自动附加费'，原文从未说有强制收费，属于凭空捏造。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply by citing research about the weather and the size of a group?",
+        "options": [
+          "Staff who remember personal details can safely count on much larger rewards.",
+          "Diners generally follow a fixed and predictable rule whenever they leave a tip.",
+          "Factors largely unrelated to service quality often decide how much people leave.",
+          "Good service remains by far the strongest predictor of what a server receives."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'the single biggest factor was the weather. Sunny days, bigger tips. Group size mattered, too... Whether the server actually repeated the customers' names? Barely made a difference.' 推理链：天气、人数这些与服务无关的因素才是关键，而记住顾客名字几乎没影响。答案 C 的 'factors largely unrelated to service quality often decide how much people leave' 正是对研究结果的言外之意概括。干扰项 D 说'优质服务是最强预测因素'，恰恰是讲话人驳斥的 'reward for good service... mostly a myth'，是反面陷阱；A 说'记住细节能拿更多小费'，与 'barely made a difference' 直接矛盾；B 说'顾客按固定规则给小费'，原文没有讨论规则的一致性，属于无中生有。"
+      },
+      {
+        "type": "single",
+        "question": "Why does the speaker bring up restaurants that have abolished tipping altogether?",
+        "options": [
+          "To prove that customers strongly prefer a single fixed price for every meal.",
+          "To show that removing tips can still leave diners paying roughly the same overall.",
+          "To argue that servers end up earning less once a guaranteed wage replaces their tips.",
+          "To complain that such restaurants offer a noticeably lower standard of service."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'Some places have tried abolishing tipping entirely — they raise prices, pay staff a proper living wage, and, interestingly, customers often end up paying about the same.' 推理链：取消小费、改用正常工资后，顾客总支出大致不变，只是钱稳定地进了员工口袋。答案 B 的 'removing tips can still leave diners paying roughly the same overall' 对应 'end up paying about the same'。干扰项 A 说'顾客强烈偏好固定价格'，原文没提到顾客的偏好，属于过度引申；C 说'员工收入变少'，与 'pay staff a proper living wage' 相反；D 说'服务水平明显下降'，原文完全没有涉及服务质量的变化。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO claims about the tipping system are supported by the talk? (Choose TWO)",
+        "options": [
+          "It shifts the risk of low wages from employers onto unpredictable customer behaviour.",
+          "It reliably rewards those servers who provide the very highest quality of service.",
+          "Social pressure and the wish not to look stingy influence how much people give.",
+          "It is a straightforward custom with no real economic effect on anyone involved."
+        ],
+        "answer": [
+          "A",
+          "C"
+        ],
+        "explanation": "本题要求跨段落归纳。音频关键句一：'moving the wage bill onto the customer... Your income depends on whether a stranger had a good day... wildly unstable'，对应 A 的 'shifts the risk of low wages from employers onto unpredictable customer behaviour'。关键句二：'people tip more when they're being watched... nobody wants to look cheap in front of friends'，对应 C 的 'social pressure and the wish not to look stingy'（look cheap → look stingy，同义替换）。干扰项 B 与关键研究 'the link is surprisingly weak... mostly a myth' 直接冲突，却披着'奖励优质服务'这层正确外衣，最迷惑；D 说'没有真正的经济影响'，与全文 'genuinely strange economics / lets businesses off the hook' 整体立意矛盾。"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "What Sleep Does for the Brain's Cleaning Crew",
+    "speaker": "Dr. Naomi Okafor",
+    "duration": "4:36",
+    "category": "神经科学",
+    "description": "睡眠期间大脑“清洁系统”如何清除代谢废物",
+    "audio_file": "ted_13.mp3",
+    "transcript": "Right, so here's a question that sounds simple until you actually try to answer it. Why do we sleep? I mean, think about it. We spend roughly a third of our lives unconscious, vulnerable, not doing anything useful. Evolution should have got rid of that ages ago. If sleep were pointless, natural selection would have weeded it out, wouldn't it? And yet every animal sleeps, in some form. So something important must be happening while we're out cold. For a long time, scientists assumed the brain was just, well, resting — powering down like a phone. But it turns out that's completely wrong. The brain is actually working harder in some ways. Today I wanna tell you about the night shift, the brain's cleaning crew, and what happens if you never let them on shift.\n\nI'm Naomi Okafor, and I study what happens in the brain during sleep. The system I want to describe was only properly identified about a decade ago, which is remarkable when you think how long we've been curious about sleep. Um, a researcher named Maiken Nedergaard was looking at mice, using a special microscope to watch the living brain in action. And she noticed something nobody had seen before. While the mice were asleep, fluid called cerebrospinal fluid — that's the liquid that bathes the brain and spinal cord — was flowing through the brain tissue in these great waves. It was basically washing the brain. During wakefulness, that flow was almost absent. Basically, the cleaning system switches on when you switch off.\n\nNow, why does this only happen at night? Well, it's to do with the space between your brain cells. When you're awake, your brain cells are packed relatively tightly, and there isn't much room for fluid to move through. But when you fall into deep sleep, something changes. The cells actually shrink — I know, it sounds kinda odd — they shrink by something like twenty percent. That opens up channels between them, and suddenly the fluid can rush through and carry away the day's rubbish. It's called the glymphatic system, a bit like the lymphatic system elsewhere in your body, but for the brain. And the timing is no accident. Your brain clears the metabolic waste of being awake precisely when you're asleep. It's an incredibly elegant bit of design, honestly.\n\nUh, what kind of rubbish are we talking about? Well, there are several toxic proteins that build up in the brain while you're awake. One of them is called beta-amyloid, and you may have heard of it, 'cause it's strongly associated with Alzheimer's disease. During the day, these proteins accumulate, sort of like dust settling on a shelf. Then, during sleep, the glymphatic system flushes them out. Researchers have found that the levels of these proteins in the brain drop significantly overnight, and rise again when you're awake. Now, I want to be careful here — this doesn't mean a single bad night's sleep gives you dementia. But over years, chronic poor sleep may mean the cleaning crew never quite catches up, and that waste keeps accumulating.\n\nAnd here's the bit that genuinely surprised me. It turns out the position you sleep in matters. In mice, at least, the system clears waste far more efficiently when they sleep on their side, compared with on their back or their front. The researchers compared it to how a dishwasher cleans better when the dishes are arranged a certain way. Side sleeping, they reckon, lets gravity help the fluid flow. I dunno, I'm not telling you all to buy a special pillow, but it shows how even automatic sleep has a physical side we barely understand. The other wrinkle is age. As we get older, this cleaning system becomes less efficient — the flow slows down. And that, of course, lines up with why neurodegenerative diseases are more common in older people.\n\nSo what do I want you to take away? Well, next time a feeling of grogginess hits you after a short night, don't just shrug it off and reach for another coffee. That's your brain telling you it missed a cleaning shift. And, you know, you're gonna want a regular schedule, enough hours, and maybe a decent pillow. Sleep isn't a luxury — it's maintenance. Right, thank you very much.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker open by asking why humans spend a third of their lives asleep?",
+        "options": [
+          "To suggest that sleep is a habit people could easily abandon if they tried hard enough.",
+          "To emphasise that something so costly must serve an important biological function.",
+          "To compare the sleeping patterns of human beings with those of other animal species.",
+          "To argue that evolution made a serious mistake in allowing sleep to survive so long."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'We spend roughly a third of our lives unconscious, vulnerable... If sleep were pointless, natural selection would have weeded it out... And yet every animal sleeps... something important must be happening.' 推理链：睡眠耗时又让人脆弱，进化却保留至今，说明它必有重要功能。答案 B 的 'something so costly must serve an important biological function' 正是对这一连串反问的概括（costly 对应 unconscious and vulnerable，important function 对应 something important must be happening）。干扰项 A 说'可以轻易放弃'，与 'natural selection would have weeded it out' 意思相反；C 说'比较人与动物的睡眠模式'，原文只以 'every animal sleeps' 作为论据，并非讲话目的；D 说'进化犯错'，与原文推理方向正好相反。"
+      },
+      {
+        "type": "single",
+        "question": "According to the speaker, what change during deep sleep allows the brain to be flushed clean?",
+        "options": [
+          "The heart pumps faster and drives blood through the tissue at far higher pressure.",
+          "The spinal cord produces extra fluid that completely replaces the old supply.",
+          "The body temperature drops low enough to slow down almost all metabolic activity.",
+          "The gaps between brain cells widen as the cells themselves become slightly smaller."
+        ],
+        "answer": "D",
+        "explanation": "音频关键句：'when you fall into deep sleep... The cells actually shrink... by something like twenty percent. That opens up channels between them, and suddenly the fluid can rush through.' 推理链：脑细胞缩小约两成 → 细胞间隙打开 → 脑脊液冲刷带走废物。答案 D 的 'the gaps between brain cells widen as the cells themselves become slightly smaller' 是对 'cells shrink... opens up channels' 的精准同义替换。干扰项 A 说'心脏加速泵血、提高血压'，原文讲的是脑脊液流动，与血管压力无关；C 说'体温下降减缓代谢'，原文未提及体温；B 说'脊髓产生新液体完全替换旧液'，原文只说液体流动冲刷，没有'完全替换'之意。"
+      },
+      {
+        "type": "single",
+        "question": "Why is the speaker careful to say that one bad night of sleep will not cause dementia?",
+        "options": [
+          "To discourage listeners from worrying at all about sleep and brain health.",
+          "To show that the research on toxic proteins is unreliable and contradictory.",
+          "To acknowledge the limits of the evidence while still warning about long-term effects.",
+          "To argue that Alzheimer's disease has causes entirely unrelated to sleep quality."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'I want to be careful here — this doesn't mean a single bad night's sleep gives you dementia. But over years, chronic poor sleep may mean the cleaning crew never quite catches up.' 推理链：讲话人先承认一晚睡不好不等于痴呆（划清证据边界），再强调多年累积的长期风险。答案 C 的 'acknowledge the limits of the evidence while still warning about long-term effects' 准确概括了这种'既克制又警示'的态度。干扰项 A 说'劝大家别担心睡眠与脑健康'，与讲话人强调长期使用风险正好相反；B 说'研究不可靠且矛盾'，原文并未否定研究结论；D 说'阿尔茨海默病与睡眠完全无关'，与 'strongly associated with Alzheimer's disease' 直接矛盾。"
+      },
+      {
+        "type": "multiple",
+        "question": "Which TWO factors does the speaker say affect how efficiently the brain clears waste during sleep? (Choose TWO)",
+        "options": [
+          "The physical position in which a person happens to sleep at night.",
+          "The total number of hours a person spent awake the previous evening.",
+          "The temperature of the bedroom where the person sleeps each night.",
+          "The age of the person, given that the system slows down over the years."
+        ],
+        "answer": [
+          "A",
+          "D"
+        ],
+        "explanation": "本题要求归纳影响清洁效率的因素。音频关键句一：'the position you sleep in matters... clears waste far more efficiently when they sleep on their side'，对应 A 的 'the physical position in which a person happens to sleep'。关键句二：'As we get older, this cleaning system becomes less efficient — the flow slows down'，对应 D 的 'the age of the person... slows down over the years'。干扰项 B 说'前一天清醒的总时长'，原文只说大脑清除清醒时产生的废物，但从未说清醒时长会影响清除效率，属于偷换概念；C 说'卧室温度'，原文完全没有提及，是无中生有。"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "The Return of the Walking City",
+    "speaker": "Daniel O'Connor",
+    "duration": "4:45",
+    "category": "城市规划",
+    "description": "步行友好城市的设计理念与健康、经济收益",
+    "audio_file": "ted_14.mp3",
+    "transcript": "G'day everyone, and thanks for having me. I wanna start with a little bit of personal history. I grew up in a suburb where I could walk to school, to the shops, to my mate's place, all without ever crossing a major road. It wasn't anything special — that's just how neighbourhoods were built back then. Now, I go back there, and it's unrecognisable. The corner store's gone, replaced by a petrol station. The footpaths are narrow and broken. My sister won't let her kids walk anywhere on their own. And, uh, I dunno, I got to thinking — what happened? Because this didn't happen by accident. Somebody designed it this way, and, well, more importantly, we can design it back.\n\nI'm Daniel O'Connor, and I'm an urban planner based in Melbourne. Let me take you back to the mid twentieth century, because that's when things changed. After the war, cars were seen as the future, and cities were reshaped around them. Whole neighbourhoods were knocked down to make way for motorways. Planners separated the places where people lived from the places where they worked and shopped. On paper it looked, sorta, efficient. In practice, it meant you couldn't get a loaf of bread without getting in the car. And once you design a city that way, driving stops being a choice and becomes a necessity. You know, we've lived with that for seventy years, and we've sort of forgotten it was ever any different.\n\nSo what does a walkable city actually look like? Well, the basic idea is that daily life should fit within about a fifteen minute walk. Your home, your work, a school, a park, a decent place to buy food — they should all be close together, mixed into the same neighbourhood. I mean, it's not a new idea, honestly. It's basically how every old city worked before cars. What's new is that we're deliberately designing for it again. And the ingredients are simple. You need continuous footpaths, safe crossings, trees for shade, and ground-floor shops facing the street. You need to slow the traffic down, 'cause a street that feels dangerous is a street nobody walks on. Look, it's not rocket science. It's just common sense that got forgotten.\n\nAnd here's why this matters beyond nostalgia. The payoff is enormous. Start with health — people who walk daily are less likely to be obese, less likely to develop heart disease, and they report better mental health. Walkable neighbourhoods get people out of the house and into the street. Then there's the local economy. A street full of pedestrians supports small shops, cafes and markets — businesses that a drive-through suburb just can't sustain. Property values near good walking streets tend to be higher, and that's, like, a real bonus for residents. And there's a social dividend too. When you walk, you bump into neighbours. You actually know the people who live near you. That stuff doesn't show up in a spreadsheet, but it's what makes a place feel like a community.\n\nNow, I know what the sceptics say. They say, but we need our cars, and honestly, fair enough. I'm not here to tell anyone to sell their car. The point isn't to ban driving; it's to make walking a genuine option. But, um, here's the funny part, though. When cities become more walkable, drivers benefit too. With less traffic and more mixed neighbourhoods, the roads that remain actually flow better, and parking gets easier, 'cause people aren't forced to drive everywhere. Copenhagen figured this out decades ago. They made the centre pleasant for pedestrians, and the whole city became more liveable, for drivers as much as anyone. Right, so it's not a war on cars. It's about giving people back the choice that was taken away.\n\nSo, what can you do? Well, start by looking at your own street. Is there a place you could walk to instead of driving? Could your kids walk to school if the crossing were safer? You gotta get enough people asking for these things, and, you know, councillors do listen, eventually, though it might take a bit of pushing. We spent seventy years designing cities around cars. We can spend the next few decades designing them around people again, and, honestly, it's not about going backwards to some golden age. It's about remembering that a city is for living in, not just for getting through. Alright, thanks a lot, everyone.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "What does the speaker's description of his childhood suburb imply about neighbourhoods today?",
+        "options": [
+          "They have become safer places for children to play independently than in the past.",
+          "They were deliberately designed to make walking impractical and car travel almost unavoidable.",
+          "They have carefully preserved the corner shops that were common decades ago.",
+          "They now offer much wider footpaths than were available when he was young."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'I could walk to school, to the shops... Now... The corner store's gone... My sister won't let her kids walk anywhere... Somebody designed it this way.' 推理链：过去能轻松步行，如今寸步难行，讲话人明确指出这是'设计出来的'结果。答案 B 的 'deliberately designed to make walking impractical and car travel almost unavoidable' 对应 'Somebody designed it this way' 与 'won't let her kids walk'。干扰项 A 说'对孩子更安全'，与现状相反；C 说'保留了街角商店'，与 'the corner store's gone' 直接矛盾；D 说'人行道更宽'，与 'footpaths are narrow and broken' 正面冲突。"
+      },
+      {
+        "type": "single",
+        "question": "What is the speaker's main point in describing the idea of a 'fifteen minute' neighbourhood?",
+        "options": [
+          "To argue that every citizen should be required to live within walking distance of work.",
+          "To complain that modern planning has made neighbourhoods far too crowded to live in.",
+          "To show that essential daily needs can be clustered within a short walk of home.",
+          "To prove that cities built before the car were more efficient than those of today."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'daily life should fit within about a fifteen minute walk. Your home, your work, a school, a park, a decent place to buy food — they should all be close together, mixed into the same neighbourhood.' 推理链：十五分钟指日常所需都集中在住所附近的短距离步行圈内。答案 C 的 'essential daily needs can be clustered within a short walk of home' 是对这段的同义替换（essential daily needs 对应 home / work / school / park / food）。干扰项 A 说'强制每个人住在工作地点附近'，把设计理念过度引申成强制规定；B 说'过于拥挤'，原文没提拥挤问题；D 说'前汽车城市更高效'，原文只说老城'本来就那样运作'，并未做效率高低比较。"
+      },
+      {
+        "type": "single",
+        "question": "Why does the speaker stress that making cities more walkable also benefits drivers?",
+        "options": [
+          "To prove that reducing car ownership should be the primary aim of urban planning.",
+          "To criticise drivers for stubbornly refusing to accept changes to the road network.",
+          "To argue that traffic flow ought to take priority over the needs of people on foot.",
+          "To show that well-designed streets can improve conditions for everyone, not just pedestrians."
+        ],
+        "answer": "D",
+        "explanation": "音频关键句：'When cities become more walkable, drivers benefit too... the roads that remain actually flow better, and parking gets easier... for drivers as much as anyone... it's not a war on cars.' 推理链：步行友好让司机同样受益，说明这不是反汽车，而是惠及所有人。答案 D 的 'well-designed streets can improve conditions for everyone, not just pedestrians' 精准概括这一意外转折。干扰项 A 说'减少汽车拥有是首要目标'，与 'not a war on cars' 正好相反；C 说'交通流量应优先于行人需求'，讲话人并未给两者排序；B 说'批评司机拒绝改变'，原文对司机持理解态度（'fair enough'），属于无中生有。"
+      },
+      {
+        "type": "multiple",
+        "question": "Which TWO benefits of walkable neighbourhoods does the speaker mention in the talk? (Choose TWO)",
+        "options": [
+          "They can support small local businesses that car-oriented suburbs cannot sustain.",
+          "They remove the need for any parking spaces at all in the city centre.",
+          "They encourage spontaneous social contact between neighbours who live nearby.",
+          "They guarantee a noticeable fall in the price of housing near the city centre."
+        ],
+        "answer": [
+          "A",
+          "C"
+        ],
+        "explanation": "本题要求跨段落归纳。音频关键句一：'A street full of pedestrians supports small shops, cafes, markets — businesses that a drive-through suburb can't sustain'，对应 A 的 'support small local businesses that car-oriented suburbs cannot sustain'。关键句二：'When you walk, you bump into neighbours. You actually know the people who live near you'，对应 C 的 'spontaneous social contact between neighbours'。干扰项 B 把原文的 'parking gets easier'（停车更容易）夸大曲解成'完全不需要停车位'；D 说'房价明显下降'，与 'Property values near good walking streets tend to be higher' 方向完全相反，是典型的反向干扰项。"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Why We Remember Some Smells Forever",
+    "speaker": "Dr. Priya Raman",
+    "duration": "4:38",
+    "category": "心理与记忆",
+    "description": "嗅觉与记忆的强关联及其心理学机制",
+    "audio_file": "ted_15.mp3",
+    "transcript": "Right, so let me take you somewhere. Close your eyes for a second and imagine a smell from your childhood. Maybe it was your grandmother's kitchen, or the smell of rain on hot pavement, or a particular soap. Got one? Now, you know, think about what comes with it. Chances are, you didn't just remember a smell. You got a whole scene — a place, a time, people, maybe even a feeling. That's a very peculiar thing, if you think about it. Try doing the same with a taste, or a sound, and the memory is usually weaker. Smells seem to have a privileged route into our past. And today I wanna explore why that is, 'cause understanding it tells us something quite profound about how memory itself works.\n\nI'm Priya Raman, and I research the psychology of memory. There's a name for what I just described — people call it the Proust effect, after the writer Marcel Proust. I mean, in his famous novel, a character dips a biscuit into tea, and that single taste and smell unlocks an entire world of childhood recollection. Now, writers noticed this long before scientists did, but psychologists have taken it seriously. What they've found is that odour triggers memories that are more vivid, more emotional, and often much older than memories triggered by other senses. You might recall something from age five or six, in a detail that surprises you. So the question is, why smell? What's so special about this sense that it can reach back so far?\n\nWell, the answer is in the wiring. Think about what happens when you see something. The information travels from your eyes, and it goes through several stages of processing before it gets stored as a memory. It's kinda like a parcel passing through a series of sorting offices. Hearing works in a similar way. But smell is different. The receptors in your nose send signals along a nerve that goes almost directly into a part of the brain called the limbic system. And the limbic system is where emotion and memory live — it includes structures like the amygdala and the hippocampus. So odour has a sort of backdoor straight into the emotional memory centre. It doesn't have to go through all the paperwork that vision does. That's basically the reason the memories are so raw and immediate.\n\nWell, these smell-triggered memories are remarkably durable. You can go decades without thinking about a particular scent, and then one day you catch a whiff of it and the whole thing comes flooding back, fully formed. Researchers have found that people can identify and describe smells they encountered as children far better than they can recall faces or names from the same period. They're sorta autobiographical, too — about you and your life, not abstract facts — and because they're tied to emotion, they feel incredibly real, almost as if you're reliving the moment rather than merely remembering it.\n\nNow, here's the catch, and it's the bit that fascinates me most. Just because a smell memory feels vivid doesn't mean it's accurate. Look, it's coming through the emotional centre, and emotion isn't a great fact-checker. Studies suggest that these recollections can be distorted. You might be convinced you're remembering a precise scene, when actually your brain has reconstructed it, mixing in details from other times. So the feeling of certainty is real, but the details may not be. And, uh, dunno, people have tried to use this. Some therapists use familiar smells to help patients with dementia reach back into their past. Advertisers, too, have caught on — they design signature smells for stores, hoping to create a lasting emotional association. It's a powerful force, and, like any powerful force, it can be used well or badly.\n\nSo what do I want you to take away? Well, next time a smell hits you out of nowhere and suddenly you're somewhere else, don't just shrug it off as nothing. You gotta pay attention to it, because there's usually a reason it arrived so vividly. Our memories aren't a video recorder — they're something more fragile and more creative, and smell shows us that better than anything else. And who knows, maybe one day a particular scent will bring back this very conversation we're having right now. Right, thank you very much.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "According to the speaker, what makes smell different from vision in the way memories are formed?",
+        "options": [
+          "It is processed more slowly, giving the brain extra time to store it carefully.",
+          "It travels almost directly to the brain region associated with emotion and memory.",
+          "It relies on the same sorting system that handles sounds before being stored away.",
+          "It is filed separately from emotional experience in a more strictly logical area."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'The receptors in your nose send signals along a nerve that goes almost directly into a part of the brain called the limbic system... where emotion and memory live.' 推理链：嗅觉信号几乎直达边缘系统（情绪与记忆中枢），而视觉要经过多个处理阶段。答案 B 的 'travels almost directly to the brain region associated with emotion and memory' 是对 'goes almost directly into... the limbic system' 的同义替换。干扰项 A 说'处理更慢、更仔细'，与原文'直达、快速'相反；C 说'和听觉走同样的分类系统'，原文明确 'But smell is different'，直接冲突；D 说'与情绪分开、存在更理性的区域'，与 'where emotion and memory live' 矛盾。"
+      },
+      {
+        "type": "single",
+        "question": "What does the research finding about childhood smells suggest when compared with faces and names?",
+        "options": [
+          "People tend to remember early smells better than early faces or names from the same period.",
+          "Odour memory declines far more quickly than other forms of memory as people grow older.",
+          "Faces are the single strongest trigger for emotional memories from early childhood.",
+          "Researchers regard names as the most reliable record of a person's earliest experiences."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'people can identify and describe smells they encountered as children far better than they can recall faces or names from the same period.' 推理链：童年时期的气味远比同期的人脸、名字记得清楚。答案 A 的 'remember early smells better than early faces or names' 是对 'far better than... faces or names' 的直接同义替换。干扰项 B 说'气味记忆衰退更快'，与原文'更持久'相反；C 说'人脸是最强触发'，与原文结论矛盾；D 说'名字最可靠'，同样与原文相反。B、C、D 都借用了原文出现的'脸'和'名字'，表面熟悉故极具迷惑性，但方向全错。"
+      },
+      {
+        "type": "single",
+        "question": "Why does the speaker warn that a vivid smell memory may not necessarily be accurate?",
+        "options": [
+          "To argue that emotional memories should never be trusted under any circumstances at all.",
+          "To encourage people to deliberately forget unpleasant experiences from their childhood.",
+          "To prove that the limbic system produces completely unreliable information every time.",
+          "To show that a strong feeling of certainty can hide reconstructed or mixed-up details."
+        ],
+        "answer": "D",
+        "explanation": "音频关键句：'Just because a smell memory feels vivid doesn't mean it's accurate... the feeling of certainty is real, but the details may not be.' 推理链：气味记忆情绪强烈、感觉真实，但细节可能被大脑重构、混入其他时间的片段。答案 D 的 'a strong feeling of certainty can hide reconstructed or mixed-up details' 正对应 'feeling of certainty is real, but the details may not be'。干扰项 A 说'情绪记忆在任何情况下都不能信'，把谨慎提醒夸大成绝对否定；C 说'边缘系统每次都产生完全不可靠的信息'，同样夸大其词；B 说'鼓励刻意遗忘童年不快'，原文毫无此意。"
+      },
+      {
+        "type": "multiple",
+        "question": "Which TWO applications or features of smell memory does the speaker mention? (Choose TWO)",
+        "options": [
+          "Smell memories tend to be abstract and detached from personal everyday experience.",
+          "Therapists use familiar scents to help people with dementia recall their own past.",
+          "Businesses design signature scents for stores to build lasting emotional associations.",
+          "Odour triggers are generally weaker than visual cues for recalling distant memories."
+        ],
+        "answer": [
+          "B",
+          "C"
+        ],
+        "explanation": "本题要求归纳气味记忆的特点与应用。音频关键句一：'Some therapists use familiar smells to help patients with dementia reach back into their past'，对应 B。关键句二：'Advertisers... design signature smells for stores, hoping to create a lasting emotional association'，对应 C。干扰项 A 说'气味记忆抽象、脱离个人体验'，与原文 'autobiographical — about you and your life, not abstract facts' 直接冲突；D 说'气味触发比视觉线索更弱'，与全文'嗅觉记忆更 vivid、更持久、直达情绪中枢'的核心结论完全相反。"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "The Hidden Cost of Convenience",
+    "speaker": "Sophie Laurent",
+    "duration": "5:02",
+    "category": "消费与社会",
+    "description": "便利生活的隐性代价：从一次性用品到注意力消耗",
+    "audio_file": "ted_16.mp3",
+    "transcript": "Right, so here's a little scene I want you to picture. You're rushing out the door in the morning, you grab a coffee in a paper cup, you tap your phone to pay, and you jump into a car that starts with a button. Everything's fast, everything's smooth, everything's, you know, convenient. And by nine o'clock you figure you've saved yourself, what, twenty minutes? Well, that's the promise anyway.\n\nI'm Sophie Laurent, and I study what I call the hidden bill of modern life — basically, all the stuff you don't see on the price tag when something's designed to make things easier. And, look, I'm not here to tell you convenience is evil. I use it, you use it, we all wanna feel that ease. I mean, you know, we all recognise that feeling, right? But here's the thing: cheap and easy usually means somebody, somewhere, is paying a kinda hidden cost that got pushed out of sight.\n\nLet's start with the obvious one — disposable stuff. You know, the single-use cup, the plastic fork, the little shampoo bottle in a hotel bathroom. I mean, think about it: we're talking about something you use for maybe five minutes and then bin, but it hangs around in a landfill for, like, hundreds of years. There's a study — I'm gonna simplify the numbers — that reckons billions of these get tossed every single day, worldwide. And the amazing bit is that most of us don't even notice. It's not that we don't care, 'cause the design hides the consequence. You can't see the dump it ends up in, right? Out of sight, out of mind, simple as that.\n\nNow here's a second layer, and this is the one that really gets me. The cost isn't just physical rubbish. It's your attention. Think about all those little conveniences on your phone: one-click shopping, autoplay, endless scrolling, dinner delivered to your door in twenty minutes. Each one shaves off a tiny bit of friction. But every time friction vanishes, somebody gains a little more say over what you do next. I'm talking about your hours, your focus, your choices. And, um, that's a far bigger price than a paper cup, honestly. Here's a figure that stuck with me — the average person now looks at their phone dozens of times a day, often without ever deciding to. That's not really a choice any more, is it? It's sorta a habit somebody built for us.\n\nSo where's the twist? Well, here's the bit I didn't expect when I started digging into this. We tell ourselves convenience saves time, and technically it does. But study after study finds the time we save doesn't turn into rest. It turns into more tasks. You save five minutes on the shopping, and you fill it with three more errands. It's like the work expands to swallow the time. So we're hustling faster and faster, and we're not actually any happier. I dunno about you, but that sounds like a lousy deal to me. I mean, honestly, who hasn't been there?\n\nAnd here's a small example that made me laugh, then made me worry. A supermarket near me removed the little barriers at the checkout, you know, the things that separate your basket from the next person's. Sales went up, 'cause suddenly people bought more on impulse. There wasn't anything wrong with those barriers. They were just a tiny pause — a moment where you might think, do I really need this? Take away that pause, and you spend more. I'm not saying that's sinister, exactly, but it shows how a few seconds of friction can quietly change what we choose.\n\nLook, the companies selling convenience aren't really in the business of saving you time at all — they've built their whole model around you coming back, again and again. So the last thing they want is for you to be, like, finished and content. A genuinely convenient life, from their point of view, would put them out of business. That's why you won't ever really reach the end of your to-do list. The ease is real, but so is the hook hiding behind it.\n\nLook, I'm not saying smash your phone and go live in a cave. That'd be ridiculous, and honestly I'd hate it. What I'm saying is that a bit of friction isn't always the enemy. Sometimes the harder route — cooking a meal, walking to the shop, waiting for something — is where the actual living happens. So next time a product promises to save you five minutes, ask yourself: what's the real price, and who's really paying it? Because if you don't ask, somebody else decides for you. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker begin her talk by describing a rushed morning with a paper cup and a tap-to-pay phone?",
+        "options": [
+          "To show how small time-saving choices can hide costs that never show up on any receipt.",
+          "To argue that modern mornings are far more stressful than they were in earlier generations.",
+          "To persuade listeners to abandon using cars and disposable cups starting as early as tomorrow.",
+          "To compare the price of a takeaway coffee with the cost of public transport in big cities."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'everything's, you know, convenient... you figure you've saved yourself, what, twenty minutes? Well, that's the promise anyway.' 紧接着她说研究的是 'the hidden bill of modern life'。推理链：用看似省时的晨间场景开场，是为了引出'省时的表象之下藏着看不见的账单'。答案 A 的 'small time-saving choices can hide costs that never show up on any receipt' 是对 hidden bill、promise 的同义替换（hidden cost → never show up on a receipt），没有照搬原词。干扰项 B 把场景曲解成'今晨比过去更紧张'的比较，原文没有跨时代对比；C 说'劝人立刻弃用汽车和纸杯'，讲话人明确说 'I'm not here to tell you convenience is evil'，属于过度引申；D 拿咖啡与公交价格作比，原文毫无此意——B/C/D 都借用了'早晨/纸杯/手机'的外壳，所以需要听懂开场的功能才能排除。"
+      },
+      {
+        "type": "single",
+        "question": "According to the speaker, why do most people fail to recognise the problem with throwaway products?",
+        "options": [
+          "Because they have been taught about recycling and therefore feel no guilt about their choices.",
+          "Because the real consequences are kept out of view at the moment a choice is made.",
+          "Because such items are made of materials that vanish quickly once they reach a landfill.",
+          "Because shops are legally required to conceal how much packaging waste they actually create."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'the design hides the consequence. You can't see the dump it ends up in, right? Out of sight, out of mind.' 推理链：问题不在人们不关心，而在'设计把后果藏了起来'——你看不到垃圾最终去了哪。答案 B 的 'the real consequences are kept out of view at the moment a choice is made' 正是对 'design hides the consequence / out of sight' 的同义替换（kept out of view 对应 hides / can't see）。干扰项 A 说'受过回收教育所以无愧疚'，原文反而说 'It's not that we don't care'，把因果说反；C 说'材料在填埋场很快消失'，与 'hangs around... for hundreds of years' 直接矛盾，是最典型的细节对调陷阱；D 说'法律要求商店隐瞒'，原文从未提及任何法律，属于无中生有。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply about the minutes that convenience is supposed to save us?",
+        "options": [
+          "They are typically spent on rest and hobbies that noticeably improve our wellbeing.",
+          "They are carefully monitored by employers and given back as longer annual holidays.",
+          "They tend to be swallowed up by extra chores, leaving us no better off than before.",
+          "They mostly disappear because people waste them on pointless mobile phone applications."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'the time we save doesn't turn into rest. It turns into more tasks... the work expands to swallow the time.' 推理链：省下的时间没有变成休息，而是被更多任务填满，工作像水一样膨胀占掉空出来的时间。答案 C 的 'swallowed up by extra chores, leaving us no better off' 精准同义替换（swallowed up 对应 swallow，no better off 对应 'not actually any happier'）。干扰项 A 说'用于休息和爱好、提升幸福感'，与 'doesn't turn into rest / not any happier' 正面冲突，却披着'省时=Fine'的外衣，最迷惑；B 说'雇主监控并返还为年假'，原文毫无职场内容；D 说'浪费在无用应用上'，偷换了原因——原文强调任务膨胀，不是单纯刷手机。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO hidden costs of convenience does she identify in her talk? (Choose TWO)",
+        "options": [
+          "The environmental burden of items discarded after only a few minutes of use.",
+          "The higher prices charged by shops that install slow checkout barriers near the exit.",
+          "The legal fines firms pay whenever they hide product details from potential buyers.",
+          "The attention and decision-making control that frictionless designs quietly take from us."
+        ],
+        "answer": [
+          "A",
+          "D"
+        ],
+        "explanation": "本题要求跨段落归纳两类隐性代价。音频关键句一：'something you use for maybe five minutes and then bin, but it hangs around in a landfill for hundreds of years'，对应 A 的 'environmental burden of items discarded after only a few minutes of use'（hangs around → burden，同义替换）。关键句二：'every time friction vanishes, somebody gains a little more say over what you do next... your hours, your focus, your choices'，对应 D 的 'attention and decision-making control that frictionless designs quietly take'。干扰项 B 把超市例子说反成'装栅栏导致涨价'，原文是'拆除栅栏销量上升'，细节对调且无中生有'价格'；C 说'隐瞒信息被罚款'，原文从未提法律或罚款，借用 hide 一词制造迷惑。"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "How Noise Pollution Changes Our Health",
+    "speaker": "Ethan Brooks",
+    "duration": "4:47",
+    "category": "公共健康",
+    "description": "噪音污染对身心健康被低估的影响",
+    "audio_file": "ted_17.mp3",
+    "transcript": "Right, imagine you're trying to get to sleep. It's late, the street outside is quiet, and then — boom — a motorbike revs past, or a neighbour's music thumps through the wall. Suddenly you're wide awake, your heart's racing, and you're lying there fuming. Well, tonight I want to talk about why that reaction involves far more than simple annoyance.\n\nI'm Ethan Brooks, and I'm a researcher in public health. Most of my work looks at noise — not the kind you can see, like a rubbish pile, but the kind you only hear. And here's the problem: 'cause it's invisible, we tend to treat it as a minor irritation, kinda. We'll complain about it over dinner and then forget it. But the evidence says we should take it much, much more seriously. Um, I dunno, we just put up with it, don't we?\n\nLet me start with the body. You know, when a loud sound hits you, your brain doesn't wait to check whether it's dangerous. It fires off a sort of stress response straight away — your pulse jumps, your blood pressure climbs, and a hormone called cortisol floods your system. Now, that's fine if a bus is actually about to hit you. But if it's just a lorry going past for the hundredth time, your body still reacts as if there's an emergency. Basically, your system can't tell the difference. It's a physical reaction, not a choice — you can't decide to ignore it, any more than you can decide not to blink when something flies towards your eye. There's a large study — I'm gonna round the figures — that followed people living near busy roads for years, and it found a clear link between constant traffic noise and higher rates of heart disease. I mean, we're talking about the same sort of risk you'd get from, like, smoking or being seriously overweight. That's not nothing.\n\nAnd here's the sneaky part: it happens while you sleep. You might think, well, I'm asleep, so it doesn't count. But your ears don't switch off. Your brain keeps monitoring the noise all night, and you never reach that deep, proper rest your body needs. So you wake up tired, even though you've been in bed for eight hours. You can't see the damage, and you can't feel it happening, but it builds up, night after night. That's why people who live beside a busy road often describe themselves as permanently exhausted, without ever connecting it to the traffic outside their window.\n\nNow let's look at the mind, because this is where it gets really interesting for me. There was this study of schoolchildren — I think it was near an airport, or maybe a railway — where researchers compared kids in noisy classrooms with kids in quieter ones. And the noisier group were, on average, months behind in reading. Not because they were less clever, but because they couldn't hear clearly and their minds sorta kept drifting off. Every time a plane went over, the teacher's voice vanished for a few seconds, and the kids just lost the thread. Imagine that happening dozens of times a day, every single day. It's like trying to read with someone constantly tapping your shoulder.\n\nSo here's the twist I didn't see coming. We usually assume the answer is simple: make everything quieter. But it's not quite that straightforward. First, a bit of background sound won't hurt anyone and can actually help some people concentrate — ever noticed how a café buzz helps you work? And second, silence isn't distributed fairly. The poorest neighbourhoods are almost always the loudest — they've got the motorway, the airport, the factory right on their doorstep. So noise isn't just a health issue, it's an unfairness issue. The people with the least money are the ones paying the highest price in lost sleep and lost learning. That made me properly angry, actually.\n\nLook, I'm not saying we all need to move to the countryside and live in a soundproof bubble. That's not realistic, and honestly I'd miss the city. What I'm saying is that we should start treating noise like the health hazard it is. If you wanna protect your sleep, insist on quieter machines, better windows, sensible city planning. Measure it, regulate it, talk about it the way we talk about dirty air. Because right now, we've got a problem we can literally hear, and we've chosen not to listen. Right, thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker open his talk with the image of a motorbike disturbing someone trying to sleep?",
+        "options": [
+          "To prove that late-night traffic is the single greatest cause of heart disease today.",
+          "To show that a familiar, irritating sound is actually a sign of a deeper physical threat.",
+          "To entertain the audience with a funny story about difficult neighbours and noisy parties.",
+          "To argue that people who live in cities can never enjoy a good night's sleep at all."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'your heart's racing... tonight I want to talk about why that reaction involves far more than simple annoyance.' 推理链：开场用'深夜摩托车惊醒入睡者'的日常画面，紧接着点明这远不只是'烦躁'，而是引出噪声对健康的深层影响。答案 B 的 'a familiar, irritating sound is actually a sign of a deeper physical threat' 是对 'far more than simple annoyance' 的同义替换（irritating sound 对应 annoyance，deeper physical threat 对应后文的 stress response / heart disease）。干扰项 A 说'深夜交通是心脏病唯一最大诱因'，把后文'风险相当'夸大成'单一最大'，属于过度引申；C 说'讲邻居趣事逗乐'，低估开场 Funktion，答非所问；D 说'城市居民永远睡不好'，绝对化，原文并未如此断言。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker say about the body's reaction to repeated loud sounds during the day?",
+        "options": [
+          "It gradually gets used to the noise and eventually stops producing any stress hormones.",
+          "It responds only when the sound is genuinely dangerous, such as an oncoming bus.",
+          "It treats even a harmless, repeated sound as an emergency and reacts accordingly.",
+          "It becomes stronger over time, which explains why constant noise improves heart health."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'if it's just a lorry going past for the hundredth time, your body still reacts as if there's an emergency. Basically, your system can't tell the difference.' 推理链：哪怕是无害、重复出现的声音（第一百辆卡车），身体依然按'紧急状态'反应，因为它分不清危险与否。答案 C 的 'treats even a harmless, repeated sound as an emergency' 是对这句的精准同义替换（harmless, repeated 对应 just a lorry for the hundredth time，as an emergency 原意转述）。干扰项 A 说'逐渐适应、停止分泌压力激素'，与 'still reacts' 正好相反，是最具迷惑性的反向陷阱；B 说'只在真正危险时反应'，与 'can't tell the difference' 矛盾；D 说'反复噪声反而增强心脏健康'，与原文'心脏病风险上升'完全颠倒。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply when he mentions that the noise linked to heart disease carries a risk comparable to smoking?",
+        "options": [
+          "Traffic noise is a serious health hazard that people wrongly dismiss as trivial.",
+          "Smoking and traffic noise affect the heart through exactly the same biological mechanism.",
+          "Researchers have proven that loud roads are more dangerous than any other environmental factor.",
+          "People living near busy roads should all be advised to give up smoking immediately."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'a clear link between constant traffic noise and higher rates of heart disease... the same sort of risk you'd get from, like, smoking or being seriously overweight. That's not nothing.' 推理链：把交通噪声的风险类比到吸烟、肥胖这类公认的重大风险，是为了强调——噪声是被严重低估、却被当作小事的真正健康威胁。答案 A 的 'a serious health hazard that people wrongly dismiss as trivial' 正是对 'minor irritation / that's not nothing' 对比的言外之意概括。干扰项 B 说'两者生物机制完全相同'，原文只比较'风险量级'，并未说机制一致，属于偷换概念；C 说'已证明噪声比其他任何环境因素都危险'，夸大为最高级；D 说'建议路边居民戒烟'，答非所问，把类比误当成建议。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO points does he make about noise as a social and health issue? (Choose TWO)",
+        "options": [
+          "A mild background hum can sometimes help people focus rather than harming them.",
+          "Wealthier districts usually suffer the most noise because they are close to airports.",
+          "Quiet surroundings tend to be unequally shared, with poorer areas bearing the loudest noise.",
+          "The stress response to noise switches off completely once a person falls asleep."
+        ],
+        "answer": [
+          "A",
+          "C"
+        ],
+        "explanation": "本题要求跨段落归纳。音频关键句一：'a bit of background sound won't hurt anyone and can actually help some people concentrate — ever noticed how a café buzz helps you work?' 对应 A 的 'a mild background hum can sometimes help people focus'，是原句的同义转述。关键句二：'silence isn't distributed fairly. The poorest neighbourhoods are almost always the loudest'，对应 C 的 'quiet surroundings unequally shared, poorer areas bearing the loudest noise'（distributed fairly → unequally shared）。干扰项 B 把'最穷社区最吵'说反成'富裕地区最吵'，方向对调，极具迷惑性；D 说'睡着后压力反应完全关闭'，与原文 'your ears don't switch off... keeps monitoring all night' 直接矛盾。"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "The Case for Doing Nothing",
+    "speaker": "Aisha Karim",
+    "duration": "4:57",
+    "category": "心理与生活方式",
+    "description": "“无为”的价值：为什么我们需要真正的休息与留白",
+    "audio_file": "ted_18.mp3",
+    "transcript": "Right, so let me ask you something. When was the last time you did absolutely nothing — and I mean nothing, no phone, no podcast, no book, just sat there? Well, if you're like most people I meet, the answer's probably never, or at least not since you were a kid. And that's what I wanna explore today.\n\nI'm Aisha Karim, and I study rest — or, more precisely, the ways we've forgotten how to rest. And, look, I get it. We live in a culture that's obsessed with being busy. If you say you're busy, it sounds important. If you say you spent the afternoon staring out the window, you feel like you have to apologise. The moment you admit you did nothing, you feel the need to justify it, as though rest were something you had to earn or apologise for. So we've turned even our downtime into a kinda performance. Basically, we can't sit still any more.\n\nHere's the first thing I want you to understand. Our brains aren't designed to be on all the time. When you're not focused on a task, your mind switches into what scientists call the default mode network. It's basically the brain's background setting. And in that state, something remarkable happens — your mind sorta starts wandering, you make connections between unrelated ideas, you replay conversations, you think about the future. I mean, that's where a lot of creativity actually comes from. There was a study where people did a boring task, like copying numbers, and then had to come up with new uses for everyday objects. The ones who'd been doing the boring thing came up with the most original ideas. Boredom, it turns out, is sort of a workshop for the mind. And it's not just about work — daydreaming helps you process things that happened to you, understand your own feelings, and work out what you actually want. In a way, the empty moments are when we understand ourselves best.\n\nNow, the second point is about how we've lost that. Think about the last time you were standing in a queue or waiting for a bus. What did you do? You pulled out your phone, didn't you? We've become so uncomfortable with a few seconds of emptiness that we fill every gap with stimulation. And, um, the cost of that is subtle. We never give our minds the space to just, you know, be. It's like we're afraid of our own thoughts. And you know what? That space, once you let it in, won't stay empty for long — it fills up with the very ideas you were chasing. I dunno about you, but that strikes me as a bit sad.\n\nSo where's the surprise? Well, here's the bit that really got me. Even when we do try to rest, we tend to do it wrong. We've turned relaxation into another task. You've got yoga classes, mindfulness apps that track your 'mindfulness score', retreats where you pay a fortune to, quote, switch off. I'm not joking — people are now booking holidays organised around doing nothing, with a schedule. If your rest has a timetable and a rating, it isn't really rest, is it? You're still performing, just with a different audience. That's actually kind of ironic, if you think about it.\n\nAnd here's something else that annoys me, actually. We treat rest as a reward you earn after enough work. But that's backwards. Rest isn't the prize at the end of the race; it's part of what makes the race possible. If you wait until you've finished everything to rest, you'll never rest, 'cause the list never ends. Your emails, your chores, your ambitions — they've all got a way of expanding to fill whatever time you give them. So there's always an excuse to put rest off, isn't there? I've done it myself — I'll say I'll rest once I've replied to a few emails, and then it's midnight and I'm still at my desk. Sound familiar? We're all waiting for permission that never comes.\n\nLook, I'm not saying lie on the sofa all day and let your life fall apart. That's not rest either, and honestly it usually leaves you feeling worse. What I'm saying is that emptiness has value. So I'm gonna suggest something simple: leave a gap in your day. Go for a walk without headphones. Sit somewhere and let your attention drift. Don't turn it into a hobby, don't measure it, don't post about it. Just let it be. Because the ability to do nothing, properly, is becoming one of the rarest skills around. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "What is the speaker's main purpose in asking when the audience last did absolutely nothing?",
+        "options": [
+          "To prove that modern people are much lazier than generations who lived before them.",
+          "To reveal how unfamiliar genuine inactivity has become in our busy everyday lives.",
+          "To gather statistics about the sleeping habits of the people in the audience.",
+          "To persuade everyone to give up their jobs and take up a completely different lifestyle."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'When was the last time you did absolutely nothing... the answer's probably never, or at least not since you were a kid.' 推理链：用一个直击人心的问题，让读者意识到'真正什么都不做'对成年人来说几乎不存在，从而引出'我们已经忘记如何休息'的主题。答案 B 的 'reveal how unfamiliar genuine inactivity has become' 正是对 'probably never... since you were a kid' 的概括性同义替换（genuine inactivity 对应 did absolutely nothing）。干扰项 A 说'现代人更懒'，与原文'我们沉迷忙碌'相反，方向对调；C 说'收集睡眠习惯数据'，原文毫无调查意图，答非所问；D 说'劝人辞职换生活方式'，过度引申——讲话人只是提倡留白，不是放弃工作。"
+      },
+      {
+        "type": "single",
+        "question": "According to the speaker, what happens in the brain during the so-called default mode network?",
+        "options": [
+          "The brain shuts down completely and uses the time to repair damaged cells.",
+          "It focuses intensely on a single difficult task until the task is finally finished.",
+          "It wanders freely, linking separate ideas and helping original thoughts emerge.",
+          "It stores away new facts so that they can be recalled perfectly at a later point."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'your mind starts wandering, you make connections between unrelated ideas... that's where a lot of creativity actually comes from.' 推理链：默认模式网络=大脑的'背景设置'，此时思绪游走、把不相干的想法联系起来，正是创造力的来源；抄数字这种无聊任务反而催生最有创意的答案。答案 C 的 'wanders freely, linking separate ideas and helping original thoughts emerge' 是对这几句的同义替换（separate ideas 对应 unrelated ideas，original thoughts 对应 creativity）。干扰项 A 说'大脑完全关闭只修复细胞'，原文说它活跃得很，正面矛盾；B 说'专注单一任务'，恰与'不专注任务时'相反；D 说'储存新事实以便完美回忆'，属于张冠李戴，把记忆功能安到了默认网络上。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply about modern attempts to relax, such as mindfulness apps and scheduled retreats?",
+        "options": [
+          "They have successfully restored the lost art of doing nothing for most people.",
+          "They have turned rest into another measured performance rather than real emptiness.",
+          "They are too expensive and should be replaced by completely free activities.",
+          "They are scientifically proven to be harmful to both mind and body in the long run."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'We've turned relaxation into another task... apps that track your mindfulness score... If your rest has a timetable and a rating, it isn't really rest.' 推理链：给休息打分、排日程，等于把休息也变成了有考核的'表演'， hollow。答案 B 的 'turned rest into another measured performance rather than real emptiness' 精准概括（measured performance 对应 score / rating / timetable，real emptiness 对应 isn't really rest）。干扰项 A 说'成功恢复了无为的艺术'，与全文批评语气相反；C 说'太贵应改成免费活动'，原文提到 'pay a fortune' 只是细节，结论并非收费问题；D 说'科学证明长期有害'，原文没下这个结论，属于过度引申。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO ideas about rest does she want the audience to take away? (Choose TWO)",
+        "options": [
+          "Rest should be treated as a reward granted only after all the work is finished.",
+          "Leaving unstructured gaps in the day allows creativity and reflection to occur.",
+          "Filling every empty moment with a phone keeps the mind healthy and sharp.",
+          "Trying to schedule and rate one's relaxation prevents it from being genuine rest."
+        ],
+        "answer": [
+          "B",
+          "D"
+        ],
+        "explanation": "本题要求跨段落归纳'无为'的两条主张。音频关键句一：'that's where a lot of creativity actually comes from' + 'the ones who'd been doing the boring thing came up with the most original ideas'，对应 B 的 'unstructured gaps allow creativity and reflection'。关键句二：'If your rest has a timetable and a rating, it isn't really rest'，对应 D 的 'scheduling and rating relaxation prevents genuine rest'。干扰项 A 说'休息是干完活后的奖励'，讲话人明确说这是 'backwards'（颠倒的），方向正相反，最迷惑；C 说'用手机填满每个空隙有益心智'，与 'uncomfortable with a few seconds of emptiness that we fill every gap with stimulation' 的批评态度冲突。"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "What Old Maps Reveal About Lost Cities",
+    "speaker": "Prof. Henry Vale",
+    "duration": "4:55",
+    "category": "历史与考古",
+    "description": "古地图如何帮助现代人重新发现失落的城市",
+    "audio_file": "ted_19.mp3",
+    "transcript": "Right, so I want you to imagine you're holding a map from, say, the fifteen hundreds. The paper's yellow and stained, the ink's faded, and someone's drawn a city right there in the middle of a desert. Trouble is, nobody's ever found that city. For centuries, people assumed the map was just plain wrong — a traveller's tall tale, kinda. Well, today I want to show you why those old maps deserve a second look.\n\nI'm Henry Vale, and I'm an archaeologist who specialises in reading old maps — well, mostly I use them to track down places that have disappeared. And, you know, there's something genuinely thrilling about it, I dunno why. A map isn't just a picture of where things are. It's a snapshot of what somebody believed, or feared, or wanted you to believe. And sometimes, hidden in the mistakes, there's a clue to a real place. Basically, every line on there is a question waiting to be asked.\n\nLet me give you an example. There's a famous old chart — I'm gonna keep the details vague, 'cause the exact site is protected — that marked a settlement beside a river in a region now covered in sand. Everyone just sorta assumed the river had simply dried up and the town had vanished into nothing. But here's the thing, um: maps from that period were often copied from earlier maps, and copyists reproduced the same features over and over. So if a river turns up in twenty different maps, it probably wasn't somebody's mistake. It probably meant something real. And when researchers laid that old line over modern satellite images, they found the dried-up riverbed — and along it, the outlines of streets and buildings buried under the sand. I mean, the place was there the whole time. We just needed the map to know where to dig.\n\nNow, here's a second way maps help, and this is where it gets properly clever. Old maps don't just tell you where a city sat; they show you what mattered to the people who drew them. A grand temple, a busy market, a road running off towards a mine — all of that hints at how the place was organised. So even before you lift a spade, you've got a sort of blueprint. There was a project — I think it was under jungle, somewhere in South America — where a team combined an old map with a laser survey they've flown above the forest. The laser bounced off the ground between the trees and revealed a whole network of roads and fields nobody had ever seen from below. The map supplied the question; the technology supplied the answer. You can't really do one without the other. And that, to me, is the real lesson here: the old document and the newest machine aren't rivals. They're partners, and the discovery happens in the space between them, right?\n\nSo here's the twist I love. Sometimes a map is wrong in a way that turns out to be useful. You see, a map-maker who'd never visited a place might draw it from a traveller's story, and the story might well exaggerate. But even the exaggeration tells you something. If a city's drawn three times its real size, maybe it was a centre of genuine power and wealth. If a route's drawn impossibly straight, maybe it was a road important enough to be remembered. The error itself becomes evidence. That's the bit that gets me properly excited, honestly. A mistake made five hundred years ago can point a modern archaeologist to a spot they'd otherwise walk straight past. I mean, actually, I've had that happen — followed what looked like a nonsense line on a page, and ended up standing in a field with my boots full of mud, realising the thing was right after all. You feel a bit foolish and a bit thrilled at the same time.\n\nLook, I'm not saying every old chart is a treasure map, or that we should believe everything drawn before, like, photographs existed. Plenty of them are pure nonsense, and I won't pretend I haven't wasted weeks chasing a few. What I'm saying is that a map is a question posed by the past, and our job is to check it against the ground. Next time you see an old map in a museum, don't just admire the fancy lettering. If you wanna spot a place that isn't there anymore, ask yourself what's missing, what's been exaggerated, and what might still be out there, just waiting to be found. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker describe an old map showing a city in the desert near the start of his talk?",
+        "options": [
+          "To suggest that most old maps were deliberately forged by clever travellers long ago.",
+          "To introduce the idea that old maps may point to real places that are still undiscovered.",
+          "To complain that museums keep valuable maps locked away from ordinary members of the public.",
+          "To prove that every city drawn on an old map has already been excavated by archaeologists."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'someone's drawn a city right there in the middle of a desert. Trouble is, nobody's ever found that city... today I want to show you why those old maps deserve a second look.' 推理链：用一张标注了无人找到的沙漠古城的旧地图开场，是为了引出核心观点——旧地图或许指向尚未被发现的真实地点，值得重新审视。答案 B 的 'old maps may point to real places that are still undiscovered' 是对 'deserve a second look / nobody's found that city' 的同义替换（real places, undiscovered）。干扰项 A 说'多数旧地图是故意伪造的'，原文只说'旅人的夸张故事'，并未定性为普遍造假；C 说'抱怨博物馆把地图锁起来'，原文反而鼓励去博物馆看地图，方向相反；D 说'每个古城都已被发掘'，与 'nobody's ever found' 直接冲突。"
+      },
+      {
+        "type": "single",
+        "question": "What reasoning does the speaker use to argue that a river appearing in many old maps was probably real?",
+        "options": [
+          "Because rivers rarely change their course, so an old map is always geographically accurate.",
+          "Because surveyors of that era copied earlier sources, repeating the same genuine feature many times.",
+          "Because satellite photographs can confirm that every line on any historical map is correct.",
+          "Because the number of copies proves the map-maker had personally visited the distant region."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'maps from that period were often copied from earlier maps, and copyists reproduced the same features over and over. So if a river turns up in twenty different maps, it probably wasn't somebody's mistake.' 推理链：那个年代的地图互相抄录，同一特征被反复复制；因此一条河出现在二十张图上，说明它源自某个真实的原始信息，而非某人笔误。答案 B 的 'surveyors copied earlier sources, repeating the same genuine feature many times' 正是对 'copied from earlier maps... reproduced over and over' 的同义替换。干扰项 A 说'河流几乎不改道，所以旧图总准确'，把结论建立在一个原文未提及的绝对前提上；C 说'卫星能证实每张历史地图的每条线都正确'，过度引申——卫星只是用来比对那条河；D 说'副本数量证明制图者亲自去过'，原文恰恰说地图常被没去过的人抄袭，方向相反。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker suggest when he says that errors in an old map can themselves become evidence?",
+        "options": [
+          "A drawing that exaggerates a settlement's size may still reflect its real importance and wealth.",
+          "Mistakes prove that old maps have no value for modern archaeological research whatsoever.",
+          "An impossible route on a map is always the result of careless printing in later copies.",
+          "Map-makers deliberately lied about cities in order to attract settlers to distant lands."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'If a city's drawn three times its real size, maybe it was a centre of genuine power and wealth... The error itself becomes evidence.' 推理链：即便制图者按道听途说夸大其词，夸张本身也透露信息——一座被画得比实际大三倍的城市，可能是真正有权势和财富的中心。答案 A 的 'exaggerates a settlement's size may still reflect its real importance and wealth' 是对这段的精准同义替换（drawn three times its real size → exaggerates size，genuine power and wealth → real importance and wealth）。干扰项 B 说'错误证明旧图毫无价值'，与全文主旨完全相反；C 说'不可能的路线只是印刷失误'，把'夸张'贬低成技术错误，丢失了'反映重要性'的深意；D 说'制图者故意撒谎吸引移民'，无中生有动机。注意本题与 id5（古罗马混凝土）虽同属历史类，但角度完全不同——这里讲的是地图解读，不是材料工程。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO ways can old maps help locate lost cities? (Choose TWO)",
+        "options": [
+          "They can be laid over satellite images to reveal buried roads and riverbeds.",
+          "They can be combined with laser surveys to expose features hidden beneath jungle.",
+          "They can be trusted as perfectly accurate records without any modern checking.",
+          "They can replace archaeological fieldwork entirely with no need to visit a site."
+        ],
+        "answer": [
+          "A",
+          "B"
+        ],
+        "explanation": "本题要求归纳旧地图的两种实际用途。音频关键句一：'laid that old line over modern satellite images, they found the dried-up riverbed — and along it, the outlines of streets and buildings'，对应 A 的 'laid over satellite images to reveal buried roads and riverbeds'。关键句二：'combined an old map with a laser survey flown above the forest... revealed a whole network of roads and fields'，对应 B 的 'combined with laser surveys to expose features beneath jungle'。干扰项 C 说'可当作完全准确、无需核实的记录'，讲话人明确说 'our job is to check it against the ground'，直接矛盾；D 说'能完全取代田野发掘、无需到现场'，与 'you just needed the map to know where to dig' 相悖——地图是用来指导挖掘，不是代替挖掘。"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "The Psychology of Queues",
+    "speaker": "Grace Mitchell",
+    "duration": "5:02",
+    "category": "社会心理",
+    "description": "排队中的心理现象与公平感设计",
+    "audio_file": "ted_20.mp3",
+    "transcript": "Well, right, so here's a situation I'm sure you know. You're standing in a long line at the supermarket, and the line right next to you starts moving faster. Immediately, doesn't it feel like you've picked the wrong one? Well, today I wanna talk about what's actually going on in your head when you queue — because it's far more interesting than just standing still.\n\nI'm Grace Mitchell, and I'm a social psychologist. My work looks at the unwritten rules that govern everyday behaviour, and queuing's one of the best examples we've got. I mean, think about it: a queue is just a bunch of strangers agreeing, silently, to stand in a particular order. Nobody's in charge, and yet nearly everybody obeys. So why do we do it? And why does it wind us up so much when it goes wrong?\n\nI mean, let's start with fairness. Here's the thing: when something's scarce, people need a rule that feels legitimate, otherwise it gets ugly. First come, first served is the rule we've settled on in most places, and we follow it even when there's no line marked on the floor. At a busy bus stop, you'll see people form a loose sort of order without anyone saying a word. And, um, if someone pushes in, the reaction's immediate and surprisingly fierce. You'll get glares, muttering, maybe a telling-off. It's not just that you've lost thirty seconds — it's that they've broken an agreement everybody else was honouring. That's why it makes you so angry, even when the delay is tiny. Basically, it's the betrayal, not the wait, that stings. And there's something else fascinating here: people will defend a line that isn't even official. If a group of us is standing loosely at a bus stop, and someone strides up and takes the front spot, you'll feel that same flash of indignation, even though nobody ever drew a line on the pavement. The rule exists because we all agree it exists. And you know, you don't have to be in a hurry to feel it.\n\nNow here's the second idea, and this one's backed by some lovely research. It's about how we experience the waiting itself. The key finding is that occupied time feels shorter than empty time. There's a famous case in an amusement park — I'm gonna simplify it — where managers were getting complaints about long waits for a ride. They didn't actually make the wait any shorter. Instead, they put mirrors near the queue, and later little screens and games. Complaints dropped, even though people were standing there just as long. Basically, if your attention's engaged, the time slips by. 'Cause if you're just stuck there with nothing to do, every second drags, actually. I dunno about you, but I've definitely felt that. It's not about tricking people, either — it's about giving a bored mind somewhere to rest. When there's nothing to occupy you, your attention turns inward, and that's when the frustration grows.\n\nWell, here's the twist I didn't see coming. You'd think the whole goal of queue design is to make the wait feel shorter and then send you on your way. But sometimes a queue has the opposite job. Think about the trendy café where people happily stand outside in the cold for twenty minutes. That queue isn't a problem to them — it's the point. You can't tell them it's a waste of time, 'cause to them it isn't. It signals that the place is popular, that it's worth waiting for. In a funny way, the queue becomes a kind of advertisement for itself. And online, you sorta get the same thing with virtual queues and waiting rooms for concert tickets. The wait builds anticipation, and, honestly, it might even make you value the thing more once you finally get it. Kinda strange, right? Look, I still find it odd that we'll happily pay for the privilege of standing around, but then again, I've queued for a popular bakery myself, so who am I to judge?\n\nLook, I'm not saying every queue is a clever trick or that we should all learn to love waiting. Most queues are just badly managed, and I've cursed my share of them. What I'm saying is that the feelings they stir up — the impatience, the sense of injustice, that small pride when you get to the front — aren't random. They're built into the system. So if you're designing a service, be honest about the wait, keep it fair, and give people something to do. And if you're stuck in one, remember: the other line won't actually be faster when you switch — it just feels that way. Right, thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker open with the experience of choosing a supermarket line that seems slower?",
+        "options": [
+          "To show how a queue can stir up strong feelings even in an ordinary everyday situation.",
+          "To prove that people who stand in the wrong line always end up wasting hours of time.",
+          "To argue that supermarkets should deliberately remove all their checkout lines entirely.",
+          "To entertain listeners with a personal story about a particularly bad shopping trip."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'the line right next to you starts moving faster. Immediately, doesn't it feel like you've picked the wrong one?... what's actually going on in your head when you queue.' 推理链：用'隔壁队伍更快'这种人人都有的日常体验开场，是为了引出演讲主题——排队时我们脑子里发生的事，即排队会唤起强烈心理反应。答案 A 的 'a queue can stir up strong feelings even in an ordinary everyday situation' 是对 'what's going on in your head / far more interesting than just standing still' 的同义替换（stir up strong feelings 对应那句反问引发的情绪）。干扰项 B 说'选错队必浪费数小时'，夸张且原文无此数据；C 说'主张取消所有收银队伍'，与全文讨论如何设计队伍相反；D 说'只是讲趣事'，低估了开场引入主题的功能——它确实是故事，但服务于论点。"
+      },
+      {
+        "type": "single",
+        "question": "According to the speaker, why do people react so strongly when someone pushes into a queue?",
+        "options": [
+          "Because the person who cuts in usually ends up causing a physical fight.",
+          "Because everyone has lost a great deal of valuable time that cannot be recovered.",
+          "Because the shared understanding of fair order has been violated by that person.",
+          "Because supermarket managers have officially banned anyone from joining a line late."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'they've broken an agreement everybody else was honouring. That's why it makes you so angry, even when the delay is tiny.' 推理链：插队之所以激起强烈愤怒，不在于损失了多少时间（原文强调 'even when the delay is tiny'），而在于违反了人人遵守的公平约定。答案 C 的 'the shared understanding of fair order has been violated' 精准同义替换（shared understanding 对应 agreement everybody was honouring，violated 对应 broken）。干扰项 A 说'插队常引发打架'，原文只说怒视、嘟囔、训斥，属于夸大；B 说'损失大量时间'，与 'even when the delay is tiny' 直接矛盾——这是最迷惑的干扰项，因为它符合直觉却与原文相反；D 说'超市明文禁止晚加入'，原文从未提任何规定。"
+      },
+      {
+        "type": "single",
+        "question": "What does the amusement park example suggest about the way we experience waiting?",
+        "options": [
+          "People will complain less if the actual time they wait is made much shorter.",
+          "Keeping attention engaged can reduce complaints even when the wait stays just as long.",
+          "Mirrors and screens are effective only when the queue is completely empty of people.",
+          "Visitors to amusement parks are far more patient than customers in ordinary shops."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'They didn't actually make the wait any shorter... they put mirrors near the queue, and later little screens and games. Complaints dropped, even though people were standing there just as long... occupied time feels shorter than empty time.' 推理链：真正无关的是等待时长，关键是有没有东西占据注意力——娱乐公园没缩短时间，只是加了镜子和屏幕，抱怨就减少了。答案 B 的 'keeping attention engaged can reduce complaints even when the wait stays just as long' 是对 'occupied time feels shorter' 及整个例子的同义概括。干扰项 A 说'只有真正缩短等待时间才能减少抱怨'，与 'didn't actually make the wait any shorter' 正面冲突，是最迷惑的常识性陷阱；C 说'镜子和屏幕只在队伍空无一人时有效'，无中生有且荒谬；D 说'乐园游客天生比商店顾客更有耐心'，原文未做人群比较。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO functions can a queue serve beyond simply organising people? (Choose TWO)",
+        "options": [
+          "It can act as a public signal that a place is popular and worth waiting for.",
+          "It can build anticipation so that people value the final reward more highly.",
+          "It can guarantee that nobody ever feels impatient or treated unfairly at all.",
+          "It can remove the need for any shared rule about who should be served first."
+        ],
+        "answer": [
+          "A",
+          "B"
+        ],
+        "explanation": "本题要求归纳排队的'额外功能'。音频关键句一：'That queue isn't a problem to them — it's the point. It signals that the place is popular'，对应 A 的 'a public signal that a place is popular and worth waiting for'。关键句二：'The wait builds anticipation, and... might even make you value the thing more once you finally get it'，对应 B 的 'build anticipation so people value the final reward more highly'。干扰项 C 说'能保证没人感到不耐烦或被不公平对待'，与 'the sense of injustice' 及 'we've cursed our share of them' 矛盾，absolute 化最迷惑；D 说'可取消先来后到的共同规则'，与全文强调公平规则直接相反——恰恰是规则被打破才让人愤怒。"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Why Some Languages Are Losing Their Last Speakers",
+    "speaker": "Dr. Samuel Okoye",
+    "duration": "5:17",
+    "category": "语言与文化",
+    "description": "濒危语言的消失及其对文化多样性的影响",
+    "audio_file": "ted_21.mp3",
+    "transcript": "Right, so let me begin with something a bit strange. Somewhere in the world today, there's an elderly person who is the last human being on earth who can speak a particular language. When that person dies, the language dies with them. Not gradually, not over centuries — just gone, like a light switching off. Well, that's not even a metaphor, um, actually. It's happening, you know, right now, in villages and on islands and in the back streets of big cities. That's what I want to talk about today.\n\nI'm Samuel Okoye, and I'm a linguist. I study how languages work and why they change. But honestly, the most urgent thing in my field right now is that languages are disappearing at a rate I genuinely find alarming. We're losing, I dunno, roughly one language every two weeks. I mean, think about that. Every fortnight, a whole way of seeing the world just vanishes, and almost nobody notices.\n\nNow, you might ask, why should we care? And look, that's a fair question. A language isn't just a set of words you can swap for another set of words. It's more like a library of knowledge that's been built up over thousands of years. When a community has lived in one place for a long time, their language encodes everything they've learned about that place — which plants are edible, how the weather changes, how to read the land. So when the language goes, all of that goes with it. It's basically like burning a library before anyone's had a chance to read the books.\n\nLet me give you a proper example. There's a language spoken in the Amazon, and it has, well, it has an extraordinary vocabulary for the forest. It's got dozens of distinct words for different kinds of rain — the rain before a storm, the fine mist that hangs in the trees. I mean, you and I would just call all of that 'rain', right? But to a speaker of that language, those are completely different phenomena. And here's the thing: each of those words carries information that's genuinely useful for survival. Basically, the language is a survival manual disguised as grammar.\n\nSo how does a language actually die? Well, it's rarely a dramatic event. It's more of a slow drift, and this is the bit I find really sad. Usually it starts with parents making what seems like a sensible decision. They want their children to have better opportunities, so they speak the dominant language at home — the language of school, of business, of government. They're not rejecting their own tongue, you know, they're just trying to give their kids a better shot. But then the children understand the old language without speaking it, and their children don't understand it at all. Three generations, and it's over. Nobody ever made a law banning it. It just kind of evaporated.\n\nAnd here's the uncomfortable part. This isn't really about geography or economics in the way people assume. It's about power. When one language has prestige — when it's the language of universities and television and money — speakers of other languages start to feel that their own tongue is somehow inferior, kinda backward. I've met people who were literally ashamed of their mother tongue, who would refuse to speak it in front of strangers. That shame is, I'd say, the real engine of language loss. It's not that the language can't survive. It's that its speakers have been convinced it doesn't deserve to.\n\nNow, you'd expect me to end with a depressing statistic, wouldn't you? But here's the surprise, and it's the reason I still do this job. Languages can come back. There are communities that have actively revived languages that were, by every measure, basically extinct. They've done it through immersion schools, through recording the last fluent speakers, through, well, through sheer stubbornness. In some places, young people are now learning the language their grandparents were too ashamed to pass on. A language that had maybe five speakers left now has hundreds, sometimes thousands of learners. It's not easy, and it takes resources, but it proves something crucial: this isn't inevitable. If you wanna help, the first step is simply caring that it matters.\n\nSo what can you do? Well, you probably can't save a language single-handedly, and I'm not gonna pretend you can. But you can start by noticing. Notice the languages around you, the ones that don't make the news. Value them, 'cause linguistic diversity is every bit as precious as biodiversity — honestly, I'd argue more so, because a language is a living record of human thought. Next time you hear someone speaking something you don't recognise, don't think 'how odd'. Think about the extraordinary amount of knowledge packed into those sounds. Look, a world with one language would be a world with one way of thinking, and that would be a tragically poor place. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker open his talk with the image of one elderly last speaker of a language?",
+        "options": [
+          "To show that a tongue can vanish all at once when its final fluent user passes away.",
+          "To argue that elderly people are the only ones who truly value their native dialect.",
+          "To complain that modern medicine keeps people alive long after their language has died.",
+          "To prove that isolated islands preserve far more languages than busy city streets do."
+        ],
+        "answer": "A",
+        "explanation": "音频关键句：'there's an elderly person who is the last human being on earth who can speak a particular language. When that person dies, the language dies with them... just gone, like a light switching off.' 讲话人刻意用一个'最后的说话者'开场，是为了说明语言消亡可以是突然、彻底、不可挽回的——随着最后一个人离去，整门语言瞬间熄灭。答案 A 的 'vanish all at once when its final fluent user passes away' 是对 'dies with them / just gone like a light switching off' 的同义替换（all at once 对应 just gone，final fluent user 对应 last human being）。干扰项 B 说'只有老人重视方言'，原文并未把重视程度按年龄划分；C 说'现代医学让语言死后人还活着'，属于无中生有的延伸；D 把岛屿和城市作比较，原文只是列举消失发生的地点（in villages and on islands and in the back streets），并非比较多少，属于借原文词汇的迷惑项。"
+      },
+      {
+        "type": "single",
+        "question": "What point does the speaker make by describing a forest language with many different words for rain?",
+        "options": [
+          "It proves that tropical languages have far more vocabulary than any European tongue.",
+          "It shows that a community's vocabulary can hold detailed knowledge vital for living there.",
+          "It suggests that speakers of that language exaggerate the weather to seem sophisticated.",
+          "It argues that the word 'rain' is too simple to be used in any serious conversation."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'It's got dozens of distinct words for different kinds of rain... each of those words carries information that's genuinely useful for survival. Basically, the language is a survival manual disguised as grammar.' 推理链：多种'雨'的词汇→每种都携带生存信息→语言是一部伪装成语法的生存手册。答案 B 的 'a community's vocabulary can hold detailed knowledge vital for living there' 正是对 'carries information useful for survival / survival manual' 的概括式同义替换，避开了 rain 原词。干扰项 A 说'热带语言词汇比欧洲语言多得多'，原文从未做语言间词汇量的横向比较，只是举例；C 说'说话人夸大天气以显得老练'，与原文'携带生存信息'的严肃语气相反；D 说'rain 一词太简单不能用于严肃对话'，纯属曲解，原文只是说英语用一个词概括，并未否定它。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply about parents who decide to speak the dominant language at home?",
+        "options": [
+          "They are deliberately trying to erase their own cultural identity and heritage.",
+          "They believe, wrongly, that their mother tongue has no useful grammar at all.",
+          "They act from good intentions, yet their choice quietly dooms the older tongue.",
+          "They have been forced by law to abandon the language of their ancestors."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'parents making what seems like a sensible decision... They want their children to have better opportunities... They're not rejecting their own tongue, you know, they're just trying to give their kids a better shot. But then the children... don't really speak it.' 推理链：出发点是善意（better opportunities / better shot），但结果却是语言在三代内消失（Three generations, and it's over）。答案 C 的 'act from good intentions, yet their choice quietly dooms the older tongue' 精准对应这组转折——good intentions 对应 sensible decision / better shot，quietly dooms 对应 it just kind of evaporated。干扰项 A 说'故意抹除文化身份'与原文 'not rejecting their own tongue' 直接矛盾，是最强的迷惑项，因为它抓住了'父母 switch language'这个正确外壳；B 说'误以为母语没有语法'，原文无此说法；D 说'被法律强迫'，而原文明确说 'Nobody ever made a law banning it'，属于正面冲突。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO factors help explain why languages decline or recover? (Choose TWO)",
+        "options": [
+          "A sense of shame makes speakers judge their own mother tongue as inferior and backward.",
+          "Government laws formally banning minority tongues are the main cause of their loss.",
+          "Deliberate effort through immersion schools and recordings can revive a dying language.",
+          "Living in remote islands guarantees that a language will survive for centuries."
+        ],
+        "answer": [
+          "A",
+          "C"
+        ],
+        "explanation": "本题要求跨段落归纳'衰落与复兴'的两股力量。音频关键句一：'speakers of other languages start to feel that their own tongue is somehow inferior, kinda backward... That shame is, I'd say, the real engine of language loss.' 对应 A 的 'a sense of shame makes speakers judge their mother tongue as inferior'，是同义替换（shame → the real engine of language loss）。关键句二：'Languages can come back... through immersion schools, through recording the last fluent speakers... this isn't inevitable.' 对应 C 的 'deliberate effort through immersion schools and recordings can revive a dying language'。干扰项 B 说'政府立法禁用是主因'，与原文 'Nobody ever made a law banning it' 正面冲突，却披着'政策导致消亡'的合理外衣，最迷惑；D 说'住在偏远岛屿就能保证语言存续数百年'，原文只把岛屿列为消失发生的地点之一，'guarantees' 属无中生有且过于绝对。"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "The Truth About Multitasking",
+    "speaker": "Olivia Chen",
+    "duration": "5:15",
+    "category": "认知科学",
+    "description": "多任务处理的认知代价与大脑切换成本",
+    "audio_file": "ted_22.mp3",
+    "transcript": "Hey everyone, so here's a question I wanna start with. Raise your hand if you've ever eaten dinner while scrolling through your phone, or listened to a lecture while answering messages, or, you know, tried to hold a conversation while watching television. Right, pretty much everyone. We do this stuff all the time, and we're actually quite proud of it. We call it multitasking, like it's some kind of impressive skill. Well, today I'm gonna ruin that little illusion for you, 'cause the truth about multitasking is a lot less flattering than you might think.\n\nI'm Olivia Chen, and I'm a cognitive scientist. Basically, I study how the brain pays attention, and let me tell you, attention is not this infinite resource you can split any way you like. It's more like a spotlight. You can point it at one thing or sweep it around fast between several, but you can't shine it on everything at once. And that distinction — between genuine parallel processing and rapid switching — is basically the whole story of multitasking.\n\nSo let me explain what's really happening in your head. When you switch from writing an email to reading a message and back, your brain doesn't just flip a switch and carry on where it left off. There's a cost. Researchers call it the switching cost, and it's basically a tiny tax you pay every single time your attention moves. You lose a bit of focus, you make more errors, and it takes your brain a moment to reload all the context of the original task. I dunno, um, maybe a few seconds each time. Sounds harmless, right? But here's the thing: those seconds add up. If you're switching every couple of minutes, you're basically paying that tax dozens of times an hour, and it quietly eats a huge chunk of your day.\n\nNow, the research on this is genuinely striking. In one well-known study, one group worked in a solid block while another did the same work with interruptions. Well, the interrupted group took, I mean, significantly longer to finish, and they made way more mistakes. But here's the really interesting bit — they didn't realise it. The multitasking group actually believed they'd done better. They were confident, sort of certain they'd been efficient, while the evidence said the exact opposite. That gap between how well we think we're doing and how well we're actually doing is what gets me, honestly.\n\nAnd it gets worse. There's evidence that heavy multitaskers are, in some ways, worse at focusing than people who rarely do it. I know, that sounds kinda backwards. You'd think practising something would make you better at it. But what you're really practising is distraction. Your brain gets very good at scanning for the next shiny thing and very bad at settling into one deep, difficult task. So the more you switch, the more your brain expects to switch, until sustained concentration starts to feel almost painful. I've seen students who literally can't read a single chapter without checking their phone every two minutes. It's not a character flaw, you know. It's a habit their brain has been trained into.\n\nNow, you're probably wondering, is there any exception? Like, are some people genuinely good at this? And the honest answer is: almost nobody. A rare few can process two demanding tasks at once, but they're incredibly uncommon. For the rest of us, when we think we're multitasking, we're really just switching really fast and doing two things badly instead of one thing well. And, I mean, there's a special problem with digital devices, 'cause the apps are deliberately designed to pull your attention back. Every notification is a little invitation to switch. So it's not even entirely your fault — the whole system is built to interrupt you.\n\nHere's the twist that surprised me, though. The problem isn't just that we lose time. It's what we lose in terms of the kind of thinking we're capable of. Deep, creative work — the kind that needs you to hold an idea and develop it — can't happen when you're switching every few minutes. So multitasking doesn't just make us slower. It makes our thinking shallower. We get a lot done, in a sense, but what we produce is fragmented.\n\nSo what's the practical takeaway? Well, I'm not gonna tell you to throw your phone in the bin. That's not realistic and, honestly, it's not necessary. What I'd suggest is something simpler. Try doing one thing at a time, even for short stretches, and notice how it feels. Give a conversation your full attention, or read something without a second screen. You might be surprised at how much better you focus, and, you know, how much calmer you feel. Look, attention is the raw material of everything you do. It's time we started treating it like the precious, limited thing it actually is. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "What is the speaker's purpose in comparing attention to a spotlight in her introduction?",
+        "options": [
+          "To argue that focus can be divided freely among several demanding activities.",
+          "To show that the brain can genuinely process several tasks in parallel at once.",
+          "To explain why switching between tasks is not the same as true simultaneous work.",
+          "To claim that some lucky people possess an unlimited supply of mental energy."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'It's more like a spotlight. You can point it at one thing, or you can sweep it around really fast between several things, but you can't actually shine it on everything at once. And that distinction — between genuine parallel processing and rapid switching — is basically the whole story.' 推理链：聚光灯一次只能照一处→快速扫过多个目标≠同时照亮全部→真正并行与快速切换有本质区别。答案 C 的 'switching between tasks is not the same as true simultaneous work' 是对 'distinction between genuine parallel processing and rapid switching' 的直接同义替换。干扰项 A 说'注意力可自由分散'，与 'can't shine it on everything at once' 正面冲突；B 说'大脑能真正并行处理多任务'，正是讲话人要否定的误解，迷惑性最强，因为它借用了'parallel'一词；D 说'有些人拥有无限精力'，与 'not this infinite resource' 矛盾。"
+      },
+      {
+        "type": "single",
+        "question": "In the study with interruptions, what does the speaker find most striking about the participants?",
+        "options": [
+          "They finished faster than the group that worked in one uninterrupted block.",
+          "They were convinced they had performed well despite clear evidence to the contrary.",
+          "They asked to switch tasks more often because they enjoyed the variety.",
+          "They noticed immediately that interruptions were hurting their concentration."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'the interrupted group took, I mean, significantly longer to finish, and they made way more mistakes. But here's the really interesting bit — they didn't realise it. The multitasking group actually believed they'd done better... while the evidence said the exact opposite.' 题干问 'what does the speaker find most striking'，关键信号词是 'the really interesting bit'，指的就是他们误以为自己表现更好这一错觉。答案 B 的 'convinced they had performed well despite clear evidence to the contrary' 精准概括 'believed they'd done better... evidence said the exact opposite'。干扰项 A 说'他们比 uninterrupted 组完成得更快'，与 'significantly longer' 方向相反，是最典型的数字/方向对调陷阱；C 说'因喜欢变化而要求多切换'，原文无此动机；D 说'立刻察觉到分心影响'，与 'they didn't realise it' 直接矛盾。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply when she says heavy multitaskers are practising distraction rather than skill?",
+        "options": [
+          "Regular switching actually strengthens the brain's ability to concentrate deeply.",
+          "The brain eventually adapts so that switching becomes completely effortless.",
+          "Students who switch tasks are simply lacking in natural intelligence and willpower.",
+          "Frequent task-switching trains the mind to crave novelty and resist sustained effort."
+        ],
+        "answer": "D",
+        "explanation": "音频关键句：'what you're really practising is distraction. Your brain gets very good at scanning for the next shiny thing and very bad at settling into one deep, difficult task... the more your brain expects to switch.' 推理链：反复切换=练习分心→大脑擅长寻找新鲜刺激、不擅长深入→越切越想切。答案 D 的 'trains the mind to crave novelty and resist sustained effort' 正是对 'scanning for the next shiny thing / bad at settling into deep task' 的言外之意概括。干扰项 A 说'切换能增强专注力'与原文 'worse at focusing' 直接相反，是迷惑性最强项；B 说'大脑最终完全毫不费力地适应切换'，原文反而说 concentration 变得痛苦，方向相反；C 把问题归为'智力或意志力缺陷'，而讲话人明确说 'It's not a character flaw... a habit their brain has been trained into'，正面冲突。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO costs of multitasking are supported by the research she cites? (Choose TWO)",
+        "options": [
+          "Switching tasks repeatedly creates small penalties that accumulate into lost time.",
+          "Interruptions make people take longer and produce more errors than steady work.",
+          "People who multitask accurately judge how much their performance has suffered.",
+          "Frequently switching guarantees that a person becomes better at deep, creative work."
+        ],
+        "answer": [
+          "A",
+          "B"
+        ],
+        "explanation": "本题要求跨段落归纳多任务处理的代价。音频关键句一：'it's basically a tiny tax you pay every single time your attention moves... those seconds add up... quietly eats a huge chunk of your day.' 对应 A 的 'small penalties that accumulate into lost time'（tax → penalties，add up → accumulate，同义替换）。关键句二：'the interrupted group took significantly longer to finish, and they made way more mistakes.' 对应 B 的 'take longer and produce more errors than steady work'。干扰项 C 说'多任务者能准确判断自己表现下滑'，与 'they didn't realise it... believed they'd done better' 正面冲突，它借用'performance'一词制造迷惑；D 说'频繁切换保证让人更擅长深度创造性工作'，与 'makes our thinking shallower' 完全相反，属于方向对调。"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "How Gardens Changed the Way We Eat",
+    "speaker": "Jack Foster",
+    "duration": "5:23",
+    "category": "食物与历史",
+    "description": "家庭菜园的历史演变及其对饮食观念的影响",
+    "audio_file": "ted_23.mp3",
+    "transcript": "G'day everyone. Right, so I want you to think about the last meal you ate. Go on, picture it. Where did it come from? Chances are it came from a supermarket, in a packet, and it travelled a long way to reach your plate. Well, that's so normal to us now that we barely think about it. But it's actually a very recent invention. For most of human history, the food on your plate came from somewhere you could walk to. And the place that changed all of that, the place that quietly revolutionised how we eat, was the humble garden. That's what I wanna talk about today.\n\nI'm Jack Foster, and I'm a food historian. Basically, I study the story of what people eat and how that's changed over time. And, you know, when you look back, the garden isn't just a patch of vegetables. It's more like a reflection of how a society thinks about food, about work, about the land. I mean, the way a culture gardens tells you a lot about what that culture values. Trace that story and you'll see how our relationship with food shifted, from producing it ourselves to mostly buying it.\n\nLet's go back a bit. For thousands of years, a garden was a matter of survival, not a hobby. You know, you grew what you needed to eat, simple as that. Households had a small plot for vegetables, a few chickens, maybe a fruit tree. And the Garden of Eden idea, you know, that deep cultural story about a perfect garden — well, that tells you how central gardens were to the way people imagined a good life. It was basically the original dream of abundance, where food was free and plentiful.\n\nRight, here's where it gets interesting. As people moved into towns, they couldn't grow their own food any more. So food started to become a commodity — something produced by someone else and sold to you. And this is where the garden starts to take on a different role. It's no longer strictly necessary, but people keep them anyway, 'cause there's something deeply satisfying about growing your own. I dunno, um, maybe it's the connection to the seasons, or just the pride of eating something you made yourself. That's the bit that never really went away.\n\nSo, look, let me give you a concrete example. During the Second World War, lots of countries had serious food shortages, and governments encouraged people to grow vegetables in any spare patch of land they could find. These were called victory gardens, and, well, they were everywhere — in backyards, in parks, even on the roofs of buildings. And here's the remarkable thing: those gardens produced an enormous amount of food — a significant share of the vegetables people ate. But, I mean, when the war ended and food became readily available again, most people gave them up. The moment the necessity disappeared, the gardens disappeared with it. That tells you something about how we treat food, doesn't it?\n\nWell, the unexpected part of the story is what happened next. Once industrial farming took over, food got cheaper and more plentiful than ever before. But something was lost. When you grow food, you're connected to the process — you plant, you wait, you watch the weather, you harvest. And that connection shapes how you value what's on your plate. But when food arrives in a clean packet with no dirt on it, you lose that sense of where it came from. I've spoken to kids who genuinely believe vegetables grow in supermarkets. It's not their fault, you know. I kinda feel sorry for them, honestly. It's just that the garden — the living proof of how food is made — has vanished from their experience.\n\nAnd here's a twist I didn't expect when I started this research. The garden is actually making a comeback, but in a new form. Community gardens are springing up in cities all over the world. People rent a small plot, grow things together, and, well, rediscover that old satisfaction. And it's not really about saving money — you can buy a carrot far cheaper than you can grow one. It's about something else. It's about connection, and community, and, sort of, remembering that food has a story. Researchers have found that people who garden eat more vegetables, even young people. Basically, growing food changes what you want to eat.\n\nSo what's the lesson here? Well, I'm not gonna tell you all to dig up your lawns and plant cabbages. Look, I'm a historian, not a gardener, and honestly my own attempts at growing tomatoes were pretty disastrous. But I'd suggest you think about where your food comes from, even a little. Notice the distance it travelled, the hands that grew it. 'Cause the garden taught us something important, and we're in danger of forgetting it: food isn't just fuel you buy. It's a relationship with the land and with the seasons and with each other. Thank you very much.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker mention the Garden of Eden when discussing the role of gardens?",
+        "options": [
+          "To argue that ancient myths exaggerate how difficult growing food really was.",
+          "To show that gardens have long stood for an ideal of plenty and a good life.",
+          "To claim that modern supermarkets have finally created that perfect garden on earth.",
+          "To complain that religion distracts people from practical farming methods."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'the Garden of Eden idea, you know, that deep cultural story about a perfect garden — well, that tells you how central gardens were to the way people imagined a good life. It was basically the original dream of abundance.' 推理链：伊甸园是'完美花园'的文化故事→说明花园在人们想象美好生活中居于核心→是'富足的原始梦想'。答案 B 的 'gardens have long stood for an ideal of plenty and a good life' 是对 'dream of abundance / central to imagining a good life' 的同义替换（plenty 对应 abundance，ideal 对应 imagined）。干扰项 A 说'神话夸大种地难度'，原文无此批判；C 说'超市终于造出了人间完美花园'，与全文'超市让我们失去与食物的联系'相反；D 说'宗教分散了人们对实用农耕的注意'，纯属无中生有，是借'Garden of Eden'外衣编造的迷惑项。"
+      },
+      {
+        "type": "single",
+        "question": "What does the story of victory gardens suggest about people's relationship with growing food?",
+        "options": [
+          "People eagerly kept growing their own vegetables long after the war had finished.",
+          "The government had to force reluctant citizens to cultivate spare patches of land.",
+          "Growing food was embraced out of necessity and abandoned once that need passed.",
+          "Rooftop gardens proved more productive than any traditional plot on the ground."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'governments encouraged people to grow vegetables... these were called victory gardens, and, well, they were everywhere... those gardens produced an enormous amount of food. But when the war ended and food became readily available again, most people gave them up. The moment the necessity disappeared, the gardens disappeared with it.' 推理链：战争造成短缺→种菜出于必要→战后必要消失→花园随之消失。答案 C 的 'growing food was embraced out of necessity and abandoned once that need passed' 精准对应 'the moment the necessity disappeared, the gardens disappeared'。干扰项 A 说'战后仍热忠于自种'与 'most people gave them up' 直接相反；B 说'政府强迫不情愿的市民'与 'encouraged' 语气不符，且原文无'不情愿'；D 说'屋顶花园比地面菜园产量更高'，原文只把屋顶列为地点之一（even on the roofs），未作产量比较，属于借原文词汇的迷惑项。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply about children who think vegetables grow in supermarkets?",
+        "options": [
+          "They are unusually curious about how industrial farming actually works.",
+          "They have been cut off from the process that shows where food truly originates.",
+          "They know more about nutrition than the adults who shop for them.",
+          "They would grow vegetables themselves if only their schools allowed it."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'when food arrives in a clean packet with no dirt on it, you lose that sense of where it came from. I've spoken to kids who genuinely believe vegetables grow in supermarkets. It's not their fault, you know... the garden — the living proof of how food is made — has vanished from their experience.' 推理链：洁净包装切断了来源感→孩子误以为蔬菜长在超市→因为花园从他们生活中消失。答案 B 的 'they have been cut off from the process that shows where food truly originates' 是对 'lose that sense of where it came from / vanished from their experience' 的言外之意概括。干扰项 A 说'他们对工业农业格外好奇'，与原文'误以为长在超市'的无知相反；C 说'比大人更懂营养'，原文无比较；D 说'只要学校允许就会自己种菜'，属于无中生有的假设，迷惑性在于它披着'孩子'话题的外衣。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO changes did industrial farming bring about in how people view food? (Choose TWO)",
+        "options": [
+          "It made food cheaper and more abundant than at any previous time in history.",
+          "It strengthened the personal connection people felt to the land and seasons.",
+          "It removed the visible link between a vegetable and the place it came from.",
+          "It guaranteed that communities would keep small plots in their backyards."
+        ],
+        "answer": [
+          "A",
+          "C"
+        ],
+        "explanation": "本题要求跨段落归纳工业化农业带来的变化。音频关键句一：'Once industrial farming took over, food got cheaper and more plentiful than ever before.' 对应 A 的 'cheaper and more abundant than at any previous time'（plentiful → abundant，同义替换）。关键句二：'when food arrives in a clean packet with no dirt on it, you lose that sense of where it came from'，对应 C 的 'removed the visible link between a vegetable and the place it came from'。干扰项 B 说'强化了人与土地季节的连接'，与 'you lose that sense' 正面冲突，方向完全相反，迷惑性在于'connection'一词原文出现过但意思被反用；D 说'保证社区保留后院小块菜地'，与 'most people gave them up' 矛盾，属于无中生有。"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "The Quiet Power of Boredom",
+    "speaker": "Dr. Elena Rossi",
+    "duration": "5:19",
+    "category": "心理与创造力",
+    "description": "无聊如何激发创造力与自我反思",
+    "audio_file": "ted_24.mp3",
+    "transcript": "Right, so I want to start with a confession. The other day I was stuck on a train, no signal, nothing to read, just sitting with my own thoughts for forty minutes. At first I was, well, climbing the walls. I felt genuinely uncomfortable. But somewhere in the middle of that journey, something odd happened. An idea I'd been struggling with for weeks suddenly clicked into place. And, you know, that wasn't a coincidence. Today I wanna talk about why being bored — properly, deeply bored — might be one of the most useful things you can be.\n\nI'm Elena Rossi, and I'm a psychologist interested in creativity and how the mind wanders. Now, we live in a world that's basically obsessed with avoiding boredom. There's always a screen to scroll or a podcast to fill the silence. And we treat that as a good thing, don't we? We think, right, I'm never bored, I'm always productive. I mean, boredom has a reputation problem, and I'd like to change that.\n\nLet me explain what boredom really is. It's not just 'nothing to do'. It's a mental state where you want to be engaged but find nothing worth engaging with. And that feeling of restlessness, of mild frustration — well, it's actually a signal. It's your brain saying, 'I need something meaningful, and I can't find it here.' So the mind starts to search. And when there's no external entertainment to grab your attention, the brain turns inward. It starts daydreaming, connecting ideas, running simulations. Basically, boredom pushes your attention from the outside world to your own internal world. And that, it turns out, is where a lot of creativity lives.\n\nHere's a proper example. A famous mathematician got the key insight to a hard problem while, of all things, staring out of a window on a boring train. I mean, he wasn't working on it at that moment. He'd, uh, stopped consciously thinking about it. His mind was still working in the background, making connections he couldn't make while concentrating hard. And then, when he let his guard down, the answer just popped into his head. That's not magic. That's what the wandering mind does. You know, we've all had that experience of getting a great idea in the shower, right? The shower is boring, so your mind is free to roam.\n\nNow, the research backs this up. There was a study where they gave people a really dull task — copying numbers out of a phone book. And then, afterwards, they gave them a creativity test. Well, the people who'd done the boring task came up with more original ideas than the group who'd done an interesting task instead. I dunno if you find that as surprising as I do, but it suggests that boredom isn't the enemy of creativity. It might be, sort of, its fuel. The dullness clears space for original thinking.\n\nBut here's where it gets tricky, and this is the bit I want you to really hear. There are two kinds of boredom, and only one of them is useful. There's 'dead-end boredom', where you're stuck and frustrated and feel awful — that's not helpful. But then there's 'open boredom', where you're not suffering, you're just kinda available. Your mind has room to breathe. And the difference, basically, comes down to whether you fill the space or let it be. The moment we feel a flicker of boredom, we reach for a device; we can't stand the emptiness. And in doing that, we're basically closing the door on that creative space before it's had a chance to open.\n\nNow, you might be thinking, well, surely constant stimulation makes us smarter, doesn't it? And here's the unexpected finding. It doesn't. In fact, constantly filling every gap seems to make us worse at reflecting on our own experience. How often do you sit and think about your day without something playing in the background? Honestly, most of us almost never do. We're so busy consuming content that we've forgotten how to be with our own thoughts. And that's a real loss, 'cause reflection is how we make sense of our lives, how we learn from what happened to us. Without it, we just keep moving without ever really processing anything.\n\nSo what's the practical advice? Well, I'm not gonna ask you to give up your phone forever. Look, that's not going to happen, and I'm not even sure it'd be good for you. What I'd suggest is small. Leave a little gap in your day. Walk somewhere without headphones. Sit on a bus and just look out of the window. Let yourself be bored for five minutes and see what your mind does. You might find it uncomfortable at first, but you might also find, like I did, that something interesting shows up. Look, boredom isn't a waste of time. It's one of the few spaces left where your mind can actually be your own. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "What does the speaker's opening story about being stuck on a train mainly serve to demonstrate?",
+        "options": [
+          "That long train journeys are the only reliable setting for creative breakthroughs.",
+          "That a spell of enforced boredom can unexpectedly unlock a stuck idea.",
+          "That modern transport is so dull it ruins passengers' concentration permanently.",
+          "That mathematicians think far more clearly than ordinary people do."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'I was stuck on a train, no phone signal... I had to just sit there with my own thoughts... An idea I'd been struggling with for weeks suddenly clicked into place. And, you know, that wasn't a coincidence.' 推理链：被迫无聊（无信号、无事可做）→困扰数周的想法突然明朗→强调这不是巧合。答案 B 的 'a spell of enforced boredom can unexpectedly unlock a stuck idea' 是对 'idea... clicked into place / wasn't a coincidence' 的概括式同义替换（enforced boredom 对应 stuck on train no signal，unlock 对应 clicked into place）。干扰项 A 说'只有长途火车才能带来突破'，原文只是个人经历，'only' 过于绝对；C 说'现代交通永久损害乘客专注力'，无中生有且消极夸大；D 说'数学家比常人更清晰思考'，原文讲数学家只是举例，未作人群比较，是借'mathematician'一词的迷惑项。"
+      },
+      {
+        "type": "single",
+        "question": "According to the speaker, what mechanism explains why boredom can help creativity?",
+        "options": [
+          "It forces the brain to work harder on the task it was already doing.",
+          "It trains people to ignore all frustrating feelings until they disappear.",
+          "It supplies the brain with a constant stream of fresh external information.",
+          "It removes outside distractions so the mind turns inward and connects ideas."
+        ],
+        "answer": "D",
+        "explanation": "音频关键句：'when there's no external entertainment to grab your attention, the brain turns inward. It starts daydreaming, connecting ideas, running simulations. Basically, boredom pushes your attention from the outside world to your own internal world.' 答案 D 的 'removes outside distractions so the mind turns inward and connects ideas' 精准对应 'no external entertainment... brain turns inward... connecting ideas'。干扰项 A 说'迫使大脑更努力处理手头任务'与原文'停止有意识思考、转向内心'不符；B 说'训练人忽略挫败感直到消失'，原文承认无聊就是 mild frustration 的信号，并未教人忽略；C 说'提供持续不断的外部新信息'与 'no external entertainment' 完全相反，是方向对调的强干扰项。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply about the difference between 'dead-end' and 'open' boredom?",
+        "options": [
+          "Both kinds are equally valuable as long as the mind is left completely idle.",
+          "Only the distressed, frustrated form creates the space needed for new ideas.",
+          "The useful kind leaves room to breathe, while the painful kind merely traps us.",
+          "Filling every empty moment is the surest way to reach the creative state."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'There's what I'd call dead-end boredom, where you're stuck and frustrated and you just feel awful — that's not helpful. But then there's open boredom, where you're not suffering, you're just kinda available. Your mind has room to breathe... it comes down to whether you fill the space or let it be.' 推理链：dead-end=痛苦被困（无益）→ open=不痛苦、有余地（有益）→差别在于是否填满空间。答案 C 的 'the useful kind leaves room to breathe, while the painful kind merely traps us' 是对 'room to breathe / stuck and frustrated' 的言外之意概括。干扰项 A 说'两种都有价值只要彻底放空'与 'that's not helpful' 冲突；B 说'只有痛苦的那种才能创造空间'，正好说反；D 说'填满每个空档最能进入创造状态'与 'we're closing the door on that creative space' 完全相反。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO findings support the idea that boredom benefits thinking? (Choose TWO)",
+        "options": [
+          "People given a dull copying task later produced more original ideas than others.",
+          "Constantly filling every gap makes people better at reflecting on their lives.",
+          "A wandering mind can form connections that focused concentration cannot manage.",
+          "People who avoid all boredom report the highest levels of daily creativity."
+        ],
+        "answer": [
+          "A",
+          "C"
+        ],
+        "explanation": "本题要求跨段落归纳'无聊有益'的证据。音频关键句一：'the people who'd done the boring task came up with more original ideas than the group who'd done an interesting task' 对应 A 的 'dull copying task later produced more original ideas'（boring task → dull copying task，同义替换）。关键句二：'his mind was still quietly working in the background, making connections he couldn't make when he was concentrating hard' 对应 C 的 'a wandering mind can form connections that focused concentration cannot manage'。干扰项 B 说'填满每个空档让人更善于反思'，与 'constantly filling every gap seems to make us worse at reflecting' 正面冲突，方向反用；D 说'完全不无聊的人创造力最高'，与全文主旨相反，是披着'creativity'外衣的强迷惑项。"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Why We Trust Strangers Online",
+    "speaker": "Nathaniel Reed",
+    "duration": "5:25",
+    "category": "社会与科技",
+    "description": "在线信任的机制：我们为何相信陌生人及平台设计的影响",
+    "audio_file": "ted_25.mp3",
+    "transcript": "Hey everyone, so let me start with something that'll make you think. When was the last time you got into a car with a driver you'd never met before? Or let a stranger into your home to stay for a weekend? Or, you know, handed over your money to someone whose real name you didn't even know? Well, if you've used a ride-sharing app, a homestay service, or an online marketplace, you've done all three. And here's the strange thing: you probably didn't think twice about it. Today I wanna look at why we trust strangers online, and what that says about us.\n\nI'm Nathaniel Reed, and I study trust in digital societies. Basically, I study how people decide whom to believe when they can't see or meet the other person. And, you know, for most of human history, trust was a local thing. You trusted your family, neighbours and village; everyone knew everyone, and reputation travelled by word of mouth. If someone cheated you, the whole community knew about it by dinner time. But the internet has completely upended that. Now we deal with people we'll never meet, and, well, we do it with remarkable confidence. So how exactly does that work?\n\nLet me give you the classic example. You book a room through a website. You've never met the host or seen the house, yet you hand over a significant amount of money. Why? Well, um, mostly because of the review system. You can read what dozens of previous guests said. They rated it, described it, left photos. And those reviews, I mean, they do the job that gossip used to do in a village. They make the stranger accountable. 'Cause here's the thing: a host who knows their reputation is public has a strong reason to behave well. One bad review can hurt their business. So the system basically manufactures trust out of information.\n\nNow, here's where it gets interesting, and this is the part I find genuinely fascinating. Research shows we read reviews in a very particular, sort of irrational way. We trust detailed, specific reviews far more than short positive ones. A review that says 'great place, loved it' doesn't convince us much. But one that mentions the squeaky door and the excellent coffee? Well, that feels honest, 'cause real people notice small details. I dunno, maybe we assume that someone who bothers to write a lot must be telling the truth. And here's the kicker — we're often right about that, but the system also has serious weaknesses.\n\nBecause, obviously, reviews can be faked: sellers write glowing reviews of their own products or pay others to do it. And, you know, the platforms know this, so they've built detection systems to spot suspicious patterns. But it's a bit of an arms race, honestly. As the platforms get better at catching fakes, the fakes get better at looking real. And the worrying thing is that most users, well, they can't tell the difference. I've shown people fake reviews and real ones side by side, and they're basically guessing. So a lot of the trust we place in these systems is, sort of, misplaced. We feel informed, but we might just be confidently wrong.\n\nHere's an unexpected finding that changed how I think about this. The design of the platform matters more than the actual information. In one study, researchers created two versions of the same marketplace. One looked professional and polished, with nice photos and clean layout. The other had identical content but looked amateurish and cluttered. Well, people trusted the polished one far more, even though the information — the prices, the descriptions, the ratings — was exactly the same. I mean, that's not rational. But it tells you something important: our trust is partly an emotional response to design, not a careful judgement of evidence. We're kinda wired to equate good-looking with trustworthy.\n\nAnd here's the deeper point. This design-driven trust has a dark side. They decide what information you see and which reviews get shown first. So when you say 'I trust this seller', really you're trusting the platform's judgment, and, well, that's a very different thing. 'Cause the platform has its own interests, which don't always match yours. I'm not saying they're evil, you know — most of them aren't. Their goal is keeping you on the site and making transactions happen, which isn't quite the same as getting you the best deal.\n\nSo where does that leave us? Well, I'm not gonna tell you to stop trusting strangers online. That'd be absurd — the whole system works, and it's brought real benefits. What I'd suggest is that you trust with your eyes open. Look for the details in reviews, not just the star rating. Notice when a site is trying to impress you with polish. And remember that the platform is not a neutral referee; it's a business. Look, trust is the glue that holds modern life together, and online it's more fragile than it looks. A little healthy suspicion, honestly, goes a long way. Thank you.",
+    "questions": [
+      {
+        "type": "single",
+        "question": "Why does the speaker begin by asking about getting into a stranger's car and home?",
+        "options": [
+          "To prove that people are becoming more cautious about personal safety online.",
+          "To reveal how readily we place deep trust in complete strangers nowadays.",
+          "To criticise ride-sharing companies for their careless safety record.",
+          "To compare travel habits between older and younger generations of users."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'When was the last time you got into a car with a driver you'd never met before? Or let a stranger into your home... you've done all three... you probably didn't think twice about it.' 推理链：一连串'把钱、身体、家交给陌生人'的提问→点出'你毫不犹豫'→引出主题：为何我们如此轻易信任陌生人。答案 B 的 'how readily we place deep trust in complete strangers' 是对 'you probably didn't think twice about it' 的同义替换（readily 对应 didn't think twice，deep trust 对应 get into a car / let a stranger into your home）。干扰项 A 说'人们变得更谨慎'与原文'毫不犹豫'相反；C 说'批评打车公司安全记录'，原文未作安全批判；D 说'比较代际旅行习惯'，原文无代际对比，是借'stranger / car'话题外壳的迷惑项。"
+      },
+      {
+        "type": "single",
+        "question": "In the review-system example, what does the speaker say makes a host behave responsibly?",
+        "options": [
+          "Strict laws that punish hosts who receive any negative feedback online.",
+          "The host's natural tendency to be welcoming towards visiting strangers.",
+          "Knowing that public comments expose them and can damage their future bookings.",
+          "The expensive fees that platforms charge hosts for every single listing."
+        ],
+        "answer": "C",
+        "explanation": "音频关键句：'they do the job that gossip used to do in a village. They make the stranger accountable... a host who knows their reputation is public has a strong reason to behave well. One bad review can hurt their business.' 推理链：评价系统=村庄里的流言→让陌生人可被追责→公开声誉+差评影响生意→促使房东守规矩。答案 C 的 'knowing that public comments expose them and can damage their future bookings' 精准对应 'reputation is public / one bad review can hurt their business'。干扰项 A 说'法律惩罚差评房东'，原文说的是声誉机制而非法律，属于无中生有；B 说'房东天性好客'，原文强调制度约束而非天性，是强迷惑项；D 说'平台收取高额上架费'，原文未提费用，答非所问。"
+      },
+      {
+        "type": "single",
+        "question": "What does the speaker imply about people's judgement when he describes the two marketplace versions?",
+        "options": [
+          "They carefully compare prices before deciding which seller to trust.",
+          "Their trust is shaped more by surface appearance than by the actual evidence.",
+          "They prefer listings that provide the longest and most detailed descriptions.",
+          "They can reliably tell polished design from genuinely trustworthy information."
+        ],
+        "answer": "B",
+        "explanation": "音频关键句：'One looked professional and polished... The other was basically identical in content, but it looked amateurish and cluttered. Well, people trusted the polished one far more, even though the information... was exactly the same... our trust is partly an emotional response to design, not a careful judgement of evidence.' 推理链：内容完全相同→只因外观精致就更受信任→信任是对设计的情绪反应，而非对证据的仔细判断。答案 B 的 'their trust is shaped more by surface appearance than by the actual evidence' 是对 'emotional response to design, not a careful judgement of evidence' 的直接同义替换。干扰项 A 说'仔细比较价格'与 'exactly the same' 信息矛盾；C 说'偏爱描述最长的列表'，原文比较的是外观 polish 而非描述长度，属于张冠李戴；D 说'能可靠区分精致设计与真实可信信息'，与 'people trusted the polished one far more' 的无理性相反。"
+      },
+      {
+        "type": "multiple",
+        "question": "According to the speaker, which TWO features influence how much we trust an online stranger? (Choose TWO)",
+        "options": [
+          "Reviews that are detailed and specific rather than short and vague.",
+          "A guarantee that every transaction is protected by strict government law.",
+          "A polished, professional-looking website design and clean layout.",
+          "The willingness of a seller to meet the buyer face to face first."
+        ],
+        "answer": [
+          "A",
+          "C"
+        ],
+        "explanation": "本题要求跨段落归纳'影响在线信任的因素'。音频关键句一：'we trust reviews that look detailed and specific far more than short positive ones... one that mentions the squeaky door and the excellent coffee feels honest' 对应 A 的 'reviews that are detailed and specific rather than short and vague'（detailed and specific 原为同义保留，short positive → short and vague）。关键句二：'people trusted the polished one far more... our trust is partly an emotional response to design' 对应 C 的 'a polished, professional-looking website design and clean layout'。干扰项 B 说'每笔交易都受政府法律保护'，原文从未提及法律保障，属于无中生有；D 说'卖家愿意先与买家见面'，与全文'从未见面却建立信任'的前提相冲突，是借'trust / stranger'外衣的迷惑项。"
+      }
+    ]
   }
 ]
