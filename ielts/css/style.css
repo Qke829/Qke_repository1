@@ -158,3 +158,4 @@ a{color:inherit;text-decoration:none}
 .wrong-status.resolved{background:#dcfce7;color:#15803d}
 .btn-del{padding:6px 12px;font-size:13px;white-space:nowrap;color:#b91c1c;border-color:#fca5a5}
 .btn-del:hover{background:#fef2f2}
+.hall-header .subtitle.intro{max-width:720px;margin:10px auto 0;line-height:1.75;font-size:14px}
