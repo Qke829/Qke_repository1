@@ -159,3 +159,7 @@ a{color:inherit;text-decoration:none}
 .btn-del{padding:6px 12px;font-size:13px;white-space:nowrap;color:#b91c1c;border-color:#fca5a5}
 .btn-del:hover{background:#fef2f2}
 .hall-header .subtitle.intro{max-width:720px;margin:10px auto 0;line-height:1.75;font-size:14px}
+/* 顶部校徽 + 院徽（左右分布） */
+.header-logos{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:8px}
+.header-logo{height:72px;width:auto;max-width:26vw;object-fit:contain}
+@media(max-width:600px){.header-logo{height:52px}}
