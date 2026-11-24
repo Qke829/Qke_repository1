@@ -149,7 +149,7 @@ function finishRound(){
 }
 
 function renderCatSelect(){
-  API.vocabCategories().then(renderCats).catch(e => {
+  API.vocabCategories().then(cats => renderCats(Array.isArray(cats) ? cats : (cats.categories || []))).catch(e => {
     $('#app').innerHTML = pageHeader('词汇积累') + `<div class="empty-hint"><p>加载失败：${e.message}</p></div>`;
   });
 }
