@@ -22,17 +22,12 @@
       const prog = document.getElementById('prog-'+k);
       if(prog) prog.textContent = `${done} / ${stats[k]}`;
     }
-    // 词汇积累：6 类总词数（不含单开的托福高频词）
-    const vocabSelectable = ['cet4','cet6','tem4','tem8','ielts','toefl'];
+    // 词汇积累：7 类总词数（含托福高频词）
+    const vocabSelectable = ['cet4','cet6','tem4','tem8','ielts','toefl','toefl_highfreq'];
     const vc = document.getElementById('count-vocab');
     if(vc && stats.vocab){
       const vTotal = vocabSelectable.reduce((a,c)=>a+(stats.vocab[c]||0), 0);
-      vc.textContent = `${vTotal} 词 · 6 类`;
-    }
-    // 托福高频词：单开卡片显示自己的词数
-    const hf = document.getElementById('count-toeflhf');
-    if(hf && stats.vocab && stats.vocab.toefl_highfreq){
-      hf.textContent = `${stats.vocab.toefl_highfreq} 词`;
+      vc.textContent = `${vTotal} 词 · 7 类`;
     }
   }catch(e){
     console.error('加载统计失败', e);

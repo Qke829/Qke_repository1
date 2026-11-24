@@ -211,7 +211,7 @@ function esc(s){
 
 document.addEventListener('DOMContentLoaded', async () => {
   await Record.loadAll();
-  // ?cat=toefl_highfreq：托福高频词独立卡片，直接锁定该词库开刷
+  // ?cat=xxx：直接锁定某词库开刷（如 ?cat=toefl_highfreq）
   // ?cat=xxx&word=yyy：从错词本跳转，把该词排最前
   const params = new URLSearchParams(location.search);
   const cat = params.get('cat'), word = params.get('word');
