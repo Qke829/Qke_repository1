@@ -59,17 +59,26 @@ async function startCategory(cat, focusWord){
   }
 }
 
+// 进度按「累计已学词数 / 词库总数」显示，与学习记录同步（父亲 2026-11-24 要求）
+function updateProgress(){
+  const total = VOCAB.words.length;
+  const learned = Object.values(Record.all('vocab') || {}).filter(v => v.category === VOCAB.cat).length;
+  const prog = total ? Math.round(learned / total * 100) : 0;
+  const fill = $('.vocab-progress-fill');
+  const txt = $('.vocab-progress-text');
+  if(fill) fill.style.width = prog + '%';
+  if(txt) txt.textContent = `已学 ${learned} / ${total} 词 · ${prog}%`;
+}
+
 function renderQuestion(){
   const app = $('#app');
   const idx = VOCAB.order[VOCAB.pos];
   const w = VOCAB.words[idx];
   const total = VOCAB.words.length;
-  const n = VOCAB.pos + 1;
-  const prog = Math.round(n / total * 100);
 
-  app.innerHTML = pageHeader(CAT_NAMES[VOCAB.cat], '选择「全部中文意思」正确的一项', '/')
-    + `<div class="vocab-progress-bar"><div class="vocab-progress-fill" style="width:${prog}%"></div></div>
-       <div class="vocab-progress-text">第 ${n} / ${total} 词 · ${prog}%</div>
+  app.innerHTML = pageHeader(CAT_NAMES[VOCAB.cat], '选择「全部中文意思」正确的一项')
+    + `<div class="vocab-progress-bar"><div class="vocab-progress-fill"></div></div>
+       <div class="vocab-progress-text"></div>
        <div class="vocab-quiz-card">
          <div class="vocab-word">${esc(w.word)}</div>
          <div class="vocab-phonetic">${esc(w.phonetic || w.phonetic_uk || '')}</div>
@@ -85,6 +94,7 @@ function renderQuestion(){
          <div id="vocab-result"></div>
        </div>`;
 
+  updateProgress();
   $$('.vocab-option').forEach(btn => btn.onclick = () => onAnswer(parseInt(btn.dataset.i), w, idx));
   $('#prev-btn').onclick = () => { if(VOCAB.pos > 0){ VOCAB.pos--; VOCAB.answered = false; VOCAB.chosen = -1; renderQuestion(); } };
   $('#next-btn').onclick = () => {
@@ -106,6 +116,7 @@ async function onAnswer(i, w, idx){
   VOCAB.history.push({ idx, chosen: i, correct });
   await Record.vocabLearn(VOCAB.cat, w.word, w, correct);
   await Record.syncWrongWord(VOCAB.cat, w.word, w, !correct);
+  updateProgress();
   showAnswer(w, i, correct);
 }
 
