@@ -166,3 +166,92 @@ a{color:inherit;text-decoration:none}
 /* 标题下移，避开角落 logo */
 .hall-header{padding-top:148px}
 @media(max-width:600px){.hall-header{padding-top:96px}}
+
+/* ===== 词汇积累 ===== */
+.card-vocab{border-top:4px solid #6366f1}
+.card-wrongwords{border-top:4px solid #ec4899}
+.vocab-cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px;margin:8px 0 24px}
+.vocab-cat{background:var(--card);border:2px solid var(--border);border-radius:var(--radius);padding:26px 16px;cursor:pointer;
+  text-align:center;box-shadow:var(--shadow);transition:transform .2s,border-color .2s,box-shadow .2s}
+.vocab-cat:hover{transform:translateY(-4px);border-color:#6366f1;box-shadow:var(--shadow-lg)}
+.vocab-cat-icon{font-size:40px;margin-bottom:10px}
+.vocab-cat-name{font-size:18px;font-weight:700;margin-bottom:6px}
+.vocab-cat-count{font-size:13px;color:var(--muted)}
+.vocab-record-bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.btn-record{background:#6366f1;color:#fff}
+.btn-record:hover{background:#4f46e5}
+.btn-secondary{background:#eef2ff;color:#4338ca}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}
+.vocab-record-tip{color:var(--muted);font-size:13px}
+.vocab-progress-bar{height:8px;background:#e2e8f0;border-radius:8px;overflow:hidden;margin-bottom:6px}
+.vocab-progress-fill{height:100%;background:#6366f1;transition:width .3s}
+.vocab-progress-text{text-align:right;color:var(--muted);font-size:12px;margin-bottom:18px}
+.vocab-quiz-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:32px;text-align:center}
+.vocab-word{font-size:42px;font-weight:800;color:var(--text);letter-spacing:1px;word-break:break-word}
+.vocab-phonetic{font-size:17px;color:#6366f1;margin-top:6px;font-family:"Times New Roman",serif}
+.vocab-q-title{font-size:15px;color:var(--muted);margin:26px 0 16px}
+.vocab-options{display:grid;gap:12px;text-align:left;max-width:720px;margin:0 auto}
+.vocab-option{display:flex;align-items:center;gap:14px;padding:14px 18px;background:#fff;border:2px solid var(--border);
+  border-radius:10px;cursor:pointer;font-size:15px;transition:border-color .15s,background .15s;text-align:left;color:var(--text)}
+.vocab-option:hover:not(:disabled){border-color:#818cf8;background:#f5f3ff}
+.vocab-option:disabled{cursor:default}
+.vocab-option .opt-label{flex:none;width:28px;height:28px;border-radius:50%;background:#eef2ff;color:#4338ca;
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.vocab-option.is-correct{border-color:#16a34a;background:#f0fdf4}
+.vocab-option.is-correct .opt-label{background:#16a34a;color:#fff}
+.vocab-option.is-wrong{border-color:#dc2626;background:#fef2f2}
+.vocab-option.is-wrong .opt-label{background:#dc2626;color:#fff}
+.vocab-answer-card{margin-top:22px;padding:20px;border-radius:12px;text-align:left;background:#f8fafc;border:1px solid var(--border)}
+.vocab-answer-card.ok{background:#f0fdf4;border-color:#bbf7d0}
+.vocab-answer-card.no{background:#fef2f2;border-color:#fecaca}
+.vocab-answer-head{font-size:16px;font-weight:700;margin-bottom:14px}
+.vocab-answer-card.ok .vocab-answer-head{color:#15803d}
+.vocab-answer-card.no .vocab-answer-head{color:#b91c1c}
+.vocab-answer-row{display:flex;gap:12px;margin-bottom:8px;font-size:14px;align-items:baseline}
+.vocab-ans-label{flex:none;color:var(--muted);font-size:12px;min-width:56px}
+.vocab-ans-meaning{font-weight:600}
+.vocab-section{margin-top:16px}
+.vocab-sec-title{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:8px;letter-spacing:1px}
+.vocab-coll{padding:6px 0;font-size:14px;border-bottom:1px dashed var(--border)}
+.vocab-coll b{color:#4338ca}
+.vocab-coll span{color:var(--muted);margin-left:8px}
+.vocab-ex{padding:8px 0 8px 12px;border-left:3px solid #6366f1;margin-bottom:8px}
+.vocab-ex-en{font-size:14px;line-height:1.6}
+.vocab-ex-cn{font-size:13px;color:var(--muted);margin-top:3px}
+.vocab-nav{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.vocab-finish{text-align:center;padding:50px 20px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow)}
+.vocab-finish-score{font-size:56px;font-weight:800;color:#6366f1}
+.vocab-finish-label{color:var(--muted);margin:8px 0 28px}
+.vocab-finish-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.vocab-record-list{display:grid;gap:12px}
+.record-word{background:var(--card);border-radius:10px;border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden}
+.record-word summary{display:flex;align-items:center;gap:14px;padding:16px 20px;cursor:pointer;flex-wrap:wrap;list-style:none}
+.record-word summary::-webkit-details-marker{display:none}
+.rw-word{font-size:19px;font-weight:700;min-width:130px}
+.rw-phonetic{color:#6366f1;font-size:13px;font-family:"Times New Roman",serif;min-width:100px}
+.rw-meaning{color:var(--text);font-size:13px;flex:1}
+.rw-stat{color:var(--muted);font-size:12px;background:#f1f5f9;padding:3px 10px;border-radius:20px}
+.record-word-body{padding:0 20px 18px;border-top:1px solid var(--border)}
+.rw-line{font-size:14px;padding:10px 0;border-bottom:1px dashed var(--border);display:flex;gap:12px;align-items:baseline}
+.rw-line:last-child{border-bottom:none}
+.rw-label{color:var(--muted);font-size:12px;min-width:64px;flex:none}
+@media(max-width:600px){
+  .vocab-quiz-card{padding:20px}
+  .vocab-word{font-size:34px}
+  .rw-word{min-width:auto}
+}
+
+/* ===== 错词本 ===== */
+.wrong-summary{display:flex;gap:16px;margin-bottom:20px}
+.ws-item{background:var(--card);border-radius:10px;padding:14px 24px;box-shadow:var(--shadow);text-align:center;min-width:110px}
+.ws-num{display:block;font-size:28px;font-weight:800;color:var(--red)}
+.ws-num.ok{color:#16a34a}
+.ws-label{font-size:12px;color:var(--muted)}
+.wrong-word-block{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.wrong-word{font-size:22px;font-weight:800;color:var(--text)}
+.wrong-phonetic{color:#6366f1;font-size:14px;font-family:"Times New Roman",serif}
+.wrong-cat{font-size:12px;color:var(--muted);background:#eef2ff;color:#4338ca;padding:2px 10px;border-radius:20px}
+.wrong-meaning{font-size:15px;font-weight:600;margin-bottom:10px;line-height:1.6}
+.wrong-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;flex-wrap:wrap}
+.wrong-time{font-size:12px;color:var(--muted)}
+.wrong-actions{display:flex;gap:8px;flex-wrap:wrap}

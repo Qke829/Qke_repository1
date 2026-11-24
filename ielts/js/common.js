@@ -1,7 +1,7 @@
 // common.js (静态版) - 读静态JSON的API（学习记录在 record.js）
-// BUILD_VER=1795415861 —— 每次构建注入版本号，fetch 带 ?v= 绕开浏览器缓存
+// BUILD_VER=1795486788 —— 每次构建注入版本号，fetch 带 ?v= 绕开浏览器缓存
 const BASE = "/Qke_repository1/ielts";
-const BUILD_VER = "1795415861";
+const BUILD_VER = "1795486788";
 const API = {
   async get(path){
     const sep = path.includes('?') ? '&' : '?';
@@ -18,11 +18,16 @@ const API = {
   async speakingDetail(id){ return (await this._all('speaking')).find(x=>x.id==id); },
   async writingList(){ return await this._all('writing'); },
   async writingDetail(id){ return (await this._all('writing')).find(x=>x.id==id); },
+  async vocabCategories(){ return await this.get('/data/vocab_meta.json'); },
+  async vocabWords(cat){ return await this._all('vocab_'+cat); },
   async stats(){
-    const [l,r,s,w] = await Promise.all([
-      this._all('listening'), this._all('reading'), this._all('speaking'), this._all('writing')
+    const [l,r,s,w,vm] = await Promise.all([
+      this._all('listening'), this._all('reading'), this._all('speaking'), this._all('writing'),
+      this.get('/data/vocab_meta.json')
     ]);
-    return {listening:l.length, reading:r.length, speaking:s.length, writing:w.length};
+    const vocab = {};
+    (vm.categories||[]).forEach(c=>{ vocab[c.id]=c.total; });
+    return {listening:l.length, reading:r.length, speaking:s.length, writing:w.length, vocab};
   },
 };
 

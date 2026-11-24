@@ -22,6 +22,12 @@
       const prog = document.getElementById('prog-'+k);
       if(prog) prog.textContent = `${done} / ${stats[k]}`;
     }
+    // 词汇：四类总词数
+    const vc = document.getElementById('count-vocab');
+    if(vc && stats.vocab){
+      const vTotal = Object.values(stats.vocab).reduce((a,b)=>a+b,0);
+      vc.textContent = `${vTotal} 词 · 4 类`;
+    }
   }catch(e){
     console.error('加载统计失败', e);
   }

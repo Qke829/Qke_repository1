@@ -3,7 +3,7 @@
 // 服务没跑时自动降级为 localStorage，数据不丢。两边数据按 updated_at 新者胜合并。
 const Record = {
   _srv: 'http://127.0.0.1:8765',
-  _modules: ['listening', 'reading', 'speaking', 'writing', 'wrongbook'],
+  _modules: ['listening', 'reading', 'speaking', 'writing', 'wrongbook', 'vocab', 'wrongwords'],
   _cache: {},
   _loaded: false,
   _srvOk: null, // null=未知 true=可用 false=不可用
@@ -147,6 +147,45 @@ const Record = {
   // 手动删除一条错题
   async removeWrong(key){
     await this._remove('wrongbook', key);
+  },
+
+  // ===== 词汇积累 =====
+  // 学习记录：每个词一条，保存最近一次作答 + 累计次数/答对次数
+  async vocabLearn(category, word, detail, correct){
+    const key = `${category}_${word}`;
+    const prev = this.all('vocab')[key] || {};
+    await this._save('vocab', key, {
+      category, word,
+      phonetic: detail.phonetic || '',
+      meaning: detail.meaning || '',
+      collocations: detail.collocations || [],
+      examples: detail.examples || [],
+      correct,
+      times: (prev.times || 0) + 1,
+      right: (prev.right || 0) + (correct ? 1 : 0),
+      last_at: Date.now(),
+    });
+  },
+  // 错词本：选错自动加入，重做答对标记已解决，可手动删除（仿错题本）
+  async syncWrongWord(category, word, detail, isWrong){
+    const key = `${category}_${word}`;
+    const prev = this.all('wrongwords')[key];
+    if(isWrong){
+      await this._save('wrongwords', key, {
+        category, word,
+        phonetic: detail.phonetic || '',
+        meaning: detail.meaning || '',
+        collocations: detail.collocations || [],
+        examples: detail.examples || [],
+        resolved: false,
+        first_at: prev ? (prev.first_at || prev.updated_at) : Date.now(),
+      });
+    } else if(prev && !prev.resolved){
+      await this._save('wrongwords', key, Object.assign({}, prev, { resolved: true }));
+    }
+  },
+  async removeWrongWord(key){
+    await this._remove('wrongwords', key);
   },
 };
 

@@ -70,7 +70,7 @@ async function renderDetail(id){
           <span class="toggle-slider"></span>
           <span id="done-label">${rec.completed?'已完成':'标记为已完成'}</span>
         </label>
-        <a class="btn btn-outline" href="/pages/writing.html">← 返回列表</a>
+        <a class="btn btn-outline" href="/Qke_repository1/ielts/pages/writing.html">← 返回列表</a>
       </div>`;
     app.appendChild(card);
     document.getElementById('done-toggle').onchange = async function(){
