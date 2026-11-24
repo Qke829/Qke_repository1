@@ -22,11 +22,11 @@
       const prog = document.getElementById('prog-'+k);
       if(prog) prog.textContent = `${done} / ${stats[k]}`;
     }
-    // 词汇积累：7 类总词数（含托福高频词）
+    // 词汇积累：词库 7 类，但托福高频词是从托福 9018 里摘的子集，不重复计入总数
     const vocabSelectable = ['cet4','cet6','tem4','tem8','ielts','toefl','toefl_highfreq'];
     const vc = document.getElementById('count-vocab');
     if(vc && stats.vocab){
-      const vTotal = vocabSelectable.reduce((a,c)=>a+(stats.vocab[c]||0), 0);
+      const vTotal = vocabSelectable.filter(c => c !== 'toefl_highfreq').reduce((a,c)=>a+(stats.vocab[c]||0), 0);
       vc.textContent = `${vTotal} 词 · 7 类`;
     }
   }catch(e){
