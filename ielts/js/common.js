@@ -1,7 +1,7 @@
 // common.js (静态版) - 读静态JSON的API（学习记录在 record.js）
-// BUILD_VER=1795488931 —— 每次构建注入版本号，fetch 带 ?v= 绕开浏览器缓存
+// BUILD_VER=1795490437 —— 每次构建注入版本号，fetch 带 ?v= 绕开浏览器缓存
 const BASE = "/Qke_repository1/ielts";
-const BUILD_VER = "1795488931";
+const BUILD_VER = "1795490437";
 const API = {
   async get(path){
     const sep = path.includes('?') ? '&' : '?';
@@ -27,6 +27,8 @@ const API = {
     ]);
     const vocab = {};
     (vm.categories||[]).forEach(c=>{ vocab[c.id]=c.total; });
+    // 单开的托福高频词放在 extra 里，也要并入 stats 供大厅卡片显示
+    if(vm.extra){ Object.keys(vm.extra).forEach(k=>{ vocab[k]=vm.extra[k].total; }); }
     return {listening:l.length, reading:r.length, speaking:s.length, writing:w.length, vocab};
   },
 };

@@ -1,6 +1,6 @@
 // wrongwords.js - 错词本：选错的词自动收集，重做答对标记「已解决」沉底，可手动删除
 const app = document.getElementById('app');
-const CAT_NAMES = { cet4: '四级', cet6: '六级', ielts: '雅思', toefl: '托福' };
+const CAT_NAMES = { cet4: '四级', cet6: '六级', tem4: '专四', tem8: '专八', ielts: '雅思', toefl: '托福', toefl_highfreq: '托福高频' };
 
 function esc(s){
   return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));

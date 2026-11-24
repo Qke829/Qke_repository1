@@ -9,7 +9,13 @@ let VOCAB = {
   history: [],     // 本次会话已刷记录（仅用于当前进度显示）
 };
 
-const CAT_NAMES = { cet4: '四级词汇', cet6: '六级词汇', ielts: '雅思词汇', toefl: '托福词汇' };
+const CAT_NAMES = {
+  cet4: '四级词汇', cet6: '六级词汇', tem4: '专四词汇', tem8: '专八词汇',
+  ielts: '雅思词汇', toefl: '托福词汇', toefl_highfreq: '托福高频词',
+};
+const CAT_ICONS = { cet4: '🔤', cet6: '📗', tem4: '🎓', tem8: '🏆', ielts: '🎯', toefl: '🌍', toefl_highfreq: '⚡' };
+// 可从错词本跳转 / 直接锁定的全部类别
+const VALID_CATS = Object.keys(CAT_NAMES);
 
 function shuffle(arr){
   const a = [...arr];
@@ -25,7 +31,7 @@ function renderCats(cats){
   app.innerHTML = pageHeader('词汇积累', '选择词库开始刷词 · 每个词一道四选一 · 答错自动进错词本')
     + `<div class="vocab-cats" id="vocab-cats">
          ${cats.map(c => `<button class="vocab-cat" data-cat="${c.id}">
-             <div class="vocab-cat-icon">${c.id === 'cet4' ? '🔤' : c.id === 'cet6' ? '📗' : c.id === 'ielts' ? '🎯' : '🌍'}</div>
+             <div class="vocab-cat-icon">${CAT_ICONS[c.id] || '📘'}</div>
              <div class="vocab-cat-name">${c.name}</div>
              <div class="vocab-cat-count">${c.total} 词</div>
            </button>`).join('')}
@@ -205,10 +211,11 @@ function esc(s){
 
 document.addEventListener('DOMContentLoaded', async () => {
   await Record.loadAll();
-  // 支持从错词本跳转：?cat=toefl&word=xxx
+  // ?cat=toefl_highfreq：托福高频词独立卡片，直接锁定该词库开刷
+  // ?cat=xxx&word=yyy：从错词本跳转，把该词排最前
   const params = new URLSearchParams(location.search);
   const cat = params.get('cat'), word = params.get('word');
-  if(cat && word && ['cet4','cet6','ielts','toefl'].includes(cat)){
+  if(cat && VALID_CATS.includes(cat) && (word || cat === 'toefl_highfreq')){
     startCategory(cat, word);
   } else {
     renderCatSelect();
