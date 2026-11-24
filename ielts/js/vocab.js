@@ -77,12 +77,12 @@ function renderQuestion(){
          <div class="vocab-options" id="vocab-options">
            ${w.options.map((o, i) => `<button class="vocab-option" data-i="${i}"><span class="opt-label">${'ABCD'[i]}</span><span>${esc(o)}</span></button>`).join('')}
          </div>
+         <div class="vocab-nav">
+           <button class="btn btn-secondary" id="prev-btn" ${VOCAB.pos === 0 ? 'disabled' : ''}>← 上一词</button>
+           <button class="btn btn-primary" id="next-btn" ${VOCAB.answered ? '' : 'disabled'}>${VOCAB.pos === total - 1 ? '完成本轮 ✓' : '下一词 →'}</button>
+           <button class="btn btn-ghost" id="back-cats-btn">切换词库</button>
+         </div>
          <div id="vocab-result"></div>
-       </div>
-       <div class="vocab-nav">
-         <button class="btn btn-secondary" id="prev-btn" ${VOCAB.pos === 0 ? 'disabled' : ''}>← 上一词</button>
-         <button class="btn btn-primary" id="next-btn" ${VOCAB.answered ? '' : 'disabled'}>${VOCAB.pos === total - 1 ? '完成本轮 ✓' : '下一词 →'}</button>
-         <button class="btn btn-ghost" id="back-cats-btn">切换词库</button>
        </div>`;
 
   $$('.vocab-option').forEach(btn => btn.onclick = () => onAnswer(parseInt(btn.dataset.i), w, idx));
