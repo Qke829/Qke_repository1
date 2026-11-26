@@ -187,6 +187,62 @@ const Record = {
   async removeWrongWord(key){
     await this._remove('wrongwords', key);
   },
+
+  // 批量保存：合并进缓存 + 一次 localStorage 写入，再逐条同步服务器（服务在时）
+  async _saveMany(module, entries){
+    const ids = Object.keys(entries);
+    if(!ids.length) return;
+    const all = this.all(module);
+    const now = Date.now();
+    ids.forEach(id => { entries[id].updated_at = now; all[id] = entries[id]; });
+    this._cache[module] = all;
+    this._lsWrite(module, all);
+    if(this._srvOk !== false){
+      await Promise.all(ids.map(id =>
+        fetch(this._srv + '/api/progress', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ module, id: String(id), record: entries[id] }),
+        }).catch(() => { this._srvOk = false; })
+      ));
+    }
+  },
+
+  // 批量标为「已学习」：只新建没有记录的词；已有记录（答过题/在错词本）原样保留
+  async vocabMarkLearned(category, words){
+    const all = this.all('vocab');
+    const entries = {}; let skipped = 0;
+    for(const w of words){
+      const key = `${category}_${w.word}`;
+      if(all[key]){ skipped++; continue; }
+      entries[key] = {
+        category, word: w.word,
+        phonetic: w.phonetic || '', meaning: w.meaning || '',
+        collocations: w.collocations || [], examples: w.examples || [],
+        correct: null, manual: true,
+        times: 0, right: 0, last_at: Date.now(),
+      };
+    }
+    await this._saveMany('vocab', entries);
+    return { marked: Object.keys(entries).length, skipped };
+  },
+
+  // 批量加入错词本：已有条目保持原状态（已解决的不被重置回未解决）
+  async addWrongWords(category, words){
+    const all = this.all('wrongwords');
+    const entries = {}; let skipped = 0;
+    for(const w of words){
+      const key = `${category}_${w.word}`;
+      if(all[key]){ skipped++; continue; }
+      entries[key] = {
+        category, word: w.word,
+        phonetic: w.phonetic || '', meaning: w.meaning || '',
+        collocations: w.collocations || [], examples: w.examples || [],
+        resolved: false, manual: true, first_at: Date.now(),
+      };
+    }
+    await this._saveMany('wrongwords', entries);
+    return { added: Object.keys(entries).length, skipped };
+  },
 };
 
 // 判定一道题是否做错（单选：字符串比较；多选：排序后数组比较）
